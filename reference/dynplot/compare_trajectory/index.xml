@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dynplot :: Visually comparing trajectories on dynverse</title>
+    <link>/reference/dynplot/compare_trajectory/</link>
+    <description>Recent content in dynplot :: Visually comparing trajectories on dynverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/reference/dynplot/compare_trajectory/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Plot strip</title>
+      <link>/reference/dynplot/compare_trajectory/plot_strip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/compare_trajectory/plot_strip/</guid>
+      <description> plot_strip.Rd  Plot strip
+ plot_strip(traj1, traj2, margin = 0.05, reorder = TRUE) Arguments   traj1 The first trajectory
+   traj2 The second traj
+   margin The margin to add
+   reorder Whether to reorder
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Plot strip onedim</title>
+      <link>/reference/dynplot/compare_trajectory/plot_linearised_comparison/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/compare_trajectory/plot_linearised_comparison/</guid>
+      <description>plot_linearised_comparison.Rd  Plot strip onedim
+ plot_linearised_comparison(traj1, traj2, reorder = TRUE, margin = 0.05, reorder_second_by = c(&#34;mapping&#34;, &#34;optimisation&#34;)) Arguments   traj1 The first trajectory
+   traj2 The second trajectory
+   reorder Whether to reorder the trajectory
+   margin The margin to add
+   reorder_second_by How to reorder the second trajectory, either by mapping the milestones from both trajectories (`mapping`), or by trying to correlate the orderings between the two trajectories (`optimisation`)</description>
+    </item>
+    
+    <item>
+      <title>Plotting edge flips</title>
+      <link>/reference/dynplot/compare_trajectory/plot_edge_flips/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/compare_trajectory/plot_edge_flips/</guid>
+      <description> plot_edge_flips.Rd  Utility plotting function for analysing the edge-flip metric from dyneval.
+ plot_edge_flips(oldadj, newadj) Arguments   oldadj Old adjacency matrix
+   newadj New adjancency matrix
+    Contents Arguments  -- </description>
+    </item>
+    
+  </channel>
+</rss>

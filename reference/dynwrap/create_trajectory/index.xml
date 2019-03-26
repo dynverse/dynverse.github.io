@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dynwrap :: Creating a trajectory on dynverse</title>
+    <link>/reference/dynwrap/create_trajectory/</link>
+    <description>Recent content in dynwrap :: Creating a trajectory on dynverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/reference/dynwrap/create_trajectory/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A data wrapper for datasets and trajectories</title>
+      <link>/reference/dynwrap/create_trajectory/wrap_data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/wrap_data/</guid>
+      <description>Source: R/wrap_data.R wrap_data.Rd  A data wrapper for datasets and trajectories
+ wrap_data(id = NULL, cell_ids, cell_info = NULL, ...) is_data_wrapper(dataset) Arguments   id A unique identifier for the data. If NULL, a random string will be generated.
+   cell_ids The ids of the cells.
+   cell_info Optional meta-information pertaining the cells.
+   ... Extra information to be stored in the wrapper.</description>
+    </item>
+    
+    <item>
+      <title>Constructs a circular trajectory using the pseudotime values of each cell.</title>
+      <link>/reference/dynwrap/create_trajectory/add_cyclic_trajectory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/add_cyclic_trajectory/</guid>
+      <description>Source: R/wrap_add_cyclic_trajectory.R add_cyclic_trajectory.Rd  This function will generate the milestone_network and progressions.
+ add_cyclic_trajectory(dataset, pseudotime, directed = FALSE, do_scale_minmax = TRUE, ...) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   pseudotime A named vector of pseudo times.
+   directed Whether or not the directionality of the pseudotime is predicted.
+   do_scale_minmax Whether or not to scale the pseudotime between 0 and 1.</description>
+    </item>
+    
+    <item>
+      <title>Constructs a linear trajectory using the pseudotime values of each cell.</title>
+      <link>/reference/dynwrap/create_trajectory/add_linear_trajectory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/add_linear_trajectory/</guid>
+      <description>Source: R/wrap_add_linear_trajectory.R add_linear_trajectory.Rd  This function will generate the milestone_network and progressions.
+ add_linear_trajectory(dataset, pseudotime, directed = FALSE, do_scale_minmax = TRUE, ...) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   pseudotime A named vector of pseudo times.
+   directed Whether or not the directionality of the pseudotime is predicted.
+   do_scale_minmax Whether or not to scale the pseudotime between 0 and 1.</description>
+    </item>
+    
+    <item>
+      <title>Constructs a trajectory by projecting cells within a dimensionality reduction onto a backbone formed by a milestone network. Optionally, a cell grouping can be given which will restrict the edges on which a cell can be projected.</title>
+      <link>/reference/dynwrap/create_trajectory/add_dimred_projection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/add_dimred_projection/</guid>
+      <description>Source: R/wrap_add_dimred_projection.R add_dimred_projection.Rd  This function will generate the milestone_network and progressions.
+ add_dimred_projection(dataset, milestone_ids = NULL, milestone_network, dimred, dimred_milestones, grouping = NULL, ...) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   milestone_ids The ids of the milestones in the trajectory. Type: Character vector.
+   milestone_network The network of the milestones. Type: Data frame(from = character, to = character, length = numeric, directed = logical).</description>
+    </item>
+    
+    <item>
+      <title>Constructs a trajectory using a cell grouping and a network between groups. Will use an existing grouping if it is present in the dataset.</title>
+      <link>/reference/dynwrap/create_trajectory/add_cluster_graph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/add_cluster_graph/</guid>
+      <description>Source: R/wrap_add_cluster_graph.R add_cluster_graph.Rd  This function will generate the milestone_network and progressions.
+ add_cluster_graph(dataset, milestone_network, grouping = NULL, explicit_splits = FALSE, ...) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   milestone_network A network of milestones.
+   grouping A grouping of the cells, can be a named vector or a dataframe with group_id (character) and cell_id (character)
+   explicit_splits Whether to make splits specific by adding a starting node.</description>
+    </item>
+    
+    <item>
+      <title>Constructs a trajectory using a graph between cells, by mapping cells onto a set of backbone cells.</title>
+      <link>/reference/dynwrap/create_trajectory/add_cell_graph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/add_cell_graph/</guid>
+      <description>Source: R/wrap_add_cell_graph.R add_cell_graph.Rd  This function will generate the milestone_network and progressions.
+ add_cell_graph(dataset, cell_graph, to_keep, milestone_prefix = &#34;milestone_&#34;, ...) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   cell_graph The edges between cells. Format: Data frame(from = character, to = character, length(optional) = numeric, directed(optional) = logical)
+   to_keep A named vector containing booleans containing whether or not a cell is part of the backbone.</description>
+    </item>
+    
+    <item>
+      <title>Create a trajectory given its branch network and the pseudotime of the cells on one of the branches</title>
+      <link>/reference/dynwrap/create_trajectory/add_branch_trajectory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/add_branch_trajectory/</guid>
+      <description>Source: R/wrap_add_branch_trajectory.R add_branch_trajectory.Rd  Create a trajectory given its branch network and the pseudotime of the cells on one of the branches
+ add_branch_trajectory(dataset, branch_network, branches, branch_progressions, ...) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   branch_network The network between branches Type: Data frame(from = charactor, to = character)
+   branches The length and directedness of the branches Type: Data frame(branch_id = character, length = numeric, directed = logical)</description>
+    </item>
+    
+    <item>
+      <title>Define a trajectory dataset given its milestone network and milestone percentages or progressions</title>
+      <link>/reference/dynwrap/create_trajectory/add_trajectory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/add_trajectory/</guid>
+      <description>Source: R/wrap_add_trajectory.R add_trajectory.Rd  Define a trajectory dataset given its milestone network and milestone percentages or progressions
+ add_trajectory(dataset, milestone_ids = NULL, milestone_network, divergence_regions = NULL, milestone_percentages = NULL, progressions = NULL, allow_self_loops = FALSE, ...) is_wrapper_with_trajectory(trajectory) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   milestone_ids The ids of the milestones in the trajectory. Type: Character vector.
+   milestone_network The network of the milestones.</description>
+    </item>
+    
+    <item>
+      <title>Multifurcating trajectory with end state probabilities</title>
+      <link>/reference/dynwrap/create_trajectory/add_end_state_probabilities/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/add_end_state_probabilities/</guid>
+      <description>Source: R/wrap_add_end_state_probabilities.R add_end_state_probabilities.Rd  Constructs a multifurcating trajectory using the pseudotime values of each cell and their end state probabilities. If pseudotime values are not given, will use pseudotime already present in the dataset.
+ add_end_state_probabilities(dataset, end_state_probabilities, pseudotime = NULL, do_scale_minmax = TRUE, ...) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   end_state_probabilities A dataframe containing cell_id (character) and additional numeric columns containing the probability for every end milestone.</description>
+    </item>
+    
+  </channel>
+</rss>

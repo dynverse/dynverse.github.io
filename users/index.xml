@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Method users on dynverse</title>
+    <link>/users/</link>
+    <description>Recent content in Method users on dynverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/users/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installation</title>
+      <link>/users/1-installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/users/1-installation/</guid>
+      <description>Dyno Docker Singularity Frequent installation problems API rate limit exceeded I’m not allowed to install docker on my shared cluster    Dyno dyno contains and loads several of the dynverse R packages (dynwrap, dynplot, dynmethods, …). To install (and update) them all:
+# install.packages(&amp;quot;devtools&amp;quot;) devtools::install_github(&amp;quot;dynverse/dyno&amp;quot;) On Linux, you will need to install udunits and ImageMagick:
+ Debian / Ubuntu / Linux Mint: sudo apt-get install libudunits2-dev imagemagick Fedora / CentOS / RHEL: sudo dnf install udunits2-devel ImageMagick-c++-devel  Docker or Singularity (version ≥ 3.</description>
+    </item>
+    
+    <item>
+      <title>Quick start</title>
+      <link>/users/2-quick_start/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/users/2-quick_start/</guid>
+      <description>Preparing the data Selecting the best methods for a dataset Running the methods Plotting the trajectory Interpreting the trajectory biologically Rooting Milestone labelling  Predicting and visualising genes of interest A global overview of the most predictive genes Lineage/branch markers Genes important at bifurcation points    library(dyno) library(tidyverse) This tutorial quickly guides you through the main steps in the dyno workflow. For each step, we also provide a more in-depth tutorial in the user guide section.</description>
+    </item>
+    
+  </channel>
+</rss>

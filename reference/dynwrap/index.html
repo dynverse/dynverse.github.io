@@ -1,0 +1,3668 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.54.0" />
+    <meta name="description" content="Dynverse">
+<meta name="author" content="Wouter Saelens and Robrecht Cannoodt">
+
+    <link rel="icon" href="../../images/favicon.png" type="image/png">
+
+    <title> :: dynverse</title>
+
+    
+    <link href="../../css/nucleus.css?1553574834" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1553574834" rel="stylesheet">
+    <link href="../../css/hybrid.css?1553574834" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1553574834" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1553574834" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1553574834" rel="stylesheet">
+    <link href="../../css/theme.css?1553574834" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1553574834" rel="stylesheet">
+    
+      <link href="../../css/theme-mine.css?1553574834" rel="stylesheet">
+    
+
+    <script src="../../js/jquery-2.x.min.js?1553574834"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+<link rel="stylesheet" href="../../css/simple-grid.min.css">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-578149-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-578149-4');
+</script>
+
+  </head>
+  <body class="" data-url="/reference/dynwrap/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="../../">
+  <img src="../../images/logo.svg" style="max-width:50%" alt="dynverse logo" class="zoom">
+</a>
+
+
+
+    </div>
+    
+        
+
+<div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+<script type="text/javascript">
+    
+        var baseurl = "\/";
+    
+
+    window.searchLoaded = false
+</script>
+
+
+<script text="text/javascript">
+$(".searchbox").click(function(){
+  if (!searchLoaded) {
+    $.getScript("\/js\/lunr.min.js?1553574834");
+    $.getScript("\/js\/auto-complete.js?1553574834");
+    $.getScript("\/js\/search.js?1553574834");
+    window.searchLoaded = true
+  }
+
+});
+</script>
+
+
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/about/" title="About" class="dd-item
+        
+        
+        menu-section
+        "
+        
+      >
+      <a href="../../about/">
+          About
+          
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/users/" title="Method users" class="dd-item
+        
+        
+        menu-section
+        "
+        
+      >
+      <a href="../../users/">
+          Method users
+          
+            <img src="../../images/dyno/dyno1.png" alt="logo" class="menu-logo zoom ">
+          
+          
+      </a>
+      
+      
+        <ul style="display:block;">
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/users/1-installation/" title="Installation" class="dd-item ">
+        <a href="../../users/1-installation/">
+        Installation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/users/2-quick_start/" title="Quick start" class="dd-item ">
+        <a href="../../users/2-quick_start/">
+        Quick start
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/users/3-user-guide/" title="User guide" class="dd-item
+        
+        
+        menu-subsection
+        ">
+      <a href="../../users/3-user-guide/">
+          User guide
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/users/3-user-guide/1-preparing/" title="Preparing the data" class="dd-item ">
+        <a href="../../users/3-user-guide/1-preparing/">
+        Preparing the data
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/users/3-user-guide/2-guidelines/" title="Selecting the best methods for a dataset" class="dd-item ">
+        <a href="../../users/3-user-guide/2-guidelines/">
+        Selecting the best methods for a dataset
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/users/3-user-guide/3-running/" title="Inferring trajectories" class="dd-item ">
+        <a href="../../users/3-user-guide/3-running/">
+        Inferring trajectories
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/users/3-user-guide/4-visualisation/" title="Visualising the trajectory" class="dd-item ">
+        <a href="../../users/3-user-guide/4-visualisation/">
+        Visualising the trajectory
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/users/3-user-guide/5-adapting/" title="Adapting the trajectory" class="dd-item ">
+        <a href="../../users/3-user-guide/5-adapting/">
+        Adapting the trajectory
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/users/3-user-guide/6-tde/" title="Trajectory differentially expression" class="dd-item ">
+        <a href="../../users/3-user-guide/6-tde/">
+        Trajectory differentially expression
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/users/4-example_analyses/" title="Example analyses" class="dd-item
+        
+        
+        menu-subsection
+        ">
+      <a href="../../users/4-example_analyses/">
+          Example analyses
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/developers/" title="Method developers" class="dd-item
+        
+        
+        menu-section
+        "
+        
+      >
+      <a href="../../developers/">
+          Method developers
+          
+          
+      </a>
+      
+      
+        <ul style="display:block;">
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/developers/creating-ti-method/" title="Creating a TI method" class="dd-item
+        
+        
+        menu-subsection
+        ">
+      <a href="../../developers/creating-ti-method/">
+          Creating a TI method
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developers/creating-ti-method/create_ti_method_barebones/" title="Bare-bones" class="dd-item ">
+        <a href="../../developers/creating-ti-method/create_ti_method_barebones/">
+        Bare-bones
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developers/creating-ti-method/create_ti_method_script/" title="Wrapper script" class="dd-item ">
+        <a href="../../developers/creating-ti-method/create_ti_method_script/">
+        Wrapper script
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developers/creating-ti-method/create_ti_method_container/" title="Container" class="dd-item ">
+        <a href="../../developers/creating-ti-method/create_ti_method_container/">
+        Container
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/developers/evaluating-ti-method/" title="Evaluating a TI method" class="dd-item
+        
+        
+        menu-subsection
+        ">
+      <a href="../../developers/evaluating-ti-method/">
+          Evaluating a TI method
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/" title="Reference" class="dd-item
+        
+        parent
+        menu-section
+        "
+         id="scroll" 
+      >
+      <a href="../../reference/">
+          Reference
+          
+          
+      </a>
+      
+      
+        <ul style="display:block;">
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynwrap/" title="" class="dd-item
+        parent
+        active
+        menu-subsection
+        ">
+      <a href="../../reference/dynwrap/">
+          dynwrap
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynwrap/create_trajectory/" title="dynwrap :: Creating a trajectory" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../reference/dynwrap/create_trajectory/">
+          Creating a trajectory
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynwrap/adapt_trajectory/" title="dynwrap :: Adapting a trajectory model" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../reference/dynwrap/adapt_trajectory/">
+          Adapting a trajectory model
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynwrap/derive_trajectory/" title="dynwrap :: Calculations from a trajectory" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../reference/dynwrap/derive_trajectory/">
+          Calculations from a trajectory
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynwrap/create_ti_method/" title="dynwrap :: Creating a TI method" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../reference/dynwrap/create_ti_method/">
+          Creating a TI method
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynwrap/infer_trajectory/" title="dynwrap :: Running a TI method" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../reference/dynwrap/infer_trajectory/">
+          Running a TI method
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynwrap/other/" title="dynwrap :: Other" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../reference/dynwrap/other/">
+          Other
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynplot/" title="" class="dd-item
+        
+        
+        menu-subsection
+        ">
+      <a href="../../reference/dynplot/">
+          dynplot
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynplot/plot_trajectory/" title="dynplot :: Plot a trajectory" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../reference/dynplot/plot_trajectory/">
+          Plot a trajectory
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynplot/compare_trajectory/" title="dynplot :: Visually comparing trajectories" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../reference/dynplot/compare_trajectory/">
+          Visually comparing trajectories
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynplot/plot_helpers/" title="dynplot :: Plotting helper functions" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../reference/dynplot/plot_helpers/">
+          Plotting helper functions
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynplot/other/" title="dynplot :: Other" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../reference/dynplot/other/">
+          Other
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynmethods/" title="" class="dd-item
+        
+        
+        menu-subsection
+        ">
+      <a href="../../reference/dynmethods/">
+          dynmethods
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynmethods/other/" title="dynmethods :: Other" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../reference/dynmethods/other/">
+          Other
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dyneval/" title="" class="dd-item
+        
+        
+        menu-subsection
+        ">
+      <a href="../../reference/dyneval/">
+          dyneval
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dyneval/evaluation/" title="dyneval :: Evaluating methods" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../reference/dyneval/evaluation/">
+          Evaluating methods
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dyneval/metric/" title="dyneval :: Metrics for comparing trajectories" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../reference/dyneval/metric/">
+          Metrics for comparing trajectories
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dyneval/other/" title="dyneval :: Other" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../reference/dyneval/other/">
+          Other
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      
+
+    </section>
+  </div>
+
+  <script type="text/javascript">
+  
+  window.onload = function() {
+    var el = document.getElementById('scroll');
+    if (el) {
+      el.scrollIntoView(true);
+    }
+  }
+  </script>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../'></a> > <a href='../../reference/'>Reference</a> > 
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1></h1>
+          
+
+        
+
+
+
+<img style="float:right;margin:10px 10px 10px 10px;" src="../../images/logos/dynwrap.png">
+
+<h1>dynwrap</h1>
+
+<style type="text/css" scoped>
+  .ref-index p{
+    margin: 0 0 0 0;
+  }
+
+  .ref-index .copy-to-clipboard {
+    opacity: 0.4;
+  }
+</style>
+
+<div id="TOC">
+  <ul>
+    <li>
+    <a href="#create_trajectory">Creating a trajectory</a>
+    </li>
+    <li>
+    <a href="#adapt_trajectory">Adapting a trajectory model</a>
+    </li>
+    <li>
+    <a href="#derive_trajectory">Calculations from a trajectory</a>
+    </li>
+    <li>
+    <a href="#create_ti_method">Creating a TI method</a>
+    </li>
+    <li>
+    <a href="#infer_trajectory">Running a TI method</a>
+    </li>
+    <li>
+    <a href="#other">Other</a>
+    </li>
+  </ul>
+</div>
+
+<div class="row">
+    <div class="col-6">
+      <h1>dynwrap 1.0.0 (unreleased)</h1>
+
+<ul>
+<li><p>MAJOR CHANGE: Add support for Singularity 3.0, drop support for previous 
+releases of Singularity and singularity-hub.</p></li>
+<li><p>FEATURE: Add <code>create_ti_method_definition()</code> to create a definition from a local script.</p></li>
+<li><p>DOCUMENTATION: Major update of all documentation for release of dynwrap 1.0.0</p></li>
+<li><p>MINOR CHANGE: Rename <code>compute_tented_geodesic_distances()</code> to <code>calculate_geodesic_distances()</code></p></li>
+<li><p>MINOR CHANGE: Harmonisation of function arguments to either <code>dataset</code> or <code>trajectory</code></p></li>
+</ul>
+
+    </div>
+    <div class="col-6">
+      <h1>dynwrap 0.3.1.2 (01-02-2019)</h1>
+
+<ul>
+<li><p>BUG FIX: <code>simplify_replace_edges()</code> would sometimes swap edges in milestone network around, but forget
+invert percentages.</p></li>
+<li><p>BUG FIX: Close sinks when interupting the R process</p></li>
+<li><p>MINOR CHANGE: Work with new babelwhale, which includes support for singularity 3.0</p></li>
+</ul>
+
+    </div>
+</div>
+
+<div class="row">
+  <table class="ref-index">
+
+  <colgroup>
+    <col class="alias" />
+    <col class="title" />
+  </colgroup>
+
+  <tbody>
+    <tr>
+      <th colspan="2">
+        <h2 id="create_trajectory" class="hasAnchor"><a href="#create_trajectory" class="anchor"></a>Creating a trajectory</h2>
+        <p class="section-desc">Methods to create a trajectory</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_trajectory/add_branch_trajectory">add_branch_trajectory</a></code> </p>
+      </td>
+      <td><p>Create a trajectory given its branch network and the pseudotime of the cells on one of the branches</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_trajectory/add_cell_graph">add_cell_graph</a></code> </p>
+      </td>
+      <td><p>Constructs a trajectory using a graph between cells, by mapping cells onto a set of backbone cells.</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_trajectory/add_cluster_graph">add_cluster_graph</a></code> </p>
+      </td>
+      <td><p>Constructs a trajectory using a cell grouping and a network between groups. Will use an existing grouping if it is present in the dataset.</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_trajectory/add_cyclic_trajectory">add_cyclic_trajectory</a></code> </p>
+      </td>
+      <td><p>Constructs a circular trajectory using the pseudotime values of each cell.</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_trajectory/add_dimred_projection">add_dimred_projection</a></code> </p>
+      </td>
+      <td><p>Constructs a trajectory by projecting cells within a dimensionality reduction onto a backbone formed by a milestone network. Optionally, a cell grouping can be given which will restrict the edges on which a cell can be projected.</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_trajectory/add_end_state_probabilities">add_end_state_probabilities</a></code> </p>
+      </td>
+      <td><p>Multifurcating trajectory with end state probabilities</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_trajectory/add_linear_trajectory">add_linear_trajectory</a></code> </p>
+      </td>
+      <td><p>Constructs a linear trajectory using the pseudotime values of each cell.</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_trajectory/add_trajectory">add_trajectory</a></code> <code><a href="../../reference/dynwrap/create_trajectory/add_trajectory">is_wrapper_with_trajectory</a></code> </p>
+      </td>
+      <td><p>Define a trajectory dataset given its milestone network and milestone percentages or progressions</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_trajectory/wrap_data">wrap_data</a></code> <code><a href="../../reference/dynwrap/create_trajectory/wrap_data">is_data_wrapper</a></code> </p>
+      </td>
+      <td><p>A data wrapper for datasets and trajectories</p></td>
+    </tr>
+  </tbody><tbody>
+    <tr>
+      <th colspan="2">
+        <h2 id="adapt_trajectory" class="hasAnchor"><a href="#adapt_trajectory" class="anchor"></a>Adapting a trajectory model</h2>
+        <p class="section-desc">Methods to adapt a trajectory</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/adapt_trajectory/add_cell_waypoints">add_cell_waypoints</a></code> <code><a href="../../reference/dynwrap/adapt_trajectory/add_cell_waypoints">is_wrapper_with_waypoint_cells</a></code> </p>
+      </td>
+      <td><p>Add cell waypoints to a wrapped trajectory</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/adapt_trajectory/add_dimred">add_dimred</a></code> <code><a href="../../reference/dynwrap/adapt_trajectory/add_dimred">is_wrapper_with_dimred</a></code> <code><a href="../../reference/dynwrap/adapt_trajectory/add_dimred">get_dimred</a></code> </p>
+      </td>
+      <td><p>Add or create a dimensionality reduction</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/adapt_trajectory/add_expression">add_expression</a></code> <code><a href="../../reference/dynwrap/adapt_trajectory/add_expression">is_wrapper_with_expression</a></code> <code><a href="../../reference/dynwrap/adapt_trajectory/add_expression">get_expression</a></code> </p>
+      </td>
+      <td><p>Add count and normalised expression values to a dataset</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/adapt_trajectory/add_grouping">add_grouping</a></code> <code><a href="../../reference/dynwrap/adapt_trajectory/add_grouping">is_wrapper_with_grouping</a></code> <code><a href="../../reference/dynwrap/adapt_trajectory/add_grouping">get_grouping</a></code> </p>
+      </td>
+      <td><p>Add a cell grouping to a dataset</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/adapt_trajectory/add_root">add_root</a></code> <code><a href="../../reference/dynwrap/adapt_trajectory/add_root">add_root_using_expression</a></code> <code><a href="../../reference/dynwrap/adapt_trajectory/add_root">is_rooted</a></code> </p>
+      </td>
+      <td><p>Root the trajectory</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/adapt_trajectory/add_tde_overall">add_tde_overall</a></code> </p>
+      </td>
+      <td><p>Add information on overall differentially expressed features</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/adapt_trajectory/add_timings">add_timings</a></code> <code><a href="../../reference/dynwrap/adapt_trajectory/add_timings">is_wrapper_with_timings</a></code> <code><a href="../../reference/dynwrap/adapt_trajectory/add_timings">add_timing_checkpoint</a></code> </p>
+      </td>
+      <td><p>Add timings checkpoints</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/adapt_trajectory/add_waypoints">add_waypoints</a></code> <code><a href="../../reference/dynwrap/adapt_trajectory/add_waypoints">is_wrapper_with_waypoints</a></code> <code><a href="../../reference/dynwrap/adapt_trajectory/add_waypoints">select_waypoints</a></code> </p>
+      </td>
+      <td><p>Add or create waypoints to a trajectory</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/adapt_trajectory/gather_cells_at_milestones">gather_cells_at_milestones</a></code> </p>
+      </td>
+      <td><p>"Gather" cells to their closest milestones</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/adapt_trajectory/label_milestones">label_milestones</a></code> <code><a href="../../reference/dynwrap/adapt_trajectory/label_milestones">label_milestones_markers</a></code> <code><a href="../../reference/dynwrap/adapt_trajectory/label_milestones">is_wrapper_with_milestone_labelling</a></code> <code><a href="../../reference/dynwrap/adapt_trajectory/label_milestones">get_milestone_labelling</a></code> </p>
+      </td>
+      <td><p>Label milestones either manually (<code>label_milestones</code>) or using marker genes (<code>label_milestones_markers</code>)</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/adapt_trajectory/simplify_trajectory">simplify_trajectory</a></code> </p>
+      </td>
+      <td><p>Simplify a trajectory by removing transient milestones</p></td>
+    </tr>
+  </tbody><tbody>
+    <tr>
+      <th colspan="2">
+        <h2 id="derive_trajectory" class="hasAnchor"><a href="#derive_trajectory" class="anchor"></a>Calculations from a trajectory</h2>
+        <p class="section-desc">Deriving features from a trajectory model</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/derive_trajectory/calculate_pseudotime">calculate_pseudotime</a></code> <code><a href="../../reference/dynwrap/derive_trajectory/calculate_pseudotime">add_pseudotime</a></code> </p>
+      </td>
+      <td><p>Add or calculate pseudotime as distance from the root</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/derive_trajectory/calculate_average_by_group">calculate_average_by_group</a></code> </p>
+      </td>
+      <td><p>Calculate mean values per cell group</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/derive_trajectory/calculate_average_by_milestone_percentages">calculate_average_by_milestone_percentages</a></code> </p>
+      </td>
+      <td><p>Calculate mean values by milestone percentages</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/derive_trajectory/calculate_geodesic_distances">calculate_geodesic_distances</a></code> <code><a href="../../reference/dynwrap/derive_trajectory/calculate_geodesic_distances">compute_tented_geodesic_distances</a></code> </p>
+      </td>
+      <td><p>Calculate geodesic distances between cells in a trajectory</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/derive_trajectory/calculate_trajectory_dimred">calculate_trajectory_dimred</a></code> </p>
+      </td>
+      <td><p>Layout the trajectory and its cells in 2 dimensions</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/derive_trajectory/group_from_trajectory">group_from_trajectory</a></code> <code><a href="../../reference/dynwrap/derive_trajectory/group_from_trajectory">group_onto_trajectory_edges</a></code> <code><a href="../../reference/dynwrap/derive_trajectory/group_from_trajectory">group_onto_nearest_milestones</a></code> </p>
+      </td>
+      <td><p>Create a grouping from a trajectory</p></td>
+    </tr>
+  </tbody><tbody>
+    <tr>
+      <th colspan="2">
+        <h2 id="create_ti_method" class="hasAnchor"><a href="#create_ti_method" class="anchor"></a>Creating a TI method</h2>
+        <p class="section-desc">Methods to create a TI method wrapper</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/allowed_inputs">allowed_inputs</a></code> </p>
+      </td>
+      <td><p>All allowed inputs</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/convert_definition">convert_definition</a></code> </p>
+      </td>
+      <td><p>Convert a definition loaded in from a yaml</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/create_ti_method_container">create_ti_method_container</a></code> </p>
+      </td>
+      <td><p>Create a TI method from a docker / singularity container</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/create_ti_method_definition">create_ti_method_definition</a></code> </p>
+      </td>
+      <td><p>Create a TI method from a local method definition file</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/create_ti_method_r">create_ti_method_r</a></code> </p>
+      </td>
+      <td><p>Create a TI method wrapper</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/def_author">def_author</a></code> </p>
+      </td>
+      <td><p>Meta information on an author</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/def_container">def_container</a></code> </p>
+      </td>
+      <td><p>Meta information on the container in which the wrapper resides</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/def_manuscript">def_manuscript</a></code> </p>
+      </td>
+      <td><p>Meta information on the manuscript</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/def_method">def_method</a></code> </p>
+      </td>
+      <td><p>Define meta information on the TI method.</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/def_parameters">def_parameters</a></code> </p>
+      </td>
+      <td><p>Meta information on the parameters of the TI method</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/def_wrapper">def_wrapper</a></code> </p>
+      </td>
+      <td><p>Meta information on the wrapper</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/definition">definition</a></code> <code><a href="../../reference/dynwrap/create_ti_method/definition">is_ti_method</a></code> </p>
+      </td>
+      <td><p>Create a definition</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/.method_process_definition">.method_process_definition</a></code> </p>
+      </td>
+      <td><p>Method process definition</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/get_default_parameters">get_default_parameters</a></code> </p>
+      </td>
+      <td><p>Get the default parameters of a method</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/prior_usages">prior_usages</a></code> </p>
+      </td>
+      <td><p>Metadata on prior usages</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/priors">priors</a></code> </p>
+      </td>
+      <td><p>Metadata on priors</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/trajectory_type_dag">trajectory_type_dag</a></code> </p>
+      </td>
+      <td><p>A DAG of trajectory types</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/trajectory_types">trajectory_types</a></code> </p>
+      </td>
+      <td><p>Metadata on the trajectory types</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/create_ti_method/wrapper_types">wrapper_types</a></code> </p>
+      </td>
+      <td><p>Metadata on wrapper types</p></td>
+    </tr>
+  </tbody><tbody>
+    <tr>
+      <th colspan="2">
+        <h2 id="infer_trajectory" class="hasAnchor"><a href="#infer_trajectory" class="anchor"></a>Running a TI method</h2>
+        <p class="section-desc">Methods to run one or more TI methods</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/infer_trajectory/add_prior_information">add_prior_information</a></code> <code><a href="../../reference/dynwrap/infer_trajectory/add_prior_information">is_wrapper_with_prior_information</a></code> <code><a href="../../reference/dynwrap/infer_trajectory/add_prior_information">generate_prior_information</a></code> </p>
+      </td>
+      <td><p>Add prior information to a data wrapper</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/infer_trajectory/get_ti_methods">get_ti_methods</a></code> </p>
+      </td>
+      <td><p>Return all TI ti_methods</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/infer_trajectory/infer_trajectories">infer_trajectories</a></code> <code><a href="../../reference/dynwrap/infer_trajectory/infer_trajectories">infer_trajectory</a></code> </p>
+      </td>
+      <td><p>Infer trajectories</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/infer_trajectory/wrap_expression">wrap_expression</a></code> </p>
+      </td>
+      <td><p>Create a wrapper object with expression and counts</p></td>
+    </tr>
+  </tbody><tbody>
+    <tr>
+      <th colspan="2">
+        <h2 id="other" class="hasAnchor"><a href="#other" class="anchor"></a>Other</h2>
+        <p class="section-desc"></p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/other/allowed_outputs">allowed_outputs</a></code> </p>
+      </td>
+      <td><p>All allowed outputs</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/other/classify_milestone_network">classify_milestone_network</a></code> </p>
+      </td>
+      <td><p>Classify a milestone network</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/other/convert_milestone_percentages_to_progressions">convert_milestone_percentages_to_progressions</a></code> </p>
+      </td>
+      <td><p>Convert milestone percentages to progressions</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/other/convert_progressions_to_milestone_percentages">convert_progressions_to_milestone_percentages</a></code> </p>
+      </td>
+      <td><p>Convert progressions to milestone percentages</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/other/determine_cell_trajectory_positions">determine_cell_trajectory_positions</a></code> </p>
+      </td>
+      <td><p>Determine the positions of all cells in the trajectory</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/other/dynwrap">dynwrap</a></code> <code><a href="../../reference/dynwrap/other/dynwrap">dynwrap-package</a></code> </p>
+      </td>
+      <td><p>This R package contains the code for a common model of single-cell trajectories.</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/other/example_dataset">example_dataset</a></code> </p>
+      </td>
+      <td><p>Example dataset</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/other/generate_parameter_documentation">generate_parameter_documentation</a></code> </p>
+      </td>
+      <td><p>Generate the parameter documentation of a method, use with <code>@eval</code></p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/other/get_divergence_triangles">get_divergence_triangles</a></code> </p>
+      </td>
+      <td><p>Helper function for processing divergence regions</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/other/random_seed">random_seed</a></code> </p>
+      </td>
+      <td><p>Generate a random seed</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/other/select_waypoint_cells">select_waypoint_cells</a></code> </p>
+      </td>
+      <td><p>Select the waypoint cells</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/other/simplify_igraph_network">simplify_igraph_network</a></code> </p>
+      </td>
+      <td><p>Simplify an igraph network such that consecutive linear edges are removed</p></td>
+    </tr><tr>
+      <td>
+        <p><code><a href="../../reference/dynwrap/other/wrap_output_list">wrap_output_list</a></code> </p>
+      </td>
+      <td><p>Transform a list of data objects to a dynwrap trajectory</p></td>
+    </tr>
+  </tbody>
+  </table>
+
+<!--  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#">Creating a trajectory</a></li>
+      <li><a href="#">Adapting a trajectory model</a></li>
+      <li><a href="#">Calculations from a trajectory</a></li>
+      <li><a href="#">Creating a TI method</a></li>
+      <li><a href="#">Running a TI method</a></li>
+      <li><a href="#">Other</a></li>
+    </ul>
+  </div>-->
+</div>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../reference/" title="Reference"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../reference/dynwrap/create_trajectory/" title="dynwrap :: Creating a trajectory" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../js/clipboard.min.js?1553574834"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1553574834"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1553574834"></script>
+    <script src="../../js/jquery.sticky.js?1553574834"></script>
+    <script src="../../js/featherlight.min.js?1553574834"></script>
+    <script src="../../js/html5shiv-printshiv.min.js?1553574834"></script>
+    <script src="../../js/highlight.pack.js?1553574834"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../js/modernizr.custom.71422.js?1553574834"></script>
+    <script src="../../js/learn.js?1553574834"></script>
+    <script src="../../js/hugo-learn.js?1553574834"></script>
+
+    <link href="../../mermaid/mermaid.css?1553574834" type="text/css" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1553574834"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>

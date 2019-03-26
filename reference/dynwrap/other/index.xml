@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dynwrap :: Other on dynverse</title>
+    <link>/reference/dynwrap/other/</link>
+    <description>Recent content in dynwrap :: Other on dynverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/reference/dynwrap/other/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>All allowed outputs</title>
+      <link>/reference/dynwrap/other/allowed_outputs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/allowed_outputs/</guid>
+      <description> Source: R/data.R allowed_outputs.Rd  All allowed outputs
+ allowed_outputs Format An object of class tbl_df (inherits from tbl, data.frame) with 14 rows and 5 columns.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>Classify a milestone network</title>
+      <link>/reference/dynwrap/other/classify_milestone_network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/classify_milestone_network/</guid>
+      <description> Source: R/classify_milestone_network.R classify_milestone_network.Rd  Classify a milestone network
+ classify_milestone_network(milestone_network) Arguments   milestone_network A milestone network
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Convert milestone percentages to progressions</title>
+      <link>/reference/dynwrap/other/convert_milestone_percentages_to_progressions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/convert_milestone_percentages_to_progressions/</guid>
+      <description> Source: R/convert_milestone_percentages_to_progressions.R convert_milestone_percentages_to_progressions.Rd  Convert milestone percentages to progressions
+ convert_milestone_percentages_to_progressions(cell_ids, milestone_ids, milestone_network, milestone_percentages) Arguments   cell_ids Vector of all cell ids
+   milestone_ids Vector of milestone ids
+   milestone_network Milestone network
+   milestone_percentages Milestone percentages
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Convert progressions to milestone percentages</title>
+      <link>/reference/dynwrap/other/convert_progressions_to_milestone_percentages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/convert_progressions_to_milestone_percentages/</guid>
+      <description> Source: R/convert_progressions_to_milestone_percentages.R convert_progressions_to_milestone_percentages.Rd  Convert progressions to milestone percentages
+ convert_progressions_to_milestone_percentages(cell_ids, milestone_ids, milestone_network, progressions) Arguments   cell_ids Vector of all cell ids
+   milestone_ids Vector of milestone ids
+   milestone_network Milestone network
+   progressions Progressions dataframe
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Determine the positions of all cells in the trajectory</title>
+      <link>/reference/dynwrap/other/determine_cell_trajectory_positions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/determine_cell_trajectory_positions/</guid>
+      <description>Source: R/wrap_add_cell_waypoints.R determine_cell_trajectory_positions.Rd  Determine the positions of all cells in the trajectory
+ determine_cell_trajectory_positions(milestone_ids, milestone_network, milestone_percentages, progressions, divergence_regions) Arguments   milestone_ids The ids of the milestones in the trajectory. Type: Character vector.
+   milestone_network The network of the milestones. Type: Data frame(from = character, to = character, length = numeric, directed = logical).
+   milestone_percentages A data frame specifying what percentage milestone each cell consists of.</description>
+    </item>
+    
+    <item>
+      <title>Example dataset</title>
+      <link>/reference/dynwrap/other/example_dataset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/example_dataset/</guid>
+      <description> Source: R/data.R example_dataset.Rd  Example dataset
+ example_dataset Format An object of class dynwrap::with_cell_waypoints (inherits from dynwrap::with_prior, dynwrap::with_dimred, dynwrap::with_trajectory, dynwrap::with_expression, dynwrap::data_wrapper, list) of length 20.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>Generate a random seed</title>
+      <link>/reference/dynwrap/other/random_seed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/random_seed/</guid>
+      <description> Source: R/method_infer_trajectory.R random_seed.Rd  ... From the current seed.
+ random_seed()  Contents  -- </description>
+    </item>
+    
+    <item>
+      <title>Generate the parameter documentation of a method, use with &lt;code&gt;@eval&lt;/code&gt;</title>
+      <link>/reference/dynwrap/other/generate_parameter_documentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/generate_parameter_documentation/</guid>
+      <description> Source: R/method_create_ti_method_r.R generate_parameter_documentation.Rd  Generate the parameter documentation of a method, use with @eval
+ generate_parameter_documentation(definition) Arguments   definition The definition which contain the parameters
+   Value A character vector containing the roxygen tags
+ Contents Arguments Value  -- </description>
+    </item>
+    
+    <item>
+      <title>Helper function for processing divergence regions</title>
+      <link>/reference/dynwrap/other/get_divergence_triangles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/get_divergence_triangles/</guid>
+      <description> Source: R/get_divergence_triangles.R get_divergence_triangles.Rd  This function returns the combinations between the start of each divergence region and pairwise combinations of the end milestones.
+ get_divergence_triangles(divergence_regions) Arguments   divergence_regions A divergence regions data frame as produced by add_trajectory.
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Select the waypoint cells</title>
+      <link>/reference/dynwrap/other/select_waypoint_cells/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/select_waypoint_cells/</guid>
+      <description>Source: R/wrap_add_cell_waypoints.R select_waypoint_cells.Rd  Waypoint cells are cells spread across all of the trajectory such that there is no other cell that has a large geodesic distance to any of the waypoint cells.
+ select_waypoint_cells(milestone_ids, milestone_network, milestone_percentages, progressions, divergence_regions, num_cells_selected = 100) Arguments   milestone_ids The ids of the milestones in the trajectory. Type: Character vector.
+   milestone_network The network of the milestones. Type: Data frame(from = character, to = character, length = numeric, directed = logical).</description>
+    </item>
+    
+    <item>
+      <title>Simplify an igraph network such that consecutive linear edges are removed</title>
+      <link>/reference/dynwrap/other/simplify_igraph_network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/simplify_igraph_network/</guid>
+      <description>Source: R/simplify_igraph_network.R simplify_igraph_network.Rd  Simplify an igraph network such that consecutive linear edges are removed
+ simplify_igraph_network(gr, allow_duplicated_edges = TRUE, allow_self_loops = TRUE, force_keep = NULL, edge_points = NULL) Arguments   gr an igraph object
+   allow_duplicated_edges Whether or not to allow duplicated edges between nodes.
+   allow_self_loops Whether or not to allow self loops.
+   force_keep Nodes that will not be removed under any condition</description>
+    </item>
+    
+    <item>
+      <title>This R package contains the code for a common model of single-cell trajectories.</title>
+      <link>/reference/dynwrap/other/dynwrap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/dynwrap/</guid>
+      <description> Source: R/package.R dynwrap.Rd  This R package contains the code for a common model of single-cell trajectories.
+  Contents  -- </description>
+    </item>
+    
+    <item>
+      <title>Transform a list of data objects to a dynwrap trajectory</title>
+      <link>/reference/dynwrap/other/wrap_output_list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/wrap_output_list/</guid>
+      <description> Source: R/wrap_output_list.R wrap_output_list.Rd  Transform a list of data objects to a dynwrap trajectory
+ wrap_output_list(output, output_ids) Arguments   output A list containing dynwrap data
+   output_ids The names of the promised dynwrap objects
+    Contents Arguments  -- </description>
+    </item>
+    
+  </channel>
+</rss>

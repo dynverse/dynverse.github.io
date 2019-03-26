@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dyneval :: Other on dynverse</title>
+    <link>/reference/dyneval/other/</link>
+    <description>Recent content in dyneval :: Other on dynverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/reference/dyneval/other/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Evaluating trajectory inference methods</title>
+      <link>/reference/dyneval/other/dyneval/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/other/dyneval/</guid>
+      <description> dyneval.Rd  Evaluating trajectory inference methods
+  Contents  -- </description>
+    </item>
+    
+  </channel>
+</rss>

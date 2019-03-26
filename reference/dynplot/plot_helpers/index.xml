@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dynplot :: Plotting helper functions on dynverse</title>
+    <link>/reference/dynplot/plot_helpers/</link>
+    <description>Recent content in dynplot :: Plotting helper functions on dynverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/reference/dynplot/plot_helpers/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create an empty plot for spacing</title>
+      <link>/reference/dynplot/plot_helpers/empty_plot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_helpers/empty_plot/</guid>
+      <description> empty_plot.Rd  Create an empty plot for spacing
+ empty_plot()  Contents  -- </description>
+    </item>
+    
+    <item>
+      <title>Default theme for TI plots</title>
+      <link>/reference/dynplot/plot_helpers/process_dynplot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_helpers/process_dynplot/</guid>
+      <description> process_dynplot.Rd  Default theme for TI plots
+ process_dynplot(g, id = NULL, expand = TRUE) Arguments   g A ggplot to modify
+   id The title
+   expand Whether or not to leave space at the borders
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Get the names of valid color palettes</title>
+      <link>/reference/dynplot/plot_helpers/milestone_palette/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_helpers/milestone_palette/</guid>
+      <description> get_milestone_palette_names.Rd  Get the names of valid color palettes
+ milestone_palette(name, n) get_milestone_palette_names() Arguments   name The name of the palette. Must be one of &#34;cubeHelix&#34;, &#34;Set3&#34;, or &#34;rainbow&#34;.
+   n The number of colours to be in the palette.
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>We like our plots clean</title>
+      <link>/reference/dynplot/plot_helpers/theme_clean/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_helpers/theme_clean/</guid>
+      <description> theme_clean.Rd  We like our plots clean
+ theme_clean()  Contents  -- </description>
+    </item>
+    
+    <item>
+      <title>We like our plots clean</title>
+      <link>/reference/dynplot/plot_helpers/theme_graph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_helpers/theme_graph/</guid>
+      <description> theme_graph.Rd  We like our plots clean
+ theme_graph()  Contents  -- </description>
+    </item>
+    
+  </channel>
+</rss>

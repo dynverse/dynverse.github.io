@@ -1,0 +1,1964 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dynverse</title>
+    <link>/</link>
+    <description>Recent content on dynverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bare-bones</title>
+      <link>/developers/creating-ti-method/create_ti_method_barebones/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/developers/creating-ti-method/create_ti_method_barebones/</guid>
+      <description>library(dynwrap) This vignette describes how to include your own method into the dynverse workflow. We’ll illustrate this with a very basic method: using one of the components of a PCA as the pseudotime.
+A method defined in R has two parts: a definition and a function.
+Definition The definition contains information on the method, its parameters and its required or optional inputs. The possibilities are quite extensive (see dynwrap::definition()), but essentials are:</description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>/users/1-installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/users/1-installation/</guid>
+      <description>Dyno Docker Singularity Frequent installation problems API rate limit exceeded I’m not allowed to install docker on my shared cluster    Dyno dyno contains and loads several of the dynverse R packages (dynwrap, dynplot, dynmethods, …). To install (and update) them all:
+# install.packages(&amp;quot;devtools&amp;quot;) devtools::install_github(&amp;quot;dynverse/dyno&amp;quot;) On Linux, you will need to install udunits and ImageMagick:
+ Debian / Ubuntu / Linux Mint: sudo apt-get install libudunits2-dev imagemagick Fedora / CentOS / RHEL: sudo dnf install udunits2-devel ImageMagick-c++-devel  Docker or Singularity (version ≥ 3.</description>
+    </item>
+    
+    <item>
+      <title>Preparing the data</title>
+      <link>/users/3-user-guide/1-preparing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/users/3-user-guide/1-preparing/</guid>
+      <description>Gene expression data Prior information Optional information Grouping / clustering Dimensionality reduction  Current limitations   library(dyno) library(tidyverse) The main functions to wrap a dataset are included within the dynwrap package.
+Gene expression data As input, dynwrap requires raw counts and normalised (log2) expression data. Cells with low expression, doublets and other “bad” cells should already be filtered from this matrix. Features (i.e. genes) may already be filtered, but this is not required.</description>
+    </item>
+    
+    <item>
+      <title>Wrapper script</title>
+      <link>/developers/creating-ti-method/create_ti_method_script/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/developers/creating-ti-method/create_ti_method_script/</guid>
+      <description>library(dynwrap) Still to be written</description>
+    </item>
+    
+    <item>
+      <title>Quick start</title>
+      <link>/users/2-quick_start/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/users/2-quick_start/</guid>
+      <description>Preparing the data Selecting the best methods for a dataset Running the methods Plotting the trajectory Interpreting the trajectory biologically Rooting Milestone labelling  Predicting and visualising genes of interest A global overview of the most predictive genes Lineage/branch markers Genes important at bifurcation points    library(dyno) library(tidyverse) This tutorial quickly guides you through the main steps in the dyno workflow. For each step, we also provide a more in-depth tutorial in the user guide section.</description>
+    </item>
+    
+    <item>
+      <title>Selecting the best methods for a dataset</title>
+      <link>/users/3-user-guide/2-guidelines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/users/3-user-guide/2-guidelines/</guid>
+      <description>library(dyno) library(tidyverse)  Within our evaluation study, we compared 45 methods on four aspects:
+ Accuracy: How similar is the inferred trajectory to the “true” (or “expected”) trajectory in the data. We used several metrics for this, comparing the cellular ordering and topology, and compared against both real datasets, for which a gold standard is not always so well defined, and synthetic data, which are not necessarily as biologically relevant as real data.</description>
+    </item>
+    
+    <item>
+      <title>Inferring trajectories</title>
+      <link>/users/3-user-guide/3-running/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/users/3-user-guide/3-running/</guid>
+      <description>Parameters Priors Reproducibility Running multiple methods or datasets Errors Running from the command line   library(dyno) library(tidyverse) dynwrap::infer_trajectory is the main function to infer a trajectory. It requires two things:
+ A dataset, wrapped using dynwrap::wrap_expression A TI method. This can be one of the 59 TI method from dynmethods, or a name of a method in which case it will retrieve the relevant method from dynmethods.  dataset &amp;lt;- wrap_expression( counts = example_dataset$counts, expression = example_dataset$expression ) model &amp;lt;- infer_trajectory(dataset, ti_comp1()) ## Loading required namespace: hdf5r This model now contains the main information on the trajectory, i.</description>
+    </item>
+    
+    <item>
+      <title>Container</title>
+      <link>/developers/creating-ti-method/create_ti_method_container/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/developers/creating-ti-method/create_ti_method_container/</guid>
+      <description>library(dynwrap) Still to be written</description>
+    </item>
+    
+    <item>
+      <title>Visualising the trajectory</title>
+      <link>/users/3-user-guide/4-visualisation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/users/3-user-guide/4-visualisation/</guid>
+      <description>Visualising the trajectory on a dimensionality reduction Plotting the trajectory itself Plotting in a dendrogram Plotting as a graph Plotting in one dimension  Visualising many genes along a trajectory Current limitations   library(dyno) library(tidyverse) The main functions for plotting a trajectory are included in the dynplot package.
+We’ll use an example toy dataset
+set.seed(1) dataset &amp;lt;- dyntoy::generate_dataset(model = &amp;quot;bifurcating&amp;quot;, num_cells = 200) To visualise a trajectory, you have to take into acount two things:</description>
+    </item>
+    
+    <item>
+      <title>Adapting the trajectory</title>
+      <link>/users/3-user-guide/5-adapting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/users/3-user-guide/5-adapting/</guid>
+      <description>Simplifying Rooting Manually Using marker genes  Annotating Manually Using marker genes  Limitations   library(dyno) library(tidyverse) Simplifying Intermediate milestones can be removed by simplyfing the trajectory:
+model &amp;lt;- dyntoy::generate_dataset(model = dyntoy::model_linear(num_milestones = 10)) simplified &amp;lt;- simplify_trajectory(model)  Rooting TI methods often do not have an idea where the root of a trajectory is. We provide two ways of rooting a trajectory. After rooting, all other edges will point away from the root.</description>
+    </item>
+    
+    <item>
+      <title>Trajectory differentially expression</title>
+      <link>/users/3-user-guide/6-tde/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/users/3-user-guide/6-tde/</guid>
+      <description>A global overview of the most predictive genes Lineage/branch markers Genes important at bifurcation points Current limitations   library(dyno) library(tidyverse) Compared to differential expression between clusters of cells, defining differential expression on trajectories is not so straightforward. What constitutes a trajectory differentially expressed gene?
+ A gene that is uniquely expressed in a particular branch? A gene that changes at a branching point? A gene that changes along pseudotime?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/logo-accordion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/logo-accordion/</guid>
+      <description>dynbenchmark Benchmarking   dyneval Comparing   dynplot Visualising   &amp;nbsp; &amp;nbsp;   dynwrap Wrapping   dynguidelines Guidelines   dynmethods Inferring       .row.logos { margin-top:-25px; } @media only all and (max-width: 47.938em) { .row.logos { margin-top:0px; } } .outer-div { position: relative; float: right; right: 50%; } .inner-div { position: relative; float: right; right: -50%; white-space: nowrap } .hex { display:inline-block; margin: 0px 10px 0px 10px; text-align: center; } .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/page-top/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/page-top/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>&#34;Gather&#34; cells to their closest milestones</title>
+      <link>/reference/dynwrap/adapt_trajectory/gather_cells_at_milestones/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/gather_cells_at_milestones/</guid>
+      <description> Source: R/wrap_gather_cells_at_milestones.R gather_cells_at_milestones.Rd  &#34;Gather&#34; cells to their closest milestones
+ gather_cells_at_milestones(trajectory) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>A DAG of trajectory types</title>
+      <link>/reference/dynwrap/create_ti_method/trajectory_type_dag/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/trajectory_type_dag/</guid>
+      <description> Source: R/data.R trajectory_type_dag.Rd  A DAG of trajectory types
+ trajectory_type_dag Format An object of class tbl_graph (inherits from igraph) of length 10.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>A data wrapper for datasets and trajectories</title>
+      <link>/reference/dynwrap/create_trajectory/wrap_data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/wrap_data/</guid>
+      <description>Source: R/wrap_data.R wrap_data.Rd  A data wrapper for datasets and trajectories
+ wrap_data(id = NULL, cell_ids, cell_info = NULL, ...) is_data_wrapper(dataset) Arguments   id A unique identifier for the data. If NULL, a random string will be generated.
+   cell_ids The ids of the cells.
+   cell_info Optional meta-information pertaining the cells.
+   ... Extra information to be stored in the wrapper.</description>
+    </item>
+    
+    <item>
+      <title>Add a cell grouping to a dataset</title>
+      <link>/reference/dynwrap/adapt_trajectory/add_grouping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/add_grouping/</guid>
+      <description>Source: R/wrap_add_grouping.R add_grouping.Rd  Add a cell grouping to a dataset
+ add_grouping(dataset, grouping, group_ids = NULL, ...) is_wrapper_with_grouping(dataset) get_grouping(dataset, grouping = NULL) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   grouping A grouping of the cells, can be a named vector or a dataframe with group_id (character) and cell_id (character)
+   group_ids All group_ids, optional
+   ... Extra information to be stored in the dataset</description>
+    </item>
+    
+    <item>
+      <title>Add cell waypoints to a wrapped trajectory</title>
+      <link>/reference/dynwrap/adapt_trajectory/add_cell_waypoints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/add_cell_waypoints/</guid>
+      <description> Source: R/wrap_add_cell_waypoints.R add_cell_waypoints.Rd  Add cell waypoints to a wrapped trajectory
+ add_cell_waypoints(trajectory, num_cells_selected = 100) is_wrapper_with_waypoint_cells(trajectory) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   num_cells_selected About the number of cells selected as waypoints
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Add coloring</title>
+      <link>/reference/dynplot/other/add_cell_coloring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/other/add_cell_coloring/</guid>
+      <description>add_cell_coloring.Rd  Add coloring
+ add_cell_coloring(cell_positions, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), traj, grouping = NULL, groups = NULL, feature_oi = NULL, expression_source = &#34;expression&#34;, pseudotime = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL) Arguments   cell_positions The positions of the cells
+   color_cells How to color the cells
+   traj The trajectory
+   grouping The grouping of the cells</description>
+    </item>
+    
+    <item>
+      <title>Add count and normalised expression values to a dataset</title>
+      <link>/reference/dynwrap/adapt_trajectory/add_expression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/add_expression/</guid>
+      <description>Source: R/wrap_add_expression.R add_expression.Rd  Add count and normalised expression values to a dataset
+ add_expression(dataset, counts, expression, feature_info = NULL, ...) is_wrapper_with_expression(dataset) get_expression(dataset, expression_source = &#34;expression&#34;) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   counts The counts with genes in columns and cells in rows
+   expression The normalised expression values with genes in columns and cells in rows
+   feature_info Optional meta-information of the features, a data.</description>
+    </item>
+    
+    <item>
+      <title>Add information on overall differentially expressed features</title>
+      <link>/reference/dynwrap/adapt_trajectory/add_tde_overall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/add_tde_overall/</guid>
+      <description> Source: R/wrap_add_tde_overall.R add_tde_overall.Rd  Add information on overall differentially expressed features
+ add_tde_overall(trajectory, tde_overall) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   tde_overall A tibble containing a feature_id (character) and differentially_expressed (logical). Can also contain other columns, such as the p-value, q-value, log fold-change, etc
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Add milestone coloring</title>
+      <link>/reference/dynplot/other/add_milestone_coloring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/other/add_milestone_coloring/</guid>
+      <description> add_milestone_coloring.Rd  Add milestone coloring
+ add_milestone_coloring(milestones = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;)) Arguments   milestones Tibble containing the `milestone_id` and a `color` for each milestone
+   color_milestones How to color the cells
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Add or calculate pseudotime as distance from the root</title>
+      <link>/reference/dynwrap/derive_trajectory/calculate_pseudotime/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/derive_trajectory/calculate_pseudotime/</guid>
+      <description> Source: R/wrap_add_pseudotime.R add_pseudotime.Rd  Add or calculate pseudotime as distance from the root
+ calculate_pseudotime(trajectory) add_pseudotime(trajectory, pseudotime = NULL) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   pseudotime Named vector containing the pseudotime for every cell
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Add or create a dimensionality reduction</title>
+      <link>/reference/dynwrap/adapt_trajectory/add_dimred/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/add_dimred/</guid>
+      <description>Source: R/wrap_add_dimred.R add_dimred.Rd  Add or create a dimensionality reduction
+ add_dimred(dataset, dimred, dimred_milestones = NULL, dimred_segment_progressions = NULL, dimred_segment_points = NULL, connect_segments = FALSE, expression_source = &#34;expression&#34;, ...) is_wrapper_with_dimred(dataset) get_dimred(dataset, dimred = NULL, expression_source = &#34;expression&#34;) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   dimred The dimensionality reduction matrix (with cell_ids as rownames) or function which will run the dimensionality reduction
+   dimred_milestones An optional dimensionality reduction of the milestones.</description>
+    </item>
+    
+    <item>
+      <title>Add or create waypoints to a trajectory</title>
+      <link>/reference/dynwrap/adapt_trajectory/add_waypoints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/add_waypoints/</guid>
+      <description>Source: R/wrap_add_waypoints.R add_waypoints.Rd  Add or create waypoints to a trajectory
+Waypoints are spread equally over the whole trajectory
+ add_waypoints(trajectory, n_waypoints = 100, resolution = sum(trajectory$milestone_network$length)/n_waypoints) is_wrapper_with_waypoints(trajectory) select_waypoints(trajectory, n_waypoints = 100, resolution = sum(trajectory$milestone_network$length)/n_waypoints) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   n_waypoints The number of waypoints
+   resolution The resolution of the waypoints, measured in the same units as the lengths of the milestone network edges, will be automatically computed using n_waypoints</description>
+    </item>
+    
+    <item>
+      <title>Add prior information to a data wrapper</title>
+      <link>/reference/dynwrap/infer_trajectory/add_prior_information/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/infer_trajectory/add_prior_information/</guid>
+      <description>Source: R/wrap_add_prior_information.R add_prior_information.Rd  Note that the given data wrapper requires a trajectory and expression values to have been added already.
+For example, what are the start cells, the end cells, to which milestone does each cell belong to, ...
+ add_prior_information(dataset, start_id = NULL, end_id = NULL, groups_id = NULL, groups_network = NULL, features_id = NULL, groups_n = NULL, start_n = NULL, end_n = NULL, timecourse_continuous = NULL, timecourse_discrete = NULL, verbose = TRUE) is_wrapper_with_prior_information(dataset) generate_prior_information(cell_ids, milestone_ids, milestone_network, milestone_percentages, progressions, divergence_regions, expression, feature_info = NULL, cell_info = NULL, marker_fdr = 0.</description>
+    </item>
+    
+    <item>
+      <title>Add timings checkpoints</title>
+      <link>/reference/dynwrap/adapt_trajectory/add_timings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/add_timings/</guid>
+      <description> Source: R/wrap_add_timings.R add_timings.Rd  Add timings checkpoints
+Helper function for storing timings information.
+ add_timings(trajectory, timings) is_wrapper_with_timings(trajectory) add_timing_checkpoint(timings, name) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   timings A list of timings.
+   name The name of the timings checkpoint.
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>All allowed inputs</title>
+      <link>/reference/dynwrap/create_ti_method/allowed_inputs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/allowed_inputs/</guid>
+      <description> Source: R/data.R allowed_inputs.Rd  All allowed inputs
+ allowed_inputs Format An object of class tbl_df (inherits from tbl, data.frame) with 13 rows and 2 columns.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>All allowed outputs</title>
+      <link>/reference/dynwrap/other/allowed_outputs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/allowed_outputs/</guid>
+      <description> Source: R/data.R allowed_outputs.Rd  All allowed outputs
+ allowed_outputs Format An object of class tbl_df (inherits from tbl, data.frame) with 14 rows and 5 columns.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>Angle</title>
+      <link>/reference/dynmethods/other/ti_angle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_angle/</guid>
+      <description> ti_angle.Rd  Will generate a trajectory using Angle.
+This method was wrapped inside a container.
+ ti_angle(dimred = &#34;pca&#34;) Arguments   dimred Which dimensionality reduction method to use. Domain: pca, mds, tsne, ica, lle, landmark_mds, mds_sammon, mds_isomds, mds_smacof, umap, dm_diffusionMap, dm_destiny. Default: pca. Format: character.
+   Value A TI method wrapper to be used together with infer_trajectory
+ Contents Arguments Value  -- </description>
+    </item>
+    
+    <item>
+      <title>CALISTA</title>
+      <link>/reference/dynmethods/other/ti_calista/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_calista/</guid>
+      <description>ti_calista.Rd  Will generate a trajectory using CALISTA.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_calista(runs = 50L, max_iter = 100L) Arguments   runs Number of independent runs of greedy algorithm. Domain: U(20, 100). Default: 50. Format: integer.
+   max_iter Number of iterations in greedy algorithm. Domain: U(20, 400). Default: 100. Format: integer.
+   Value A TI method wrapper to be used together with infer_trajectory</description>
+    </item>
+    
+    <item>
+      <title>Calculate geodesic distances between cells in a trajectory</title>
+      <link>/reference/dynwrap/derive_trajectory/calculate_geodesic_distances/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/derive_trajectory/calculate_geodesic_distances/</guid>
+      <description>Source: R/calculate_geodesic_distances.R calculate_geodesic_distances.Rd  Will calculate geodesic distances between cells within a trajectory. To speed things up, only the distances with a set of waypoint cells are calculated.
+ calculate_geodesic_distances(trajectory, waypoint_cells = NULL, waypoint_milestone_percentages = NULL) compute_tented_geodesic_distances(trajectory, waypoint_cells = NULL, waypoint_milestone_percentages = NULL) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   waypoint_cells A vector of waypoint cells. Only the geodesic distances between waypoint cells and all other cells will be calculated.</description>
+    </item>
+    
+    <item>
+      <title>Calculate mean values by milestone percentages</title>
+      <link>/reference/dynwrap/derive_trajectory/calculate_average_by_milestone_percentages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/derive_trajectory/calculate_average_by_milestone_percentages/</guid>
+      <description>Source: R/calculate_average.R calculate_average_by_milestone_percentages.Rd  Calculate mean values by milestone percentages
+ calculate_average_by_milestone_percentages(x, milestone_percentages) Arguments   x A matrix. One row for every cell; one column for every feature. The rows must be named.
+   milestone_percentages A data frame of milestone percentages. Format: data_frame(cell_id = character(), milestone_id = character(), percentage = numeric()).
+   Examples data(example_dataset) calculate_average_by_milestone_percentages( x = example_dataset$expression, milestone_percentages = example_dataset$milestone_percentages )#&amp;gt; 2 x 3 Matrix of class &#34;</description>
+    </item>
+    
+    <item>
+      <title>Calculate mean values per cell group</title>
+      <link>/reference/dynwrap/derive_trajectory/calculate_average_by_group/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/derive_trajectory/calculate_average_by_group/</guid>
+      <description>Source: R/calculate_average.R calculate_average_by_group.Rd  Calculate mean values per cell group
+ calculate_average_by_group(x, cell_grouping) Arguments   x A matrix. One row for every cell; one column for every feature. The rows must be named.
+   cell_grouping A data frame denoting the grouping of the cells. Format: data_frame(cell_id = character(), group_id = character()).
+   Examples data(example_dataset) calculate_average_by_group( x = example_dataset$expression, cell_grouping = example_dataset$prior_information$groups_id )#&amp;gt; 2 x 3 Matrix of class &#34;</description>
+    </item>
+    
+    <item>
+      <title>Calculate the similarity between two trajectory models.</title>
+      <link>/reference/dyneval/metric/calculate_metrics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/metric/calculate_metrics/</guid>
+      <description>calculate_metrics.Rd  One use case for these metrics is to calculate the accuracy of a certain prediction compared to a reference trajectory. However, these metrics can also be used for other purposes, such as clustering of trajectories.
+ calculate_metrics(dataset, model, metrics = dyneval::metrics$metric_id, expression_source = dataset$expression) Arguments   dataset The first trajectory, in most cases a gold standard trajectory
+   model The second trajectory, in most cases a predicted trajectory</description>
+    </item>
+    
+    <item>
+      <title>CellRouter</title>
+      <link>/reference/dynmethods/other/ti_cellrouter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_cellrouter/</guid>
+      <description>ti_cellrouter.Rd  Will generate a trajectory using CellRouter.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_cellrouter(ndim_pca = 20L, ndim_tsne = 11L, max_iter = 1000L, cluster_method = &#34;graph.clustering&#34;, k_clustering = 20L, ndim_pca_clustering = 20L, k_knn = 10L, ndim_pca_knn = 20L, sim_type = &#34;jaccard&#34;, distance_method_paths = &#34;graph&#34;, ranks = &#34;rank&#34;, num_cells = 3L, neighs = 3L, perplexity = 30L) Arguments   ndim_pca Number of principal components to compute.</description>
+    </item>
+    
+    <item>
+      <title>CellTrails</title>
+      <link>/reference/dynmethods/other/ti_celltrails/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_celltrails/</guid>
+      <description>ti_celltrails.Rd  Will generate a trajectory using CellTrails.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_celltrails(filter_features = FALSE, threshold_dl = 2L, threshold_cov = 0.05, threshold_ff = 1.7, min_expr = 0L, frac = 100L, min_size = 0.01, min_feat = 5L, max_pval = 1e-04, min_fc = 2L, l = 10L) Arguments   filter_features Whether to include celltrails feature filtering. Default: FALSE.</description>
+    </item>
+    
+    <item>
+      <title>Classify a milestone network</title>
+      <link>/reference/dynwrap/other/classify_milestone_network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/classify_milestone_network/</guid>
+      <description> Source: R/classify_milestone_network.R classify_milestone_network.Rd  Classify a milestone network
+ classify_milestone_network(milestone_network) Arguments   milestone_network A milestone network
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Color cells using a background density</title>
+      <link>/reference/dynplot/other/add_density_coloring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/other/add_density_coloring/</guid>
+      <description>add_density_coloring.Rd  Color cells using a background density
+ add_density_coloring(cell_positions, color_density = c(&#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;), traj, grouping = NULL, groups = NULL, feature_oi = NULL, expression_source = &#34;expression&#34;, padding = 0.1, nbins = 1000, bw = 0.2, density_cutoff = 0.3, density_cutoff_label = density_cutoff/10) Arguments   cell_positions The positions of the cells in 2D
+   color_density How to color density, can be &#34;none&#34;, &#34;grouping&#34;, or &#34;feature&#34;
+   traj The trajectory</description>
+    </item>
+    
+    <item>
+      <title>Compare enrichment in finding back the most important genes</title>
+      <link>/reference/dyneval/metric/calculate_featureimp_enrichment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/metric/calculate_featureimp_enrichment/</guid>
+      <description>calculate_featureimp_enrichment.Rd  Compare enrichment in finding back the most important genes
+ calculate_featureimp_enrichment(dataset, prediction, expression_source = dataset$expression, fi_method = dynfeature::fi_ranger_rf_lite()) Arguments   dataset A dataset
+   prediction A predicted trajectory
+   expression_source The expression data matrix, with features as columns.
+ If a matrix is provided, it is used as is.
+ If a character is provided, dataset[[expression_source]] should contain the matrix.
+ If a function is provided, that function will be called in order to obtain the expression (useful for lazy loading).</description>
+    </item>
+    
+    <item>
+      <title>Compare feature importances derived by both trajectories</title>
+      <link>/reference/dyneval/metric/calculate_featureimp_cor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/metric/calculate_featureimp_cor/</guid>
+      <description>calculate_featureimp_cor.Rd  Compare feature importances derived by both trajectories
+ calculate_featureimp_cor(dataset, prediction, expression_source = dataset$expression_source, fi_method = dynfeature::fi_ranger_rf_lite()) Arguments   dataset A dataset
+   prediction A predicted trajectory
+   expression_source The expression data matrix, with features as columns.
+ If a matrix is provided, it is used as is.
+ If a character is provided, dataset[[expression_source]] should contain the matrix.
+ If a function is provided, that function will be called in order to obtain the expression (useful for lazy loading).</description>
+    </item>
+    
+    <item>
+      <title>Compares the mapping between milestones or branches</title>
+      <link>/reference/dyneval/metric/calculate_mapping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/metric/calculate_mapping/</guid>
+      <description> calculate_mapping.Rd  Compares the mapping between milestones or branches
+ calculate_mapping(dataset, prediction, grouping = c(&#34;branches&#34;, &#34;milestones&#34;), simplify = TRUE) calculate_mapping_milestones(dataset, prediction, simplify = TRUE) calculate_mapping_branches(dataset, prediction, simplify = TRUE) Arguments   dataset A dataset
+   prediction A predicted model
+   grouping How to group the cells, either branches or milestones
+   simplify Whether to simplify the trajectory (allowing self loops)
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Component 1</title>
+      <link>/reference/dynmethods/other/ti_comp1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_comp1/</guid>
+      <description>ti_comp1.Rd  Will generate a trajectory using Component 1.
+This method was wrapped inside a container.
+ ti_comp1(dimred = &#34;pca&#34;, ndim = 2L, component = 1L) Arguments   dimred Which dimensionality reduction method to use. Domain: pca, mds, tsne, ica, lle, landmark_mds, mds_sammon, mds_isomds, mds_smacof, umap, dm_diffusionMap. Default: pca. Format: character.
+   ndim . Domain: U(2, 30). Default: 2. Format: integer.
+   component . Domain: U(1, 10).</description>
+    </item>
+    
+    <item>
+      <title>Compute metrics related to the prediction of the positions</title>
+      <link>/reference/dyneval/metric/calculate_position_predict/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/metric/calculate_position_predict/</guid>
+      <description> calculate_position_predict.Rd  Compute metrics related to the prediction of the positions
+ calculate_position_predict(dataset, prediction, metrics = c(&#34;rf_mse&#34;, &#34;rf_rsq&#34;, &#34;lm_mse&#34;, &#34;lm_rsq&#34;)) Arguments   dataset A dataset containing a trajectory
+   prediction A predicted trajectory
+   metrics Which metrics to predict, can be rf_mse, rf_rsq, rf_nmse, lm_mse, lm_rsq and/or lm_nmse
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Constructs a circular trajectory using the pseudotime values of each cell.</title>
+      <link>/reference/dynwrap/create_trajectory/add_cyclic_trajectory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/add_cyclic_trajectory/</guid>
+      <description>Source: R/wrap_add_cyclic_trajectory.R add_cyclic_trajectory.Rd  This function will generate the milestone_network and progressions.
+ add_cyclic_trajectory(dataset, pseudotime, directed = FALSE, do_scale_minmax = TRUE, ...) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   pseudotime A named vector of pseudo times.
+   directed Whether or not the directionality of the pseudotime is predicted.
+   do_scale_minmax Whether or not to scale the pseudotime between 0 and 1.</description>
+    </item>
+    
+    <item>
+      <title>Constructs a linear trajectory using the pseudotime values of each cell.</title>
+      <link>/reference/dynwrap/create_trajectory/add_linear_trajectory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/add_linear_trajectory/</guid>
+      <description>Source: R/wrap_add_linear_trajectory.R add_linear_trajectory.Rd  This function will generate the milestone_network and progressions.
+ add_linear_trajectory(dataset, pseudotime, directed = FALSE, do_scale_minmax = TRUE, ...) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   pseudotime A named vector of pseudo times.
+   directed Whether or not the directionality of the pseudotime is predicted.
+   do_scale_minmax Whether or not to scale the pseudotime between 0 and 1.</description>
+    </item>
+    
+    <item>
+      <title>Constructs a trajectory by projecting cells within a dimensionality reduction onto a backbone formed by a milestone network. Optionally, a cell grouping can be given which will restrict the edges on which a cell can be projected.</title>
+      <link>/reference/dynwrap/create_trajectory/add_dimred_projection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/add_dimred_projection/</guid>
+      <description>Source: R/wrap_add_dimred_projection.R add_dimred_projection.Rd  This function will generate the milestone_network and progressions.
+ add_dimred_projection(dataset, milestone_ids = NULL, milestone_network, dimred, dimred_milestones, grouping = NULL, ...) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   milestone_ids The ids of the milestones in the trajectory. Type: Character vector.
+   milestone_network The network of the milestones. Type: Data frame(from = character, to = character, length = numeric, directed = logical).</description>
+    </item>
+    
+    <item>
+      <title>Constructs a trajectory using a cell grouping and a network between groups. Will use an existing grouping if it is present in the dataset.</title>
+      <link>/reference/dynwrap/create_trajectory/add_cluster_graph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/add_cluster_graph/</guid>
+      <description>Source: R/wrap_add_cluster_graph.R add_cluster_graph.Rd  This function will generate the milestone_network and progressions.
+ add_cluster_graph(dataset, milestone_network, grouping = NULL, explicit_splits = FALSE, ...) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   milestone_network A network of milestones.
+   grouping A grouping of the cells, can be a named vector or a dataframe with group_id (character) and cell_id (character)
+   explicit_splits Whether to make splits specific by adding a starting node.</description>
+    </item>
+    
+    <item>
+      <title>Constructs a trajectory using a graph between cells, by mapping cells onto a set of backbone cells.</title>
+      <link>/reference/dynwrap/create_trajectory/add_cell_graph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/add_cell_graph/</guid>
+      <description>Source: R/wrap_add_cell_graph.R add_cell_graph.Rd  This function will generate the milestone_network and progressions.
+ add_cell_graph(dataset, cell_graph, to_keep, milestone_prefix = &#34;milestone_&#34;, ...) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   cell_graph The edges between cells. Format: Data frame(from = character, to = character, length(optional) = numeric, directed(optional) = logical)
+   to_keep A named vector containing booleans containing whether or not a cell is part of the backbone.</description>
+    </item>
+    
+    <item>
+      <title>Convert a definition loaded in from a yaml</title>
+      <link>/reference/dynwrap/create_ti_method/convert_definition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/convert_definition/</guid>
+      <description> Source: R/method_process_definition.R convert_definition.Rd  Convert a definition loaded in from a yaml
+ convert_definition(definition_raw) Arguments   definition_raw The raw definition loaded from the yaml
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Convert milestone percentages to progressions</title>
+      <link>/reference/dynwrap/other/convert_milestone_percentages_to_progressions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/convert_milestone_percentages_to_progressions/</guid>
+      <description> Source: R/convert_milestone_percentages_to_progressions.R convert_milestone_percentages_to_progressions.Rd  Convert milestone percentages to progressions
+ convert_milestone_percentages_to_progressions(cell_ids, milestone_ids, milestone_network, milestone_percentages) Arguments   cell_ids Vector of all cell ids
+   milestone_ids Vector of milestone ids
+   milestone_network Milestone network
+   milestone_percentages Milestone percentages
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Convert progressions to milestone percentages</title>
+      <link>/reference/dynwrap/other/convert_progressions_to_milestone_percentages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/convert_progressions_to_milestone_percentages/</guid>
+      <description> Source: R/convert_progressions_to_milestone_percentages.R convert_progressions_to_milestone_percentages.Rd  Convert progressions to milestone percentages
+ convert_progressions_to_milestone_percentages(cell_ids, milestone_ids, milestone_network, progressions) Arguments   cell_ids Vector of all cell ids
+   milestone_ids Vector of milestone ids
+   milestone_network Milestone network
+   progressions Progressions dataframe
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Create a TI method from a docker / singularity container</title>
+      <link>/reference/dynwrap/create_ti_method/create_ti_method_container/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/create_ti_method_container/</guid>
+      <description>Source: R/method_create_ti_method_container.R create_ti_method_container.Rd  These functions create a TI method from a container using babelwhale. Supports both docker and singularity as a backend.
+ create_ti_method_container(container_id, pull_if_needed = TRUE, return_function = TRUE) Arguments   container_id The name of the container repository (e.g. &#34;dynverse/ti_angle&#34;).
+   pull_if_needed Pull the container if not yet available.
+   return_function Whether to return a function that allows you to override the default parameters, or just return the method meta data as is.</description>
+    </item>
+    
+    <item>
+      <title>Create a TI method from a local method definition file</title>
+      <link>/reference/dynwrap/create_ti_method/create_ti_method_definition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/create_ti_method_definition/</guid>
+      <description>Source: R/method_create_ti_method_definition.R create_ti_method_definition.Rd  The local method definition file describes a method that is runnable on the local system.
+ create_ti_method_definition(definition, script, return_function = TRUE) Arguments   definition A definition, see definition()
+   script Location of the script that will be executed. Has to contain a #!
+   return_function Whether to return a function that allows you to override the default parameters, or just return the method meta data as is.</description>
+    </item>
+    
+    <item>
+      <title>Create a TI method wrapper</title>
+      <link>/reference/dynwrap/create_ti_method/create_ti_method_r/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/create_ti_method_r/</guid>
+      <description>Source: R/method_create_ti_method_r.R create_ti_method_r.Rd  Create a TI method wrapper
+ create_ti_method_r(definition, run_fun, package_required = character(), package_loaded = character(), remotes_package = character(), return_function = TRUE) Arguments   definition A definition, see definition()
+   run_fun A function to infer a trajectory, with parameters counts/expression, parameters, priors, verbose and seed
+   package_required The packages that need to be installed before executing the method.
+   package_loaded The packages that need to be loaded before executing the method.</description>
+    </item>
+    
+    <item>
+      <title>Create a definition</title>
+      <link>/reference/dynwrap/create_ti_method/definition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/definition/</guid>
+      <description>Source: R/method_process_definition.R definition.Rd  A definition contains meta information on a TI method and various aspects thereof. For brevity, the example only contains a minimum example, check the documentation of the def_* helper functions for more extensive examples.
+ definition(method, wrapper, manuscript = NULL, container = NULL, parameters = parameter_set()) is_ti_method(method) Arguments   method Meta information on the TI method (see def_method()).
+   wrapper Meta information on the wrapper itself (see def_wrapper()).</description>
+    </item>
+    
+    <item>
+      <title>Create a grouping from a trajectory</title>
+      <link>/reference/dynwrap/derive_trajectory/group_from_trajectory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/derive_trajectory/group_from_trajectory/</guid>
+      <description> Source: R/wrap_add_grouping.R group_from_trajectory.Rd  Grouping cells onto their edges, or grouping cells onto their nearest milestones
+ group_onto_trajectory_edges(trajectory, group_template = &#34;{from}-&amp;gt;{to}&#34;) group_onto_nearest_milestones(trajectory) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   group_template Processed by glue::glue to name the group
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Create a trajectory given its branch network and the pseudotime of the cells on one of the branches</title>
+      <link>/reference/dynwrap/create_trajectory/add_branch_trajectory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/add_branch_trajectory/</guid>
+      <description>Source: R/wrap_add_branch_trajectory.R add_branch_trajectory.Rd  Create a trajectory given its branch network and the pseudotime of the cells on one of the branches
+ add_branch_trajectory(dataset, branch_network, branches, branch_progressions, ...) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   branch_network The network between branches Type: Data frame(from = charactor, to = character)
+   branches The length and directedness of the branches Type: Data frame(branch_id = character, length = numeric, directed = logical)</description>
+    </item>
+    
+    <item>
+      <title>Create a wrapper object with expression and counts</title>
+      <link>/reference/dynwrap/infer_trajectory/wrap_expression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/infer_trajectory/wrap_expression/</guid>
+      <description>Source: R/wrap_add_expression.R wrap_expression.Rd  Create a wrapper object with expression and counts
+ wrap_expression(id = NULL, expression, counts, cell_info = NULL, feature_info = NULL, ...) Arguments   id A unique identifier for the data. If NULL, a random string will be generated.
+   expression The normalised expression values with genes in columns and cells in rows
+   counts The counts with genes in columns and cells in rows</description>
+    </item>
+    
+    <item>
+      <title>Create an empty plot for spacing</title>
+      <link>/reference/dynplot/plot_helpers/empty_plot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_helpers/empty_plot/</guid>
+      <description> empty_plot.Rd  Create an empty plot for spacing
+ empty_plot()  Contents  -- </description>
+    </item>
+    
+    <item>
+      <title>DPT</title>
+      <link>/reference/dynmethods/other/ti_dpt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_dpt/</guid>
+      <description>ti_dpt.Rd  Will generate a trajectory using DPT.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_dpt(sigma = &#34;local&#34;, distance = &#34;euclidean&#34;, ndim = 20L, density_norm = TRUE, n_local = c(5L, 7L), w_width = 0.1) Arguments   sigma Diffusion scale parameter of the Gaussian kernel. A larger sigma might be necessary if the eigenvalues can not be found because of a singularity in the matrix.</description>
+    </item>
+    
+    <item>
+      <title>Default theme for TI plots</title>
+      <link>/reference/dynplot/plot_helpers/process_dynplot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_helpers/process_dynplot/</guid>
+      <description> process_dynplot.Rd  Default theme for TI plots
+ process_dynplot(g, id = NULL, expand = TRUE) Arguments   g A ggplot to modify
+   id The title
+   expand Whether or not to leave space at the borders
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Define a trajectory dataset given its milestone network and milestone percentages or progressions</title>
+      <link>/reference/dynwrap/create_trajectory/add_trajectory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/add_trajectory/</guid>
+      <description>Source: R/wrap_add_trajectory.R add_trajectory.Rd  Define a trajectory dataset given its milestone network and milestone percentages or progressions
+ add_trajectory(dataset, milestone_ids = NULL, milestone_network, divergence_regions = NULL, milestone_percentages = NULL, progressions = NULL, allow_self_loops = FALSE, ...) is_wrapper_with_trajectory(trajectory) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   milestone_ids The ids of the milestones in the trajectory. Type: Character vector.
+   milestone_network The network of the milestones.</description>
+    </item>
+    
+    <item>
+      <title>Define meta information on the TI method.</title>
+      <link>/reference/dynwrap/create_ti_method/def_method/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/def_method/</guid>
+      <description>Source: R/method_process_definition.R def_method.Rd  Define meta information on the TI method.
+ def_method(id, name = id, source = &#34;tool&#34;, tool_id = NULL, platform = NULL, url = NULL, license = NULL, authors = list()) Arguments   id An id by which to identify a method. Should only contain lowercase letters or underscores.
+   name The name of the method.
+   source The type of TI method.</description>
+    </item>
+    
+    <item>
+      <title>Determine the positions of all cells in the trajectory</title>
+      <link>/reference/dynwrap/other/determine_cell_trajectory_positions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/determine_cell_trajectory_positions/</guid>
+      <description>Source: R/wrap_add_cell_waypoints.R determine_cell_trajectory_positions.Rd  Determine the positions of all cells in the trajectory
+ determine_cell_trajectory_positions(milestone_ids, milestone_network, milestone_percentages, progressions, divergence_regions) Arguments   milestone_ids The ids of the milestones in the trajectory. Type: Character vector.
+   milestone_network The network of the milestones. Type: Data frame(from = character, to = character, length = numeric, directed = logical).
+   milestone_percentages A data frame specifying what percentage milestone each cell consists of.</description>
+    </item>
+    
+    <item>
+      <title>Edge flip score</title>
+      <link>/reference/dyneval/metric/calculate_edge_flip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/metric/calculate_edge_flip/</guid>
+      <description>calculate_edge_flip.Rd  Edge flip score
+ calculate_edge_flip(net1, net2, return = c(&#34;score&#34;, &#34;all&#34;), simplify = TRUE, limit_flips = 5, limit_combinations = choose(25, 4)) Arguments   net1 Network 1
+   net2 Network 2
+   return Whether to return only the score or the full output (all)
+   simplify Whether or not to simplify the networks
+   limit_flips Maximal number of flips to check</description>
+    </item>
+    
+    <item>
+      <title>ElPiGraph</title>
+      <link>/reference/dynmethods/other/ti_elpigraph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_elpigraph/</guid>
+      <description>ti_elpigraph.Rd  Will generate a trajectory using ElPiGraph.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_elpigraph(topology = &#34;tree&#34;, NumNodes = 50L, NumEdges = 100000L, InitNodes = 2L, Mu = 0.1, Lambda = 0.01, MaxNumberOfIterations = 10L, eps = 0.01, CenterData = FALSE) Arguments   topology The kind of topology to detect. Domain: cycle, tree, linear. Default: tree. Format: character.</description>
+    </item>
+    
+    <item>
+      <title>ElPiGraph - Cycle</title>
+      <link>/reference/dynmethods/other/ti_elpicycle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_elpicycle/</guid>
+      <description>ti_elpicycle.Rd  Will generate a trajectory using ElPiGraph - Cycle.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_elpicycle(NumNodes = 50L, NumEdges = 100000L, InitNodes = 2L, Mu = 0.1, Lambda = 0.01, MaxNumberOfIterations = 10L, eps = 0.01, CenterData = FALSE) Arguments   NumNodes The number of nodes of the principal graph. Domain: U(2, 1000). Default: 50. Format: integer.</description>
+    </item>
+    
+    <item>
+      <title>ElPiGraph - Linear</title>
+      <link>/reference/dynmethods/other/ti_elpilinear/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_elpilinear/</guid>
+      <description>ti_elpilinear.Rd  Will generate a trajectory using ElPiGraph - Linear.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_elpilinear(NumNodes = 50L, NumEdges = 100000L, InitNodes = 2L, Mu = 0.1, Lambda = 0.01, MaxNumberOfIterations = 10L, eps = 0.01, CenterData = FALSE) Arguments   NumNodes The number of nodes of the principal graph. Domain: U(2, 1000). Default: 50. Format: integer.</description>
+    </item>
+    
+    <item>
+      <title>Embeddr</title>
+      <link>/reference/dynmethods/other/ti_embeddr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_embeddr/</guid>
+      <description>ti_embeddr.Rd  Will generate a trajectory using Embeddr.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_embeddr(ndim = 2L, kernel = &#34;nn&#34;, metric = &#34;correlation&#34;, nn_pct = 0L, eps = 0L, t = 0L, symmetrize = &#34;mean&#34;, measure_type = &#34;unorm&#34;, thresh = 0.001, maxit = 10L, stretch = 2L, smoother = &#34;smooth.spline&#34;) Arguments   ndim Dimension of the embedded space, default is 2.</description>
+    </item>
+    
+    <item>
+      <title>Error</title>
+      <link>/reference/dynmethods/other/ti_error/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_error/</guid>
+      <description> ti_error.Rd  Will generate a trajectory using Error.
+This method was wrapped inside a container.
+ ti_error(dummy_param = 0.5) Arguments   dummy_param Dummy parameter. Domain: U(0, 1). Default: 0.5. Format: numeric.
+   Value A TI method wrapper to be used together with infer_trajectory
+ Contents Arguments Value  -- </description>
+    </item>
+    
+    <item>
+      <title>Evaluating trajectory inference methods</title>
+      <link>/reference/dyneval/other/dyneval/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/other/dyneval/</guid>
+      <description> dyneval.Rd  Evaluating trajectory inference methods
+  Contents  -- </description>
+    </item>
+    
+    <item>
+      <title>Example dataset</title>
+      <link>/reference/dynwrap/other/example_dataset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/example_dataset/</guid>
+      <description> Source: R/data.R example_dataset.Rd  Example dataset
+ example_dataset Format An object of class dynwrap::with_cell_waypoints (inherits from dynwrap::with_prior, dynwrap::with_dimred, dynwrap::with_trajectory, dynwrap::with_expression, dynwrap::data_wrapper, list) of length 20.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>FORKS</title>
+      <link>/reference/dynmethods/other/ti_forks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_forks/</guid>
+      <description>ti_forks.Rd  Will generate a trajectory using FORKS.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_forks(norm_function = &#34;median&#34;, norm_quantile = 75L, cum_sum_exp_var = 0.9, cluster = c(4L, 10L), mapping_type = &#34;Isomap&#34;, initialization = &#34;kmeans&#34;, iterMax = 1000L, eta = 0.01, C = 1L) Arguments   norm_function No description provided by the author. Domain: mean, median, quantile. Default: median. Format: character.</description>
+    </item>
+    
+    <item>
+      <title>FateID</title>
+      <link>/reference/dynmethods/other/ti_fateid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_fateid/</guid>
+      <description>ti_fateid.Rd  Will generate a trajectory using FateID.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_fateid(reclassify = TRUE, clthr = 0.9, nbfactor = 5L, q = 0.75, k = 3L, m = &#34;tsne&#34;, minnr = 5L, minnrh = 10L, trthr = 0.4, force = FALSE) Arguments   reclassify Whether to reclassify the cell grouping. Default: TRUE. Format: logical.</description>
+    </item>
+    
+    <item>
+      <title>GNG</title>
+      <link>/reference/dynmethods/other/ti_gng/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_gng/</guid>
+      <description>ti_gng.Rd  Will generate a trajectory using GNG.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_gng(dimred = &#34;landmark_mds&#34;, ndim = 5L, max_iter = 15000L, max_nodes = 8L, apply_mst = TRUE) Arguments   dimred Which dimensionality reduction method to use. Domain: pca, mds, tsne, ica, lle, landmark_mds, mds_sammon, mds_isomds, mds_smacof, umap, dm_diffusionMap. Default: landmark_mds. Format: character.
+   ndim The number of dimensions.</description>
+    </item>
+    
+    <item>
+      <title>GPfates</title>
+      <link>/reference/dynmethods/other/ti_gpfates/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_gpfates/</guid>
+      <description>ti_gpfates.Rd  Will generate a trajectory using GPfates.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_gpfates(log_expression_cutoff = 0.5, min_cells_expression_cutoff = 0L, ndim = 2L) Arguments   log_expression_cutoff The log expression cutoff. Domain: U(0.5, 5). Default: 0.5. Format: numeric.
+   min_cells_expression_cutoff The min expression cutoff. Domain: U(0, 20). Default: 0. Format: numeric.
+   ndim Number of dimensions for dimensionality reduction.</description>
+    </item>
+    
+    <item>
+      <title>Generate a random seed</title>
+      <link>/reference/dynwrap/other/random_seed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/random_seed/</guid>
+      <description> Source: R/method_infer_trajectory.R random_seed.Rd  ... From the current seed.
+ random_seed()  Contents  -- </description>
+    </item>
+    
+    <item>
+      <title>Generate the parameter documentation of a method, use with &lt;code&gt;@eval&lt;/code&gt;</title>
+      <link>/reference/dynwrap/other/generate_parameter_documentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/generate_parameter_documentation/</guid>
+      <description> Source: R/method_create_ti_method_r.R generate_parameter_documentation.Rd  Generate the parameter documentation of a method, use with @eval
+ generate_parameter_documentation(definition) Arguments   definition The definition which contain the parameters
+   Value A character vector containing the roxygen tags
+ Contents Arguments Value  -- </description>
+    </item>
+    
+    <item>
+      <title>Get the default parameters of a method</title>
+      <link>/reference/dynwrap/create_ti_method/get_default_parameters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/get_default_parameters/</guid>
+      <description> Source: R/method_process_definition.R get_default_parameters.Rd  Get the default parameters of a method
+ get_default_parameters(definition) Arguments   definition A TI method description
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Get the names of valid color palettes</title>
+      <link>/reference/dynplot/plot_helpers/milestone_palette/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_helpers/milestone_palette/</guid>
+      <description> get_milestone_palette_names.Rd  Get the names of valid color palettes
+ milestone_palette(name, n) get_milestone_palette_names() Arguments   name The name of the palette. Must be one of &#34;cubeHelix&#34;, &#34;Set3&#34;, or &#34;rainbow&#34;.
+   n The number of colours to be in the palette.
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>GrandPrix</title>
+      <link>/reference/dynmethods/other/ti_grandprix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_grandprix/</guid>
+      <description>ti_grandprix.Rd  Will generate a trajectory using GrandPrix.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_grandprix(n_inducing_points = 40L, latent_prior_var = 0.1, latent_var = 0.028) Arguments   n_inducing_points . Domain: U(0, 1). Default: 40. Format: integer.
+   latent_prior_var . Domain: U(0, 1). Default: 0.1. Format: numeric.
+   latent_var . Domain: U(0, 1). Default: 0.028. Format: numeric.</description>
+    </item>
+    
+    <item>
+      <title>Helper function for processing divergence regions</title>
+      <link>/reference/dynwrap/other/get_divergence_triangles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/get_divergence_triangles/</guid>
+      <description> Source: R/get_divergence_triangles.R get_divergence_triangles.Rd  This function returns the combinations between the start of each divergence region and pairwise combinations of the end milestones.
+ get_divergence_triangles(divergence_regions) Arguments   divergence_regions A divergence regions data frame as produced by add_trajectory.
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Identity</title>
+      <link>/reference/dynmethods/other/ti_identity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_identity/</guid>
+      <description> ti_identity.Rd  Will generate a trajectory using Identity.
+This method was wrapped inside a container.
+ ti_identity() Value A TI method wrapper to be used together with infer_trajectory
+ Contents Value  -- </description>
+    </item>
+    
+    <item>
+      <title>Infer trajectories</title>
+      <link>/reference/dynwrap/infer_trajectory/infer_trajectories/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/infer_trajectory/infer_trajectories/</guid>
+      <description>Source: R/method_infer_trajectory.R infer_trajectories.Rd  Infer trajectories
+ infer_trajectories(dataset, method, parameters = NULL, give_priors = NULL, seed = random_seed(), verbose = FALSE, return_verbose = FALSE, debug = FALSE, map_fun = map) infer_trajectory(dataset, method, parameters = NULL, give_priors = NULL, seed = random_seed(), verbose = FALSE, return_verbose = FALSE, debug = FALSE, ...) Arguments   dataset One or more datasets as created by infer_trajectory() or add_trajectory(). Prior information can be added using add_prior_information().</description>
+    </item>
+    
+    <item>
+      <title>Label milestones either manually (&lt;code&gt;label_milestones&lt;/code&gt;) or using marker genes (&lt;code&gt;label_milestones_markers&lt;/code&gt;)</title>
+      <link>/reference/dynwrap/adapt_trajectory/label_milestones/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/label_milestones/</guid>
+      <description>Source: R/wrap_label_milestones.R label_milestones.Rd  Label milestones either manually (label_milestones) or using marker genes (label_milestones_markers)
+ label_milestones(trajectory, labelling) label_milestones_markers(trajectory, markers, expression_source = &#34;expression&#34;, n_nearest_cells = 20) is_wrapper_with_milestone_labelling(trajectory) get_milestone_labelling(trajectory, label_milestones = NULL) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   labelling Named character vector containing for a milestone a new label
+   markers List containing for each label a list of marker genes</description>
+    </item>
+    
+    <item>
+      <title>Layout the trajectory and its cells in 2 dimensions</title>
+      <link>/reference/dynwrap/derive_trajectory/calculate_trajectory_dimred/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/derive_trajectory/calculate_trajectory_dimred/</guid>
+      <description> Source: R/calculate_trajectory_dimred.R calculate_trajectory_dimred.Rd  Layout the trajectory and its cells in 2 dimensions
+ calculate_trajectory_dimred(trajectory, adjust_weights = FALSE) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   adjust_weights Whether or not to rescale the milestone network weights
+   See also wrap_data
+  Contents Arguments See also  -- </description>
+    </item>
+    
+    <item>
+      <title>Linearise a trajectory</title>
+      <link>/reference/dynplot/other/linearise_cells/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/other/linearise_cells/</guid>
+      <description>linearise_cells.Rd  Linearise a trajectory
+ linearise_cells(traj, margin = 0.05, no_margin_between_linear = TRUE, one_edge = FALSE, equal_cell_width = FALSE) Arguments   traj The trajectory
+   margin The margin to add
+   no_margin_between_linear Whether to add a margin only when
+   one_edge If TRUE, assigns each cell to one edge only
+   equal_cell_width if TRUE, will give each cell equal width</description>
+    </item>
+    
+    <item>
+      <title>MATCHER</title>
+      <link>/reference/dynmethods/other/ti_matcher/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_matcher/</guid>
+      <description>ti_matcher.Rd  Will generate a trajectory using MATCHER.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_matcher(quantiles = 50L, method = &#34;linear&#34;) Arguments   quantiles Quantiles How many quantiles to use when computing warp functions (integer). Domain: U(2, 500). Default: 50. Format: integer.
+   method Gaussian process regression or linear interpolation? (&#34;gp&#34; or &#34;linear). Domain: gp, linear. Default: linear.</description>
+    </item>
+    
+    <item>
+      <title>MERLoT</title>
+      <link>/reference/dynmethods/other/ti_merlot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_merlot/</guid>
+      <description>ti_merlot.Rd  Will generate a trajectory using MERLoT.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_merlot(sigma = &#34;local&#34;, distance = &#34;euclidean&#34;, ndim = 20L, density_norm = TRUE, n_local = c(5L, 7L), w_width = 0.01, n_components_to_use = 3L, N_yk = 100L, lambda_0 = 8e-10, mu_0 = 0.0025, increaseFactor_mu = 20L, increaseFactor_lambda = 20L, FixEndpoints = FALSE) Arguments   sigma Diffusion scale parameter of the Gaussian kernel.</description>
+    </item>
+    
+    <item>
+      <title>MFA</title>
+      <link>/reference/dynmethods/other/ti_mfa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_mfa/</guid>
+      <description>ti_mfa.Rd  Will generate a trajectory using MFA.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_mfa(iter = 2000L, thin = 1L, pc_initialise = 1L, prop_collapse = 0L, scale_input = TRUE, zero_inflation = FALSE) Arguments   iter Number of MCMC iterations. Domain: U(20, 5000). Default: 2000. Format: integer.
+   thin MCMC samples to thin. Domain: U(1, 20). Default: 1.</description>
+    </item>
+    
+    <item>
+      <title>MST</title>
+      <link>/reference/dynmethods/other/ti_mst/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_mst/</guid>
+      <description>ti_mst.Rd  Will generate a trajectory using MST.
+This method was wrapped inside a container.
+ ti_mst(dimred = &#34;pca&#34;, ndim = 2L) Arguments   dimred Which dimensionality reduction method to use. Domain: pca, mds, tsne, ica, lle, landmark_mds, mds_sammon, mds_isomds, mds_smacof, umap, dm_diffusionMap. Default: pca. Format: character.
+   ndim . Domain: U(2, 30). Default: 2. Format: integer.
+   Value A TI method wrapper to be used together with infer_trajectory</description>
+    </item>
+    
+    <item>
+      <title>Meta information on an author</title>
+      <link>/reference/dynwrap/create_ti_method/def_author/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/def_author/</guid>
+      <description>Source: R/method_process_definition.R def_author.Rd  Meta information on an author
+ def_author(given, family, email = NULL, github = NULL, orcid = NULL) Arguments   given The given name
+   family The family name
+   email The email address
+   github The github handle
+   orcid The orcid id
+   Examples def_author( given = &#34;Bob&#34;, family = &#34;Dylan&#34;, email = &#34;</description>
+    </item>
+    
+    <item>
+      <title>Meta information on the container in which the wrapper resides</title>
+      <link>/reference/dynwrap/create_ti_method/def_container/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/def_container/</guid>
+      <description> Source: R/method_process_definition.R def_container.Rd  Meta information on the container in which the wrapper resides
+ def_container(docker, url = NULL) Arguments   docker The handle of the docker container
+   url An url of where the docker codebase resides (containing definition.yml, Dockerfile, ...)
+   Examples def_container( docker = &#34;bobdylan/ti_some_method&#34;, url = &#34;https://github.com/bobdylan/ti_some_method&#34; )#&amp;gt; $docker #&amp;gt; [1] &#34;bobdylan/ti_some_method&#34; #&amp;gt; #&amp;gt; $url #&amp;gt; [1] &#34;https://github.com/bobdylan/ti_some_method&#34; #&amp;gt;   Contents Arguments Examples  -- </description>
+    </item>
+    
+    <item>
+      <title>Meta information on the manuscript</title>
+      <link>/reference/dynwrap/create_ti_method/def_manuscript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/def_manuscript/</guid>
+      <description>Source: R/method_process_definition.R def_manuscript.Rd  Meta information on the manuscript
+ def_manuscript(doi = NULL, google_scholar_cluster_id = NULL, preprint_date = NULL, publication_date = NULL) Arguments   doi A doi identifier (not an url)
+   google_scholar_cluster_id The google cluster id. Finding this id is a bit tricky; you need to find the manuscript on one of the author pages, and hover over the &#39;All X versions&#39; button. Example: google scholar page, screenshot.</description>
+    </item>
+    
+    <item>
+      <title>Meta information on the parameters of the TI method</title>
+      <link>/reference/dynwrap/create_ti_method/def_parameters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/def_parameters/</guid>
+      <description>Source: R/method_process_definition.R def_parameters.Rd  Parameters can be defined using dynparam::dynparam().
+ def_parameters(..., parameters = NULL, forbidden = NULL) Arguments   ... Parameters to wrap in a parameter set.
+   parameters A list of parameters to wrap in a parameter set.
+   forbidden States forbidden region of parameter via a character vector, which will be turned into an expression.
+   Examples library(dynparam) def_parameters( character_parameter(id = &#34;</description>
+    </item>
+    
+    <item>
+      <title>Meta information on the wrapper</title>
+      <link>/reference/dynwrap/create_ti_method/def_wrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/def_wrapper/</guid>
+      <description>Source: R/method_process_definition.R def_wrapper.Rd  Meta information on the wrapper
+ def_wrapper(input_required, input_optional = character(), type = &#34;trajectory&#34;, topology_inference = NULL, trajectory_types = character()) Arguments   input_required The required inputs for this method. See dynwrap::allowed_inputs().
+   input_optional Optional inputs for this method. See dynwrap::allowed_inputs().
+   type Which type of trajectory post-processing is used. Possible values: &#34;trajectory&#34; (default), &#34;linear_trajectory&#34;, &#34;cyclic_trajectory&#34;, &#34;branch_trajectory&#34;, &#34;cluster_graph&#34;, &#34;dimred_projection&#34;, &#34;end_state_probabilities&#34;, &#34;cell_graph&#34;.
+   topology_inference Whether the topology is fixed (&#34;</description>
+    </item>
+    
+    <item>
+      <title>Metadata on metrics</title>
+      <link>/reference/dyneval/metric/metrics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/metric/metrics/</guid>
+      <description>metrics.Rd  Also contained are:
+ Ways of rendering the metrics
+ Categorisation of the metrics
+ The perfect and worst possible scores (if possible to determine beforehand)
+ Whether the metric is symmetric (i.e. whether flipping the order of trajectories would change the expected value of the metric)
+   metrics Format An object of class tbl_df (inherits from tbl, data.frame) with 19 rows and 10 columns.</description>
+    </item>
+    
+    <item>
+      <title>Metadata on prior usages</title>
+      <link>/reference/dynwrap/create_ti_method/prior_usages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/prior_usages/</guid>
+      <description> Source: R/data.R prior_usages.Rd  Metadata on prior usages
+ prior_usages Format An object of class tbl_df (inherits from tbl, data.frame) with 3 rows and 2 columns.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>Metadata on priors</title>
+      <link>/reference/dynwrap/create_ti_method/priors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/priors/</guid>
+      <description> Source: R/data.R priors.Rd  Metadata on priors
+ priors Format An object of class tbl_df (inherits from tbl, data.frame) with 11 rows and 4 columns.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>Metadata on the different TI methods</title>
+      <link>/reference/dynmethods/other/methods/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/methods/</guid>
+      <description> methods.Rd  Metadata on the different TI methods
+ methods Format An object of class tbl_df (inherits from tbl, data.frame) with 59 rows and 22 columns.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>Metadata on the trajectory types</title>
+      <link>/reference/dynwrap/create_ti_method/trajectory_types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/trajectory_types/</guid>
+      <description> Source: R/data.R trajectory_types.Rd  Metadata on the trajectory types
+ trajectory_types Format An object of class tbl_df (inherits from tbl, data.frame) with 9 rows and 6 columns.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>Metadata on wrapper types</title>
+      <link>/reference/dynwrap/create_ti_method/wrapper_types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/wrapper_types/</guid>
+      <description> Source: R/data.R wrapper_types.Rd  Metadata on wrapper types
+ wrapper_types Format An object of class tbl_df (inherits from tbl, data.frame) with 7 rows and 4 columns.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>Monocle DDRTree</title>
+      <link>/reference/dynmethods/other/ti_monocle_ddrtree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_monocle_ddrtree/</guid>
+      <description>ti_monocle_ddrtree.Rd  Will generate a trajectory using Monocle DDRTree.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_monocle_ddrtree(reduction_method = &#34;ICA&#34;, max_components = 2L, norm_method = &#34;log&#34;, auto_param_selection = TRUE, filter_features = TRUE, filter_features_mean_expression = 0.1) Arguments   reduction_method A character string specifying the algorithm to use for dimensionality reduction. Domain: ICA. Default: ICA. Format: character.
+   max_components The dimensionality of the reduced space.</description>
+    </item>
+    
+    <item>
+      <title>Monocle ICA</title>
+      <link>/reference/dynmethods/other/ti_monocle_ica/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_monocle_ica/</guid>
+      <description>ti_monocle_ica.Rd  Will generate a trajectory using Monocle ICA.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_monocle_ica(reduction_method = &#34;ICA&#34;, max_components = 2L, norm_method = &#34;log&#34;, filter_features = TRUE, filter_features_mean_expression = 0.1) Arguments   reduction_method A character string specifying the algorithm to use for dimensionality reduction. Domain: ICA. Default: ICA. Format: character.
+   max_components The dimensionality of the reduced space.</description>
+    </item>
+    
+    <item>
+      <title>Mpath</title>
+      <link>/reference/dynmethods/other/ti_mpath/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_mpath/</guid>
+      <description>ti_mpath.Rd  Will generate a trajectory using Mpath.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_mpath(distMethod = &#34;euclidean&#34;, method = &#34;kmeans&#34;, numcluster = 11L, numcluster_null = TRUE, diversity_cut = 0.6, size_cut = 0.05) Arguments   distMethod The method for calculating dissimilarity between cells. distMethod can be one of &#34;pearson&#34;, &#34;kendall&#34;, &#34;spearman&#34; or &#34;euclidean&#34;. Default is &#34;euclidean&#34;. Domain: pearson, kendall, spearman, euclidean.</description>
+    </item>
+    
+    <item>
+      <title>Multifurcating trajectory with end state probabilities</title>
+      <link>/reference/dynwrap/create_trajectory/add_end_state_probabilities/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_trajectory/add_end_state_probabilities/</guid>
+      <description>Source: R/wrap_add_end_state_probabilities.R add_end_state_probabilities.Rd  Constructs a multifurcating trajectory using the pseudotime values of each cell and their end state probabilities. If pseudotime values are not given, will use pseudotime already present in the dataset.
+ add_end_state_probabilities(dataset, end_state_probabilities, pseudotime = NULL, do_scale_minmax = TRUE, ...) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   end_state_probabilities A dataframe containing cell_id (character) and additional numeric columns containing the probability for every end milestone.</description>
+    </item>
+    
+    <item>
+      <title>PAGA</title>
+      <link>/reference/dynmethods/other/ti_paga/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_paga/</guid>
+      <description>ti_paga.Rd  Will generate a trajectory using PAGA.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_paga(n_neighbors = 15L, n_comps = 50L, n_dcs = 15L, resolution = 1L, embedding_type = &#34;fa&#34;, connectivity_cutoff = 0.05) Arguments   n_neighbors Number of neighbours for knn. Domain: U(1, 100). Default: 15. Format: integer.
+   n_comps Number of principal components. Domain: U(0, 100).</description>
+    </item>
+    
+    <item>
+      <title>PAGA Tree</title>
+      <link>/reference/dynmethods/other/ti_paga_tree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_paga_tree/</guid>
+      <description>ti_paga_tree.Rd  Will generate a trajectory using PAGA Tree.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_paga_tree(n_neighbors = 15L, n_comps = 50L, n_dcs = 15L, resolution = 1L, embedding_type = &#34;fa&#34;) Arguments   n_neighbors Number of neighbours for knn. Domain: U(1, 100). Default: 15. Format: integer.
+   n_comps Number of principal components. Domain: U(0, 100). Default: 50.</description>
+    </item>
+    
+    <item>
+      <title>Periodic PrinCurve</title>
+      <link>/reference/dynmethods/other/ti_periodpc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_periodpc/</guid>
+      <description> ti_periodpc.Rd  Will generate a trajectory using Periodic PrinCurve.
+This method was wrapped inside a container.
+ ti_periodpc(ndim = 3L, maxit = 10L) Arguments   ndim . Domain: U(2, 10). Default: 3. Format: integer.
+   maxit . Domain: U(0, 100). Default: 10. Format: integer.
+   Value A TI method wrapper to be used together with infer_trajectory
+ Contents Arguments Value  -- </description>
+    </item>
+    
+    <item>
+      <title>PhenoPath</title>
+      <link>/reference/dynmethods/other/ti_phenopath/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_phenopath/</guid>
+      <description>ti_phenopath.Rd  Will generate a trajectory using PhenoPath.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_phenopath(thin = 40L, z_init = &#34;1&#34;, model_mu = FALSE, scale_y = TRUE) Arguments   thin The number of iterations to wait each time before re-calculating the elbo. Domain: U(2, 500). Default: 40. Format: integer.
+   z_init The initialisation of the latent trajectory.</description>
+    </item>
+    
+    <item>
+      <title>Plot a trajectory and cellular positions as a graph</title>
+      <link>/reference/dynplot/plot_trajectory/plot_graph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_trajectory/plot_graph/</guid>
+      <description>plot_graph.Rd  Plot a trajectory and cellular positions as a graph
+ plot_graph(traj, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, pseudotime = NULL, expression_source = &#34;expression&#34;, milestones = NULL, milestone_percentages = NULL, transition_size = 3, milestone_size = 5, arrow_length = grid::unit(1, &#34;cm&#34;), label_milestones = dynwrap::is_wrapper_with_milestone_labelling(traj), plot_milestones = FALSE, adjust_weights = FALSE) Arguments   traj The trajectory</description>
+    </item>
+    
+    <item>
+      <title>Plot a trajectory as a dendrogram</title>
+      <link>/reference/dynplot/plot_trajectory/plot_dendro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_trajectory/plot_dendro/</guid>
+      <description>plot_dendro.Rd  Plot a trajectory as a dendrogram
+ plot_dendro(traj, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, expression_source = &#34;expression&#34;, pseudotime = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, diag_offset = 0.05, y_offset = 0.2) Arguments   traj The trajectory
+   color_cells How to color the cells
+   grouping The grouping of the cells</description>
+    </item>
+    
+    <item>
+      <title>Plot a trajectory on dimensionality reduction</title>
+      <link>/reference/dynplot/plot_trajectory/plot_dimred/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_trajectory/plot_dimred/</guid>
+      <description>plot_dimred.Rd  Plot a trajectory on dimensionality reduction
+ plot_dimred(traj, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), dimred = ifelse(dynwrap::is_wrapper_with_dimred(traj), NA, ifelse(length(traj$cell_ids) &amp;gt; 500, dimred_pca, dimred_mds)), plot_trajectory = dynwrap::is_wrapper_with_trajectory(traj) &amp;amp;&amp;amp; !plot_milestone_network, plot_milestone_network = FALSE, label_milestones = dynwrap::is_wrapper_with_milestone_labelling(traj), alpha_cells = 1, size_trajectory = 1, grouping = NULL, groups = NULL, feature_oi = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, pseudotime = NULL, expression_source = &#34;</description>
+    </item>
+    
+    <item>
+      <title>Plot all the trajectories</title>
+      <link>/reference/dynplot/other/dynplot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/other/dynplot/</guid>
+      <description> dynplot.Rd  Plot all the trajectories
+  Contents  -- </description>
+    </item>
+    
+    <item>
+      <title>Plot onedim</title>
+      <link>/reference/dynplot/plot_trajectory/plot_onedim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_trajectory/plot_onedim/</guid>
+      <description>plot_onedim.Rd  Plot onedim
+ plot_onedim(traj, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, pseudotime = NULL, expression_source = &#34;expression&#34;, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, orientation = 1, margin = 0.05, linearised = linearise_cells(traj, margin, one_edge = TRUE), quasirandom_width = 0.2, plot_cells = TRUE, label_milestones = dynwrap::is_wrapper_with_milestone_labelling(traj)) Arguments   traj The trajectory</description>
+    </item>
+    
+    <item>
+      <title>Plot strip</title>
+      <link>/reference/dynplot/compare_trajectory/plot_strip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/compare_trajectory/plot_strip/</guid>
+      <description> plot_strip.Rd  Plot strip
+ plot_strip(traj1, traj2, margin = 0.05, reorder = TRUE) Arguments   traj1 The first trajectory
+   traj2 The second traj
+   margin The margin to add
+   reorder Whether to reorder
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Plot strip onedim</title>
+      <link>/reference/dynplot/compare_trajectory/plot_linearised_comparison/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/compare_trajectory/plot_linearised_comparison/</guid>
+      <description>plot_linearised_comparison.Rd  Plot strip onedim
+ plot_linearised_comparison(traj1, traj2, reorder = TRUE, margin = 0.05, reorder_second_by = c(&#34;mapping&#34;, &#34;optimisation&#34;)) Arguments   traj1 The first trajectory
+   traj2 The second trajectory
+   reorder Whether to reorder the trajectory
+   margin The margin to add
+   reorder_second_by How to reorder the second trajectory, either by mapping the milestones from both trajectories (`mapping`), or by trying to correlate the orderings between the two trajectories (`optimisation`)</description>
+    </item>
+    
+    <item>
+      <title>Plot the expression across a trajectory in a heatmap</title>
+      <link>/reference/dynplot/plot_trajectory/plot_heatmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_trajectory/plot_heatmap/</guid>
+      <description>plot_heatmap.Rd  When using RStudio: the heatmap will not show inside the plot area, but will be visible once you click the zoom button.
+ plot_heatmap(traj, expression_source = &#34;expression&#34;, features_oi = 20, clust = &#34;ward.D2&#34;, margin = 0.02, color_cells = NULL, milestones = NULL, milestone_percentages = traj$milestone_percentages, grouping = NULL, groups = NULL, cell_feature_importances = NULL, heatmap_type = c(&#34;tiled&#34;, &#34;dotted&#34;), scale = dynutils::scale_quantile, label_milestones = TRUE) Arguments   traj The trajectory</description>
+    </item>
+    
+    <item>
+      <title>Plot the topology of a trajectory</title>
+      <link>/reference/dynplot/plot_trajectory/plot_topology/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_trajectory/plot_topology/</guid>
+      <description> plot_topology.Rd  Plot the topology of a trajectory
+ plot_topology(traj, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, layout = NULL) Arguments   traj The trajectory
+   color_milestones How to color the cells
+   milestones Tibble containing the `milestone_id` and a `color` for each milestone
+   layout The type of layout to create.
+   Examples data(example_disconnected) plot_topology(example_disconnected)#&amp;gt; root cell or milestone not provided, trying first outgoing milestone_id#&amp;gt; Using &#39;T1_M4&#39; as rootdata(example_tree) plot_topology(example_tree)#&amp;gt; root cell or milestone not provided, trying first outgoing milestone_id#&amp;gt; Using &#39;M1&#39; as root  Contents Arguments Examples  -- </description>
+    </item>
+    
+    <item>
+      <title>Plotting edge flips</title>
+      <link>/reference/dynplot/compare_trajectory/plot_edge_flips/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/compare_trajectory/plot_edge_flips/</guid>
+      <description> plot_edge_flips.Rd  Utility plotting function for analysing the edge-flip metric from dyneval.
+ plot_edge_flips(oldadj, newadj) Arguments   oldadj Old adjacency matrix
+   newadj New adjancency matrix
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Project the waypoints</title>
+      <link>/reference/dynplot/other/project_waypoints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/other/project_waypoints/</guid>
+      <description>project_waypoints.Rd  Project the waypoints
+ project_waypoints(traj, cell_positions, waypoints = dynwrap::select_waypoints(traj), trajectory_projection_sd = sum(traj$milestone_network$length) * 0.05, color_trajectory = &#34;none&#34;) Arguments   traj The trajectory
+   cell_positions The positions of the cells
+   waypoints The waypoints to use for projecting, as generated by [dynwrap::select_waypoints()]
+   trajectory_projection_sd The standard deviation of the gaussian kernel
+   color_trajectory How to color the trajectory, can be &#34;</description>
+    </item>
+    
+    <item>
+      <title>Projected DPT</title>
+      <link>/reference/dynmethods/other/ti_projected_dpt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_projected_dpt/</guid>
+      <description>ti_projected_dpt.Rd  Will generate a trajectory using Projected DPT.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_projected_dpt(sigma = &#34;local&#34;, distance = &#34;euclidean&#34;, ndim = 20L, density_norm = TRUE, n_local = c(5L, 7L), w_width = 0.1) Arguments   sigma Diffusion scale parameter of the Gaussian kernel. A larger sigma might be necessary if the eigenvalues can not be found because of a singularity in the matrix.</description>
+    </item>
+    
+    <item>
+      <title>Projected Monocle</title>
+      <link>/reference/dynmethods/other/ti_projected_monocle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_projected_monocle/</guid>
+      <description>ti_projected_monocle.Rd  Will generate a trajectory using Projected Monocle.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_projected_monocle(reduction_method = &#34;DDRTree&#34;, max_components = 2L, norm_method = &#34;vstExprs&#34;, auto_param_selection = TRUE, filter_features = TRUE, filter_features_mean_expression = 0.1) Arguments   reduction_method A character string specifying the algorithm to use for dimensionality reduction. Domain: DDRTree. Default: DDRTree. Format: character.
+   max_components The dimensionality of the reduced space.</description>
+    </item>
+    
+    <item>
+      <title>Projected PAGA</title>
+      <link>/reference/dynmethods/other/ti_projected_paga/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_projected_paga/</guid>
+      <description>ti_projected_paga.Rd  Will generate a trajectory using Projected PAGA.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_projected_paga(n_neighbors = 15L, n_comps = 50L, n_dcs = 15L, resolution = 1L, embedding_type = &#34;fa&#34;, connectivity_cutoff = 0.05) Arguments   n_neighbors Number of neighbours for knn. Domain: U(1, 100). Default: 15. Format: integer.
+   n_comps Number of principal components. Domain: U(0, 100).</description>
+    </item>
+    
+    <item>
+      <title>Projected Slingshot</title>
+      <link>/reference/dynmethods/other/ti_projected_slingshot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_projected_slingshot/</guid>
+      <description>ti_projected_slingshot.Rd  Will generate a trajectory using Projected Slingshot.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_projected_slingshot(shrink = 1L, reweight = TRUE, reassign = TRUE, thresh = 0.001, maxit = 10L, stretch = 2, smoother = &#34;smooth.spline&#34;, shrink.method = &#34;cosine&#34;) Arguments   shrink Logical or numeric between 0 and 1, determines whether and how much to shrink branching lineages toward their average prior to the split.</description>
+    </item>
+    
+    <item>
+      <title>Projected TSCAN</title>
+      <link>/reference/dynmethods/other/ti_projected_tscan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_projected_tscan/</guid>
+      <description>ti_projected_tscan.Rd  Will generate a trajectory using Projected TSCAN.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_projected_tscan(minexpr_percent = 0L, minexpr_value = 0L, cvcutoff = 0L, clusternum = c(2L, 9L), modelNames = &#34;VVV&#34;) Arguments   minexpr_percent . Domain: U(0, 1). Default: 0. Format: numeric.
+   minexpr_value . Domain: U(0, 10). Default: 0. Format: numeric.
+   cvcutoff .</description>
+    </item>
+    
+    <item>
+      <title>RaceID / StemID</title>
+      <link>/reference/dynmethods/other/ti_raceid_stemid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_raceid_stemid/</guid>
+      <description>ti_raceid_stemid.Rd  Will generate a trajectory using RaceID / StemID.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_raceid_stemid(knn = 10L, ccor = 0.4, metric = &#34;pearson&#34;, sat = TRUE, samp = 1000L, cln = 30L, clustnr = 30L, bootnr = 50L, FUNcluster = &#34;kmedoids&#34;, probthr = 0.001, outminc = 5L, outlg = 2L, outdistquant = 0.95, initial_cmd = TRUE, perplexity = 30L, cthr = 5L, nmode = TRUE, projcells_knn = 3L, fr = FALSE, pdishuf = 500L, fast = FALSE, pthr = 0.</description>
+    </item>
+    
+    <item>
+      <title>Random</title>
+      <link>/reference/dynmethods/other/ti_random/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_random/</guid>
+      <description> ti_random.Rd  Will generate a trajectory using Random.
+This method was wrapped inside a container.
+ ti_random(dummy_param = 0.5) Arguments   dummy_param Dummy parameter. Domain: U(0, 1). Default: 0.5. Format: numeric.
+   Value A TI method wrapper to be used together with infer_trajectory
+ Contents Arguments Value  -- </description>
+    </item>
+    
+    <item>
+      <title>Return all TI ti_methods</title>
+      <link>/reference/dynwrap/infer_trajectory/get_ti_methods/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/infer_trajectory/get_ti_methods/</guid>
+      <description>Source: R/method_get_ti_methods.R get_ti_methods.Rd  Return all TI ti_methods
+ get_ti_methods(method_ids = NULL, as_tibble = TRUE, ti_packages = ifelse(&#34;dynmethods&#34; %in% rownames(utils::installed.packages()), &#34;dynmethods&#34;, &#34;dynwrap&#34;), evaluate = FALSE) Arguments   method_ids The method identifiers. NULL if listing all methods
+   as_tibble Whether or not to return the ti_methods as a tibble
+   ti_packages In which packages to look for ti methods
+   evaluate Automatically evaluate the functions</description>
+    </item>
+    
+    <item>
+      <title>Root the trajectory</title>
+      <link>/reference/dynwrap/adapt_trajectory/add_root/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/add_root/</guid>
+      <description>Source: R/wrap_add_root.R add_root.Rd  Roots the trajectory by changing the directionality of all edges given a root cell
+ add_root(trajectory, root_cell_id = trajectory$root_cell_id, root_milestone_id = trajectory$root_milestone_id, flip_edges = TRUE) add_root_using_expression(trajectory, features_oi, expression_source = &#34;expression&#34;) is_rooted(trajectory) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   root_cell_id The root cell id, not required if root_milestone_id is given
+   root_milestone_id The root milestone id, not required if root_cell_id is given</description>
+    </item>
+    
+    <item>
+      <title>Running an evaluation of a method on a set of datasets with a set of parameters</title>
+      <link>/reference/dyneval/evaluation/evaluate_ti_method/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/evaluation/evaluate_ti_method/</guid>
+      <description>evaluate_ti_method.Rd  Running an evaluation of a method on a set of datasets with a set of parameters
+ evaluate_ti_method(dataset, method, parameters, metrics, give_priors = NULL, output_model = TRUE, seed = function() random_seed(), map_fun = map, verbose = FALSE) Arguments   dataset The first trajectory, in most cases a gold standard trajectory
+   method One or more methods. Must be one of:
+ an object or list of ti_.</description>
+    </item>
+    
+    <item>
+      <title>SCIMITAR</title>
+      <link>/reference/dynmethods/other/ti_scimitar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_scimitar/</guid>
+      <description>ti_scimitar.Rd  Will generate a trajectory using SCIMITAR.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_scimitar(covariance_type = &#34;diag&#34;, degree = 3L, step_size = 0.07, cov_estimator = &#34;identity&#34;, cov_reg = 0.05, max_iter = 3L) Arguments   covariance_type . Domain: diag, spherical, full. Default: diag. Format: character.
+   degree . Domain: U(1, 20). Default: 3. Format: integer.
+   step_size .</description>
+    </item>
+    
+    <item>
+      <title>SCORPIUS</title>
+      <link>/reference/dynmethods/other/ti_scorpius/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_scorpius/</guid>
+      <description>ti_scorpius.Rd  Will generate a trajectory using SCORPIUS.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_scorpius(distance_method = &#34;spearman&#34;, ndim = 3L, k = 4L, thresh = 0.001, maxit = 10L, stretch = 0, smoother = &#34;smooth_spline&#34;, sparse = TRUE) Arguments   distance_method A character string indicating which correlationcoefficient (or covariance) is to be computed. One of &#34;pearson&#34;, &#34;kendall&#34;, or &#34;</description>
+    </item>
+    
+    <item>
+      <title>SCOUP</title>
+      <link>/reference/dynmethods/other/ti_scoup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_scoup/</guid>
+      <description>ti_scoup.Rd  Will generate a trajectory using SCOUP.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_scoup(ndim = 2L, max_ite1 = 100L, max_ite2 = 100L, alpha = c(0.1, 100), t = c(0.001, 2), sigma_squared = 0.1, thresh = 0.01) Arguments   ndim Number of pca dimensions. Domain: U(2, 20). Default: 2. Format: integer.
+   max_ite1 Upper bound of EM iteration (without pseudo-time optimization).</description>
+    </item>
+    
+    <item>
+      <title>SCUBA</title>
+      <link>/reference/dynmethods/other/ti_scuba/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_scuba/</guid>
+      <description>ti_scuba.Rd  Will generate a trajectory using SCUBA.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_scuba(rigorous_gap_stats = TRUE, N_dim = 2L, low_gene_threshold = 1L, low_gene_fraction_max = 0.7, min_split = 15L, min_percentage_split = 0.25) Arguments   rigorous_gap_stats Whether to use rigorous gap statistics to determine number of clusters. Default: TRUE. Format: logical.
+   N_dim Number of TSNE dimensions.</description>
+    </item>
+    
+    <item>
+      <title>SLICE</title>
+      <link>/reference/dynmethods/other/ti_slice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_slice/</guid>
+      <description>ti_slice.Rd  Will generate a trajectory using SLICE.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_slice(lm.method = &#34;clustering&#34;, model.type = &#34;tree&#34;, ss.method = &#34;all&#34;, ss.threshold = 0.25, community.method = &#34;louvain&#34;, cluster.method = &#34;kmeans&#34;, k = 0L, k.max = 10L, B = 100L, k.opt.method = &#34;firstmax&#34;) Arguments   lm.method Select &#34;clustering&#34; based or &#34;graph&#34; based method to infer lineage model.</description>
+    </item>
+    
+    <item>
+      <title>SLICER</title>
+      <link>/reference/dynmethods/other/ti_slicer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_slicer/</guid>
+      <description>ti_slicer.Rd  Will generate a trajectory using SLICER.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_slicer(kmin = 10L, m = 2L) Arguments   kmin Smallest value of k to try. Domain: U(2, 20). Default: 10. Format: integer.
+   m Intrinsic dimension of the data. This parameter mainly influences the visualisation of the results. The real intrinsic dimension will be calculated automaticly.</description>
+    </item>
+    
+    <item>
+      <title>STEMNET</title>
+      <link>/reference/dynmethods/other/ti_stemnet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_stemnet/</guid>
+      <description>ti_stemnet.Rd  Will generate a trajectory using STEMNET.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_stemnet(alpha = 0.1, lambda_auto = TRUE, lambda = 0.1, force = FALSE) Arguments   alpha The elastic net mixing parameter of the ‘glmnet’ classifier. Domain: e^U(-6.91, 2.30). Default: 0.1. Format: numeric.
+   lambda_auto Whether to select the lambda by cross-validation. Default: TRUE.</description>
+    </item>
+    
+    <item>
+      <title>Select the waypoint cells</title>
+      <link>/reference/dynwrap/other/select_waypoint_cells/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/select_waypoint_cells/</guid>
+      <description>Source: R/wrap_add_cell_waypoints.R select_waypoint_cells.Rd  Waypoint cells are cells spread across all of the trajectory such that there is no other cell that has a large geodesic distance to any of the waypoint cells.
+ select_waypoint_cells(milestone_ids, milestone_network, milestone_percentages, progressions, divergence_regions, num_cells_selected = 100) Arguments   milestone_ids The ids of the milestones in the trajectory. Type: Character vector.
+   milestone_network The network of the milestones. Type: Data frame(from = character, to = character, length = numeric, directed = logical).</description>
+    </item>
+    
+    <item>
+      <title>Simplify a trajectory by removing transient milestones</title>
+      <link>/reference/dynwrap/adapt_trajectory/simplify_trajectory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/simplify_trajectory/</guid>
+      <description>Source: R/simplify_trajectory.R simplify_trajectory.Rd  Transient milestones are milestones with a degree of two (if undirected) or with an indegree of one and outdegree of one (if directed)
+ simplify_trajectory(trajectory, allow_self_loops = FALSE) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   allow_self_loops Whether or not to allow self loops.
+   Details The positions of the cells within the trajectory remain the same</description>
+    </item>
+    
+    <item>
+      <title>Simplify an igraph network such that consecutive linear edges are removed</title>
+      <link>/reference/dynwrap/other/simplify_igraph_network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/simplify_igraph_network/</guid>
+      <description>Source: R/simplify_igraph_network.R simplify_igraph_network.Rd  Simplify an igraph network such that consecutive linear edges are removed
+ simplify_igraph_network(gr, allow_duplicated_edges = TRUE, allow_self_loops = TRUE, force_keep = NULL, edge_points = NULL) Arguments   gr an igraph object
+   allow_duplicated_edges Whether or not to allow duplicated edges between nodes.
+   allow_self_loops Whether or not to allow self loops.
+   force_keep Nodes that will not be removed under any condition</description>
+    </item>
+    
+    <item>
+      <title>Sincell</title>
+      <link>/reference/dynmethods/other/ti_sincell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_sincell/</guid>
+      <description>ti_sincell.Rd  Will generate a trajectory using Sincell.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_sincell(distance_method = &#34;euclidean&#34;, dimred_method = &#34;none&#34;, clust.method = &#34;max.distance&#34;, mutual = TRUE, max.distance = 0L, k = 3L, shortest.rank.percent = 10L, graph.algorithm = &#34;MST&#34;, graph.using.cells.clustering = FALSE, k_imc = 3L, pct_leaf_node_cutoff = 0.5) Arguments   distance_method Distance method to be used. The available distances are the Euclidean distance (method=&#34;</description>
+    </item>
+    
+    <item>
+      <title>Slingshot</title>
+      <link>/reference/dynmethods/other/ti_slingshot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_slingshot/</guid>
+      <description>ti_slingshot.Rd  Will generate a trajectory using Slingshot.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_slingshot(shrink = 1L, reweight = TRUE, reassign = TRUE, thresh = 0.001, maxit = 10L, stretch = 2L, smoother = &#34;smooth.spline&#34;, shrink.method = &#34;cosine&#34;) Arguments   shrink Logical or numeric between 0 and 1, determines whether and how much to shrink branching lineages toward their average prior to the split.</description>
+    </item>
+    
+    <item>
+      <title>TSCAN</title>
+      <link>/reference/dynmethods/other/ti_tscan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_tscan/</guid>
+      <description>ti_tscan.Rd  Will generate a trajectory using TSCAN.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_tscan(minexpr_percent = 0L, minexpr_value = 0L, cvcutoff = 0L, clusternum = c(2L, 9L), modelNames = &#34;VVV&#34;) Arguments   minexpr_percent . Domain: U(0, 1). Default: 0. Format: numeric.
+   minexpr_value . Domain: U(0, 10). Default: 0. Format: numeric.
+   cvcutoff .</description>
+    </item>
+    
+    <item>
+      <title>This R package contains the code for a common model of single-cell trajectories.</title>
+      <link>/reference/dynwrap/other/dynwrap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/dynwrap/</guid>
+      <description> Source: R/package.R dynwrap.Rd  This R package contains the code for a common model of single-cell trajectories.
+  Contents  -- </description>
+    </item>
+    
+    <item>
+      <title>Transform a list of data objects to a dynwrap trajectory</title>
+      <link>/reference/dynwrap/other/wrap_output_list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/other/wrap_output_list/</guid>
+      <description> Source: R/wrap_output_list.R wrap_output_list.Rd  Transform a list of data objects to a dynwrap trajectory
+ wrap_output_list(output, output_ids) Arguments   output A list containing dynwrap data
+   output_ids The names of the promised dynwrap objects
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>URD</title>
+      <link>/reference/dynmethods/other/ti_urd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_urd/</guid>
+      <description>ti_urd.Rd  Will generate a trajectory using URD.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_urd(knn = 0L, sigma.use = 0, distance = &#34;euclidean&#34;, n_floods = 20L, stability.div = 10L, mp.factor = 1L, perplexity = 30L, theta = 0.5, max_iter = 1000L, num.nn = 30L, do.jaccard = TRUE, optimal.cells.forward = 20L, max.cells.back = 40L, n.per.tip = 25000L, root.visits = 1L, max.</description>
+    </item>
+    
+    <item>
+      <title>Wanderlust</title>
+      <link>/reference/dynmethods/other/ti_wanderlust/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_wanderlust/</guid>
+      <description>ti_wanderlust.Rd  Will generate a trajectory using Wanderlust.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_wanderlust(normalise = TRUE, knn = 25L, n_diffusion_components = 3L, n_pca_components = 30L, k = 25L, num_waypoints = 250L, epsilon = 1L) Arguments   normalise . Default: TRUE. Format: logical.
+   knn K-nearest neighbours for diffusion. Domain: U(15, 100). Default: 25. Format: integer.</description>
+    </item>
+    
+    <item>
+      <title>Waterfall</title>
+      <link>/reference/dynmethods/other/ti_waterfall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_waterfall/</guid>
+      <description>ti_waterfall.Rd  Will generate a trajectory using Waterfall.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_waterfall(num_clusters = 10L) Arguments   num_clusters . Domain: U(2, 20). Default: 10. Format: integer.
+   Value A TI method wrapper to be used together with infer_trajectory
+References Shin, J., Berg, D.A., Zhu, Y., Shin, J.Y., Song, J., Bonaguidi, M.A., Enikolopov, G., Nauen, D.</description>
+    </item>
+    
+    <item>
+      <title>We like our plots clean</title>
+      <link>/reference/dynplot/plot_helpers/theme_clean/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_helpers/theme_clean/</guid>
+      <description> theme_clean.Rd  We like our plots clean
+ theme_clean()  Contents  -- </description>
+    </item>
+    
+    <item>
+      <title>We like our plots clean</title>
+      <link>/reference/dynplot/plot_helpers/theme_graph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_helpers/theme_graph/</guid>
+      <description> theme_graph.Rd  We like our plots clean
+ theme_graph()  Contents  -- </description>
+    </item>
+    
+    <item>
+      <title>Wishbone</title>
+      <link>/reference/dynmethods/other/ti_wishbone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_wishbone/</guid>
+      <description>ti_wishbone.Rd  Will generate a trajectory using Wishbone.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_wishbone(normalise = TRUE, knn = 25L, n_diffusion_components = 3L, n_pca_components = 30L, k = 25L, num_waypoints = 250L, epsilon = 1L) Arguments   normalise . Default: TRUE. Format: logical.
+   knn K-nearest neighbours for diffusion. Domain: U(15, 100). Default: 25. Format: integer.</description>
+    </item>
+    
+    <item>
+      <title>Wrappers for trajectory inference methods</title>
+      <link>/reference/dynmethods/other/dynmethods/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/dynmethods/</guid>
+      <description> dynmethods.Rd  Wrappers for trajectory inference methods
+  Contents  -- </description>
+    </item>
+    
+    <item>
+      <title>cellTree Gibbs</title>
+      <link>/reference/dynmethods/other/ti_celltree_gibbs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_celltree_gibbs/</guid>
+      <description>ti_celltree_gibbs.Rd  Will generate a trajectory using cellTree Gibbs.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_celltree_gibbs(method = &#34;Gibbs&#34;, sd_filter = 0.5, width_scale_factor = 1.5, outlier_tolerance_factor = 0.1, rooting_method = &#34;null&#34;, num_topics = 4L, tot_iter = 200L, tolerance = 1e-05) Arguments   method LDA inference method to use. Domain: Gibbs. Default: Gibbs. Format: character.
+   sd_filter Standard-deviation threshold below which genes should be removed from the data.</description>
+    </item>
+    
+    <item>
+      <title>cellTree maptpx</title>
+      <link>/reference/dynmethods/other/ti_celltree_maptpx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_celltree_maptpx/</guid>
+      <description>ti_celltree_maptpx.Rd  Will generate a trajectory using cellTree maptpx.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_celltree_maptpx(method = &#34;maptpx&#34;, sd_filter = 0.5, absolute_width = 0L, width_scale_factor = 1.5, outlier_tolerance_factor = 0.1, rooting_method = &#34;null&#34;, num_topics = c(2L, 15L), tot_iter = 200L, tolerance = 0.05) Arguments   method LDA inference method to use. Domain: maptpx. Default: maptpx. Format: character.</description>
+    </item>
+    
+    <item>
+      <title>cellTree vem</title>
+      <link>/reference/dynmethods/other/ti_celltree_vem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_celltree_vem/</guid>
+      <description>ti_celltree_vem.Rd  Will generate a trajectory using cellTree vem.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_celltree_vem(method = &#34;VEM&#34;, sd_filter = 0.5, width_scale_factor = 1.5, outlier_tolerance_factor = 0.1, rooting_method = &#34;null&#34;, num_topics = 4L, tot_iter = 1000000L, tolerance = 1e-05) Arguments   method LDA inference method to use. Domain: VEM. Default: VEM. Format: character.
+   sd_filter Standard-deviation threshold below which genes should be removed from the data.</description>
+    </item>
+    
+    <item>
+      <title>netdist scores</title>
+      <link>/reference/dyneval/metric/calculate_him/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/metric/calculate_him/</guid>
+      <description>calculate_him.Rd  netdist scores
+ calculate_him(net1, net2, simplify = TRUE) Arguments   net1 Network 1
+   net2 Network 2
+   simplify Whether or not to simplify the networks
+   Examples net1 &amp;lt;- dyntoy::generate_milestone_network(&#34;linear&#34;) net2 &amp;lt;- dyntoy::generate_milestone_network(&#34;bifurcating&#34;) calculate_him(net1, net2)#&amp;gt; Error in calculate_him(net1, net2): could not find function &#34;calculate_him&#34;net1 &amp;lt;- dyntoy::generate_milestone_network(&#34;cyclic&#34;) net2 &amp;lt;- dyntoy::generate_milestone_network(&#34;cyclic&#34;) calculate_him(net1, net2)#&amp;gt; Error in calculate_him(net1, net2): could not find function &#34;</description>
+    </item>
+    
+    <item>
+      <title>ouija</title>
+      <link>/reference/dynmethods/other/ti_ouija/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_ouija/</guid>
+      <description>ti_ouija.Rd  Will generate a trajectory using ouija.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_ouija(iter = 100L, response_type = &#34;switch&#34;, inference_type = &#34;hmc&#34;, normalise_expression = TRUE) Arguments   iter Number of iterations. Domain: e^U(2.30, 6.91). Default: 100. Format: numeric.
+   response_type A vector declaring whether each gene exhibits &#34;switch&#34; or &#34;transient&#34;expression. Defaults to &#34;switch&#34; for all genes.</description>
+    </item>
+    
+    <item>
+      <title>ouijaflow</title>
+      <link>/reference/dynmethods/other/ti_ouijaflow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_ouijaflow/</guid>
+      <description>ti_ouijaflow.Rd  Will generate a trajectory using ouijaflow.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_ouijaflow(iter = 1000L) Arguments   iter . Domain: e^U(0.69, 10.82). Default: 1000. Format: integer.
+   Value A TI method wrapper to be used together with infer_trajectory
+References Campbell, K.R., Yau, C., 2016. A descriptive marker gene approach to single-cell pseudotime inference.</description>
+    </item>
+    
+    <item>
+      <title>pCreode</title>
+      <link>/reference/dynmethods/other/ti_pcreode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_pcreode/</guid>
+      <description>ti_pcreode.Rd  Will generate a trajectory using pCreode.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_pcreode(n_pca_components = 3L, num_runs = 10L) Arguments   n_pca_components . Domain: U(2, 10). Default: 3. Format: integer.
+   num_runs . Domain: e^U(2.30, 4.61). Default: 10. Format: integer.
+   Value A TI method wrapper to be used together with infer_trajectory</description>
+    </item>
+    
+    <item>
+      <title>pseudogp</title>
+      <link>/reference/dynmethods/other/ti_pseudogp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_pseudogp/</guid>
+      <description>ti_pseudogp.Rd  Will generate a trajectory using pseudogp.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_pseudogp(smoothing_alpha = 10, smoothing_beta = 3, pseudotime_mean = 0.5, pseudotime_var = 1, chains = 3L, iter = 100L, dimreds = c(&#34;pca&#34;, &#34;mds&#34;), initialise_from = &#34;random&#34;) Arguments   smoothing_alpha The hyperparameter for the Gamma distribution that controls arc-length. Domain: U(1, 20). Default: 10. Format: numeric.</description>
+    </item>
+    
+    <item>
+      <title>reCAT</title>
+      <link>/reference/dynmethods/other/ti_recat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_recat/</guid>
+      <description>ti_recat.Rd  Will generate a trajectory using reCAT.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_recat(TSPFold = 2L, beginNum = 10L, endNum = 15L, step_size = 2L, base_cycle_range = c(6L, 9L), max_num = 300L, clustMethod = &#34;GMM&#34;) Arguments   TSPFold No documentation provided by authors. Domain: U(2, 10). Default: 2. Format: integer.
+   beginNum No documentation provided by authors.</description>
+    </item>
+    
+    <item>
+      <title>shuffle</title>
+      <link>/reference/dynmethods/other/ti_shuffle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_shuffle/</guid>
+      <description> ti_shuffle.Rd  Will generate a trajectory using shuffle.
+This method was wrapped inside a container.
+ ti_shuffle(dummy_param = TRUE) Arguments   dummy_param Dummy parameter. Default: TRUE. Format: logical.
+   Value A TI method wrapper to be used together with infer_trajectory
+ Contents Arguments Value  -- </description>
+    </item>
+    
+    <item>
+      <title>topslam</title>
+      <link>/reference/dynmethods/other/ti_topslam/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/other/ti_topslam/</guid>
+      <description>ti_topslam.Rd  Will generate a trajectory using topslam.
+This method was wrapped inside a container. The original code of this method is available here.
+ ti_topslam(n_components = 2L, n_neighbors = 10L, linear_dims = 0L, max_iters = 1000L, dimreds = c(&#34;t-SNE&#34;, &#34;PCA&#34;, &#34;Spectral&#34;, &#34;Isomap&#34;, &#34;ICA&#34;)) Arguments   n_components The number of components. Domain: U(2, 10). Default: 2. Format: integer.
+   n_neighbors The number of neighbors. Domain: U(2, 100).</description>
+    </item>
+    
+  </channel>
+</rss>

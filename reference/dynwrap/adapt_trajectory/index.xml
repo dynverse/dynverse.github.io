@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dynwrap :: Adapting a trajectory model on dynverse</title>
+    <link>/reference/dynwrap/adapt_trajectory/</link>
+    <description>Recent content in dynwrap :: Adapting a trajectory model on dynverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/reference/dynwrap/adapt_trajectory/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>&#34;Gather&#34; cells to their closest milestones</title>
+      <link>/reference/dynwrap/adapt_trajectory/gather_cells_at_milestones/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/gather_cells_at_milestones/</guid>
+      <description> Source: R/wrap_gather_cells_at_milestones.R gather_cells_at_milestones.Rd  &#34;Gather&#34; cells to their closest milestones
+ gather_cells_at_milestones(trajectory) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Add a cell grouping to a dataset</title>
+      <link>/reference/dynwrap/adapt_trajectory/add_grouping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/add_grouping/</guid>
+      <description>Source: R/wrap_add_grouping.R add_grouping.Rd  Add a cell grouping to a dataset
+ add_grouping(dataset, grouping, group_ids = NULL, ...) is_wrapper_with_grouping(dataset) get_grouping(dataset, grouping = NULL) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   grouping A grouping of the cells, can be a named vector or a dataframe with group_id (character) and cell_id (character)
+   group_ids All group_ids, optional
+   ... Extra information to be stored in the dataset</description>
+    </item>
+    
+    <item>
+      <title>Add cell waypoints to a wrapped trajectory</title>
+      <link>/reference/dynwrap/adapt_trajectory/add_cell_waypoints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/add_cell_waypoints/</guid>
+      <description> Source: R/wrap_add_cell_waypoints.R add_cell_waypoints.Rd  Add cell waypoints to a wrapped trajectory
+ add_cell_waypoints(trajectory, num_cells_selected = 100) is_wrapper_with_waypoint_cells(trajectory) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   num_cells_selected About the number of cells selected as waypoints
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Add count and normalised expression values to a dataset</title>
+      <link>/reference/dynwrap/adapt_trajectory/add_expression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/add_expression/</guid>
+      <description>Source: R/wrap_add_expression.R add_expression.Rd  Add count and normalised expression values to a dataset
+ add_expression(dataset, counts, expression, feature_info = NULL, ...) is_wrapper_with_expression(dataset) get_expression(dataset, expression_source = &#34;expression&#34;) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   counts The counts with genes in columns and cells in rows
+   expression The normalised expression values with genes in columns and cells in rows
+   feature_info Optional meta-information of the features, a data.</description>
+    </item>
+    
+    <item>
+      <title>Add information on overall differentially expressed features</title>
+      <link>/reference/dynwrap/adapt_trajectory/add_tde_overall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/add_tde_overall/</guid>
+      <description> Source: R/wrap_add_tde_overall.R add_tde_overall.Rd  Add information on overall differentially expressed features
+ add_tde_overall(trajectory, tde_overall) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   tde_overall A tibble containing a feature_id (character) and differentially_expressed (logical). Can also contain other columns, such as the p-value, q-value, log fold-change, etc
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Add or create a dimensionality reduction</title>
+      <link>/reference/dynwrap/adapt_trajectory/add_dimred/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/add_dimred/</guid>
+      <description>Source: R/wrap_add_dimred.R add_dimred.Rd  Add or create a dimensionality reduction
+ add_dimred(dataset, dimred, dimred_milestones = NULL, dimred_segment_progressions = NULL, dimred_segment_points = NULL, connect_segments = FALSE, expression_source = &#34;expression&#34;, ...) is_wrapper_with_dimred(dataset) get_dimred(dataset, dimred = NULL, expression_source = &#34;expression&#34;) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
+   dimred The dimensionality reduction matrix (with cell_ids as rownames) or function which will run the dimensionality reduction
+   dimred_milestones An optional dimensionality reduction of the milestones.</description>
+    </item>
+    
+    <item>
+      <title>Add or create waypoints to a trajectory</title>
+      <link>/reference/dynwrap/adapt_trajectory/add_waypoints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/add_waypoints/</guid>
+      <description>Source: R/wrap_add_waypoints.R add_waypoints.Rd  Add or create waypoints to a trajectory
+Waypoints are spread equally over the whole trajectory
+ add_waypoints(trajectory, n_waypoints = 100, resolution = sum(trajectory$milestone_network$length)/n_waypoints) is_wrapper_with_waypoints(trajectory) select_waypoints(trajectory, n_waypoints = 100, resolution = sum(trajectory$milestone_network$length)/n_waypoints) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   n_waypoints The number of waypoints
+   resolution The resolution of the waypoints, measured in the same units as the lengths of the milestone network edges, will be automatically computed using n_waypoints</description>
+    </item>
+    
+    <item>
+      <title>Add timings checkpoints</title>
+      <link>/reference/dynwrap/adapt_trajectory/add_timings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/add_timings/</guid>
+      <description> Source: R/wrap_add_timings.R add_timings.Rd  Add timings checkpoints
+Helper function for storing timings information.
+ add_timings(trajectory, timings) is_wrapper_with_timings(trajectory) add_timing_checkpoint(timings, name) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   timings A list of timings.
+   name The name of the timings checkpoint.
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Label milestones either manually (&lt;code&gt;label_milestones&lt;/code&gt;) or using marker genes (&lt;code&gt;label_milestones_markers&lt;/code&gt;)</title>
+      <link>/reference/dynwrap/adapt_trajectory/label_milestones/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/label_milestones/</guid>
+      <description>Source: R/wrap_label_milestones.R label_milestones.Rd  Label milestones either manually (label_milestones) or using marker genes (label_milestones_markers)
+ label_milestones(trajectory, labelling) label_milestones_markers(trajectory, markers, expression_source = &#34;expression&#34;, n_nearest_cells = 20) is_wrapper_with_milestone_labelling(trajectory) get_milestone_labelling(trajectory, label_milestones = NULL) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   labelling Named character vector containing for a milestone a new label
+   markers List containing for each label a list of marker genes</description>
+    </item>
+    
+    <item>
+      <title>Root the trajectory</title>
+      <link>/reference/dynwrap/adapt_trajectory/add_root/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/add_root/</guid>
+      <description>Source: R/wrap_add_root.R add_root.Rd  Roots the trajectory by changing the directionality of all edges given a root cell
+ add_root(trajectory, root_cell_id = trajectory$root_cell_id, root_milestone_id = trajectory$root_milestone_id, flip_edges = TRUE) add_root_using_expression(trajectory, features_oi, expression_source = &#34;expression&#34;) is_rooted(trajectory) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   root_cell_id The root cell id, not required if root_milestone_id is given
+   root_milestone_id The root milestone id, not required if root_cell_id is given</description>
+    </item>
+    
+    <item>
+      <title>Simplify a trajectory by removing transient milestones</title>
+      <link>/reference/dynwrap/adapt_trajectory/simplify_trajectory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/adapt_trajectory/simplify_trajectory/</guid>
+      <description>Source: R/simplify_trajectory.R simplify_trajectory.Rd  Transient milestones are milestones with a degree of two (if undirected) or with an indegree of one and outdegree of one (if directed)
+ simplify_trajectory(trajectory, allow_self_loops = FALSE) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   allow_self_loops Whether or not to allow self loops.
+   Details The positions of the cells within the trajectory remain the same</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>User guide on dynverse</title>
+    <link>/users/3-user-guide/</link>
+    <description>Recent content in User guide on dynverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/users/3-user-guide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Preparing the data</title>
+      <link>/users/3-user-guide/1-preparing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/users/3-user-guide/1-preparing/</guid>
+      <description>Gene expression data Prior information Optional information Grouping / clustering Dimensionality reduction  Current limitations   library(dyno) library(tidyverse) The main functions to wrap a dataset are included within the dynwrap package.
+Gene expression data As input, dynwrap requires raw counts and normalised (log2) expression data. Cells with low expression, doublets and other “bad” cells should already be filtered from this matrix. Features (i.e. genes) may already be filtered, but this is not required.</description>
+    </item>
+    
+    <item>
+      <title>Selecting the best methods for a dataset</title>
+      <link>/users/3-user-guide/2-guidelines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/users/3-user-guide/2-guidelines/</guid>
+      <description>library(dyno) library(tidyverse)  Within our evaluation study, we compared 45 methods on four aspects:
+ Accuracy: How similar is the inferred trajectory to the “true” (or “expected”) trajectory in the data. We used several metrics for this, comparing the cellular ordering and topology, and compared against both real datasets, for which a gold standard is not always so well defined, and synthetic data, which are not necessarily as biologically relevant as real data.</description>
+    </item>
+    
+    <item>
+      <title>Inferring trajectories</title>
+      <link>/users/3-user-guide/3-running/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/users/3-user-guide/3-running/</guid>
+      <description>Parameters Priors Reproducibility Running multiple methods or datasets Errors Running from the command line   library(dyno) library(tidyverse) dynwrap::infer_trajectory is the main function to infer a trajectory. It requires two things:
+ A dataset, wrapped using dynwrap::wrap_expression A TI method. This can be one of the 59 TI method from dynmethods, or a name of a method in which case it will retrieve the relevant method from dynmethods.  dataset &amp;lt;- wrap_expression( counts = example_dataset$counts, expression = example_dataset$expression ) model &amp;lt;- infer_trajectory(dataset, ti_comp1()) ## Loading required namespace: hdf5r This model now contains the main information on the trajectory, i.</description>
+    </item>
+    
+    <item>
+      <title>Visualising the trajectory</title>
+      <link>/users/3-user-guide/4-visualisation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/users/3-user-guide/4-visualisation/</guid>
+      <description>Visualising the trajectory on a dimensionality reduction Plotting the trajectory itself Plotting in a dendrogram Plotting as a graph Plotting in one dimension  Visualising many genes along a trajectory Current limitations   library(dyno) library(tidyverse) The main functions for plotting a trajectory are included in the dynplot package.
+We’ll use an example toy dataset
+set.seed(1) dataset &amp;lt;- dyntoy::generate_dataset(model = &amp;quot;bifurcating&amp;quot;, num_cells = 200) To visualise a trajectory, you have to take into acount two things:</description>
+    </item>
+    
+    <item>
+      <title>Adapting the trajectory</title>
+      <link>/users/3-user-guide/5-adapting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/users/3-user-guide/5-adapting/</guid>
+      <description>Simplifying Rooting Manually Using marker genes  Annotating Manually Using marker genes  Limitations   library(dyno) library(tidyverse) Simplifying Intermediate milestones can be removed by simplyfing the trajectory:
+model &amp;lt;- dyntoy::generate_dataset(model = dyntoy::model_linear(num_milestones = 10)) simplified &amp;lt;- simplify_trajectory(model)  Rooting TI methods often do not have an idea where the root of a trajectory is. We provide two ways of rooting a trajectory. After rooting, all other edges will point away from the root.</description>
+    </item>
+    
+    <item>
+      <title>Trajectory differentially expression</title>
+      <link>/users/3-user-guide/6-tde/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/users/3-user-guide/6-tde/</guid>
+      <description>A global overview of the most predictive genes Lineage/branch markers Genes important at bifurcation points Current limitations   library(dyno) library(tidyverse) Compared to differential expression between clusters of cells, defining differential expression on trajectories is not so straightforward. What constitutes a trajectory differentially expressed gene?
+ A gene that is uniquely expressed in a particular branch? A gene that changes at a branching point? A gene that changes along pseudotime?</description>
+    </item>
+    
+  </channel>
+</rss>

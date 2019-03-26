@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dynplot :: Plot a trajectory on dynverse</title>
+    <link>/reference/dynplot/plot_trajectory/</link>
+    <description>Recent content in dynplot :: Plot a trajectory on dynverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/reference/dynplot/plot_trajectory/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Plot a trajectory and cellular positions as a graph</title>
+      <link>/reference/dynplot/plot_trajectory/plot_graph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_trajectory/plot_graph/</guid>
+      <description>plot_graph.Rd  Plot a trajectory and cellular positions as a graph
+ plot_graph(traj, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, pseudotime = NULL, expression_source = &#34;expression&#34;, milestones = NULL, milestone_percentages = NULL, transition_size = 3, milestone_size = 5, arrow_length = grid::unit(1, &#34;cm&#34;), label_milestones = dynwrap::is_wrapper_with_milestone_labelling(traj), plot_milestones = FALSE, adjust_weights = FALSE) Arguments   traj The trajectory</description>
+    </item>
+    
+    <item>
+      <title>Plot a trajectory as a dendrogram</title>
+      <link>/reference/dynplot/plot_trajectory/plot_dendro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_trajectory/plot_dendro/</guid>
+      <description>plot_dendro.Rd  Plot a trajectory as a dendrogram
+ plot_dendro(traj, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, expression_source = &#34;expression&#34;, pseudotime = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, diag_offset = 0.05, y_offset = 0.2) Arguments   traj The trajectory
+   color_cells How to color the cells
+   grouping The grouping of the cells</description>
+    </item>
+    
+    <item>
+      <title>Plot a trajectory on dimensionality reduction</title>
+      <link>/reference/dynplot/plot_trajectory/plot_dimred/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_trajectory/plot_dimred/</guid>
+      <description>plot_dimred.Rd  Plot a trajectory on dimensionality reduction
+ plot_dimred(traj, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), dimred = ifelse(dynwrap::is_wrapper_with_dimred(traj), NA, ifelse(length(traj$cell_ids) &amp;gt; 500, dimred_pca, dimred_mds)), plot_trajectory = dynwrap::is_wrapper_with_trajectory(traj) &amp;amp;&amp;amp; !plot_milestone_network, plot_milestone_network = FALSE, label_milestones = dynwrap::is_wrapper_with_milestone_labelling(traj), alpha_cells = 1, size_trajectory = 1, grouping = NULL, groups = NULL, feature_oi = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, pseudotime = NULL, expression_source = &#34;</description>
+    </item>
+    
+    <item>
+      <title>Plot onedim</title>
+      <link>/reference/dynplot/plot_trajectory/plot_onedim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_trajectory/plot_onedim/</guid>
+      <description>plot_onedim.Rd  Plot onedim
+ plot_onedim(traj, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, pseudotime = NULL, expression_source = &#34;expression&#34;, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, orientation = 1, margin = 0.05, linearised = linearise_cells(traj, margin, one_edge = TRUE), quasirandom_width = 0.2, plot_cells = TRUE, label_milestones = dynwrap::is_wrapper_with_milestone_labelling(traj)) Arguments   traj The trajectory</description>
+    </item>
+    
+    <item>
+      <title>Plot the expression across a trajectory in a heatmap</title>
+      <link>/reference/dynplot/plot_trajectory/plot_heatmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_trajectory/plot_heatmap/</guid>
+      <description>plot_heatmap.Rd  When using RStudio: the heatmap will not show inside the plot area, but will be visible once you click the zoom button.
+ plot_heatmap(traj, expression_source = &#34;expression&#34;, features_oi = 20, clust = &#34;ward.D2&#34;, margin = 0.02, color_cells = NULL, milestones = NULL, milestone_percentages = traj$milestone_percentages, grouping = NULL, groups = NULL, cell_feature_importances = NULL, heatmap_type = c(&#34;tiled&#34;, &#34;dotted&#34;), scale = dynutils::scale_quantile, label_milestones = TRUE) Arguments   traj The trajectory</description>
+    </item>
+    
+    <item>
+      <title>Plot the topology of a trajectory</title>
+      <link>/reference/dynplot/plot_trajectory/plot_topology/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/plot_trajectory/plot_topology/</guid>
+      <description> plot_topology.Rd  Plot the topology of a trajectory
+ plot_topology(traj, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, layout = NULL) Arguments   traj The trajectory
+   color_milestones How to color the cells
+   milestones Tibble containing the `milestone_id` and a `color` for each milestone
+   layout The type of layout to create.
+   Examples data(example_disconnected) plot_topology(example_disconnected)#&amp;gt; root cell or milestone not provided, trying first outgoing milestone_id#&amp;gt; Using &#39;T1_M4&#39; as rootdata(example_tree) plot_topology(example_tree)#&amp;gt; root cell or milestone not provided, trying first outgoing milestone_id#&amp;gt; Using &#39;M1&#39; as root  Contents Arguments Examples  -- </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dyneval :: Metrics for comparing trajectories on dynverse</title>
+    <link>/reference/dyneval/metric/</link>
+    <description>Recent content in dyneval :: Metrics for comparing trajectories on dynverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/reference/dyneval/metric/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Calculate the similarity between two trajectory models.</title>
+      <link>/reference/dyneval/metric/calculate_metrics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/metric/calculate_metrics/</guid>
+      <description>calculate_metrics.Rd  One use case for these metrics is to calculate the accuracy of a certain prediction compared to a reference trajectory. However, these metrics can also be used for other purposes, such as clustering of trajectories.
+ calculate_metrics(dataset, model, metrics = dyneval::metrics$metric_id, expression_source = dataset$expression) Arguments   dataset The first trajectory, in most cases a gold standard trajectory
+   model The second trajectory, in most cases a predicted trajectory</description>
+    </item>
+    
+    <item>
+      <title>Compare enrichment in finding back the most important genes</title>
+      <link>/reference/dyneval/metric/calculate_featureimp_enrichment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/metric/calculate_featureimp_enrichment/</guid>
+      <description>calculate_featureimp_enrichment.Rd  Compare enrichment in finding back the most important genes
+ calculate_featureimp_enrichment(dataset, prediction, expression_source = dataset$expression, fi_method = dynfeature::fi_ranger_rf_lite()) Arguments   dataset A dataset
+   prediction A predicted trajectory
+   expression_source The expression data matrix, with features as columns.
+ If a matrix is provided, it is used as is.
+ If a character is provided, dataset[[expression_source]] should contain the matrix.
+ If a function is provided, that function will be called in order to obtain the expression (useful for lazy loading).</description>
+    </item>
+    
+    <item>
+      <title>Compare feature importances derived by both trajectories</title>
+      <link>/reference/dyneval/metric/calculate_featureimp_cor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/metric/calculate_featureimp_cor/</guid>
+      <description>calculate_featureimp_cor.Rd  Compare feature importances derived by both trajectories
+ calculate_featureimp_cor(dataset, prediction, expression_source = dataset$expression_source, fi_method = dynfeature::fi_ranger_rf_lite()) Arguments   dataset A dataset
+   prediction A predicted trajectory
+   expression_source The expression data matrix, with features as columns.
+ If a matrix is provided, it is used as is.
+ If a character is provided, dataset[[expression_source]] should contain the matrix.
+ If a function is provided, that function will be called in order to obtain the expression (useful for lazy loading).</description>
+    </item>
+    
+    <item>
+      <title>Compares the mapping between milestones or branches</title>
+      <link>/reference/dyneval/metric/calculate_mapping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/metric/calculate_mapping/</guid>
+      <description> calculate_mapping.Rd  Compares the mapping between milestones or branches
+ calculate_mapping(dataset, prediction, grouping = c(&#34;branches&#34;, &#34;milestones&#34;), simplify = TRUE) calculate_mapping_milestones(dataset, prediction, simplify = TRUE) calculate_mapping_branches(dataset, prediction, simplify = TRUE) Arguments   dataset A dataset
+   prediction A predicted model
+   grouping How to group the cells, either branches or milestones
+   simplify Whether to simplify the trajectory (allowing self loops)
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Compute metrics related to the prediction of the positions</title>
+      <link>/reference/dyneval/metric/calculate_position_predict/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/metric/calculate_position_predict/</guid>
+      <description> calculate_position_predict.Rd  Compute metrics related to the prediction of the positions
+ calculate_position_predict(dataset, prediction, metrics = c(&#34;rf_mse&#34;, &#34;rf_rsq&#34;, &#34;lm_mse&#34;, &#34;lm_rsq&#34;)) Arguments   dataset A dataset containing a trajectory
+   prediction A predicted trajectory
+   metrics Which metrics to predict, can be rf_mse, rf_rsq, rf_nmse, lm_mse, lm_rsq and/or lm_nmse
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Edge flip score</title>
+      <link>/reference/dyneval/metric/calculate_edge_flip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/metric/calculate_edge_flip/</guid>
+      <description>calculate_edge_flip.Rd  Edge flip score
+ calculate_edge_flip(net1, net2, return = c(&#34;score&#34;, &#34;all&#34;), simplify = TRUE, limit_flips = 5, limit_combinations = choose(25, 4)) Arguments   net1 Network 1
+   net2 Network 2
+   return Whether to return only the score or the full output (all)
+   simplify Whether or not to simplify the networks
+   limit_flips Maximal number of flips to check</description>
+    </item>
+    
+    <item>
+      <title>Metadata on metrics</title>
+      <link>/reference/dyneval/metric/metrics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/metric/metrics/</guid>
+      <description>metrics.Rd  Also contained are:
+ Ways of rendering the metrics
+ Categorisation of the metrics
+ The perfect and worst possible scores (if possible to determine beforehand)
+ Whether the metric is symmetric (i.e. whether flipping the order of trajectories would change the expected value of the metric)
+   metrics Format An object of class tbl_df (inherits from tbl, data.frame) with 19 rows and 10 columns.</description>
+    </item>
+    
+    <item>
+      <title>netdist scores</title>
+      <link>/reference/dyneval/metric/calculate_him/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/metric/calculate_him/</guid>
+      <description>calculate_him.Rd  netdist scores
+ calculate_him(net1, net2, simplify = TRUE) Arguments   net1 Network 1
+   net2 Network 2
+   simplify Whether or not to simplify the networks
+   Examples net1 &amp;lt;- dyntoy::generate_milestone_network(&#34;linear&#34;) net2 &amp;lt;- dyntoy::generate_milestone_network(&#34;bifurcating&#34;) calculate_him(net1, net2)#&amp;gt; Error in calculate_him(net1, net2): could not find function &#34;calculate_him&#34;net1 &amp;lt;- dyntoy::generate_milestone_network(&#34;cyclic&#34;) net2 &amp;lt;- dyntoy::generate_milestone_network(&#34;cyclic&#34;) calculate_him(net1, net2)#&amp;gt; Error in calculate_him(net1, net2): could not find function &#34;</description>
+    </item>
+    
+  </channel>
+</rss>

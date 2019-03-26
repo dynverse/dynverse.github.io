@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dynwrap :: Calculations from a trajectory on dynverse</title>
+    <link>/reference/dynwrap/derive_trajectory/</link>
+    <description>Recent content in dynwrap :: Calculations from a trajectory on dynverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/reference/dynwrap/derive_trajectory/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Add or calculate pseudotime as distance from the root</title>
+      <link>/reference/dynwrap/derive_trajectory/calculate_pseudotime/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/derive_trajectory/calculate_pseudotime/</guid>
+      <description> Source: R/wrap_add_pseudotime.R add_pseudotime.Rd  Add or calculate pseudotime as distance from the root
+ calculate_pseudotime(trajectory) add_pseudotime(trajectory, pseudotime = NULL) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   pseudotime Named vector containing the pseudotime for every cell
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Calculate geodesic distances between cells in a trajectory</title>
+      <link>/reference/dynwrap/derive_trajectory/calculate_geodesic_distances/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/derive_trajectory/calculate_geodesic_distances/</guid>
+      <description>Source: R/calculate_geodesic_distances.R calculate_geodesic_distances.Rd  Will calculate geodesic distances between cells within a trajectory. To speed things up, only the distances with a set of waypoint cells are calculated.
+ calculate_geodesic_distances(trajectory, waypoint_cells = NULL, waypoint_milestone_percentages = NULL) compute_tented_geodesic_distances(trajectory, waypoint_cells = NULL, waypoint_milestone_percentages = NULL) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   waypoint_cells A vector of waypoint cells. Only the geodesic distances between waypoint cells and all other cells will be calculated.</description>
+    </item>
+    
+    <item>
+      <title>Calculate mean values by milestone percentages</title>
+      <link>/reference/dynwrap/derive_trajectory/calculate_average_by_milestone_percentages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/derive_trajectory/calculate_average_by_milestone_percentages/</guid>
+      <description>Source: R/calculate_average.R calculate_average_by_milestone_percentages.Rd  Calculate mean values by milestone percentages
+ calculate_average_by_milestone_percentages(x, milestone_percentages) Arguments   x A matrix. One row for every cell; one column for every feature. The rows must be named.
+   milestone_percentages A data frame of milestone percentages. Format: data_frame(cell_id = character(), milestone_id = character(), percentage = numeric()).
+   Examples data(example_dataset) calculate_average_by_milestone_percentages( x = example_dataset$expression, milestone_percentages = example_dataset$milestone_percentages )#&amp;gt; 2 x 3 Matrix of class &#34;</description>
+    </item>
+    
+    <item>
+      <title>Calculate mean values per cell group</title>
+      <link>/reference/dynwrap/derive_trajectory/calculate_average_by_group/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/derive_trajectory/calculate_average_by_group/</guid>
+      <description>Source: R/calculate_average.R calculate_average_by_group.Rd  Calculate mean values per cell group
+ calculate_average_by_group(x, cell_grouping) Arguments   x A matrix. One row for every cell; one column for every feature. The rows must be named.
+   cell_grouping A data frame denoting the grouping of the cells. Format: data_frame(cell_id = character(), group_id = character()).
+   Examples data(example_dataset) calculate_average_by_group( x = example_dataset$expression, cell_grouping = example_dataset$prior_information$groups_id )#&amp;gt; 2 x 3 Matrix of class &#34;</description>
+    </item>
+    
+    <item>
+      <title>Create a grouping from a trajectory</title>
+      <link>/reference/dynwrap/derive_trajectory/group_from_trajectory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/derive_trajectory/group_from_trajectory/</guid>
+      <description> Source: R/wrap_add_grouping.R group_from_trajectory.Rd  Grouping cells onto their edges, or grouping cells onto their nearest milestones
+ group_onto_trajectory_edges(trajectory, group_template = &#34;{from}-&amp;gt;{to}&#34;) group_onto_nearest_milestones(trajectory) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   group_template Processed by glue::glue to name the group
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Layout the trajectory and its cells in 2 dimensions</title>
+      <link>/reference/dynwrap/derive_trajectory/calculate_trajectory_dimred/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/derive_trajectory/calculate_trajectory_dimred/</guid>
+      <description> Source: R/calculate_trajectory_dimred.R calculate_trajectory_dimred.Rd  Layout the trajectory and its cells in 2 dimensions
+ calculate_trajectory_dimred(trajectory, adjust_weights = FALSE) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()
+   adjust_weights Whether or not to rescale the milestone network weights
+   See also wrap_data
+  Contents Arguments See also  -- </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Creating a TI method on dynverse</title>
+    <link>/developers/creating-ti-method/</link>
+    <description>Recent content in Creating a TI method on dynverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/developers/creating-ti-method/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bare-bones</title>
+      <link>/developers/creating-ti-method/create_ti_method_barebones/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/developers/creating-ti-method/create_ti_method_barebones/</guid>
+      <description>library(dynwrap) This vignette describes how to include your own method into the dynverse workflow. We’ll illustrate this with a very basic method: using one of the components of a PCA as the pseudotime.
+A method defined in R has two parts: a definition and a function.
+Definition The definition contains information on the method, its parameters and its required or optional inputs. The possibilities are quite extensive (see dynwrap::definition()), but essentials are:</description>
+    </item>
+    
+    <item>
+      <title>Wrapper script</title>
+      <link>/developers/creating-ti-method/create_ti_method_script/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/developers/creating-ti-method/create_ti_method_script/</guid>
+      <description>library(dynwrap) Still to be written</description>
+    </item>
+    
+    <item>
+      <title>Container</title>
+      <link>/developers/creating-ti-method/create_ti_method_container/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/developers/creating-ti-method/create_ti_method_container/</guid>
+      <description>library(dynwrap) Still to be written</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dyneval :: Evaluating methods on dynverse</title>
+    <link>/reference/dyneval/evaluation/</link>
+    <description>Recent content in dyneval :: Evaluating methods on dynverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/reference/dyneval/evaluation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Running an evaluation of a method on a set of datasets with a set of parameters</title>
+      <link>/reference/dyneval/evaluation/evaluate_ti_method/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dyneval/evaluation/evaluate_ti_method/</guid>
+      <description>evaluate_ti_method.Rd  Running an evaluation of a method on a set of datasets with a set of parameters
+ evaluate_ti_method(dataset, method, parameters, metrics, give_priors = NULL, output_model = TRUE, seed = function() random_seed(), map_fun = map, verbose = FALSE) Arguments   dataset The first trajectory, in most cases a gold standard trajectory
+   method One or more methods. Must be one of:
+ an object or list of ti_.</description>
+    </item>
+    
+  </channel>
+</rss>

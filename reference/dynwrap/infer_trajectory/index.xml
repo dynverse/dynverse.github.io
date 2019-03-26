@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dynwrap :: Running a TI method on dynverse</title>
+    <link>/reference/dynwrap/infer_trajectory/</link>
+    <description>Recent content in dynwrap :: Running a TI method on dynverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/reference/dynwrap/infer_trajectory/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Add prior information to a data wrapper</title>
+      <link>/reference/dynwrap/infer_trajectory/add_prior_information/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/infer_trajectory/add_prior_information/</guid>
+      <description>Source: R/wrap_add_prior_information.R add_prior_information.Rd  Note that the given data wrapper requires a trajectory and expression values to have been added already.
+For example, what are the start cells, the end cells, to which milestone does each cell belong to, ...
+ add_prior_information(dataset, start_id = NULL, end_id = NULL, groups_id = NULL, groups_network = NULL, features_id = NULL, groups_n = NULL, start_n = NULL, end_n = NULL, timecourse_continuous = NULL, timecourse_discrete = NULL, verbose = TRUE) is_wrapper_with_prior_information(dataset) generate_prior_information(cell_ids, milestone_ids, milestone_network, milestone_percentages, progressions, divergence_regions, expression, feature_info = NULL, cell_info = NULL, marker_fdr = 0.</description>
+    </item>
+    
+    <item>
+      <title>Create a wrapper object with expression and counts</title>
+      <link>/reference/dynwrap/infer_trajectory/wrap_expression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/infer_trajectory/wrap_expression/</guid>
+      <description>Source: R/wrap_add_expression.R wrap_expression.Rd  Create a wrapper object with expression and counts
+ wrap_expression(id = NULL, expression, counts, cell_info = NULL, feature_info = NULL, ...) Arguments   id A unique identifier for the data. If NULL, a random string will be generated.
+   expression The normalised expression values with genes in columns and cells in rows
+   counts The counts with genes in columns and cells in rows</description>
+    </item>
+    
+    <item>
+      <title>Infer trajectories</title>
+      <link>/reference/dynwrap/infer_trajectory/infer_trajectories/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/infer_trajectory/infer_trajectories/</guid>
+      <description>Source: R/method_infer_trajectory.R infer_trajectories.Rd  Infer trajectories
+ infer_trajectories(dataset, method, parameters = NULL, give_priors = NULL, seed = random_seed(), verbose = FALSE, return_verbose = FALSE, debug = FALSE, map_fun = map) infer_trajectory(dataset, method, parameters = NULL, give_priors = NULL, seed = random_seed(), verbose = FALSE, return_verbose = FALSE, debug = FALSE, ...) Arguments   dataset One or more datasets as created by infer_trajectory() or add_trajectory(). Prior information can be added using add_prior_information().</description>
+    </item>
+    
+    <item>
+      <title>Return all TI ti_methods</title>
+      <link>/reference/dynwrap/infer_trajectory/get_ti_methods/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/infer_trajectory/get_ti_methods/</guid>
+      <description>Source: R/method_get_ti_methods.R get_ti_methods.Rd  Return all TI ti_methods
+ get_ti_methods(method_ids = NULL, as_tibble = TRUE, ti_packages = ifelse(&#34;dynmethods&#34; %in% rownames(utils::installed.packages()), &#34;dynmethods&#34;, &#34;dynwrap&#34;), evaluate = FALSE) Arguments   method_ids The method identifiers. NULL if listing all methods
+   as_tibble Whether or not to return the ti_methods as a tibble
+   ti_packages In which packages to look for ti methods
+   evaluate Automatically evaluate the functions</description>
+    </item>
+    
+  </channel>
+</rss>

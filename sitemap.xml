@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/developers/creating-ti-method/create_ti_method_barebones/</loc>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/</loc>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+  </url>
+  
+  <url>
+    <loc>/users/1-installation/</loc>
+  </url>
+  
+  <url>
+    <loc>/users/</loc>
+  </url>
+  
+  <url>
+    <loc>/users/3-user-guide/1-preparing/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dyneval/evaluation/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/plot_trajectory/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_trajectory/</loc>
+  </url>
+  
+  <url>
+    <loc>/developers/creating-ti-method/create_ti_method_script/</loc>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/</loc>
+  </url>
+  
+  <url>
+    <loc>/developers/creating-ti-method/</loc>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/developers/</loc>
+  </url>
+  
+  <url>
+    <loc>/users/2-quick_start/</loc>
+  </url>
+  
+  <url>
+    <loc>/users/3-user-guide/2-guidelines/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dyneval/metric/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/compare_trajectory/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/adapt_trajectory/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/</loc>
+  </url>
+  
+  <url>
+    <loc>/developers/evaluating-ti-method/</loc>
+  </url>
+  
+  <url>
+    <loc>/users/3-user-guide/3-running/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/</loc>
+  </url>
+  
+  <url>
+    <loc>/users/3-user-guide/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dyneval/other/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/plot_helpers/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/derive_trajectory/</loc>
+  </url>
+  
+  <url>
+    <loc>/developers/creating-ti-method/create_ti_method_container/</loc>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/reference/dyneval/</loc>
+  </url>
+  
+  <url>
+    <loc>/users/4-example_analyses/</loc>
+  </url>
+  
+  <url>
+    <loc>/users/3-user-guide/4-visualisation/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/other/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/</loc>
+  </url>
+  
+  <url>
+    <loc>/users/3-user-guide/5-adapting/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/infer_trajectory/</loc>
+  </url>
+  
+  <url>
+    <loc>/users/3-user-guide/6-tde/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/other/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/logo-accordion/</loc>
+  </url>
+  
+  <url>
+    <loc>/page-top/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/adapt_trajectory/gather_cells_at_milestones/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/trajectory_type_dag/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_trajectory/wrap_data/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/adapt_trajectory/add_grouping/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/adapt_trajectory/add_cell_waypoints/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/other/add_cell_coloring/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/adapt_trajectory/add_expression/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/adapt_trajectory/add_tde_overall/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/other/add_milestone_coloring/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/derive_trajectory/calculate_pseudotime/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/adapt_trajectory/add_dimred/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/adapt_trajectory/add_waypoints/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/infer_trajectory/add_prior_information/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/adapt_trajectory/add_timings/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/allowed_inputs/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/other/allowed_outputs/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_angle/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_calista/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/derive_trajectory/calculate_geodesic_distances/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/derive_trajectory/calculate_average_by_milestone_percentages/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/derive_trajectory/calculate_average_by_group/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dyneval/metric/calculate_metrics/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_cellrouter/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_celltrails/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/other/classify_milestone_network/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/other/add_density_coloring/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dyneval/metric/calculate_featureimp_enrichment/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dyneval/metric/calculate_featureimp_cor/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dyneval/metric/calculate_mapping/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_comp1/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dyneval/metric/calculate_position_predict/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_trajectory/add_cyclic_trajectory/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_trajectory/add_linear_trajectory/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_trajectory/add_dimred_projection/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_trajectory/add_cluster_graph/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_trajectory/add_cell_graph/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/convert_definition/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/other/convert_milestone_percentages_to_progressions/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/other/convert_progressions_to_milestone_percentages/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/create_ti_method_container/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/create_ti_method_definition/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/create_ti_method_r/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/definition/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/derive_trajectory/group_from_trajectory/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_trajectory/add_branch_trajectory/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/infer_trajectory/wrap_expression/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/plot_helpers/empty_plot/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_dpt/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/plot_helpers/process_dynplot/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_trajectory/add_trajectory/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/def_method/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/other/determine_cell_trajectory_positions/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dyneval/metric/calculate_edge_flip/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_elpigraph/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_elpicycle/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_elpilinear/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_embeddr/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_error/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dyneval/other/dyneval/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/other/example_dataset/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_forks/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_fateid/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_gng/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_gpfates/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/other/random_seed/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/other/generate_parameter_documentation/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/get_default_parameters/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/plot_helpers/milestone_palette/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_grandprix/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/other/get_divergence_triangles/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_identity/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/infer_trajectory/infer_trajectories/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/adapt_trajectory/label_milestones/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/derive_trajectory/calculate_trajectory_dimred/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/other/linearise_cells/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_matcher/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_merlot/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_mfa/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_mst/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/def_author/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/def_container/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/def_manuscript/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/def_parameters/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/def_wrapper/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dyneval/metric/metrics/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/prior_usages/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/priors/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/methods/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/trajectory_types/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_ti_method/wrapper_types/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_monocle_ddrtree/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_monocle_ica/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_mpath/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/create_trajectory/add_end_state_probabilities/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_paga/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_paga_tree/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_periodpc/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_phenopath/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/plot_trajectory/plot_graph/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/plot_trajectory/plot_dendro/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/plot_trajectory/plot_dimred/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/other/dynplot/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/plot_trajectory/plot_onedim/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/compare_trajectory/plot_strip/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/compare_trajectory/plot_linearised_comparison/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/plot_trajectory/plot_heatmap/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/plot_trajectory/plot_topology/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/compare_trajectory/plot_edge_flips/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/other/project_waypoints/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_projected_dpt/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_projected_monocle/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_projected_paga/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_projected_slingshot/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_projected_tscan/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_raceid_stemid/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_random/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/infer_trajectory/get_ti_methods/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/adapt_trajectory/add_root/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dyneval/evaluation/evaluate_ti_method/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_scimitar/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_scorpius/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_scoup/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_scuba/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_slice/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_slicer/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_stemnet/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/other/select_waypoint_cells/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/adapt_trajectory/simplify_trajectory/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/other/simplify_igraph_network/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_sincell/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_slingshot/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_tscan/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/other/dynwrap/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynwrap/other/wrap_output_list/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_urd/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_wanderlust/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_waterfall/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/plot_helpers/theme_clean/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/plot_helpers/theme_graph/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_wishbone/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/dynmethods/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_celltree_gibbs/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_celltree_maptpx/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_celltree_vem/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dyneval/metric/calculate_him/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_ouija/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_ouijaflow/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_pcreode/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_pseudogp/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_recat/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_shuffle/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/other/ti_topslam/</loc>
+  </url>
+  
+</urlset>

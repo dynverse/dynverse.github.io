@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dynwrap :: Creating a TI method on dynverse</title>
+    <link>/reference/dynwrap/create_ti_method/</link>
+    <description>Recent content in dynwrap :: Creating a TI method on dynverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/reference/dynwrap/create_ti_method/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A DAG of trajectory types</title>
+      <link>/reference/dynwrap/create_ti_method/trajectory_type_dag/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/trajectory_type_dag/</guid>
+      <description> Source: R/data.R trajectory_type_dag.Rd  A DAG of trajectory types
+ trajectory_type_dag Format An object of class tbl_graph (inherits from igraph) of length 10.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>All allowed inputs</title>
+      <link>/reference/dynwrap/create_ti_method/allowed_inputs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/allowed_inputs/</guid>
+      <description> Source: R/data.R allowed_inputs.Rd  All allowed inputs
+ allowed_inputs Format An object of class tbl_df (inherits from tbl, data.frame) with 13 rows and 2 columns.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>Convert a definition loaded in from a yaml</title>
+      <link>/reference/dynwrap/create_ti_method/convert_definition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/convert_definition/</guid>
+      <description> Source: R/method_process_definition.R convert_definition.Rd  Convert a definition loaded in from a yaml
+ convert_definition(definition_raw) Arguments   definition_raw The raw definition loaded from the yaml
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Create a TI method from a docker / singularity container</title>
+      <link>/reference/dynwrap/create_ti_method/create_ti_method_container/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/create_ti_method_container/</guid>
+      <description>Source: R/method_create_ti_method_container.R create_ti_method_container.Rd  These functions create a TI method from a container using babelwhale. Supports both docker and singularity as a backend.
+ create_ti_method_container(container_id, pull_if_needed = TRUE, return_function = TRUE) Arguments   container_id The name of the container repository (e.g. &#34;dynverse/ti_angle&#34;).
+   pull_if_needed Pull the container if not yet available.
+   return_function Whether to return a function that allows you to override the default parameters, or just return the method meta data as is.</description>
+    </item>
+    
+    <item>
+      <title>Create a TI method from a local method definition file</title>
+      <link>/reference/dynwrap/create_ti_method/create_ti_method_definition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/create_ti_method_definition/</guid>
+      <description>Source: R/method_create_ti_method_definition.R create_ti_method_definition.Rd  The local method definition file describes a method that is runnable on the local system.
+ create_ti_method_definition(definition, script, return_function = TRUE) Arguments   definition A definition, see definition()
+   script Location of the script that will be executed. Has to contain a #!
+   return_function Whether to return a function that allows you to override the default parameters, or just return the method meta data as is.</description>
+    </item>
+    
+    <item>
+      <title>Create a TI method wrapper</title>
+      <link>/reference/dynwrap/create_ti_method/create_ti_method_r/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/create_ti_method_r/</guid>
+      <description>Source: R/method_create_ti_method_r.R create_ti_method_r.Rd  Create a TI method wrapper
+ create_ti_method_r(definition, run_fun, package_required = character(), package_loaded = character(), remotes_package = character(), return_function = TRUE) Arguments   definition A definition, see definition()
+   run_fun A function to infer a trajectory, with parameters counts/expression, parameters, priors, verbose and seed
+   package_required The packages that need to be installed before executing the method.
+   package_loaded The packages that need to be loaded before executing the method.</description>
+    </item>
+    
+    <item>
+      <title>Create a definition</title>
+      <link>/reference/dynwrap/create_ti_method/definition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/definition/</guid>
+      <description>Source: R/method_process_definition.R definition.Rd  A definition contains meta information on a TI method and various aspects thereof. For brevity, the example only contains a minimum example, check the documentation of the def_* helper functions for more extensive examples.
+ definition(method, wrapper, manuscript = NULL, container = NULL, parameters = parameter_set()) is_ti_method(method) Arguments   method Meta information on the TI method (see def_method()).
+   wrapper Meta information on the wrapper itself (see def_wrapper()).</description>
+    </item>
+    
+    <item>
+      <title>Define meta information on the TI method.</title>
+      <link>/reference/dynwrap/create_ti_method/def_method/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/def_method/</guid>
+      <description>Source: R/method_process_definition.R def_method.Rd  Define meta information on the TI method.
+ def_method(id, name = id, source = &#34;tool&#34;, tool_id = NULL, platform = NULL, url = NULL, license = NULL, authors = list()) Arguments   id An id by which to identify a method. Should only contain lowercase letters or underscores.
+   name The name of the method.
+   source The type of TI method.</description>
+    </item>
+    
+    <item>
+      <title>Get the default parameters of a method</title>
+      <link>/reference/dynwrap/create_ti_method/get_default_parameters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/get_default_parameters/</guid>
+      <description> Source: R/method_process_definition.R get_default_parameters.Rd  Get the default parameters of a method
+ get_default_parameters(definition) Arguments   definition A TI method description
+    Contents Arguments  -- </description>
+    </item>
+    
+    <item>
+      <title>Meta information on an author</title>
+      <link>/reference/dynwrap/create_ti_method/def_author/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/def_author/</guid>
+      <description>Source: R/method_process_definition.R def_author.Rd  Meta information on an author
+ def_author(given, family, email = NULL, github = NULL, orcid = NULL) Arguments   given The given name
+   family The family name
+   email The email address
+   github The github handle
+   orcid The orcid id
+   Examples def_author( given = &#34;Bob&#34;, family = &#34;Dylan&#34;, email = &#34;</description>
+    </item>
+    
+    <item>
+      <title>Meta information on the container in which the wrapper resides</title>
+      <link>/reference/dynwrap/create_ti_method/def_container/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/def_container/</guid>
+      <description> Source: R/method_process_definition.R def_container.Rd  Meta information on the container in which the wrapper resides
+ def_container(docker, url = NULL) Arguments   docker The handle of the docker container
+   url An url of where the docker codebase resides (containing definition.yml, Dockerfile, ...)
+   Examples def_container( docker = &#34;bobdylan/ti_some_method&#34;, url = &#34;https://github.com/bobdylan/ti_some_method&#34; )#&amp;gt; $docker #&amp;gt; [1] &#34;bobdylan/ti_some_method&#34; #&amp;gt; #&amp;gt; $url #&amp;gt; [1] &#34;https://github.com/bobdylan/ti_some_method&#34; #&amp;gt;   Contents Arguments Examples  -- </description>
+    </item>
+    
+    <item>
+      <title>Meta information on the manuscript</title>
+      <link>/reference/dynwrap/create_ti_method/def_manuscript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/def_manuscript/</guid>
+      <description>Source: R/method_process_definition.R def_manuscript.Rd  Meta information on the manuscript
+ def_manuscript(doi = NULL, google_scholar_cluster_id = NULL, preprint_date = NULL, publication_date = NULL) Arguments   doi A doi identifier (not an url)
+   google_scholar_cluster_id The google cluster id. Finding this id is a bit tricky; you need to find the manuscript on one of the author pages, and hover over the &#39;All X versions&#39; button. Example: google scholar page, screenshot.</description>
+    </item>
+    
+    <item>
+      <title>Meta information on the parameters of the TI method</title>
+      <link>/reference/dynwrap/create_ti_method/def_parameters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/def_parameters/</guid>
+      <description>Source: R/method_process_definition.R def_parameters.Rd  Parameters can be defined using dynparam::dynparam().
+ def_parameters(..., parameters = NULL, forbidden = NULL) Arguments   ... Parameters to wrap in a parameter set.
+   parameters A list of parameters to wrap in a parameter set.
+   forbidden States forbidden region of parameter via a character vector, which will be turned into an expression.
+   Examples library(dynparam) def_parameters( character_parameter(id = &#34;</description>
+    </item>
+    
+    <item>
+      <title>Meta information on the wrapper</title>
+      <link>/reference/dynwrap/create_ti_method/def_wrapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/def_wrapper/</guid>
+      <description>Source: R/method_process_definition.R def_wrapper.Rd  Meta information on the wrapper
+ def_wrapper(input_required, input_optional = character(), type = &#34;trajectory&#34;, topology_inference = NULL, trajectory_types = character()) Arguments   input_required The required inputs for this method. See dynwrap::allowed_inputs().
+   input_optional Optional inputs for this method. See dynwrap::allowed_inputs().
+   type Which type of trajectory post-processing is used. Possible values: &#34;trajectory&#34; (default), &#34;linear_trajectory&#34;, &#34;cyclic_trajectory&#34;, &#34;branch_trajectory&#34;, &#34;cluster_graph&#34;, &#34;dimred_projection&#34;, &#34;end_state_probabilities&#34;, &#34;cell_graph&#34;.
+   topology_inference Whether the topology is fixed (&#34;</description>
+    </item>
+    
+    <item>
+      <title>Metadata on prior usages</title>
+      <link>/reference/dynwrap/create_ti_method/prior_usages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/prior_usages/</guid>
+      <description> Source: R/data.R prior_usages.Rd  Metadata on prior usages
+ prior_usages Format An object of class tbl_df (inherits from tbl, data.frame) with 3 rows and 2 columns.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>Metadata on priors</title>
+      <link>/reference/dynwrap/create_ti_method/priors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/priors/</guid>
+      <description> Source: R/data.R priors.Rd  Metadata on priors
+ priors Format An object of class tbl_df (inherits from tbl, data.frame) with 11 rows and 4 columns.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>Metadata on the trajectory types</title>
+      <link>/reference/dynwrap/create_ti_method/trajectory_types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/trajectory_types/</guid>
+      <description> Source: R/data.R trajectory_types.Rd  Metadata on the trajectory types
+ trajectory_types Format An object of class tbl_df (inherits from tbl, data.frame) with 9 rows and 6 columns.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>Metadata on wrapper types</title>
+      <link>/reference/dynwrap/create_ti_method/wrapper_types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynwrap/create_ti_method/wrapper_types/</guid>
+      <description> Source: R/data.R wrapper_types.Rd  Metadata on wrapper types
+ wrapper_types Format An object of class tbl_df (inherits from tbl, data.frame) with 7 rows and 4 columns.
+ Contents Format  -- </description>
+    </item>
+    
+  </channel>
+</rss>
