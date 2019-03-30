@@ -3,16 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/developers/creating-ti-method/create_ti_method_barebones/</loc>
-    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <loc>/developers/creating-ti-method/create_ti_method_wrappers/</loc>
+    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/reference/dynwrap/</loc>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
   </url>
   
   <url>
@@ -32,6 +28,10 @@
   </url>
   
   <url>
+    <loc>/reference/dynmethods/method/</loc>
+  </url>
+  
+  <url>
     <loc>/reference/dynplot/plot_trajectory/</loc>
   </url>
   
@@ -40,8 +40,8 @@
   </url>
   
   <url>
-    <loc>/developers/creating-ti-method/create_ti_method_script/</loc>
-    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <loc>/developers/creating-ti-method/create_ti_method_r/</loc>
+    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -50,7 +50,7 @@
   
   <url>
     <loc>/developers/creating-ti-method/</loc>
-    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -79,6 +79,11 @@
   
   <url>
     <loc>/reference/dynwrap/adapt_trajectory/</loc>
+  </url>
+  
+  <url>
+    <loc>/developers/creating-ti-method/create_ti_method_script/</loc>
+    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -115,7 +120,7 @@
   
   <url>
     <loc>/developers/creating-ti-method/create_ti_method_container/</loc>
-    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -123,7 +128,7 @@
   </url>
   
   <url>
-    <loc>/users/4-example_analyses/</loc>
+    <loc>/about/</loc>
   </url>
   
   <url>
@@ -156,7 +161,11 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/contributing/</loc>
   </url>
   
   <url>
@@ -232,11 +241,27 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_angle/</loc>
+    <loc>/reference/dynplot/other/example_bifurcating/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_calista/</loc>
+    <loc>/reference/dynplot/other/example_disconnected/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/other/example_linear/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynplot/other/example_tree/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/method/ti_angle/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/dynmethods/method/ti_calista/</loc>
   </url>
   
   <url>
@@ -261,11 +286,11 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_cellrouter/</loc>
+    <loc>/reference/dynmethods/method/ti_cellrouter/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_celltrails/</loc>
+    <loc>/reference/dynmethods/method/ti_celltrails/</loc>
   </url>
   
   <url>
@@ -289,7 +314,7 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_comp1/</loc>
+    <loc>/reference/dynmethods/method/ti_comp1/</loc>
   </url>
   
   <url>
@@ -314,6 +339,10 @@
   
   <url>
     <loc>/reference/dynwrap/create_trajectory/add_cell_graph/</loc>
+  </url>
+  
+  <url>
+    <loc>/about/contributing/</loc>
   </url>
   
   <url>
@@ -361,7 +390,7 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_dpt/</loc>
+    <loc>/reference/dynmethods/method/ti_dpt/</loc>
   </url>
   
   <url>
@@ -385,23 +414,23 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_elpigraph/</loc>
+    <loc>/reference/dynmethods/method/ti_elpigraph/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_elpicycle/</loc>
+    <loc>/reference/dynmethods/method/ti_elpicycle/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_elpilinear/</loc>
+    <loc>/reference/dynmethods/method/ti_elpilinear/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_embeddr/</loc>
+    <loc>/reference/dynmethods/method/ti_embeddr/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_error/</loc>
+    <loc>/reference/dynmethods/method/ti_error/</loc>
   </url>
   
   <url>
@@ -413,19 +442,19 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_forks/</loc>
+    <loc>/reference/dynmethods/method/ti_forks/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_fateid/</loc>
+    <loc>/reference/dynmethods/method/ti_fateid/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_gng/</loc>
+    <loc>/reference/dynmethods/method/ti_gng/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_gpfates/</loc>
+    <loc>/reference/dynmethods/method/ti_gpfates/</loc>
   </url>
   
   <url>
@@ -445,7 +474,7 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_grandprix/</loc>
+    <loc>/reference/dynmethods/method/ti_grandprix/</loc>
   </url>
   
   <url>
@@ -453,7 +482,7 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_identity/</loc>
+    <loc>/reference/dynmethods/method/ti_identity/</loc>
   </url>
   
   <url>
@@ -473,19 +502,19 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_matcher/</loc>
+    <loc>/reference/dynmethods/method/ti_matcher/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_merlot/</loc>
+    <loc>/reference/dynmethods/method/ti_merlot/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_mfa/</loc>
+    <loc>/reference/dynmethods/method/ti_mfa/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_mst/</loc>
+    <loc>/reference/dynmethods/method/ti_mst/</loc>
   </url>
   
   <url>
@@ -533,15 +562,15 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_monocle_ddrtree/</loc>
+    <loc>/reference/dynmethods/method/ti_monocle_ddrtree/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_monocle_ica/</loc>
+    <loc>/reference/dynmethods/method/ti_monocle_ica/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_mpath/</loc>
+    <loc>/reference/dynmethods/method/ti_mpath/</loc>
   </url>
   
   <url>
@@ -549,19 +578,19 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_paga/</loc>
+    <loc>/reference/dynmethods/method/ti_paga/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_paga_tree/</loc>
+    <loc>/reference/dynmethods/method/ti_paga_tree/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_periodpc/</loc>
+    <loc>/reference/dynmethods/method/ti_periodpc/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_phenopath/</loc>
+    <loc>/reference/dynmethods/method/ti_phenopath/</loc>
   </url>
   
   <url>
@@ -609,31 +638,31 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_projected_dpt/</loc>
+    <loc>/reference/dynmethods/method/ti_projected_dpt/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_projected_monocle/</loc>
+    <loc>/reference/dynmethods/method/ti_projected_monocle/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_projected_paga/</loc>
+    <loc>/reference/dynmethods/method/ti_projected_paga/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_projected_slingshot/</loc>
+    <loc>/reference/dynmethods/method/ti_projected_slingshot/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_projected_tscan/</loc>
+    <loc>/reference/dynmethods/method/ti_projected_tscan/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_raceid_stemid/</loc>
+    <loc>/reference/dynmethods/method/ti_raceid_stemid/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_random/</loc>
+    <loc>/reference/dynmethods/method/ti_random/</loc>
   </url>
   
   <url>
@@ -649,31 +678,31 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_scimitar/</loc>
+    <loc>/reference/dynmethods/method/ti_scimitar/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_scorpius/</loc>
+    <loc>/reference/dynmethods/method/ti_scorpius/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_scoup/</loc>
+    <loc>/reference/dynmethods/method/ti_scoup/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_scuba/</loc>
+    <loc>/reference/dynmethods/method/ti_scuba/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_slice/</loc>
+    <loc>/reference/dynmethods/method/ti_slice/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_slicer/</loc>
+    <loc>/reference/dynmethods/method/ti_slicer/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_stemnet/</loc>
+    <loc>/reference/dynmethods/method/ti_stemnet/</loc>
   </url>
   
   <url>
@@ -689,15 +718,15 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_sincell/</loc>
+    <loc>/reference/dynmethods/method/ti_sincell/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_slingshot/</loc>
+    <loc>/reference/dynmethods/method/ti_slingshot/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_tscan/</loc>
+    <loc>/reference/dynmethods/method/ti_tscan/</loc>
   </url>
   
   <url>
@@ -714,15 +743,15 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_urd/</loc>
+    <loc>/reference/dynmethods/method/ti_urd/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_wanderlust/</loc>
+    <loc>/reference/dynmethods/method/ti_wanderlust/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_waterfall/</loc>
+    <loc>/reference/dynmethods/method/ti_waterfall/</loc>
   </url>
   
   <url>
@@ -734,7 +763,7 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_wishbone/</loc>
+    <loc>/reference/dynmethods/method/ti_wishbone/</loc>
   </url>
   
   <url>
@@ -742,15 +771,15 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_celltree_gibbs/</loc>
+    <loc>/reference/dynmethods/method/ti_celltree_gibbs/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_celltree_maptpx/</loc>
+    <loc>/reference/dynmethods/method/ti_celltree_maptpx/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_celltree_vem/</loc>
+    <loc>/reference/dynmethods/method/ti_celltree_vem/</loc>
   </url>
   
   <url>
@@ -758,31 +787,31 @@
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_ouija/</loc>
+    <loc>/reference/dynmethods/method/ti_ouija/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_ouijaflow/</loc>
+    <loc>/reference/dynmethods/method/ti_ouijaflow/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_pcreode/</loc>
+    <loc>/reference/dynmethods/method/ti_pcreode/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_pseudogp/</loc>
+    <loc>/reference/dynmethods/method/ti_pseudogp/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_recat/</loc>
+    <loc>/reference/dynmethods/method/ti_recat/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_shuffle/</loc>
+    <loc>/reference/dynmethods/method/ti_shuffle/</loc>
   </url>
   
   <url>
-    <loc>/reference/dynmethods/other/ti_topslam/</loc>
+    <loc>/reference/dynmethods/method/ti_topslam/</loc>
   </url>
   
 </urlset>

@@ -17,9 +17,9 @@
       
       <guid>/reference/dynplot/other/add_cell_coloring/</guid>
       <description>add_cell_coloring.Rd  Add coloring
- add_cell_coloring(cell_positions, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), traj, grouping = NULL, groups = NULL, feature_oi = NULL, expression_source = &#34;expression&#34;, pseudotime = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL) Arguments   cell_positions The positions of the cells
+ add_cell_coloring(cell_positions, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), trajectory, grouping = NULL, groups = NULL, feature_oi = NULL, expression_source = &#34;expression&#34;, pseudotime = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL) Arguments   cell_positions The positions of the cells
    color_cells How to color the cells
-   traj The trajectory
+   trajectory The trajectory
    grouping The grouping of the cells</description>
     </item>
     
@@ -36,15 +36,59 @@
     </item>
     
     <item>
+      <title>An example bifurcating dataset</title>
+      <link>/reference/dynplot/other/example_bifurcating/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/other/example_bifurcating/</guid>
+      <description> example_bifurcating.Rd  An example bifurcating dataset
+ example_bifurcating Format An object of class dynwrap::with_prior (inherits from dynwrap::with_expression, dynwrap::with_cell_waypoints, dynwrap::with_trajectory, dynwrap::data_wrapper, list) of length 18.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>An example disconnected dataset</title>
+      <link>/reference/dynplot/other/example_disconnected/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/other/example_disconnected/</guid>
+      <description> example_disconnected.Rd  An example disconnected dataset
+ example_disconnected Format An object of class dynwrap::with_prior (inherits from dynwrap::with_expression, dynwrap::with_cell_waypoints, dynwrap::with_trajectory, dynwrap::data_wrapper, list) of length 18.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>An example linear dataset</title>
+      <link>/reference/dynplot/other/example_linear/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/other/example_linear/</guid>
+      <description> example_linear.Rd  An example linear dataset
+ example_linear Format An object of class dynwrap::with_prior (inherits from dynwrap::with_expression, dynwrap::with_cell_waypoints, dynwrap::with_trajectory, dynwrap::data_wrapper, list) of length 18.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>An example tree dataset</title>
+      <link>/reference/dynplot/other/example_tree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/other/example_tree/</guid>
+      <description> example_tree.Rd  An example tree dataset
+ example_tree Format An object of class dynwrap::with_prior (inherits from dynwrap::with_expression, dynwrap::with_cell_waypoints, dynwrap::with_trajectory, dynwrap::data_wrapper, list) of length 18.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
       <title>Color cells using a background density</title>
       <link>/reference/dynplot/other/add_density_coloring/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/reference/dynplot/other/add_density_coloring/</guid>
       <description>add_density_coloring.Rd  Color cells using a background density
- add_density_coloring(cell_positions, color_density = c(&#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;), traj, grouping = NULL, groups = NULL, feature_oi = NULL, expression_source = &#34;expression&#34;, padding = 0.1, nbins = 1000, bw = 0.2, density_cutoff = 0.3, density_cutoff_label = density_cutoff/10) Arguments   cell_positions The positions of the cells in 2D
+ add_density_coloring(cell_positions, color_density = c(&#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;), trajectory, grouping = NULL, groups = NULL, feature_oi = NULL, expression_source = &#34;expression&#34;, padding = 0.1, nbins = 1000, bw = 0.2, density_cutoff = 0.3, density_cutoff_label = density_cutoff/10) Arguments   cell_positions The positions of the cells in 2D
    color_density How to color density, can be &#34;none&#34;, &#34;grouping&#34;, or &#34;feature&#34;
-   traj The trajectory</description>
+   trajectory The trajectory</description>
     </item>
     
     <item>
@@ -54,7 +98,7 @@
       
       <guid>/reference/dynplot/other/linearise_cells/</guid>
       <description>linearise_cells.Rd  Linearise a trajectory
- linearise_cells(traj, margin = 0.05, no_margin_between_linear = TRUE, one_edge = FALSE, equal_cell_width = FALSE) Arguments   traj The trajectory
+ linearise_cells(trajectory, margin = 0.05, no_margin_between_linear = TRUE, one_edge = FALSE, equal_cell_width = FALSE) Arguments   trajectory The trajectory
    margin The margin to add
    no_margin_between_linear Whether to add a margin only when
    one_edge If TRUE, assigns each cell to one edge only
@@ -78,7 +122,7 @@
       
       <guid>/reference/dynplot/other/project_waypoints/</guid>
       <description>project_waypoints.Rd  Project the waypoints
- project_waypoints(traj, cell_positions, waypoints = dynwrap::select_waypoints(traj), trajectory_projection_sd = sum(traj$milestone_network$length) * 0.05, color_trajectory = &#34;none&#34;) Arguments   traj The trajectory
+ project_waypoints(trajectory, cell_positions, waypoints = dynwrap::select_waypoints(trajectory), trajectory_projection_sd = sum(trajectory$milestone_network$length) * 0.05, color_trajectory = &#34;none&#34;) Arguments   trajectory The trajectory
    cell_positions The positions of the cells
    waypoints The waypoints to use for projecting, as generated by [dynwrap::select_waypoints()]
    trajectory_projection_sd The standard deviation of the gaussian kernel

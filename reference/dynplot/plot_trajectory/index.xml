@@ -17,7 +17,7 @@
       
       <guid>/reference/dynplot/plot_trajectory/plot_graph/</guid>
       <description>plot_graph.Rd  Plot a trajectory and cellular positions as a graph
- plot_graph(traj, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, pseudotime = NULL, expression_source = &#34;expression&#34;, milestones = NULL, milestone_percentages = NULL, transition_size = 3, milestone_size = 5, arrow_length = grid::unit(1, &#34;cm&#34;), label_milestones = dynwrap::is_wrapper_with_milestone_labelling(traj), plot_milestones = FALSE, adjust_weights = FALSE) Arguments   traj The trajectory</description>
+ plot_graph(trajectory, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, pseudotime = NULL, expression_source = &#34;expression&#34;, milestones = NULL, milestone_percentages = NULL, transition_size = 3, milestone_size = 5, arrow_length = grid::unit(1, &#34;cm&#34;), label_milestones = dynwrap::is_wrapper_with_milestone_labelling(trajectory), plot_milestones = FALSE, adjust_weights = FALSE) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       
       <guid>/reference/dynplot/plot_trajectory/plot_dendro/</guid>
       <description>plot_dendro.Rd  Plot a trajectory as a dendrogram
- plot_dendro(traj, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, expression_source = &#34;expression&#34;, pseudotime = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, diag_offset = 0.05, y_offset = 0.2) Arguments   traj The trajectory
+ plot_dendro(trajectory, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, expression_source = &#34;expression&#34;, pseudotime = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, diag_offset = 0.05, y_offset = 0.2) Arguments   trajectory The trajectory
    color_cells How to color the cells
    grouping The grouping of the cells</description>
     </item>
@@ -39,7 +39,7 @@
       
       <guid>/reference/dynplot/plot_trajectory/plot_dimred/</guid>
       <description>plot_dimred.Rd  Plot a trajectory on dimensionality reduction
- plot_dimred(traj, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), dimred = ifelse(dynwrap::is_wrapper_with_dimred(traj), NA, ifelse(length(traj$cell_ids) &amp;gt; 500, dimred_pca, dimred_mds)), plot_trajectory = dynwrap::is_wrapper_with_trajectory(traj) &amp;amp;&amp;amp; !plot_milestone_network, plot_milestone_network = FALSE, label_milestones = dynwrap::is_wrapper_with_milestone_labelling(traj), alpha_cells = 1, size_trajectory = 1, grouping = NULL, groups = NULL, feature_oi = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, pseudotime = NULL, expression_source = &#34;</description>
+ plot_dimred(trajectory, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), dimred = ifelse(dynwrap::is_wrapper_with_dimred(trajectory), NA, ifelse(length(trajectory$cell_ids) &amp;gt; 500, dimred_pca, dimred_mds)), plot_trajectory = dynwrap::is_wrapper_with_trajectory(trajectory) &amp;amp;&amp;amp; !plot_milestone_network, plot_milestone_network = FALSE, label_milestones = dynwrap::is_wrapper_with_milestone_labelling(trajectory), alpha_cells = 1, size_trajectory = 1, grouping = NULL, groups = NULL, feature_oi = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, pseudotime = NULL, expression_source = &#34;</description>
     </item>
     
     <item>
@@ -49,7 +49,7 @@
       
       <guid>/reference/dynplot/plot_trajectory/plot_onedim/</guid>
       <description>plot_onedim.Rd  Plot onedim
- plot_onedim(traj, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, pseudotime = NULL, expression_source = &#34;expression&#34;, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, orientation = 1, margin = 0.05, linearised = linearise_cells(traj, margin, one_edge = TRUE), quasirandom_width = 0.2, plot_cells = TRUE, label_milestones = dynwrap::is_wrapper_with_milestone_labelling(traj)) Arguments   traj The trajectory</description>
+ plot_onedim(trajectory, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, pseudotime = NULL, expression_source = &#34;expression&#34;, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, orientation = 1, margin = 0.05, linearised = linearise_cells(trajectory, margin, one_edge = TRUE), quasirandom_width = 0.2, plot_cells = TRUE, label_milestones = dynwrap::is_wrapper_with_milestone_labelling(trajectory)) Arguments   trajectory The trajectory</description>
     </item>
     
     <item>
@@ -59,7 +59,7 @@
       
       <guid>/reference/dynplot/plot_trajectory/plot_heatmap/</guid>
       <description>plot_heatmap.Rd  When using RStudio: the heatmap will not show inside the plot area, but will be visible once you click the zoom button.
- plot_heatmap(traj, expression_source = &#34;expression&#34;, features_oi = 20, clust = &#34;ward.D2&#34;, margin = 0.02, color_cells = NULL, milestones = NULL, milestone_percentages = traj$milestone_percentages, grouping = NULL, groups = NULL, cell_feature_importances = NULL, heatmap_type = c(&#34;tiled&#34;, &#34;dotted&#34;), scale = dynutils::scale_quantile, label_milestones = TRUE) Arguments   traj The trajectory</description>
+ plot_heatmap(trajectory, expression_source = &#34;expression&#34;, features_oi = 20, clust = &#34;ward.D2&#34;, margin = 0.02, color_cells = NULL, milestones = NULL, milestone_percentages = trajectory$milestone_percentages, grouping = NULL, groups = NULL, cell_feature_importances = NULL, heatmap_type = c(&#34;tiled&#34;, &#34;dotted&#34;), scale = dynutils::scale_quantile, label_milestones = TRUE) Arguments   trajectory The trajectory</description>
     </item>
     
     <item>
@@ -69,7 +69,7 @@
       
       <guid>/reference/dynplot/plot_trajectory/plot_topology/</guid>
       <description> plot_topology.Rd  Plot the topology of a trajectory
- plot_topology(traj, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, layout = NULL) Arguments   traj The trajectory
+ plot_topology(trajectory, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, layout = NULL) Arguments   trajectory The trajectory
    color_milestones How to color the cells
    milestones Tibble containing the `milestone_id` and a `color` for each milestone
    layout The type of layout to create.

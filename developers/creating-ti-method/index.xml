@@ -6,17 +6,27 @@
     <description>Recent content in Creating a TI method on dynverse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/developers/creating-ti-method/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Bare-bones</title>
-      <link>/developers/creating-ti-method/create_ti_method_barebones/</link>
-      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Creating a trajectory</title>
+      <link>/developers/creating-ti-method/create_ti_method_wrappers/</link>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/developers/creating-ti-method/create_ti_method_barebones/</guid>
+      <guid>/developers/creating-ti-method/create_ti_method_wrappers/</guid>
+      <description>Direct wrapping dynwrap always represents trajectories in the same way, as illustrated here with a tree trajectory
+ Milestone network, contains information of connections between milestones  ## # A tibble: 5 x 4 ## from to length directed ## &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;lgl&amp;gt; ## 1 Milestone_A Milestone_B 1 FALSE ## 2 Milestone_B Milestone_C 2 FALSE ## 3 Milestone_B Milestone_D 1 FALSE ## 4 Milestone_C Milestone_E 1 FALSE ## 5 Milestone_C Milestone_F 1.</description>
+    </item>
+    
+    <item>
+      <title>Wrapping in R</title>
+      <link>/developers/creating-ti-method/create_ti_method_r/</link>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/developers/creating-ti-method/create_ti_method_r/</guid>
       <description>library(dynwrap) This vignette describes how to include your own method into the dynverse workflow. We’ll illustrate this with a very basic method: using one of the components of a PCA as the pseudotime.
 A method defined in R has two parts: a definition and a function.
 Definition The definition contains information on the method, its parameters and its required or optional inputs. The possibilities are quite extensive (see dynwrap::definition()), but essentials are:</description>
@@ -25,19 +35,19 @@ Definition The definition contains information on the method, its parameters and
     <item>
       <title>Wrapper script</title>
       <link>/developers/creating-ti-method/create_ti_method_script/</link>
-      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/developers/creating-ti-method/create_ti_method_script/</guid>
-      <description>library(dynwrap) Still to be written</description>
+      <description>library(dynwrap) To write</description>
     </item>
     
     <item>
-      <title>Container</title>
+      <title>Containerised wrapping</title>
       <link>/developers/creating-ti-method/create_ti_method_container/</link>
-      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/developers/creating-ti-method/create_ti_method_container/</guid>
-      <description>library(dynwrap) Still to be written</description>
+      <description>library(dynwrap) To write</description>
     </item>
     
   </channel>

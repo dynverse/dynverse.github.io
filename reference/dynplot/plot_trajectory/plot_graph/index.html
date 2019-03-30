@@ -12,19 +12,19 @@
     <title>Plot a trajectory and cellular positions as a graph :: dynverse</title>
 
     
-    <link href="../../../../css/nucleus.css?1553574834" rel="stylesheet">
-    <link href="../../../../css/fontawesome-all.min.css?1553574834" rel="stylesheet">
-    <link href="../../../../css/hybrid.css?1553574834" rel="stylesheet">
-    <link href="../../../../css/featherlight.min.css?1553574834" rel="stylesheet">
-    <link href="../../../../css/perfect-scrollbar.min.css?1553574834" rel="stylesheet">
-    <link href="../../../../css/auto-complete.css?1553574834" rel="stylesheet">
-    <link href="../../../../css/theme.css?1553574834" rel="stylesheet">
-    <link href="../../../../css/hugo-theme.css?1553574834" rel="stylesheet">
+    <link href="../../../../css/nucleus.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/fontawesome-all.min.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/hybrid.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/featherlight.min.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/perfect-scrollbar.min.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/auto-complete.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/theme.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/hugo-theme.css?1553927521" rel="stylesheet">
     
-      <link href="../../../../css/theme-mine.css?1553574834" rel="stylesheet">
+      <link href="../../../../css/theme-mine.css?1553927521" rel="stylesheet">
     
 
-    <script src="../../../../js/jquery-2.x.min.js?1553574834"></script>
+    <script src="../../../../js/jquery-2.x.min.js?1553927521"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -54,7 +54,7 @@
   <div id="header-wrapper">
     <div id="header">
       <a id="logo" href="../../../../">
-  <img src="../../../../images/logo.svg" style="max-width:50%" alt="dynverse logo" class="zoom">
+  <img src="../../../../images/logo.png" style="max-width:100px;" alt="dynverse logo" class="zoom">
 </a>
 
 
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1553574834");
-    $.getScript("\/js\/auto-complete.js?1553574834");
-    $.getScript("\/js\/search.js?1553574834");
+    $.getScript("\/js\/lunr.min.js?1553927521");
+    $.getScript("\/js\/auto-complete.js?1553927521");
+    $.getScript("\/js\/search.js?1553927521");
     window.searchLoaded = true
   }
 
@@ -97,31 +97,6 @@ $(".searchbox").click(function(){
     <div class="highlightable">
     <ul class="topics">
         
-          
-          
-
-
- 
-  
-    
-    <li data-nav-id="/about/" title="About" class="dd-item
-        
-        
-        menu-section
-        "
-        
-      >
-      <a href="../../../../about/">
-          About
-          
-          
-      </a>
-      
-      
-    </li>
-  
- 
-
           
           
 
@@ -340,30 +315,6 @@ $(".searchbox").click(function(){
 
             
           
-            
-            
-
-
- 
-  
-    
-    <li data-nav-id="/users/4-example_analyses/" title="Example analyses" class="dd-item
-        
-        
-        menu-subsection
-        ">
-      <a href="../../../../users/4-example_analyses/">
-          Example analyses
-          
-      </a>
-      
-      
-    </li>
-  
- 
-
-            
-          
         
         </ul>
       
@@ -387,6 +338,8 @@ $(".searchbox").click(function(){
       >
       <a href="../../../../developers/">
           Method developers
+          
+            <img src="../../../../images/dynbenchmark/logo.png" alt="logo" class="menu-logo zoom ">
           
           
       </a>
@@ -433,9 +386,28 @@ $(".searchbox").click(function(){
  
   
     
-      <li data-nav-id="/developers/creating-ti-method/create_ti_method_barebones/" title="Bare-bones" class="dd-item ">
-        <a href="../../../../developers/creating-ti-method/create_ti_method_barebones/">
-        Bare-bones
+      <li data-nav-id="/developers/creating-ti-method/create_ti_method_wrappers/" title="Creating a trajectory" class="dd-item ">
+        <a href="../../../../developers/creating-ti-method/create_ti_method_wrappers/">
+        Creating a trajectory
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developers/creating-ti-method/create_ti_method_r/" title="Wrapping in R" class="dd-item ">
+        <a href="../../../../developers/creating-ti-method/create_ti_method_r/">
+        Wrapping in R
         
         </a>
     </li>
@@ -471,9 +443,9 @@ $(".searchbox").click(function(){
  
   
     
-      <li data-nav-id="/developers/creating-ti-method/create_ti_method_container/" title="Container" class="dd-item ">
+      <li data-nav-id="/developers/creating-ti-method/create_ti_method_container/" title="Containerised wrapping" class="dd-item ">
         <a href="../../../../developers/creating-ti-method/create_ti_method_container/">
-        Container
+        Containerised wrapping
         
         </a>
     </li>
@@ -1210,6 +1182,18 @@ $(".searchbox").click(function(){
             
             
           
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
         
         </ul>
       
@@ -1262,14 +1246,14 @@ $(".searchbox").click(function(){
  
   
     
-    <li data-nav-id="/reference/dynmethods/other/" title="dynmethods :: Other" class="dd-item
+    <li data-nav-id="/reference/dynmethods/method/" title="dynmethods :: Trajectory inference methods" class="dd-item
         
         
         
         menu-item
         ">
-      <a href="../../../../reference/dynmethods/other/">
-          Other
+      <a href="../../../../reference/dynmethods/method/">
+          Trajectory inference methods
 
           
       </a>
@@ -1458,6 +1442,42 @@ $(".searchbox").click(function(){
           
             
             
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynmethods/other/" title="dynmethods :: Other" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../../../reference/dynmethods/other/">
+          Other
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
           
             
             
@@ -1665,6 +1685,79 @@ $(".searchbox").click(function(){
  
 
           
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/about/" title="About" class="dd-item
+        
+        
+        menu-section
+        "
+        
+      >
+      <a href="../../../../about/">
+          About
+          
+          
+      </a>
+      
+      
+        <ul style="display:block;">
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/about/contributing/" title="" class="dd-item ">
+        <a href="../../../../about/contributing/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/about/contributing/" title="Contributing" class="dd-item ">
+        <a href="../../../../about/contributing/">
+        Contributing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
         
     </ul>
 
@@ -1796,22 +1889,22 @@ $(".searchbox").click(function(){
     
     </div>
 
-    <pre class="usage"><span class='fu'><a href='../../../../reference/dynplot/plot_trajectory/plot_graph'>plot_graph</a></span>(<span class='no'>traj</span>, <span class='kw'>color_cells</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"auto"</span>, <span class='st'>"none"</span>, <span class='st'>"grouping"</span>, <span class='st'>"feature"</span>,
-  <span class='st'>"milestone"</span>, <span class='st'>"pseudotime"</span>), <span class='kw'>color_milestones</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"auto"</span>, <span class='st'>"given"</span>,
-  <span class='st'>"cubeHelix"</span>, <span class='st'>"Set3"</span>, <span class='st'>"rainbow"</span>), <span class='kw'>grouping</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>groups</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>feature_oi</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>pseudotime</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+    <pre class="usage"><span class='fu'><a href='../../../../reference/dynplot/plot_trajectory/plot_graph'>plot_graph</a></span>(<span class='no'>trajectory</span>, <span class='kw'>color_cells</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"auto"</span>, <span class='st'>"none"</span>, <span class='st'>"grouping"</span>,
+  <span class='st'>"feature"</span>, <span class='st'>"milestone"</span>, <span class='st'>"pseudotime"</span>), <span class='kw'>color_milestones</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"auto"</span>,
+  <span class='st'>"given"</span>, <span class='st'>"cubeHelix"</span>, <span class='st'>"Set3"</span>, <span class='st'>"rainbow"</span>), <span class='kw'>grouping</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>groups</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>feature_oi</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>pseudotime</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>expression_source</span> <span class='kw'>=</span> <span class='st'>"expression"</span>, <span class='kw'>milestones</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>milestone_percentages</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>transition_size</span> <span class='kw'>=</span> <span class='fl'>3</span>,
   <span class='kw'>milestone_size</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>arrow_length</span> <span class='kw'>=</span> <span class='kw pkg'>grid</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/grid/topics/unit'>unit</a></span>(<span class='fl'>1</span>, <span class='st'>"cm"</span>),
-  <span class='kw'>label_milestones</span> <span class='kw'>=</span> <span class='kw pkg'>dynwrap</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/dynwrap/topics/label_milestones'>is_wrapper_with_milestone_labelling</a></span>(<span class='no'>traj</span>),
+  <span class='kw'>label_milestones</span> <span class='kw'>=</span> <span class='kw pkg'>dynwrap</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/dynwrap/topics/label_milestones'>is_wrapper_with_milestone_labelling</a></span>(<span class='no'>trajectory</span>),
   <span class='kw'>plot_milestones</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>adjust_weights</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>traj</th>
-      <td><p>The trajectory</p></td>
+      <th>trajectory</th>
+      <td><p>The trajectory as created by <code>infer_trajectory()</code> or <code>add_trajectory()</code></p></td>
     </tr>
     <tr>
       <th>color_cells</th>
@@ -1878,13 +1971,13 @@ $(".searchbox").click(function(){
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/data'>data</a></span>(<span class='no'>example_disconnected</span>)
-<span class='fu'><a href='../../../../reference/dynplot/plot_trajectory/plot_graph'>plot_graph</a></span>(<span class='no'>example_disconnected</span>)</div><div class='output co'>#&gt; <span class='message'>Coloring by milestone</span></div><div class='output co'>#&gt; <span class='message'>Using milestone_percentages from traj</span></div><div class='img'><img src='../../../../images/examples/plot_graph-1.png' alt='static/images/examples/plot_graph-1' width='700' height='433' /></div><div class='input'><span class='fu'><a href='../../../../reference/dynplot/plot_trajectory/plot_graph'>plot_graph</a></span>(<span class='no'>example_disconnected</span>, <span class='kw'>color_cells</span> <span class='kw'>=</span> <span class='st'>"pseudotime"</span>)</div><div class='output co'>#&gt; <span class='message'>Pseudotime not provided, will calculate pseudotime from root milestone</span></div><div class='output co'>#&gt; <span class='message'>root cell or milestone not provided, trying first outgoing milestone_id</span></div><div class='output co'>#&gt; <span class='message'>Using 'T1_M4' as root</span></div><div class='img'><img src='../../../../images/examples/plot_graph-2.png' alt='static/images/examples/plot_graph-2' width='700' height='433' /></div><div class='input'><span class='fu'><a href='../../../../reference/dynplot/plot_trajectory/plot_graph'>plot_graph</a></span>(
+<span class='fu'><a href='../../../../reference/dynplot/plot_trajectory/plot_graph'>plot_graph</a></span>(<span class='no'>example_disconnected</span>)</div><div class='output co'>#&gt; <span class='message'>Coloring by milestone</span></div><div class='output co'>#&gt; <span class='message'>Using milestone_percentages from trajectory</span></div><div class='img'><img src='../../../../images/examples/plot_graph-1.png' alt='static/images/examples/plot_graph-1' width='700' height='433' /></div><div class='input'><span class='fu'><a href='../../../../reference/dynplot/plot_trajectory/plot_graph'>plot_graph</a></span>(<span class='no'>example_disconnected</span>, <span class='kw'>color_cells</span> <span class='kw'>=</span> <span class='st'>"pseudotime"</span>)</div><div class='output co'>#&gt; <span class='message'>Pseudotime not provided, will calculate pseudotime from root milestone</span></div><div class='output co'>#&gt; <span class='message'>root cell or milestone not provided, trying first outgoing milestone_id</span></div><div class='output co'>#&gt; <span class='message'>Using 'T1_M4' as root</span></div><div class='img'><img src='../../../../images/examples/plot_graph-2.png' alt='static/images/examples/plot_graph-2' width='700' height='433' /></div><div class='input'><span class='fu'><a href='../../../../reference/dynplot/plot_trajectory/plot_graph'>plot_graph</a></span>(
   <span class='no'>example_disconnected</span>,
   <span class='kw'>color_cells</span> <span class='kw'>=</span> <span class='st'>"grouping"</span>,
   <span class='kw'>grouping</span> <span class='kw'>=</span> <span class='kw pkg'>dynwrap</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/dynwrap/topics/group_from_trajectory'>group_onto_nearest_milestones</a></span>(<span class='no'>example_disconnected</span>)
 )</div><div class='img'><img src='../../../../images/examples/plot_graph-3.png' alt='static/images/examples/plot_graph-3' width='700' height='433' /></div><div class='input'>
 <span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/data'>data</a></span>(<span class='no'>example_tree</span>)
-<span class='fu'><a href='../../../../reference/dynplot/plot_trajectory/plot_graph'>plot_graph</a></span>(<span class='no'>example_tree</span>)</div><div class='output co'>#&gt; <span class='message'>Coloring by milestone</span></div><div class='output co'>#&gt; <span class='message'>Using milestone_percentages from traj</span></div><div class='img'><img src='../../../../images/examples/plot_graph-4.png' alt='static/images/examples/plot_graph-4' width='700' height='433' /></div></pre>
+<span class='fu'><a href='../../../../reference/dynplot/plot_trajectory/plot_graph'>plot_graph</a></span>(<span class='no'>example_tree</span>)</div><div class='output co'>#&gt; <span class='message'>Coloring by milestone</span></div><div class='output co'>#&gt; <span class='message'>Using milestone_percentages from trajectory</span></div><div class='img'><img src='../../../../images/examples/plot_graph-4.png' alt='static/images/examples/plot_graph-4' width='700' height='433' /></div></pre>
 </div>
 <!--  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -1941,22 +2034,6 @@ $(".searchbox").click(function(){
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -2099,6 +2176,9 @@ $(".searchbox").click(function(){
                     
                     
 
+                    
+            
+        
                     
             
         
@@ -2116,14 +2196,10 @@ $(".searchbox").click(function(){
 
                     
                     
-                    
-
+                        
                     
-            
-        
                     
-            
-        
+
                     
                         
             
@@ -2134,8 +2210,6 @@ $(".searchbox").click(function(){
                 
 
                     
-                    
-                        
                     
                     
 
@@ -2153,6 +2227,9 @@ $(".searchbox").click(function(){
                     
 
                     
+            
+        
+                    
                         
             
             
@@ -2811,6 +2888,26 @@ $(".searchbox").click(function(){
                     
                     
 
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
                     
                         
             
@@ -3168,9 +3265,25 @@ $(".searchbox").click(function(){
                     
                         
             
+            
+        
+                    
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
                     
+                    
+
+                    
                         
             
             
@@ -3293,12 +3406,60 @@ $(".searchbox").click(function(){
 
                     
                         
+            
+            
+        
+                    
             
+        
+                    
+            
+        
+                    
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
                     
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -3328,20 +3489,20 @@ $(".searchbox").click(function(){
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../../js/clipboard.min.js?1553574834"></script>
-    <script src="../../../../js/perfect-scrollbar.min.js?1553574834"></script>
-    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1553574834"></script>
-    <script src="../../../../js/jquery.sticky.js?1553574834"></script>
-    <script src="../../../../js/featherlight.min.js?1553574834"></script>
-    <script src="../../../../js/html5shiv-printshiv.min.js?1553574834"></script>
-    <script src="../../../../js/highlight.pack.js?1553574834"></script>
+    <script src="../../../../js/clipboard.min.js?1553927521"></script>
+    <script src="../../../../js/perfect-scrollbar.min.js?1553927521"></script>
+    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1553927521"></script>
+    <script src="../../../../js/jquery.sticky.js?1553927521"></script>
+    <script src="../../../../js/featherlight.min.js?1553927521"></script>
+    <script src="../../../../js/html5shiv-printshiv.min.js?1553927521"></script>
+    <script src="../../../../js/highlight.pack.js?1553927521"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../../js/modernizr.custom.71422.js?1553574834"></script>
-    <script src="../../../../js/learn.js?1553574834"></script>
-    <script src="../../../../js/hugo-learn.js?1553574834"></script>
+    <script src="../../../../js/modernizr.custom.71422.js?1553927521"></script>
+    <script src="../../../../js/learn.js?1553927521"></script>
+    <script src="../../../../js/hugo-learn.js?1553927521"></script>
 
-    <link href="../../../../mermaid/mermaid.css?1553574834" type="text/css" rel="stylesheet" />
-    <script src="../../../../mermaid/mermaid.js?1553574834"></script>
+    <link href="../../../../mermaid/mermaid.css?1553927521" type="text/css" rel="stylesheet" />
+    <script src="../../../../mermaid/mermaid.js?1553927521"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

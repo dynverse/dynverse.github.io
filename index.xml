@@ -6,20 +6,19 @@
     <description>Recent content on dynverse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Bare-bones</title>
-      <link>/developers/creating-ti-method/create_ti_method_barebones/</link>
-      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Creating a trajectory</title>
+      <link>/developers/creating-ti-method/create_ti_method_wrappers/</link>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/developers/creating-ti-method/create_ti_method_barebones/</guid>
-      <description>library(dynwrap) This vignette describes how to include your own method into the dynverse workflow. We’ll illustrate this with a very basic method: using one of the components of a PCA as the pseudotime.
-A method defined in R has two parts: a definition and a function.
-Definition The definition contains information on the method, its parameters and its required or optional inputs. The possibilities are quite extensive (see dynwrap::definition()), but essentials are:</description>
+      <guid>/developers/creating-ti-method/create_ti_method_wrappers/</guid>
+      <description>Direct wrapping dynwrap always represents trajectories in the same way, as illustrated here with a tree trajectory
+ Milestone network, contains information of connections between milestones  ## # A tibble: 5 x 4 ## from to length directed ## &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;lgl&amp;gt; ## 1 Milestone_A Milestone_B 1 FALSE ## 2 Milestone_B Milestone_C 2 FALSE ## 3 Milestone_B Milestone_D 1 FALSE ## 4 Milestone_C Milestone_E 1 FALSE ## 5 Milestone_C Milestone_F 1.</description>
     </item>
     
     <item>
@@ -44,12 +43,14 @@ Gene expression data As input, dynwrap requires raw counts and normalised (log2)
     </item>
     
     <item>
-      <title>Wrapper script</title>
-      <link>/developers/creating-ti-method/create_ti_method_script/</link>
-      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Wrapping in R</title>
+      <link>/developers/creating-ti-method/create_ti_method_r/</link>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/developers/creating-ti-method/create_ti_method_script/</guid>
-      <description>library(dynwrap) Still to be written</description>
+      <guid>/developers/creating-ti-method/create_ti_method_r/</guid>
+      <description>library(dynwrap) This vignette describes how to include your own method into the dynverse workflow. We’ll illustrate this with a very basic method: using one of the components of a PCA as the pseudotime.
+A method defined in R has two parts: a definition and a function.
+Definition The definition contains information on the method, its parameters and its required or optional inputs. The possibilities are quite extensive (see dynwrap::definition()), but essentials are:</description>
     </item>
     
     <item>
@@ -72,6 +73,15 @@ Gene expression data As input, dynwrap requires raw counts and normalised (log2)
     </item>
     
     <item>
+      <title>Wrapper script</title>
+      <link>/developers/creating-ti-method/create_ti_method_script/</link>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/developers/creating-ti-method/create_ti_method_script/</guid>
+      <description>library(dynwrap) To write</description>
+    </item>
+    
+    <item>
       <title>Inferring trajectories</title>
       <link>/users/3-user-guide/3-running/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -82,12 +92,12 @@ Gene expression data As input, dynwrap requires raw counts and normalised (log2)
     </item>
     
     <item>
-      <title>Container</title>
+      <title>Containerised wrapping</title>
       <link>/developers/creating-ti-method/create_ti_method_container/</link>
-      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/developers/creating-ti-method/create_ti_method_container/</guid>
-      <description>library(dynwrap) Still to be written</description>
+      <description>library(dynwrap) To write</description>
     </item>
     
     <item>
@@ -123,11 +133,20 @@ model &amp;lt;- dyntoy::generate_dataset(model = dyntoy::model_linear(num_milest
     
     <item>
       <title></title>
+      <link>/about/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/contributing/</guid>
+      <description>Contributing /*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */ !function(a,b){&#34;object&#34;==typeof module&amp;&amp;&#34;object&#34;==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error(&#34;jQuery requires a window with a document&#34;);return b(a)}:b(a)}(&#34;undefined&#34;!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l=&#34;1.11.3&#34;,m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:&#34;&#34;,length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0a?b:0);return this.pushStack(c=0&amp;&amp;bc?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for(&#34;boolean&#34;==typeof g&amp;&amp;(j=g,g=arguments[h]||{},h++),&#34;object&#34;==typeof g||m.isFunction(g)||(g={}),h===i&amp;&amp;(g=this,h--);ih;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&amp;&amp;(j&amp;&amp;c&amp;&amp;(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&amp;&amp;m.isArray(a)?a:[]):f=a&amp;&amp;m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&amp;&amp;(g[d]=c));return g},m.extend({expando:&#34;jQuery&#34;+(l+Math.random()).replace(/\D/g,&#34;&#34;),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return&#34;function&#34;===m.type(a)},isArray:Array.isArray||function(a){return&#34;array&#34;===m.type(a)},isWindow:function(a){return null!=a&amp;&amp;a==a.window},isNumeric:function(a){return!m.isArray(a)&amp;&amp;a-parseFloat(a)+1=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||&#34;object&#34;!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&amp;&amp;!j.call(a,&#34;constructor&#34;)&amp;&amp;!j.call(a.constructor.prototype,&#34;isPrototypeOf&#34;))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+&#34;&#34;:&#34;object&#34;==typeof a||&#34;function&#34;==typeof a?h[i.call(a)]||&#34;object&#34;:typeof a},globalEval:function(b){b&amp;&amp;m.trim(b)&amp;&amp;(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>/logo-accordion/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/logo-accordion/</guid>
-      <description>dynbenchmark Benchmarking   dyneval Comparing   dynplot Visualising   &amp;nbsp; &amp;nbsp;   dynwrap Wrapping   dynguidelines Guidelines   dynmethods Inferring       .row.logos { margin-top:-25px; } @media only all and (max-width: 47.938em) { .row.logos { margin-top:0px; } } .outer-div { position: relative; float: right; right: 50%; } .inner-div { position: relative; float: right; right: -50%; white-space: nowrap } .hex { display:inline-block; margin: 0px 10px 0px 10px; text-align: center; } .</description>
+      <description>dynbenchmark Benchmarking   dyneval Comparing   dynplot Visualising   &amp;nbsp; &amp;nbsp;   dynwrap Wrapping   dynguidelines Guidelines   dynmethods Inferring       /* top row: by default more to the top, unless on mobile */ .row.logos { margin-top:-25px; } @media only all and (max-width: 47.938em) { .row.logos { margin-top:0px; } } .outer-div { position: relative; float: right; right: 50%; } .</description>
     </item>
     
     <item>
@@ -206,9 +225,9 @@ model &amp;lt;- dyntoy::generate_dataset(model = dyntoy::model_linear(num_milest
       
       <guid>/reference/dynplot/other/add_cell_coloring/</guid>
       <description>add_cell_coloring.Rd  Add coloring
- add_cell_coloring(cell_positions, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), traj, grouping = NULL, groups = NULL, feature_oi = NULL, expression_source = &#34;expression&#34;, pseudotime = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL) Arguments   cell_positions The positions of the cells
+ add_cell_coloring(cell_positions, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), trajectory, grouping = NULL, groups = NULL, feature_oi = NULL, expression_source = &#34;expression&#34;, pseudotime = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL) Arguments   cell_positions The positions of the cells
    color_cells How to color the cells
-   traj The trajectory
+   trajectory The trajectory
    grouping The grouping of the cells</description>
     </item>
     
@@ -334,11 +353,55 @@ Helper function for storing timings information.
     </item>
     
     <item>
-      <title>Angle</title>
-      <link>/reference/dynmethods/other/ti_angle/</link>
+      <title>An example bifurcating dataset</title>
+      <link>/reference/dynplot/other/example_bifurcating/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_angle/</guid>
+      <guid>/reference/dynplot/other/example_bifurcating/</guid>
+      <description> example_bifurcating.Rd  An example bifurcating dataset
+ example_bifurcating Format An object of class dynwrap::with_prior (inherits from dynwrap::with_expression, dynwrap::with_cell_waypoints, dynwrap::with_trajectory, dynwrap::data_wrapper, list) of length 18.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>An example disconnected dataset</title>
+      <link>/reference/dynplot/other/example_disconnected/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/other/example_disconnected/</guid>
+      <description> example_disconnected.Rd  An example disconnected dataset
+ example_disconnected Format An object of class dynwrap::with_prior (inherits from dynwrap::with_expression, dynwrap::with_cell_waypoints, dynwrap::with_trajectory, dynwrap::data_wrapper, list) of length 18.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>An example linear dataset</title>
+      <link>/reference/dynplot/other/example_linear/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/other/example_linear/</guid>
+      <description> example_linear.Rd  An example linear dataset
+ example_linear Format An object of class dynwrap::with_prior (inherits from dynwrap::with_expression, dynwrap::with_cell_waypoints, dynwrap::with_trajectory, dynwrap::data_wrapper, list) of length 18.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>An example tree dataset</title>
+      <link>/reference/dynplot/other/example_tree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynplot/other/example_tree/</guid>
+      <description> example_tree.Rd  An example tree dataset
+ example_tree Format An object of class dynwrap::with_prior (inherits from dynwrap::with_expression, dynwrap::with_cell_waypoints, dynwrap::with_trajectory, dynwrap::data_wrapper, list) of length 18.
+ Contents Format  -- </description>
+    </item>
+    
+    <item>
+      <title>Angle</title>
+      <link>/reference/dynmethods/method/ti_angle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/dynmethods/method/ti_angle/</guid>
       <description> ti_angle.Rd  Will generate a trajectory using Angle.
 This method was wrapped inside a container.
  ti_angle(dimred = &#34;pca&#34;) Arguments   dimred Which dimensionality reduction method to use. Domain: pca, mds, tsne, ica, lle, landmark_mds, mds_sammon, mds_isomds, mds_smacof, umap, dm_diffusionMap, dm_destiny. Default: pca. Format: character.
@@ -348,10 +411,10 @@ This method was wrapped inside a container.
     
     <item>
       <title>CALISTA</title>
-      <link>/reference/dynmethods/other/ti_calista/</link>
+      <link>/reference/dynmethods/method/ti_calista/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_calista/</guid>
+      <guid>/reference/dynmethods/method/ti_calista/</guid>
       <description>ti_calista.Rd  Will generate a trajectory using CALISTA.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_calista(runs = 50L, max_iter = 100L) Arguments   runs Number of independent runs of greedy algorithm. Domain: U(20, 100). Default: 50. Format: integer.
@@ -407,10 +470,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>CellRouter</title>
-      <link>/reference/dynmethods/other/ti_cellrouter/</link>
+      <link>/reference/dynmethods/method/ti_cellrouter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_cellrouter/</guid>
+      <guid>/reference/dynmethods/method/ti_cellrouter/</guid>
       <description>ti_cellrouter.Rd  Will generate a trajectory using CellRouter.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_cellrouter(ndim_pca = 20L, ndim_tsne = 11L, max_iter = 1000L, cluster_method = &#34;graph.clustering&#34;, k_clustering = 20L, ndim_pca_clustering = 20L, k_knn = 10L, ndim_pca_knn = 20L, sim_type = &#34;jaccard&#34;, distance_method_paths = &#34;graph&#34;, ranks = &#34;rank&#34;, num_cells = 3L, neighs = 3L, perplexity = 30L) Arguments   ndim_pca Number of principal components to compute.</description>
@@ -418,10 +481,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>CellTrails</title>
-      <link>/reference/dynmethods/other/ti_celltrails/</link>
+      <link>/reference/dynmethods/method/ti_celltrails/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_celltrails/</guid>
+      <guid>/reference/dynmethods/method/ti_celltrails/</guid>
       <description>ti_celltrails.Rd  Will generate a trajectory using CellTrails.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_celltrails(filter_features = FALSE, threshold_dl = 2L, threshold_cov = 0.05, threshold_ff = 1.7, min_expr = 0L, frac = 100L, min_size = 0.01, min_feat = 5L, max_pval = 1e-04, min_fc = 2L, l = 10L) Arguments   filter_features Whether to include celltrails feature filtering. Default: FALSE.</description>
@@ -445,9 +508,9 @@ This method was wrapped inside a container. The original code of this method is 
       
       <guid>/reference/dynplot/other/add_density_coloring/</guid>
       <description>add_density_coloring.Rd  Color cells using a background density
- add_density_coloring(cell_positions, color_density = c(&#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;), traj, grouping = NULL, groups = NULL, feature_oi = NULL, expression_source = &#34;expression&#34;, padding = 0.1, nbins = 1000, bw = 0.2, density_cutoff = 0.3, density_cutoff_label = density_cutoff/10) Arguments   cell_positions The positions of the cells in 2D
+ add_density_coloring(cell_positions, color_density = c(&#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;), trajectory, grouping = NULL, groups = NULL, feature_oi = NULL, expression_source = &#34;expression&#34;, padding = 0.1, nbins = 1000, bw = 0.2, density_cutoff = 0.3, density_cutoff_label = density_cutoff/10) Arguments   cell_positions The positions of the cells in 2D
    color_density How to color density, can be &#34;none&#34;, &#34;grouping&#34;, or &#34;feature&#34;
-   traj The trajectory</description>
+   trajectory The trajectory</description>
     </item>
     
     <item>
@@ -496,10 +559,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Component 1</title>
-      <link>/reference/dynmethods/other/ti_comp1/</link>
+      <link>/reference/dynmethods/method/ti_comp1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_comp1/</guid>
+      <guid>/reference/dynmethods/method/ti_comp1/</guid>
       <description>ti_comp1.Rd  Will generate a trajectory using Component 1.
 This method was wrapped inside a container.
  ti_comp1(dimred = &#34;pca&#34;, ndim = 2L, component = 1L) Arguments   dimred Which dimensionality reduction method to use. Domain: pca, mds, tsne, ica, lle, landmark_mds, mds_sammon, mds_isomds, mds_smacof, umap, dm_diffusionMap. Default: pca. Format: character.
@@ -580,7 +643,18 @@ This method was wrapped inside a container.
       <description>Source: R/wrap_add_cell_graph.R add_cell_graph.Rd  This function will generate the milestone_network and progressions.
  add_cell_graph(dataset, cell_graph, to_keep, milestone_prefix = &#34;milestone_&#34;, ...) Arguments   dataset A dataset created by wrap_data() or wrap_expression()
    cell_graph The edges between cells. Format: Data frame(from = character, to = character, length(optional) = numeric, directed(optional) = logical)
-   to_keep A named vector containing booleans containing whether or not a cell is part of the backbone.</description>
+   to_keep A character vector with the identifiers of the backbone cells. Alternatively, a named boolean vector whether a cell is from the backbone</description>
+    </item>
+    
+    <item>
+      <title>Contributing</title>
+      <link>/about/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/contributing/</guid>
+      <description>We welcome any contributions to this project, be it changes in documentation, bug fixes, new functionality, or even new packages if they fit the scope of our project. When making big changes, please first discuss the change you wish to make via issue, email, or any other method with the owners of the repository.
+We try to follow the
+Pull Requests  Make sure your code is following tidyverse style guide Ensure that you are working in the devel branch (or any derivates of the devel branch) Edit the NEWS.</description>
     </item>
     
     <item>
@@ -718,10 +792,10 @@ This method was wrapped inside a container.
     
     <item>
       <title>DPT</title>
-      <link>/reference/dynmethods/other/ti_dpt/</link>
+      <link>/reference/dynmethods/method/ti_dpt/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_dpt/</guid>
+      <guid>/reference/dynmethods/method/ti_dpt/</guid>
       <description>ti_dpt.Rd  Will generate a trajectory using DPT.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_dpt(sigma = &#34;local&#34;, distance = &#34;euclidean&#34;, ndim = 20L, density_norm = TRUE, n_local = c(5L, 7L), w_width = 0.1) Arguments   sigma Diffusion scale parameter of the Gaussian kernel. A larger sigma might be necessary if the eigenvalues can not be found because of a singularity in the matrix.</description>
@@ -792,10 +866,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>ElPiGraph</title>
-      <link>/reference/dynmethods/other/ti_elpigraph/</link>
+      <link>/reference/dynmethods/method/ti_elpigraph/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_elpigraph/</guid>
+      <guid>/reference/dynmethods/method/ti_elpigraph/</guid>
       <description>ti_elpigraph.Rd  Will generate a trajectory using ElPiGraph.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_elpigraph(topology = &#34;tree&#34;, NumNodes = 50L, NumEdges = 100000L, InitNodes = 2L, Mu = 0.1, Lambda = 0.01, MaxNumberOfIterations = 10L, eps = 0.01, CenterData = FALSE) Arguments   topology The kind of topology to detect. Domain: cycle, tree, linear. Default: tree. Format: character.</description>
@@ -803,10 +877,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>ElPiGraph - Cycle</title>
-      <link>/reference/dynmethods/other/ti_elpicycle/</link>
+      <link>/reference/dynmethods/method/ti_elpicycle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_elpicycle/</guid>
+      <guid>/reference/dynmethods/method/ti_elpicycle/</guid>
       <description>ti_elpicycle.Rd  Will generate a trajectory using ElPiGraph - Cycle.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_elpicycle(NumNodes = 50L, NumEdges = 100000L, InitNodes = 2L, Mu = 0.1, Lambda = 0.01, MaxNumberOfIterations = 10L, eps = 0.01, CenterData = FALSE) Arguments   NumNodes The number of nodes of the principal graph. Domain: U(2, 1000). Default: 50. Format: integer.</description>
@@ -814,10 +888,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>ElPiGraph - Linear</title>
-      <link>/reference/dynmethods/other/ti_elpilinear/</link>
+      <link>/reference/dynmethods/method/ti_elpilinear/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_elpilinear/</guid>
+      <guid>/reference/dynmethods/method/ti_elpilinear/</guid>
       <description>ti_elpilinear.Rd  Will generate a trajectory using ElPiGraph - Linear.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_elpilinear(NumNodes = 50L, NumEdges = 100000L, InitNodes = 2L, Mu = 0.1, Lambda = 0.01, MaxNumberOfIterations = 10L, eps = 0.01, CenterData = FALSE) Arguments   NumNodes The number of nodes of the principal graph. Domain: U(2, 1000). Default: 50. Format: integer.</description>
@@ -825,10 +899,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Embeddr</title>
-      <link>/reference/dynmethods/other/ti_embeddr/</link>
+      <link>/reference/dynmethods/method/ti_embeddr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_embeddr/</guid>
+      <guid>/reference/dynmethods/method/ti_embeddr/</guid>
       <description>ti_embeddr.Rd  Will generate a trajectory using Embeddr.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_embeddr(ndim = 2L, kernel = &#34;nn&#34;, metric = &#34;correlation&#34;, nn_pct = 0L, eps = 0L, t = 0L, symmetrize = &#34;mean&#34;, measure_type = &#34;unorm&#34;, thresh = 0.001, maxit = 10L, stretch = 2L, smoother = &#34;smooth.spline&#34;) Arguments   ndim Dimension of the embedded space, default is 2.</description>
@@ -836,10 +910,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Error</title>
-      <link>/reference/dynmethods/other/ti_error/</link>
+      <link>/reference/dynmethods/method/ti_error/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_error/</guid>
+      <guid>/reference/dynmethods/method/ti_error/</guid>
       <description> ti_error.Rd  Will generate a trajectory using Error.
 This method was wrapped inside a container.
  ti_error(dummy_param = 0.5) Arguments   dummy_param Dummy parameter. Domain: U(0, 1). Default: 0.5. Format: numeric.
@@ -870,10 +944,10 @@ This method was wrapped inside a container.
     
     <item>
       <title>FORKS</title>
-      <link>/reference/dynmethods/other/ti_forks/</link>
+      <link>/reference/dynmethods/method/ti_forks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_forks/</guid>
+      <guid>/reference/dynmethods/method/ti_forks/</guid>
       <description>ti_forks.Rd  Will generate a trajectory using FORKS.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_forks(norm_function = &#34;median&#34;, norm_quantile = 75L, cum_sum_exp_var = 0.9, cluster = c(4L, 10L), mapping_type = &#34;Isomap&#34;, initialization = &#34;kmeans&#34;, iterMax = 1000L, eta = 0.01, C = 1L) Arguments   norm_function No description provided by the author. Domain: mean, median, quantile. Default: median. Format: character.</description>
@@ -881,10 +955,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>FateID</title>
-      <link>/reference/dynmethods/other/ti_fateid/</link>
+      <link>/reference/dynmethods/method/ti_fateid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_fateid/</guid>
+      <guid>/reference/dynmethods/method/ti_fateid/</guid>
       <description>ti_fateid.Rd  Will generate a trajectory using FateID.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_fateid(reclassify = TRUE, clthr = 0.9, nbfactor = 5L, q = 0.75, k = 3L, m = &#34;tsne&#34;, minnr = 5L, minnrh = 10L, trthr = 0.4, force = FALSE) Arguments   reclassify Whether to reclassify the cell grouping. Default: TRUE. Format: logical.</description>
@@ -892,10 +966,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>GNG</title>
-      <link>/reference/dynmethods/other/ti_gng/</link>
+      <link>/reference/dynmethods/method/ti_gng/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_gng/</guid>
+      <guid>/reference/dynmethods/method/ti_gng/</guid>
       <description>ti_gng.Rd  Will generate a trajectory using GNG.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_gng(dimred = &#34;landmark_mds&#34;, ndim = 5L, max_iter = 15000L, max_nodes = 8L, apply_mst = TRUE) Arguments   dimred Which dimensionality reduction method to use. Domain: pca, mds, tsne, ica, lle, landmark_mds, mds_sammon, mds_isomds, mds_smacof, umap, dm_diffusionMap. Default: landmark_mds. Format: character.
@@ -904,10 +978,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>GPfates</title>
-      <link>/reference/dynmethods/other/ti_gpfates/</link>
+      <link>/reference/dynmethods/method/ti_gpfates/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_gpfates/</guid>
+      <guid>/reference/dynmethods/method/ti_gpfates/</guid>
       <description>ti_gpfates.Rd  Will generate a trajectory using GPfates.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_gpfates(log_expression_cutoff = 0.5, min_cells_expression_cutoff = 0L, ndim = 2L) Arguments   log_expression_cutoff The log expression cutoff. Domain: U(0.5, 5). Default: 0.5. Format: numeric.
@@ -962,10 +1036,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>GrandPrix</title>
-      <link>/reference/dynmethods/other/ti_grandprix/</link>
+      <link>/reference/dynmethods/method/ti_grandprix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_grandprix/</guid>
+      <guid>/reference/dynmethods/method/ti_grandprix/</guid>
       <description>ti_grandprix.Rd  Will generate a trajectory using GrandPrix.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_grandprix(n_inducing_points = 40L, latent_prior_var = 0.1, latent_var = 0.028) Arguments   n_inducing_points . Domain: U(0, 1). Default: 40. Format: integer.
@@ -986,10 +1060,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Identity</title>
-      <link>/reference/dynmethods/other/ti_identity/</link>
+      <link>/reference/dynmethods/method/ti_identity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_identity/</guid>
+      <guid>/reference/dynmethods/method/ti_identity/</guid>
       <description> ti_identity.Rd  Will generate a trajectory using Identity.
 This method was wrapped inside a container.
  ti_identity() Value A TI method wrapper to be used together with infer_trajectory
@@ -1038,7 +1112,7 @@ This method was wrapped inside a container.
       
       <guid>/reference/dynplot/other/linearise_cells/</guid>
       <description>linearise_cells.Rd  Linearise a trajectory
- linearise_cells(traj, margin = 0.05, no_margin_between_linear = TRUE, one_edge = FALSE, equal_cell_width = FALSE) Arguments   traj The trajectory
+ linearise_cells(trajectory, margin = 0.05, no_margin_between_linear = TRUE, one_edge = FALSE, equal_cell_width = FALSE) Arguments   trajectory The trajectory
    margin The margin to add
    no_margin_between_linear Whether to add a margin only when
    one_edge If TRUE, assigns each cell to one edge only
@@ -1047,10 +1121,10 @@ This method was wrapped inside a container.
     
     <item>
       <title>MATCHER</title>
-      <link>/reference/dynmethods/other/ti_matcher/</link>
+      <link>/reference/dynmethods/method/ti_matcher/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_matcher/</guid>
+      <guid>/reference/dynmethods/method/ti_matcher/</guid>
       <description>ti_matcher.Rd  Will generate a trajectory using MATCHER.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_matcher(quantiles = 50L, method = &#34;linear&#34;) Arguments   quantiles Quantiles How many quantiles to use when computing warp functions (integer). Domain: U(2, 500). Default: 50. Format: integer.
@@ -1059,10 +1133,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>MERLoT</title>
-      <link>/reference/dynmethods/other/ti_merlot/</link>
+      <link>/reference/dynmethods/method/ti_merlot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_merlot/</guid>
+      <guid>/reference/dynmethods/method/ti_merlot/</guid>
       <description>ti_merlot.Rd  Will generate a trajectory using MERLoT.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_merlot(sigma = &#34;local&#34;, distance = &#34;euclidean&#34;, ndim = 20L, density_norm = TRUE, n_local = c(5L, 7L), w_width = 0.01, n_components_to_use = 3L, N_yk = 100L, lambda_0 = 8e-10, mu_0 = 0.0025, increaseFactor_mu = 20L, increaseFactor_lambda = 20L, FixEndpoints = FALSE) Arguments   sigma Diffusion scale parameter of the Gaussian kernel.</description>
@@ -1070,10 +1144,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>MFA</title>
-      <link>/reference/dynmethods/other/ti_mfa/</link>
+      <link>/reference/dynmethods/method/ti_mfa/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_mfa/</guid>
+      <guid>/reference/dynmethods/method/ti_mfa/</guid>
       <description>ti_mfa.Rd  Will generate a trajectory using MFA.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_mfa(iter = 2000L, thin = 1L, pc_initialise = 1L, prop_collapse = 0L, scale_input = TRUE, zero_inflation = FALSE) Arguments   iter Number of MCMC iterations. Domain: U(20, 5000). Default: 2000. Format: integer.
@@ -1082,10 +1156,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>MST</title>
-      <link>/reference/dynmethods/other/ti_mst/</link>
+      <link>/reference/dynmethods/method/ti_mst/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_mst/</guid>
+      <guid>/reference/dynmethods/method/ti_mst/</guid>
       <description>ti_mst.Rd  Will generate a trajectory using MST.
 This method was wrapped inside a container.
  ti_mst(dimred = &#34;pca&#34;, ndim = 2L) Arguments   dimred Which dimensionality reduction method to use. Domain: pca, mds, tsne, ica, lle, landmark_mds, mds_sammon, mds_isomds, mds_smacof, umap, dm_diffusionMap. Default: pca. Format: character.
@@ -1228,10 +1302,10 @@ This method was wrapped inside a container.
     
     <item>
       <title>Monocle DDRTree</title>
-      <link>/reference/dynmethods/other/ti_monocle_ddrtree/</link>
+      <link>/reference/dynmethods/method/ti_monocle_ddrtree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_monocle_ddrtree/</guid>
+      <guid>/reference/dynmethods/method/ti_monocle_ddrtree/</guid>
       <description>ti_monocle_ddrtree.Rd  Will generate a trajectory using Monocle DDRTree.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_monocle_ddrtree(reduction_method = &#34;ICA&#34;, max_components = 2L, norm_method = &#34;log&#34;, auto_param_selection = TRUE, filter_features = TRUE, filter_features_mean_expression = 0.1) Arguments   reduction_method A character string specifying the algorithm to use for dimensionality reduction. Domain: ICA. Default: ICA. Format: character.
@@ -1240,10 +1314,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Monocle ICA</title>
-      <link>/reference/dynmethods/other/ti_monocle_ica/</link>
+      <link>/reference/dynmethods/method/ti_monocle_ica/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_monocle_ica/</guid>
+      <guid>/reference/dynmethods/method/ti_monocle_ica/</guid>
       <description>ti_monocle_ica.Rd  Will generate a trajectory using Monocle ICA.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_monocle_ica(reduction_method = &#34;ICA&#34;, max_components = 2L, norm_method = &#34;log&#34;, filter_features = TRUE, filter_features_mean_expression = 0.1) Arguments   reduction_method A character string specifying the algorithm to use for dimensionality reduction. Domain: ICA. Default: ICA. Format: character.
@@ -1252,10 +1326,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Mpath</title>
-      <link>/reference/dynmethods/other/ti_mpath/</link>
+      <link>/reference/dynmethods/method/ti_mpath/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_mpath/</guid>
+      <guid>/reference/dynmethods/method/ti_mpath/</guid>
       <description>ti_mpath.Rd  Will generate a trajectory using Mpath.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_mpath(distMethod = &#34;euclidean&#34;, method = &#34;kmeans&#34;, numcluster = 11L, numcluster_null = TRUE, diversity_cut = 0.6, size_cut = 0.05) Arguments   distMethod The method for calculating dissimilarity between cells. distMethod can be one of &#34;pearson&#34;, &#34;kendall&#34;, &#34;spearman&#34; or &#34;euclidean&#34;. Default is &#34;euclidean&#34;. Domain: pearson, kendall, spearman, euclidean.</description>
@@ -1274,10 +1348,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>PAGA</title>
-      <link>/reference/dynmethods/other/ti_paga/</link>
+      <link>/reference/dynmethods/method/ti_paga/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_paga/</guid>
+      <guid>/reference/dynmethods/method/ti_paga/</guid>
       <description>ti_paga.Rd  Will generate a trajectory using PAGA.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_paga(n_neighbors = 15L, n_comps = 50L, n_dcs = 15L, resolution = 1L, embedding_type = &#34;fa&#34;, connectivity_cutoff = 0.05) Arguments   n_neighbors Number of neighbours for knn. Domain: U(1, 100). Default: 15. Format: integer.
@@ -1286,10 +1360,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>PAGA Tree</title>
-      <link>/reference/dynmethods/other/ti_paga_tree/</link>
+      <link>/reference/dynmethods/method/ti_paga_tree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_paga_tree/</guid>
+      <guid>/reference/dynmethods/method/ti_paga_tree/</guid>
       <description>ti_paga_tree.Rd  Will generate a trajectory using PAGA Tree.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_paga_tree(n_neighbors = 15L, n_comps = 50L, n_dcs = 15L, resolution = 1L, embedding_type = &#34;fa&#34;) Arguments   n_neighbors Number of neighbours for knn. Domain: U(1, 100). Default: 15. Format: integer.
@@ -1298,10 +1372,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Periodic PrinCurve</title>
-      <link>/reference/dynmethods/other/ti_periodpc/</link>
+      <link>/reference/dynmethods/method/ti_periodpc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_periodpc/</guid>
+      <guid>/reference/dynmethods/method/ti_periodpc/</guid>
       <description> ti_periodpc.Rd  Will generate a trajectory using Periodic PrinCurve.
 This method was wrapped inside a container.
  ti_periodpc(ndim = 3L, maxit = 10L) Arguments   ndim . Domain: U(2, 10). Default: 3. Format: integer.
@@ -1312,10 +1386,10 @@ This method was wrapped inside a container.
     
     <item>
       <title>PhenoPath</title>
-      <link>/reference/dynmethods/other/ti_phenopath/</link>
+      <link>/reference/dynmethods/method/ti_phenopath/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_phenopath/</guid>
+      <guid>/reference/dynmethods/method/ti_phenopath/</guid>
       <description>ti_phenopath.Rd  Will generate a trajectory using PhenoPath.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_phenopath(thin = 40L, z_init = &#34;1&#34;, model_mu = FALSE, scale_y = TRUE) Arguments   thin The number of iterations to wait each time before re-calculating the elbo. Domain: U(2, 500). Default: 40. Format: integer.
@@ -1329,7 +1403,7 @@ This method was wrapped inside a container. The original code of this method is 
       
       <guid>/reference/dynplot/plot_trajectory/plot_graph/</guid>
       <description>plot_graph.Rd  Plot a trajectory and cellular positions as a graph
- plot_graph(traj, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, pseudotime = NULL, expression_source = &#34;expression&#34;, milestones = NULL, milestone_percentages = NULL, transition_size = 3, milestone_size = 5, arrow_length = grid::unit(1, &#34;cm&#34;), label_milestones = dynwrap::is_wrapper_with_milestone_labelling(traj), plot_milestones = FALSE, adjust_weights = FALSE) Arguments   traj The trajectory</description>
+ plot_graph(trajectory, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, pseudotime = NULL, expression_source = &#34;expression&#34;, milestones = NULL, milestone_percentages = NULL, transition_size = 3, milestone_size = 5, arrow_length = grid::unit(1, &#34;cm&#34;), label_milestones = dynwrap::is_wrapper_with_milestone_labelling(trajectory), plot_milestones = FALSE, adjust_weights = FALSE) Arguments   trajectory The trajectory as created by infer_trajectory() or add_trajectory()</description>
     </item>
     
     <item>
@@ -1339,7 +1413,7 @@ This method was wrapped inside a container. The original code of this method is 
       
       <guid>/reference/dynplot/plot_trajectory/plot_dendro/</guid>
       <description>plot_dendro.Rd  Plot a trajectory as a dendrogram
- plot_dendro(traj, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, expression_source = &#34;expression&#34;, pseudotime = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, diag_offset = 0.05, y_offset = 0.2) Arguments   traj The trajectory
+ plot_dendro(trajectory, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, expression_source = &#34;expression&#34;, pseudotime = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, diag_offset = 0.05, y_offset = 0.2) Arguments   trajectory The trajectory
    color_cells How to color the cells
    grouping The grouping of the cells</description>
     </item>
@@ -1351,7 +1425,7 @@ This method was wrapped inside a container. The original code of this method is 
       
       <guid>/reference/dynplot/plot_trajectory/plot_dimred/</guid>
       <description>plot_dimred.Rd  Plot a trajectory on dimensionality reduction
- plot_dimred(traj, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), dimred = ifelse(dynwrap::is_wrapper_with_dimred(traj), NA, ifelse(length(traj$cell_ids) &amp;gt; 500, dimred_pca, dimred_mds)), plot_trajectory = dynwrap::is_wrapper_with_trajectory(traj) &amp;amp;&amp;amp; !plot_milestone_network, plot_milestone_network = FALSE, label_milestones = dynwrap::is_wrapper_with_milestone_labelling(traj), alpha_cells = 1, size_trajectory = 1, grouping = NULL, groups = NULL, feature_oi = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, pseudotime = NULL, expression_source = &#34;</description>
+ plot_dimred(trajectory, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), dimred = ifelse(dynwrap::is_wrapper_with_dimred(trajectory), NA, ifelse(length(trajectory$cell_ids) &amp;gt; 500, dimred_pca, dimred_mds)), plot_trajectory = dynwrap::is_wrapper_with_trajectory(trajectory) &amp;amp;&amp;amp; !plot_milestone_network, plot_milestone_network = FALSE, label_milestones = dynwrap::is_wrapper_with_milestone_labelling(trajectory), alpha_cells = 1, size_trajectory = 1, grouping = NULL, groups = NULL, feature_oi = NULL, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, pseudotime = NULL, expression_source = &#34;</description>
     </item>
     
     <item>
@@ -1371,7 +1445,7 @@ This method was wrapped inside a container. The original code of this method is 
       
       <guid>/reference/dynplot/plot_trajectory/plot_onedim/</guid>
       <description>plot_onedim.Rd  Plot onedim
- plot_onedim(traj, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, pseudotime = NULL, expression_source = &#34;expression&#34;, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, orientation = 1, margin = 0.05, linearised = linearise_cells(traj, margin, one_edge = TRUE), quasirandom_width = 0.2, plot_cells = TRUE, label_milestones = dynwrap::is_wrapper_with_milestone_labelling(traj)) Arguments   traj The trajectory</description>
+ plot_onedim(trajectory, color_cells = c(&#34;auto&#34;, &#34;none&#34;, &#34;grouping&#34;, &#34;feature&#34;, &#34;milestone&#34;, &#34;pseudotime&#34;), grouping = NULL, groups = NULL, feature_oi = NULL, pseudotime = NULL, expression_source = &#34;expression&#34;, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, milestone_percentages = NULL, orientation = 1, margin = 0.05, linearised = linearise_cells(trajectory, margin, one_edge = TRUE), quasirandom_width = 0.2, plot_cells = TRUE, label_milestones = dynwrap::is_wrapper_with_milestone_labelling(trajectory)) Arguments   trajectory The trajectory</description>
     </item>
     
     <item>
@@ -1409,7 +1483,7 @@ This method was wrapped inside a container. The original code of this method is 
       
       <guid>/reference/dynplot/plot_trajectory/plot_heatmap/</guid>
       <description>plot_heatmap.Rd  When using RStudio: the heatmap will not show inside the plot area, but will be visible once you click the zoom button.
- plot_heatmap(traj, expression_source = &#34;expression&#34;, features_oi = 20, clust = &#34;ward.D2&#34;, margin = 0.02, color_cells = NULL, milestones = NULL, milestone_percentages = traj$milestone_percentages, grouping = NULL, groups = NULL, cell_feature_importances = NULL, heatmap_type = c(&#34;tiled&#34;, &#34;dotted&#34;), scale = dynutils::scale_quantile, label_milestones = TRUE) Arguments   traj The trajectory</description>
+ plot_heatmap(trajectory, expression_source = &#34;expression&#34;, features_oi = 20, clust = &#34;ward.D2&#34;, margin = 0.02, color_cells = NULL, milestones = NULL, milestone_percentages = trajectory$milestone_percentages, grouping = NULL, groups = NULL, cell_feature_importances = NULL, heatmap_type = c(&#34;tiled&#34;, &#34;dotted&#34;), scale = dynutils::scale_quantile, label_milestones = TRUE) Arguments   trajectory The trajectory</description>
     </item>
     
     <item>
@@ -1419,7 +1493,7 @@ This method was wrapped inside a container. The original code of this method is 
       
       <guid>/reference/dynplot/plot_trajectory/plot_topology/</guid>
       <description> plot_topology.Rd  Plot the topology of a trajectory
- plot_topology(traj, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, layout = NULL) Arguments   traj The trajectory
+ plot_topology(trajectory, color_milestones = c(&#34;auto&#34;, &#34;given&#34;, &#34;cubeHelix&#34;, &#34;Set3&#34;, &#34;rainbow&#34;), milestones = NULL, layout = NULL) Arguments   trajectory The trajectory
    color_milestones How to color the cells
    milestones Tibble containing the `milestone_id` and a `color` for each milestone
    layout The type of layout to create.
@@ -1445,7 +1519,7 @@ This method was wrapped inside a container. The original code of this method is 
       
       <guid>/reference/dynplot/other/project_waypoints/</guid>
       <description>project_waypoints.Rd  Project the waypoints
- project_waypoints(traj, cell_positions, waypoints = dynwrap::select_waypoints(traj), trajectory_projection_sd = sum(traj$milestone_network$length) * 0.05, color_trajectory = &#34;none&#34;) Arguments   traj The trajectory
+ project_waypoints(trajectory, cell_positions, waypoints = dynwrap::select_waypoints(trajectory), trajectory_projection_sd = sum(trajectory$milestone_network$length) * 0.05, color_trajectory = &#34;none&#34;) Arguments   trajectory The trajectory
    cell_positions The positions of the cells
    waypoints The waypoints to use for projecting, as generated by [dynwrap::select_waypoints()]
    trajectory_projection_sd The standard deviation of the gaussian kernel
@@ -1454,10 +1528,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Projected DPT</title>
-      <link>/reference/dynmethods/other/ti_projected_dpt/</link>
+      <link>/reference/dynmethods/method/ti_projected_dpt/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_projected_dpt/</guid>
+      <guid>/reference/dynmethods/method/ti_projected_dpt/</guid>
       <description>ti_projected_dpt.Rd  Will generate a trajectory using Projected DPT.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_projected_dpt(sigma = &#34;local&#34;, distance = &#34;euclidean&#34;, ndim = 20L, density_norm = TRUE, n_local = c(5L, 7L), w_width = 0.1) Arguments   sigma Diffusion scale parameter of the Gaussian kernel. A larger sigma might be necessary if the eigenvalues can not be found because of a singularity in the matrix.</description>
@@ -1465,10 +1539,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Projected Monocle</title>
-      <link>/reference/dynmethods/other/ti_projected_monocle/</link>
+      <link>/reference/dynmethods/method/ti_projected_monocle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_projected_monocle/</guid>
+      <guid>/reference/dynmethods/method/ti_projected_monocle/</guid>
       <description>ti_projected_monocle.Rd  Will generate a trajectory using Projected Monocle.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_projected_monocle(reduction_method = &#34;DDRTree&#34;, max_components = 2L, norm_method = &#34;vstExprs&#34;, auto_param_selection = TRUE, filter_features = TRUE, filter_features_mean_expression = 0.1) Arguments   reduction_method A character string specifying the algorithm to use for dimensionality reduction. Domain: DDRTree. Default: DDRTree. Format: character.
@@ -1477,10 +1551,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Projected PAGA</title>
-      <link>/reference/dynmethods/other/ti_projected_paga/</link>
+      <link>/reference/dynmethods/method/ti_projected_paga/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_projected_paga/</guid>
+      <guid>/reference/dynmethods/method/ti_projected_paga/</guid>
       <description>ti_projected_paga.Rd  Will generate a trajectory using Projected PAGA.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_projected_paga(n_neighbors = 15L, n_comps = 50L, n_dcs = 15L, resolution = 1L, embedding_type = &#34;fa&#34;, connectivity_cutoff = 0.05) Arguments   n_neighbors Number of neighbours for knn. Domain: U(1, 100). Default: 15. Format: integer.
@@ -1489,10 +1563,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Projected Slingshot</title>
-      <link>/reference/dynmethods/other/ti_projected_slingshot/</link>
+      <link>/reference/dynmethods/method/ti_projected_slingshot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_projected_slingshot/</guid>
+      <guid>/reference/dynmethods/method/ti_projected_slingshot/</guid>
       <description>ti_projected_slingshot.Rd  Will generate a trajectory using Projected Slingshot.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_projected_slingshot(shrink = 1L, reweight = TRUE, reassign = TRUE, thresh = 0.001, maxit = 10L, stretch = 2, smoother = &#34;smooth.spline&#34;, shrink.method = &#34;cosine&#34;) Arguments   shrink Logical or numeric between 0 and 1, determines whether and how much to shrink branching lineages toward their average prior to the split.</description>
@@ -1500,10 +1574,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Projected TSCAN</title>
-      <link>/reference/dynmethods/other/ti_projected_tscan/</link>
+      <link>/reference/dynmethods/method/ti_projected_tscan/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_projected_tscan/</guid>
+      <guid>/reference/dynmethods/method/ti_projected_tscan/</guid>
       <description>ti_projected_tscan.Rd  Will generate a trajectory using Projected TSCAN.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_projected_tscan(minexpr_percent = 0L, minexpr_value = 0L, cvcutoff = 0L, clusternum = c(2L, 9L), modelNames = &#34;VVV&#34;) Arguments   minexpr_percent . Domain: U(0, 1). Default: 0. Format: numeric.
@@ -1513,10 +1587,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>RaceID / StemID</title>
-      <link>/reference/dynmethods/other/ti_raceid_stemid/</link>
+      <link>/reference/dynmethods/method/ti_raceid_stemid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_raceid_stemid/</guid>
+      <guid>/reference/dynmethods/method/ti_raceid_stemid/</guid>
       <description>ti_raceid_stemid.Rd  Will generate a trajectory using RaceID / StemID.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_raceid_stemid(knn = 10L, ccor = 0.4, metric = &#34;pearson&#34;, sat = TRUE, samp = 1000L, cln = 30L, clustnr = 30L, bootnr = 50L, FUNcluster = &#34;kmedoids&#34;, probthr = 0.001, outminc = 5L, outlg = 2L, outdistquant = 0.95, initial_cmd = TRUE, perplexity = 30L, cthr = 5L, nmode = TRUE, projcells_knn = 3L, fr = FALSE, pdishuf = 500L, fast = FALSE, pthr = 0.</description>
@@ -1524,10 +1598,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Random</title>
-      <link>/reference/dynmethods/other/ti_random/</link>
+      <link>/reference/dynmethods/method/ti_random/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_random/</guid>
+      <guid>/reference/dynmethods/method/ti_random/</guid>
       <description> ti_random.Rd  Will generate a trajectory using Random.
 This method was wrapped inside a container.
  ti_random(dummy_param = 0.5) Arguments   dummy_param Dummy parameter. Domain: U(0, 1). Default: 0.5. Format: numeric.
@@ -1574,10 +1648,10 @@ This method was wrapped inside a container.
     
     <item>
       <title>SCIMITAR</title>
-      <link>/reference/dynmethods/other/ti_scimitar/</link>
+      <link>/reference/dynmethods/method/ti_scimitar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_scimitar/</guid>
+      <guid>/reference/dynmethods/method/ti_scimitar/</guid>
       <description>ti_scimitar.Rd  Will generate a trajectory using SCIMITAR.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_scimitar(covariance_type = &#34;diag&#34;, degree = 3L, step_size = 0.07, cov_estimator = &#34;identity&#34;, cov_reg = 0.05, max_iter = 3L) Arguments   covariance_type . Domain: diag, spherical, full. Default: diag. Format: character.
@@ -1587,10 +1661,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>SCORPIUS</title>
-      <link>/reference/dynmethods/other/ti_scorpius/</link>
+      <link>/reference/dynmethods/method/ti_scorpius/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_scorpius/</guid>
+      <guid>/reference/dynmethods/method/ti_scorpius/</guid>
       <description>ti_scorpius.Rd  Will generate a trajectory using SCORPIUS.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_scorpius(distance_method = &#34;spearman&#34;, ndim = 3L, k = 4L, thresh = 0.001, maxit = 10L, stretch = 0, smoother = &#34;smooth_spline&#34;, sparse = TRUE) Arguments   distance_method A character string indicating which correlationcoefficient (or covariance) is to be computed. One of &#34;pearson&#34;, &#34;kendall&#34;, or &#34;</description>
@@ -1598,10 +1672,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>SCOUP</title>
-      <link>/reference/dynmethods/other/ti_scoup/</link>
+      <link>/reference/dynmethods/method/ti_scoup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_scoup/</guid>
+      <guid>/reference/dynmethods/method/ti_scoup/</guid>
       <description>ti_scoup.Rd  Will generate a trajectory using SCOUP.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_scoup(ndim = 2L, max_ite1 = 100L, max_ite2 = 100L, alpha = c(0.1, 100), t = c(0.001, 2), sigma_squared = 0.1, thresh = 0.01) Arguments   ndim Number of pca dimensions. Domain: U(2, 20). Default: 2. Format: integer.
@@ -1610,10 +1684,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>SCUBA</title>
-      <link>/reference/dynmethods/other/ti_scuba/</link>
+      <link>/reference/dynmethods/method/ti_scuba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_scuba/</guid>
+      <guid>/reference/dynmethods/method/ti_scuba/</guid>
       <description>ti_scuba.Rd  Will generate a trajectory using SCUBA.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_scuba(rigorous_gap_stats = TRUE, N_dim = 2L, low_gene_threshold = 1L, low_gene_fraction_max = 0.7, min_split = 15L, min_percentage_split = 0.25) Arguments   rigorous_gap_stats Whether to use rigorous gap statistics to determine number of clusters. Default: TRUE. Format: logical.
@@ -1622,10 +1696,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>SLICE</title>
-      <link>/reference/dynmethods/other/ti_slice/</link>
+      <link>/reference/dynmethods/method/ti_slice/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_slice/</guid>
+      <guid>/reference/dynmethods/method/ti_slice/</guid>
       <description>ti_slice.Rd  Will generate a trajectory using SLICE.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_slice(lm.method = &#34;clustering&#34;, model.type = &#34;tree&#34;, ss.method = &#34;all&#34;, ss.threshold = 0.25, community.method = &#34;louvain&#34;, cluster.method = &#34;kmeans&#34;, k = 0L, k.max = 10L, B = 100L, k.opt.method = &#34;firstmax&#34;) Arguments   lm.method Select &#34;clustering&#34; based or &#34;graph&#34; based method to infer lineage model.</description>
@@ -1633,10 +1707,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>SLICER</title>
-      <link>/reference/dynmethods/other/ti_slicer/</link>
+      <link>/reference/dynmethods/method/ti_slicer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_slicer/</guid>
+      <guid>/reference/dynmethods/method/ti_slicer/</guid>
       <description>ti_slicer.Rd  Will generate a trajectory using SLICER.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_slicer(kmin = 10L, m = 2L) Arguments   kmin Smallest value of k to try. Domain: U(2, 20). Default: 10. Format: integer.
@@ -1645,10 +1719,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>STEMNET</title>
-      <link>/reference/dynmethods/other/ti_stemnet/</link>
+      <link>/reference/dynmethods/method/ti_stemnet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_stemnet/</guid>
+      <guid>/reference/dynmethods/method/ti_stemnet/</guid>
       <description>ti_stemnet.Rd  Will generate a trajectory using STEMNET.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_stemnet(alpha = 0.1, lambda_auto = TRUE, lambda = 0.1, force = FALSE) Arguments   alpha The elastic net mixing parameter of the ‘glmnet’ classifier. Domain: e^U(-6.91, 2.30). Default: 0.1. Format: numeric.
@@ -1693,10 +1767,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Sincell</title>
-      <link>/reference/dynmethods/other/ti_sincell/</link>
+      <link>/reference/dynmethods/method/ti_sincell/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_sincell/</guid>
+      <guid>/reference/dynmethods/method/ti_sincell/</guid>
       <description>ti_sincell.Rd  Will generate a trajectory using Sincell.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_sincell(distance_method = &#34;euclidean&#34;, dimred_method = &#34;none&#34;, clust.method = &#34;max.distance&#34;, mutual = TRUE, max.distance = 0L, k = 3L, shortest.rank.percent = 10L, graph.algorithm = &#34;MST&#34;, graph.using.cells.clustering = FALSE, k_imc = 3L, pct_leaf_node_cutoff = 0.5) Arguments   distance_method Distance method to be used. The available distances are the Euclidean distance (method=&#34;</description>
@@ -1704,10 +1778,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Slingshot</title>
-      <link>/reference/dynmethods/other/ti_slingshot/</link>
+      <link>/reference/dynmethods/method/ti_slingshot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_slingshot/</guid>
+      <guid>/reference/dynmethods/method/ti_slingshot/</guid>
       <description>ti_slingshot.Rd  Will generate a trajectory using Slingshot.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_slingshot(shrink = 1L, reweight = TRUE, reassign = TRUE, thresh = 0.001, maxit = 10L, stretch = 2L, smoother = &#34;smooth.spline&#34;, shrink.method = &#34;cosine&#34;) Arguments   shrink Logical or numeric between 0 and 1, determines whether and how much to shrink branching lineages toward their average prior to the split.</description>
@@ -1715,10 +1789,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>TSCAN</title>
-      <link>/reference/dynmethods/other/ti_tscan/</link>
+      <link>/reference/dynmethods/method/ti_tscan/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_tscan/</guid>
+      <guid>/reference/dynmethods/method/ti_tscan/</guid>
       <description>ti_tscan.Rd  Will generate a trajectory using TSCAN.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_tscan(minexpr_percent = 0L, minexpr_value = 0L, cvcutoff = 0L, clusternum = c(2L, 9L), modelNames = &#34;VVV&#34;) Arguments   minexpr_percent . Domain: U(0, 1). Default: 0. Format: numeric.
@@ -1750,10 +1824,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>URD</title>
-      <link>/reference/dynmethods/other/ti_urd/</link>
+      <link>/reference/dynmethods/method/ti_urd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_urd/</guid>
+      <guid>/reference/dynmethods/method/ti_urd/</guid>
       <description>ti_urd.Rd  Will generate a trajectory using URD.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_urd(knn = 0L, sigma.use = 0, distance = &#34;euclidean&#34;, n_floods = 20L, stability.div = 10L, mp.factor = 1L, perplexity = 30L, theta = 0.5, max_iter = 1000L, num.nn = 30L, do.jaccard = TRUE, optimal.cells.forward = 20L, max.cells.back = 40L, n.per.tip = 25000L, root.visits = 1L, max.</description>
@@ -1761,10 +1835,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Wanderlust</title>
-      <link>/reference/dynmethods/other/ti_wanderlust/</link>
+      <link>/reference/dynmethods/method/ti_wanderlust/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_wanderlust/</guid>
+      <guid>/reference/dynmethods/method/ti_wanderlust/</guid>
       <description>ti_wanderlust.Rd  Will generate a trajectory using Wanderlust.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_wanderlust(normalise = TRUE, knn = 25L, n_diffusion_components = 3L, n_pca_components = 30L, k = 25L, num_waypoints = 250L, epsilon = 1L) Arguments   normalise . Default: TRUE. Format: logical.
@@ -1773,10 +1847,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>Waterfall</title>
-      <link>/reference/dynmethods/other/ti_waterfall/</link>
+      <link>/reference/dynmethods/method/ti_waterfall/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_waterfall/</guid>
+      <guid>/reference/dynmethods/method/ti_waterfall/</guid>
       <description>ti_waterfall.Rd  Will generate a trajectory using Waterfall.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_waterfall(num_clusters = 10L) Arguments   num_clusters . Domain: U(2, 20). Default: 10. Format: integer.
@@ -1806,10 +1880,10 @@ References Shin, J., Berg, D.A., Zhu, Y., Shin, J.Y., Song, J., Bonaguidi, M.A.,
     
     <item>
       <title>Wishbone</title>
-      <link>/reference/dynmethods/other/ti_wishbone/</link>
+      <link>/reference/dynmethods/method/ti_wishbone/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_wishbone/</guid>
+      <guid>/reference/dynmethods/method/ti_wishbone/</guid>
       <description>ti_wishbone.Rd  Will generate a trajectory using Wishbone.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_wishbone(normalise = TRUE, knn = 25L, n_diffusion_components = 3L, n_pca_components = 30L, k = 25L, num_waypoints = 250L, epsilon = 1L) Arguments   normalise . Default: TRUE. Format: logical.
@@ -1828,10 +1902,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>cellTree Gibbs</title>
-      <link>/reference/dynmethods/other/ti_celltree_gibbs/</link>
+      <link>/reference/dynmethods/method/ti_celltree_gibbs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_celltree_gibbs/</guid>
+      <guid>/reference/dynmethods/method/ti_celltree_gibbs/</guid>
       <description>ti_celltree_gibbs.Rd  Will generate a trajectory using cellTree Gibbs.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_celltree_gibbs(method = &#34;Gibbs&#34;, sd_filter = 0.5, width_scale_factor = 1.5, outlier_tolerance_factor = 0.1, rooting_method = &#34;null&#34;, num_topics = 4L, tot_iter = 200L, tolerance = 1e-05) Arguments   method LDA inference method to use. Domain: Gibbs. Default: Gibbs. Format: character.
@@ -1840,10 +1914,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>cellTree maptpx</title>
-      <link>/reference/dynmethods/other/ti_celltree_maptpx/</link>
+      <link>/reference/dynmethods/method/ti_celltree_maptpx/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_celltree_maptpx/</guid>
+      <guid>/reference/dynmethods/method/ti_celltree_maptpx/</guid>
       <description>ti_celltree_maptpx.Rd  Will generate a trajectory using cellTree maptpx.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_celltree_maptpx(method = &#34;maptpx&#34;, sd_filter = 0.5, absolute_width = 0L, width_scale_factor = 1.5, outlier_tolerance_factor = 0.1, rooting_method = &#34;null&#34;, num_topics = c(2L, 15L), tot_iter = 200L, tolerance = 0.05) Arguments   method LDA inference method to use. Domain: maptpx. Default: maptpx. Format: character.</description>
@@ -1851,10 +1925,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>cellTree vem</title>
-      <link>/reference/dynmethods/other/ti_celltree_vem/</link>
+      <link>/reference/dynmethods/method/ti_celltree_vem/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_celltree_vem/</guid>
+      <guid>/reference/dynmethods/method/ti_celltree_vem/</guid>
       <description>ti_celltree_vem.Rd  Will generate a trajectory using cellTree vem.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_celltree_vem(method = &#34;VEM&#34;, sd_filter = 0.5, width_scale_factor = 1.5, outlier_tolerance_factor = 0.1, rooting_method = &#34;null&#34;, num_topics = 4L, tot_iter = 1000000L, tolerance = 1e-05) Arguments   method LDA inference method to use. Domain: VEM. Default: VEM. Format: character.
@@ -1876,10 +1950,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>ouija</title>
-      <link>/reference/dynmethods/other/ti_ouija/</link>
+      <link>/reference/dynmethods/method/ti_ouija/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_ouija/</guid>
+      <guid>/reference/dynmethods/method/ti_ouija/</guid>
       <description>ti_ouija.Rd  Will generate a trajectory using ouija.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_ouija(iter = 100L, response_type = &#34;switch&#34;, inference_type = &#34;hmc&#34;, normalise_expression = TRUE) Arguments   iter Number of iterations. Domain: e^U(2.30, 6.91). Default: 100. Format: numeric.
@@ -1888,10 +1962,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>ouijaflow</title>
-      <link>/reference/dynmethods/other/ti_ouijaflow/</link>
+      <link>/reference/dynmethods/method/ti_ouijaflow/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_ouijaflow/</guid>
+      <guid>/reference/dynmethods/method/ti_ouijaflow/</guid>
       <description>ti_ouijaflow.Rd  Will generate a trajectory using ouijaflow.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_ouijaflow(iter = 1000L) Arguments   iter . Domain: e^U(0.69, 10.82). Default: 1000. Format: integer.
@@ -1901,10 +1975,10 @@ References Campbell, K.R., Yau, C., 2016. A descriptive marker gene approach to 
     
     <item>
       <title>pCreode</title>
-      <link>/reference/dynmethods/other/ti_pcreode/</link>
+      <link>/reference/dynmethods/method/ti_pcreode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_pcreode/</guid>
+      <guid>/reference/dynmethods/method/ti_pcreode/</guid>
       <description>ti_pcreode.Rd  Will generate a trajectory using pCreode.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_pcreode(n_pca_components = 3L, num_runs = 10L) Arguments   n_pca_components . Domain: U(2, 10). Default: 3. Format: integer.
@@ -1914,10 +1988,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>pseudogp</title>
-      <link>/reference/dynmethods/other/ti_pseudogp/</link>
+      <link>/reference/dynmethods/method/ti_pseudogp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_pseudogp/</guid>
+      <guid>/reference/dynmethods/method/ti_pseudogp/</guid>
       <description>ti_pseudogp.Rd  Will generate a trajectory using pseudogp.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_pseudogp(smoothing_alpha = 10, smoothing_beta = 3, pseudotime_mean = 0.5, pseudotime_var = 1, chains = 3L, iter = 100L, dimreds = c(&#34;pca&#34;, &#34;mds&#34;), initialise_from = &#34;random&#34;) Arguments   smoothing_alpha The hyperparameter for the Gamma distribution that controls arc-length. Domain: U(1, 20). Default: 10. Format: numeric.</description>
@@ -1925,10 +1999,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>reCAT</title>
-      <link>/reference/dynmethods/other/ti_recat/</link>
+      <link>/reference/dynmethods/method/ti_recat/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_recat/</guid>
+      <guid>/reference/dynmethods/method/ti_recat/</guid>
       <description>ti_recat.Rd  Will generate a trajectory using reCAT.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_recat(TSPFold = 2L, beginNum = 10L, endNum = 15L, step_size = 2L, base_cycle_range = c(6L, 9L), max_num = 300L, clustMethod = &#34;GMM&#34;) Arguments   TSPFold No documentation provided by authors. Domain: U(2, 10). Default: 2. Format: integer.
@@ -1937,10 +2011,10 @@ This method was wrapped inside a container. The original code of this method is 
     
     <item>
       <title>shuffle</title>
-      <link>/reference/dynmethods/other/ti_shuffle/</link>
+      <link>/reference/dynmethods/method/ti_shuffle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_shuffle/</guid>
+      <guid>/reference/dynmethods/method/ti_shuffle/</guid>
       <description> ti_shuffle.Rd  Will generate a trajectory using shuffle.
 This method was wrapped inside a container.
  ti_shuffle(dummy_param = TRUE) Arguments   dummy_param Dummy parameter. Default: TRUE. Format: logical.
@@ -1950,10 +2024,10 @@ This method was wrapped inside a container.
     
     <item>
       <title>topslam</title>
-      <link>/reference/dynmethods/other/ti_topslam/</link>
+      <link>/reference/dynmethods/method/ti_topslam/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/reference/dynmethods/other/ti_topslam/</guid>
+      <guid>/reference/dynmethods/method/ti_topslam/</guid>
       <description>ti_topslam.Rd  Will generate a trajectory using topslam.
 This method was wrapped inside a container. The original code of this method is available here.
  ti_topslam(n_components = 2L, n_neighbors = 10L, linear_dims = 0L, max_iters = 1000L, dimreds = c(&#34;t-SNE&#34;, &#34;PCA&#34;, &#34;Spectral&#34;, &#34;Isomap&#34;, &#34;ICA&#34;)) Arguments   n_components The number of components. Domain: U(2, 10). Default: 2. Format: integer.

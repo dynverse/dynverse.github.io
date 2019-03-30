@@ -12,19 +12,19 @@
     <title>Constructs a trajectory using a graph between cells, by mapping cells onto a set of backbone cells. :: dynverse</title>
 
     
-    <link href="../../../../css/nucleus.css?1553574834" rel="stylesheet">
-    <link href="../../../../css/fontawesome-all.min.css?1553574834" rel="stylesheet">
-    <link href="../../../../css/hybrid.css?1553574834" rel="stylesheet">
-    <link href="../../../../css/featherlight.min.css?1553574834" rel="stylesheet">
-    <link href="../../../../css/perfect-scrollbar.min.css?1553574834" rel="stylesheet">
-    <link href="../../../../css/auto-complete.css?1553574834" rel="stylesheet">
-    <link href="../../../../css/theme.css?1553574834" rel="stylesheet">
-    <link href="../../../../css/hugo-theme.css?1553574834" rel="stylesheet">
+    <link href="../../../../css/nucleus.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/fontawesome-all.min.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/hybrid.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/featherlight.min.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/perfect-scrollbar.min.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/auto-complete.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/theme.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/hugo-theme.css?1553927521" rel="stylesheet">
     
-      <link href="../../../../css/theme-mine.css?1553574834" rel="stylesheet">
+      <link href="../../../../css/theme-mine.css?1553927521" rel="stylesheet">
     
 
-    <script src="../../../../js/jquery-2.x.min.js?1553574834"></script>
+    <script src="../../../../js/jquery-2.x.min.js?1553927521"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -54,7 +54,7 @@
   <div id="header-wrapper">
     <div id="header">
       <a id="logo" href="../../../../">
-  <img src="../../../../images/logo.svg" style="max-width:50%" alt="dynverse logo" class="zoom">
+  <img src="../../../../images/logo.png" style="max-width:100px;" alt="dynverse logo" class="zoom">
 </a>
 
 
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1553574834");
-    $.getScript("\/js\/auto-complete.js?1553574834");
-    $.getScript("\/js\/search.js?1553574834");
+    $.getScript("\/js\/lunr.min.js?1553927521");
+    $.getScript("\/js\/auto-complete.js?1553927521");
+    $.getScript("\/js\/search.js?1553927521");
     window.searchLoaded = true
   }
 
@@ -97,31 +97,6 @@ $(".searchbox").click(function(){
     <div class="highlightable">
     <ul class="topics">
         
-          
-          
-
-
- 
-  
-    
-    <li data-nav-id="/about/" title="About" class="dd-item
-        
-        
-        menu-section
-        "
-        
-      >
-      <a href="../../../../about/">
-          About
-          
-          
-      </a>
-      
-      
-    </li>
-  
- 
-
           
           
 
@@ -340,30 +315,6 @@ $(".searchbox").click(function(){
 
             
           
-            
-            
-
-
- 
-  
-    
-    <li data-nav-id="/users/4-example_analyses/" title="Example analyses" class="dd-item
-        
-        
-        menu-subsection
-        ">
-      <a href="../../../../users/4-example_analyses/">
-          Example analyses
-          
-      </a>
-      
-      
-    </li>
-  
- 
-
-            
-          
         
         </ul>
       
@@ -387,6 +338,8 @@ $(".searchbox").click(function(){
       >
       <a href="../../../../developers/">
           Method developers
+          
+            <img src="../../../../images/dynbenchmark/logo.png" alt="logo" class="menu-logo zoom ">
           
           
       </a>
@@ -433,9 +386,28 @@ $(".searchbox").click(function(){
  
   
     
-      <li data-nav-id="/developers/creating-ti-method/create_ti_method_barebones/" title="Bare-bones" class="dd-item ">
-        <a href="../../../../developers/creating-ti-method/create_ti_method_barebones/">
-        Bare-bones
+      <li data-nav-id="/developers/creating-ti-method/create_ti_method_wrappers/" title="Creating a trajectory" class="dd-item ">
+        <a href="../../../../developers/creating-ti-method/create_ti_method_wrappers/">
+        Creating a trajectory
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developers/creating-ti-method/create_ti_method_r/" title="Wrapping in R" class="dd-item ">
+        <a href="../../../../developers/creating-ti-method/create_ti_method_r/">
+        Wrapping in R
         
         </a>
     </li>
@@ -471,9 +443,9 @@ $(".searchbox").click(function(){
  
   
     
-      <li data-nav-id="/developers/creating-ti-method/create_ti_method_container/" title="Container" class="dd-item ">
+      <li data-nav-id="/developers/creating-ti-method/create_ti_method_container/" title="Containerised wrapping" class="dd-item ">
         <a href="../../../../developers/creating-ti-method/create_ti_method_container/">
-        Container
+        Containerised wrapping
         
         </a>
     </li>
@@ -1210,6 +1182,18 @@ $(".searchbox").click(function(){
             
             
           
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
         
         </ul>
       
@@ -1262,14 +1246,14 @@ $(".searchbox").click(function(){
  
   
     
-    <li data-nav-id="/reference/dynmethods/other/" title="dynmethods :: Other" class="dd-item
+    <li data-nav-id="/reference/dynmethods/method/" title="dynmethods :: Trajectory inference methods" class="dd-item
         
         
         
         menu-item
         ">
-      <a href="../../../../reference/dynmethods/other/">
-          Other
+      <a href="../../../../reference/dynmethods/method/">
+          Trajectory inference methods
 
           
       </a>
@@ -1458,6 +1442,42 @@ $(".searchbox").click(function(){
           
             
             
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynmethods/other/" title="dynmethods :: Other" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../../../reference/dynmethods/other/">
+          Other
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
           
             
             
@@ -1665,6 +1685,79 @@ $(".searchbox").click(function(){
  
 
           
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/about/" title="About" class="dd-item
+        
+        
+        menu-section
+        "
+        
+      >
+      <a href="../../../../about/">
+          About
+          
+          
+      </a>
+      
+      
+        <ul style="display:block;">
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/about/contributing/" title="" class="dd-item ">
+        <a href="../../../../about/contributing/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/about/contributing/" title="Contributing" class="dd-item ">
+        <a href="../../../../about/contributing/">
+        Contributing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
         
     </ul>
 
@@ -1812,8 +1905,7 @@ $(".searchbox").click(function(){
     </tr>
     <tr>
       <th>to_keep</th>
-      <td><p>A named vector containing booleans containing
-whether or not a cell is part of the backbone. Or, alternatively a character vector containing the backbone cells</p></td>
+      <td><p>A character vector with the identifiers of the backbone cells. Alternatively, a named boolean vector whether a cell is from the backbone</p></td>
     </tr>
     <tr>
       <th>milestone_prefix</th>
@@ -1830,6 +1922,27 @@ whether or not a cell is part of the backbone. Or, alternatively a character vec
     <p>The trajectory</p>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>tibble</span>)
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>dplyr</span>)
+<span class='no'>dataset</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='../../../../reference/dynwrap/create_trajectory/wrap_data'>wrap_data</a></span>(<span class='kw'>cell_ids</span> <span class='kw'>=</span> <span class='no'>letters</span>)
+
+<span class='no'>backbone_cell_graph</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></span>(
+  <span class='kw'>from</span> <span class='kw'>=</span> <span class='no'>letters</span>[<span class='fl'>1</span>:<span class='fl'>10</span>],
+  <span class='kw'>to</span> <span class='kw'>=</span> <span class='no'>letters</span>[<span class='fl'>2</span>:<span class='fl'>11</span>],
+  <span class='kw'>length</span> <span class='kw'>=</span> <span class='fl'>1</span>,
+  <span class='kw'>directed</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+)
+<span class='no'>leaves_cell_graph</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></span>(
+  <span class='kw'>from</span> <span class='kw'>=</span> <span class='no'>letters</span>[<span class='fl'>12</span>:<span class='fl'>26</span>],
+  <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/sample.html'>sample</a></span>(<span class='no'>letters</span>[<span class='fl'>1</span>:<span class='fl'>11</span>], <span class='fl'>15</span>, <span class='kw'>replace</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>),
+  <span class='kw'>length</span> <span class='kw'>=</span> <span class='fl'>1</span>,
+  <span class='kw'>directed</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+)
+<span class='no'>cell_graph</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/bind.html'>bind_rows</a></span>(<span class='no'>backbone_cell_graph</span>, <span class='no'>leaves_cell_graph</span>)
+<span class='no'>to_keep</span> <span class='kw'>&lt;-</span> <span class='no'>letters</span>[<span class='fl'>1</span>:<span class='fl'>11</span>]
+
+<span class='no'>trajectory</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='../../../../reference/dynwrap/create_trajectory/add_cell_graph'>add_cell_graph</a></span>(<span class='no'>dataset</span>, <span class='no'>cell_graph</span>, <span class='no'>to_keep</span>)</div></pre>
 </div>
 <!--  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -1837,7 +1950,9 @@ whether or not a cell is part of the backbone. Or, alternatively a character vec
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
-          </ul>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>-->
 
@@ -1886,22 +2001,6 @@ whether or not a cell is part of the backbone. Or, alternatively a character vec
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -2044,6 +2143,9 @@ whether or not a cell is part of the backbone. Or, alternatively a character vec
                     
                     
 
+                    
+            
+        
                     
             
         
@@ -2061,14 +2163,10 @@ whether or not a cell is part of the backbone. Or, alternatively a character vec
 
                     
                     
-                    
-
+                        
                     
-            
-        
                     
-            
-        
+
                     
                         
             
@@ -2079,8 +2177,6 @@ whether or not a cell is part of the backbone. Or, alternatively a character vec
                 
 
                     
-                    
-                        
                     
                     
 
@@ -2098,6 +2194,9 @@ whether or not a cell is part of the backbone. Or, alternatively a character vec
                     
 
                     
+            
+        
+                    
                         
             
             
@@ -2753,6 +2852,26 @@ whether or not a cell is part of the backbone. Or, alternatively a character vec
                     
                     
 
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
                     
                         
             
@@ -3110,9 +3229,25 @@ whether or not a cell is part of the backbone. Or, alternatively a character vec
                     
                         
             
+            
+        
+                    
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
                     
+                    
+
+                    
                         
             
             
@@ -3235,12 +3370,60 @@ whether or not a cell is part of the backbone. Or, alternatively a character vec
 
                     
                         
+            
+            
+        
+                    
             
+        
+                    
+            
+        
+                    
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
                     
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -3270,20 +3453,20 @@ whether or not a cell is part of the backbone. Or, alternatively a character vec
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../../js/clipboard.min.js?1553574834"></script>
-    <script src="../../../../js/perfect-scrollbar.min.js?1553574834"></script>
-    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1553574834"></script>
-    <script src="../../../../js/jquery.sticky.js?1553574834"></script>
-    <script src="../../../../js/featherlight.min.js?1553574834"></script>
-    <script src="../../../../js/html5shiv-printshiv.min.js?1553574834"></script>
-    <script src="../../../../js/highlight.pack.js?1553574834"></script>
+    <script src="../../../../js/clipboard.min.js?1553927521"></script>
+    <script src="../../../../js/perfect-scrollbar.min.js?1553927521"></script>
+    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1553927521"></script>
+    <script src="../../../../js/jquery.sticky.js?1553927521"></script>
+    <script src="../../../../js/featherlight.min.js?1553927521"></script>
+    <script src="../../../../js/html5shiv-printshiv.min.js?1553927521"></script>
+    <script src="../../../../js/highlight.pack.js?1553927521"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../../js/modernizr.custom.71422.js?1553574834"></script>
-    <script src="../../../../js/learn.js?1553574834"></script>
-    <script src="../../../../js/hugo-learn.js?1553574834"></script>
+    <script src="../../../../js/modernizr.custom.71422.js?1553927521"></script>
+    <script src="../../../../js/learn.js?1553927521"></script>
+    <script src="../../../../js/hugo-learn.js?1553927521"></script>
 
-    <link href="../../../../mermaid/mermaid.css?1553574834" type="text/css" rel="stylesheet" />
-    <script src="../../../../mermaid/mermaid.js?1553574834"></script>
+    <link href="../../../../mermaid/mermaid.css?1553927521" type="text/css" rel="stylesheet" />
+    <script src="../../../../mermaid/mermaid.js?1553927521"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,19 +12,19 @@
     <title>Visualising the trajectory :: dynverse</title>
 
     
-    <link href="../../../css/nucleus.css?1553574834" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1553574834" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1553574834" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1553574834" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1553574834" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1553574834" rel="stylesheet">
-    <link href="../../../css/theme.css?1553574834" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1553574834" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1553927521" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1553927521" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1553927521" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1553927521" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1553927521" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1553927521" rel="stylesheet">
+    <link href="../../../css/theme.css?1553927521" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1553927521" rel="stylesheet">
     
-      <link href="../../../css/theme-mine.css?1553574834" rel="stylesheet">
+      <link href="../../../css/theme-mine.css?1553927521" rel="stylesheet">
     
 
-    <script src="../../../js/jquery-2.x.min.js?1553574834"></script>
+    <script src="../../../js/jquery-2.x.min.js?1553927521"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -54,7 +54,7 @@
   <div id="header-wrapper">
     <div id="header">
       <a id="logo" href="../../../">
-  <img src="../../../images/logo.svg" style="max-width:50%" alt="dynverse logo" class="zoom">
+  <img src="../../../images/logo.png" style="max-width:100px;" alt="dynverse logo" class="zoom">
 </a>
 
 
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1553574834");
-    $.getScript("\/js\/auto-complete.js?1553574834");
-    $.getScript("\/js\/search.js?1553574834");
+    $.getScript("\/js\/lunr.min.js?1553927521");
+    $.getScript("\/js\/auto-complete.js?1553927521");
+    $.getScript("\/js\/search.js?1553927521");
     window.searchLoaded = true
   }
 
@@ -97,31 +97,6 @@ $(".searchbox").click(function(){
     <div class="highlightable">
     <ul class="topics">
         
-          
-          
-
-
- 
-  
-    
-    <li data-nav-id="/about/" title="About" class="dd-item
-        
-        
-        menu-section
-        "
-        
-      >
-      <a href="../../../about/">
-          About
-          
-          
-      </a>
-      
-      
-    </li>
-  
- 
-
           
           
 
@@ -340,30 +315,6 @@ $(".searchbox").click(function(){
 
             
           
-            
-            
-
-
- 
-  
-    
-    <li data-nav-id="/users/4-example_analyses/" title="Example analyses" class="dd-item
-        
-        
-        menu-subsection
-        ">
-      <a href="../../../users/4-example_analyses/">
-          Example analyses
-          
-      </a>
-      
-      
-    </li>
-  
- 
-
-            
-          
         
         </ul>
       
@@ -387,6 +338,8 @@ $(".searchbox").click(function(){
       >
       <a href="../../../developers/">
           Method developers
+          
+            <img src="../../../images/dynbenchmark/logo.png" alt="logo" class="menu-logo zoom ">
           
           
       </a>
@@ -433,9 +386,28 @@ $(".searchbox").click(function(){
  
   
     
-      <li data-nav-id="/developers/creating-ti-method/create_ti_method_barebones/" title="Bare-bones" class="dd-item ">
-        <a href="../../../developers/creating-ti-method/create_ti_method_barebones/">
-        Bare-bones
+      <li data-nav-id="/developers/creating-ti-method/create_ti_method_wrappers/" title="Creating a trajectory" class="dd-item ">
+        <a href="../../../developers/creating-ti-method/create_ti_method_wrappers/">
+        Creating a trajectory
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developers/creating-ti-method/create_ti_method_r/" title="Wrapping in R" class="dd-item ">
+        <a href="../../../developers/creating-ti-method/create_ti_method_r/">
+        Wrapping in R
         
         </a>
     </li>
@@ -471,9 +443,9 @@ $(".searchbox").click(function(){
  
   
     
-      <li data-nav-id="/developers/creating-ti-method/create_ti_method_container/" title="Container" class="dd-item ">
+      <li data-nav-id="/developers/creating-ti-method/create_ti_method_container/" title="Containerised wrapping" class="dd-item ">
         <a href="../../../developers/creating-ti-method/create_ti_method_container/">
-        Container
+        Containerised wrapping
         
         </a>
     </li>
@@ -1210,6 +1182,18 @@ $(".searchbox").click(function(){
             
             
           
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
         
         </ul>
       
@@ -1262,14 +1246,14 @@ $(".searchbox").click(function(){
  
   
     
-    <li data-nav-id="/reference/dynmethods/other/" title="dynmethods :: Other" class="dd-item
+    <li data-nav-id="/reference/dynmethods/method/" title="dynmethods :: Trajectory inference methods" class="dd-item
         
         
         
         menu-item
         ">
-      <a href="../../../reference/dynmethods/other/">
-          Other
+      <a href="../../../reference/dynmethods/method/">
+          Trajectory inference methods
 
           
       </a>
@@ -1458,6 +1442,42 @@ $(".searchbox").click(function(){
           
             
             
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/dynmethods/other/" title="dynmethods :: Other" class="dd-item
+        
+        
+        
+        menu-item
+        ">
+      <a href="../../../reference/dynmethods/other/">
+          Other
+
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
           
             
             
@@ -1665,6 +1685,79 @@ $(".searchbox").click(function(){
  
 
           
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/about/" title="About" class="dd-item
+        
+        
+        menu-section
+        "
+        
+      >
+      <a href="../../../about/">
+          About
+          
+          
+      </a>
+      
+      
+        <ul style="display:block;">
+          
+          
+          
+
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/about/contributing/" title="" class="dd-item ">
+        <a href="../../../about/contributing/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/about/contributing/" title="Contributing" class="dd-item ">
+        <a href="../../../about/contributing/">
+        Contributing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
         
     </ul>
 
@@ -1820,14 +1913,13 @@ head(get_dimred(model), 5)
 <p>Dynplot will use this dimensionality reduction if available, otherwise it will calculate a dimensionality reduction under the hood:</p>
 <pre class="r"><code>plot_dimred(model)
 ## Coloring by milestone
-## Using milestone_percentages from traj</code></pre>
+## Using milestone_percentages from trajectory</code></pre>
 <p><img src="../../../users/3-user-guide/4-visualisation_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>You can also supply it with your own dimensionality reduction. In this case, the trajectory will be <em>projected</em> onto this dimensionality reduction.</p>
 <pre class="r"><code>dimred &lt;- dyndimred::dimred_umap(dataset$expression)
-## Loading required namespace: uwot
 plot_dimred(model, dimred = dimred)
 ## Coloring by milestone
-## Using milestone_percentages from traj</code></pre>
+## Using milestone_percentages from trajectory</code></pre>
 <p><img src="../../../users/3-user-guide/4-visualisation_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p>On this plot, you can color the cells according to</p>
 <ol style="list-style-type: decimal">
@@ -1843,7 +1935,7 @@ plot_dimred(model, dimred = dimred)
   plot_dimred(model, &quot;pseudotime&quot;, pseudotime = calculate_pseudotime(model)) + ggtitle(&quot;Pseudotime&quot;)
 )
 ## Coloring by milestone
-## Using milestone_percentages from traj
+## Using milestone_percentages from trajectory
 ## Coloring by grouping
 ## Coloring by expression
 ## root cell or milestone not provided, trying first outgoing milestone_id
@@ -1856,7 +1948,7 @@ plot_dimred(model, dimred = dimred)
   annotate(&quot;label&quot;, x = model$dimred[1, 1], y = model$dimred[1, 2], label = &quot;Amazing cells&quot;) +
   annotate(&quot;label&quot;, x = model$dimred[2, 1], y = model$dimred[2, 2], label = &quot;Also amazing cells&quot;)
 ## Coloring by milestone
-## Using milestone_percentages from traj</code></pre>
+## Using milestone_percentages from trajectory</code></pre>
 <p><img src="../../../users/3-user-guide/4-visualisation_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 </div>
 </div>
@@ -1870,7 +1962,7 @@ plot_dimred(model, dimred = dimred)
 ## root cell or milestone not provided, trying first outgoing milestone_id
 ## Using &#39;M1&#39; as root
 ## Coloring by milestone
-## Using milestone_percentages from traj</code></pre>
+## Using milestone_percentages from trajectory</code></pre>
 <p><img src="../../../users/3-user-guide/4-visualisation_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <p>This visualisation hinges on the correct location of a root, which will be further discussed in the <a href="../5-adapting">adapting guide</a>.</p>
 <p>Here you can again color the cells in different ways similar as <code>plot_dimred</code>, i.e.:</p>
@@ -1886,7 +1978,7 @@ plot_dimred(model, dimred = dimred)
 <pre class="r"><code>disconnected_dataset &lt;- dyntoy::generate_trajectory(model = &quot;disconnected&quot;, num_cells = 300)
 plot_graph(disconnected_dataset)
 ## Coloring by milestone
-## Using milestone_percentages from traj</code></pre>
+## Using milestone_percentages from trajectory</code></pre>
 <p><img src="../../../users/3-user-guide/4-visualisation_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 </div>
 <div id="plotting-in-one-dimension" class="section level3">
@@ -1896,7 +1988,7 @@ plot_graph(disconnected_dataset)
 ## root cell or milestone not provided, trying first outgoing milestone_id
 ## Using &#39;M1&#39; as root
 ## Coloring by milestone
-## Using milestone_percentages from traj</code></pre>
+## Using milestone_percentages from trajectory</code></pre>
 <p><img src="../../../users/3-user-guide/4-visualisation_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 </div>
@@ -1958,25 +2050,6 @@ See the issue on github: <a href="https://github.com/dynverse/dynplot/issues/29"
             
                 
                     
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -2136,6 +2209,9 @@ See the issue on github: <a href="https://github.com/dynverse/dynplot/issues/29"
                     
                     
 
+                    
+            
+        
                     
             
         
@@ -2151,16 +2227,12 @@ See the issue on github: <a href="https://github.com/dynverse/dynplot/issues/29"
                 
                 
 
-                    
                     
                     
-
+                        
                     
-            
-        
                     
-            
-        
+
                     
                         
             
@@ -2171,8 +2243,6 @@ See the issue on github: <a href="https://github.com/dynverse/dynplot/issues/29"
                 
 
                     
-                    
-                        
                     
                     
 
@@ -2190,6 +2260,9 @@ See the issue on github: <a href="https://github.com/dynverse/dynplot/issues/29"
                     
 
                     
+            
+        
+                    
                         
             
             
@@ -2839,6 +2912,26 @@ See the issue on github: <a href="https://github.com/dynverse/dynplot/issues/29"
                     
                     
 
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
                     
                         
             
@@ -3198,6 +3291,22 @@ See the issue on github: <a href="https://github.com/dynverse/dynplot/issues/29"
             
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -3321,12 +3430,60 @@ See the issue on github: <a href="https://github.com/dynverse/dynplot/issues/29"
 
                     
                         
+            
+            
+        
+                    
+            
+        
+                    
             
+        
+                    
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
                     
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -3356,20 +3513,20 @@ See the issue on github: <a href="https://github.com/dynverse/dynplot/issues/29"
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1553574834"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1553574834"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1553574834"></script>
-    <script src="../../../js/jquery.sticky.js?1553574834"></script>
-    <script src="../../../js/featherlight.min.js?1553574834"></script>
-    <script src="../../../js/html5shiv-printshiv.min.js?1553574834"></script>
-    <script src="../../../js/highlight.pack.js?1553574834"></script>
+    <script src="../../../js/clipboard.min.js?1553927521"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1553927521"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1553927521"></script>
+    <script src="../../../js/jquery.sticky.js?1553927521"></script>
+    <script src="../../../js/featherlight.min.js?1553927521"></script>
+    <script src="../../../js/html5shiv-printshiv.min.js?1553927521"></script>
+    <script src="../../../js/highlight.pack.js?1553927521"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom.71422.js?1553574834"></script>
-    <script src="../../../js/learn.js?1553574834"></script>
-    <script src="../../../js/hugo-learn.js?1553574834"></script>
+    <script src="../../../js/modernizr.custom.71422.js?1553927521"></script>
+    <script src="../../../js/learn.js?1553927521"></script>
+    <script src="../../../js/hugo-learn.js?1553927521"></script>
 
-    <link href="../../../mermaid/mermaid.css?1553574834" type="text/css" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.js?1553574834"></script>
+    <link href="../../../mermaid/mermaid.css?1553927521" type="text/css" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1553927521"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
