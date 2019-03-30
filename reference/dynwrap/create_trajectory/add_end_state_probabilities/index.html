@@ -12,19 +12,19 @@
     <title>Multifurcating trajectory with end state probabilities :: dynverse</title>
 
     
-    <link href="../../../../css/nucleus.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/fontawesome-all.min.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/hybrid.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/featherlight.min.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/perfect-scrollbar.min.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/auto-complete.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/theme.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/hugo-theme.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/nucleus.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/fontawesome-all.min.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/hybrid.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/featherlight.min.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/perfect-scrollbar.min.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/auto-complete.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/theme.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/hugo-theme.css?1553932715" rel="stylesheet">
     
-      <link href="../../../../css/theme-mine.css?1553927521" rel="stylesheet">
+      <link href="../../../../css/theme-mine.css?1553932715" rel="stylesheet">
     
 
-    <script src="../../../../js/jquery-2.x.min.js?1553927521"></script>
+    <script src="../../../../js/jquery-2.x.min.js?1553932715"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1553927521");
-    $.getScript("\/js\/auto-complete.js?1553927521");
-    $.getScript("\/js\/search.js?1553927521");
+    $.getScript("\/js\/lunr.min.js?1553932715");
+    $.getScript("\/js\/auto-complete.js?1553932715");
+    $.getScript("\/js\/search.js?1553932715");
     window.searchLoaded = true
   }
 
@@ -1928,6 +1928,38 @@ Otherwise, will assume the values are already within that range.</p></td>
     <p>This function will generate the milestone_network and progressions.</p>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>tibble</span>)
+<span class='no'>dataset</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='../../../../reference/dynwrap/create_trajectory/wrap_data'>wrap_data</a></span>(<span class='kw'>cell_ids</span> <span class='kw'>=</span> <span class='no'>letters</span>)
+
+<span class='no'>pseudotime</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/Uniform'>runif</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/length'>length</a></span>(<span class='no'>dataset</span>$<span class='no'>cell_ids</span>))
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/names'>names</a></span>(<span class='no'>pseudotime</span>) <span class='kw'>&lt;-</span> <span class='no'>dataset</span>$<span class='no'>cell_ids</span>
+<span class='no'>pseudotime</span></div><div class='output co'>#&gt;          a          b          c          d          e          f          g          h          i          j          k 
+#&gt; 0.69838516 0.41271697 0.02462417 0.60293311 0.70640633 0.06941876 0.95080230 0.44329099 0.44920161 0.13797106 0.47845701 
+#&gt;          l          m          n          o          p          q          r          s          t          u          v 
+#&gt; 0.21978857 0.93266483 0.03325397 0.39295583 0.40492778 0.25332181 0.45373496 0.64225546 0.01314465 0.11480209 0.27546591 
+#&gt;          w          x          y          z 
+#&gt; 0.72839976 0.63735692 0.21383311 0.46924767 </div><div class='input'><span class='no'>end_state_probabilities</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></span>(
+  <span class='kw'>cell_id</span> <span class='kw'>=</span> <span class='no'>dataset</span>$<span class='no'>cell_ids</span>,
+  <span class='kw'>A</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/Uniform'>runif</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/length'>length</a></span>(<span class='no'>dataset</span>$<span class='no'>cell_ids</span>)),
+  <span class='kw'>B</span> <span class='kw'>=</span> <span class='fl'>1</span>-<span class='no'>A</span>
+)
+<span class='no'>end_state_probabilities</span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 26 x 3</span><span>
+#&gt;    cell_id      A      B
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> a       0.876  0.124 
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> b       0.926  0.074</span><span style='text-decoration: underline;'>1</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> c       0.963  0.036</span><span style='text-decoration: underline;'>8</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> d       0.019</span><span style='text-decoration: underline;'>2</span><span> 0.981 
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> e       0.687  0.313 
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> f       0.462  0.538 
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> g       0.809  0.191 
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> h       0.413  0.587 
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> i       0.223  0.777 
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> j       0.212  0.788 
+#&gt; </span><span style='color: #949494;'># … with 16 more rows</span><span></div><div class='input'><span class='no'>trajectory</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='../../../../reference/dynwrap/create_trajectory/add_end_state_probabilities'>add_end_state_probabilities</a></span>(<span class='no'>dataset</span>, <span class='no'>end_state_probabilities</span>, <span class='no'>pseudotime</span>)
+
+<span class='kw'>if</span> (<span class='st'>"dynplot"</span> <span class='kw'>%in%</span> <span class='fu'><a href='https://tibble.tidyverse.org/reference/rownames.html'>rownames</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/installed.packages'>installed.packages</a></span>())) {<span class='kw pkg'>dynplot</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/dynplot/topics/plot_graph'>plot_graph</a></span>(<span class='no'>trajectory</span>)}</div><div class='output co'>#&gt; <span class='message'>Coloring by milestone</span></div><div class='output co'>#&gt; <span class='message'>Using milestone_percentages from trajectory</span></div><div class='img'><img src='../../../../images/examples/add_end_state_probabilities-1.png' alt='static/images/examples/add_end_state_probabilities-1' width='700' height='433' /></div><div class='input'></div></span></pre>
 </div>
 <!--  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -1937,7 +1969,9 @@ Otherwise, will assume the values are already within that range.</p></td>
       <li><a href="#value">Value</a></li>
 
       <li><a href="#details">Details</a></li>
-          </ul>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>-->
 
@@ -3438,20 +3472,20 @@ Otherwise, will assume the values are already within that range.</p></td>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../../js/clipboard.min.js?1553927521"></script>
-    <script src="../../../../js/perfect-scrollbar.min.js?1553927521"></script>
-    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1553927521"></script>
-    <script src="../../../../js/jquery.sticky.js?1553927521"></script>
-    <script src="../../../../js/featherlight.min.js?1553927521"></script>
-    <script src="../../../../js/html5shiv-printshiv.min.js?1553927521"></script>
-    <script src="../../../../js/highlight.pack.js?1553927521"></script>
+    <script src="../../../../js/clipboard.min.js?1553932715"></script>
+    <script src="../../../../js/perfect-scrollbar.min.js?1553932715"></script>
+    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1553932715"></script>
+    <script src="../../../../js/jquery.sticky.js?1553932715"></script>
+    <script src="../../../../js/featherlight.min.js?1553932715"></script>
+    <script src="../../../../js/html5shiv-printshiv.min.js?1553932715"></script>
+    <script src="../../../../js/highlight.pack.js?1553932715"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../../js/modernizr.custom.71422.js?1553927521"></script>
-    <script src="../../../../js/learn.js?1553927521"></script>
-    <script src="../../../../js/hugo-learn.js?1553927521"></script>
+    <script src="../../../../js/modernizr.custom.71422.js?1553932715"></script>
+    <script src="../../../../js/learn.js?1553932715"></script>
+    <script src="../../../../js/hugo-learn.js?1553932715"></script>
 
-    <link href="../../../../mermaid/mermaid.css?1553927521" type="text/css" rel="stylesheet" />
-    <script src="../../../../mermaid/mermaid.js?1553927521"></script>
+    <link href="../../../../mermaid/mermaid.css?1553932715" type="text/css" rel="stylesheet" />
+    <script src="../../../../mermaid/mermaid.js?1553932715"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,19 +12,19 @@
     <title>Create a trajectory given its branch network and the pseudotime of the cells on one of the branches :: dynverse</title>
 
     
-    <link href="../../../../css/nucleus.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/fontawesome-all.min.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/hybrid.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/featherlight.min.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/perfect-scrollbar.min.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/auto-complete.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/theme.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/hugo-theme.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/nucleus.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/fontawesome-all.min.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/hybrid.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/featherlight.min.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/perfect-scrollbar.min.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/auto-complete.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/theme.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/hugo-theme.css?1553932715" rel="stylesheet">
     
-      <link href="../../../../css/theme-mine.css?1553927521" rel="stylesheet">
+      <link href="../../../../css/theme-mine.css?1553932715" rel="stylesheet">
     
 
-    <script src="../../../../js/jquery-2.x.min.js?1553927521"></script>
+    <script src="../../../../js/jquery-2.x.min.js?1553932715"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1553927521");
-    $.getScript("\/js\/auto-complete.js?1553927521");
-    $.getScript("\/js\/search.js?1553927521");
+    $.getScript("\/js\/lunr.min.js?1553932715");
+    $.getScript("\/js\/auto-complete.js?1553932715");
+    $.getScript("\/js\/search.js?1553932715");
     window.searchLoaded = true
   }
 
@@ -1926,27 +1926,46 @@ Type: Data frame(cell_id = character, branch_id = character, percentage = numeri
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>library(tibble)
-dataset <- wrap_data(cell_ids = letters)
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>tibble</span>)
+<span class='no'>dataset</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='../../../../reference/dynwrap/create_trajectory/wrap_data'>wrap_data</a></span>(<span class='kw'>cell_ids</span> <span class='kw'>=</span> <span class='no'>letters</span>)
 
-branch_network <- tibble(from = c("A", "A"), to = c("B", "C"))
-branches <- tibble(branch_id = c("A", "B", "C"), length = 1, directed = TRUE)
-branch_progressions <- tibble(
-  cell_id = dataset$cell_ids,
-  branch_id = sample(branches$branch_id, length(dataset$cell_ids), replace = TRUE)
-  percentage = runif(length(dataset$cell_ids))
+<span class='no'>branch_network</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></span>(<span class='kw'>from</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"A"</span>, <span class='st'>"A"</span>), <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"B"</span>, <span class='st'>"C"</span>))
+<span class='no'>branch_network</span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 2 x 2</span><span>
+#&gt;   from  to   
+#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span> A     B    
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span> A     C    </div><div class='input'><span class='no'>branches</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></span>(<span class='kw'>branch_id</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"A"</span>, <span class='st'>"B"</span>, <span class='st'>"C"</span>), <span class='kw'>length</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>directed</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+<span class='no'>branches</span></div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 3 x 3</span><span>
+#&gt;   branch_id length directed
+#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>   
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span> A              1 TRUE    
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span> B              1 TRUE    
+#&gt; </span><span style='color: #BCBCBC;'>3</span><span> C              1 TRUE    </div><div class='input'><span class='no'>branch_progressions</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></span>(
+  <span class='kw'>cell_id</span> <span class='kw'>=</span> <span class='no'>dataset</span>$<span class='no'>cell_ids</span>,
+  <span class='kw'>branch_id</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/sample'>sample</a></span>(<span class='no'>branches</span>$<span class='no'>branch_id</span>, <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/length'>length</a></span>(<span class='no'>dataset</span>$<span class='no'>cell_ids</span>), <span class='kw'>replace</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>),
+  <span class='kw'>percentage</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/Uniform'>runif</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/length'>length</a></span>(<span class='no'>dataset</span>$<span class='no'>cell_ids</span>))
+)
+<span class='no'>branch_progressions</span></div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 26 x 3</span><span>
+#&gt;    cell_id branch_id percentage
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> a       B             0.786 
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> b       A             0.385 
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> c       C             0.612 
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> d       A             0.244 
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> e       A             0.548 
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> f       A             0.886 
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> g       A             0.685 
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> h       C             0.686 
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> i       B             0.036</span><span style='text-decoration: underline;'>5</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> j       C             0.106 
+#&gt; </span><span style='color: #949494;'># … with 16 more rows</span><span></div><div class='input'><span class='no'>trajectory</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='../../../../reference/dynwrap/create_trajectory/add_branch_trajectory'>add_branch_trajectory</a></span>(
+  <span class='no'>dataset</span>,
+  <span class='no'>branch_network</span>,
+  <span class='no'>branches</span>,
+  <span class='no'>branch_progressions</span>
 )
 
-trajectory <- add_branch_trajectory(
-  dataset,
-  branch_network,
-  branches,
-  branch_progressions
-)
-</div><div class='output co'>#&gt; <span class='error'>Error: &lt;text&gt;:9:3: unexpected symbol</span>
-#&gt; <span class='error'>8:   branch_id = sample(branches$branch_id, length(dataset$cell_ids), replace = TRUE)</span>
-#&gt; <span class='error'>9:   percentage</span>
-#&gt; <span class='error'>     ^</span></div></pre>
+<span class='kw'>if</span> (<span class='st'>"dynplot"</span> <span class='kw'>%in%</span> <span class='fu'><a href='https://tibble.tidyverse.org/reference/rownames.html'>rownames</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/installed.packages'>installed.packages</a></span>())) {<span class='kw pkg'>dynplot</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/dynplot/topics/plot_graph'>plot_graph</a></span>(<span class='no'>trajectory</span>)}</div><div class='output co'>#&gt; <span class='message'>Coloring by milestone</span></div><div class='output co'>#&gt; <span class='message'>Using milestone_percentages from trajectory</span></div><div class='img'><img src='../../../../images/examples/add_branch_trajectory-1.png' alt='static/images/examples/add_branch_trajectory-1' width='700' height='433' /></div></span></pre>
 </div>
 <!--  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -3457,20 +3476,20 @@ trajectory <- add_branch_trajectory(
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../../js/clipboard.min.js?1553927521"></script>
-    <script src="../../../../js/perfect-scrollbar.min.js?1553927521"></script>
-    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1553927521"></script>
-    <script src="../../../../js/jquery.sticky.js?1553927521"></script>
-    <script src="../../../../js/featherlight.min.js?1553927521"></script>
-    <script src="../../../../js/html5shiv-printshiv.min.js?1553927521"></script>
-    <script src="../../../../js/highlight.pack.js?1553927521"></script>
+    <script src="../../../../js/clipboard.min.js?1553932715"></script>
+    <script src="../../../../js/perfect-scrollbar.min.js?1553932715"></script>
+    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1553932715"></script>
+    <script src="../../../../js/jquery.sticky.js?1553932715"></script>
+    <script src="../../../../js/featherlight.min.js?1553932715"></script>
+    <script src="../../../../js/html5shiv-printshiv.min.js?1553932715"></script>
+    <script src="../../../../js/highlight.pack.js?1553932715"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../../js/modernizr.custom.71422.js?1553927521"></script>
-    <script src="../../../../js/learn.js?1553927521"></script>
-    <script src="../../../../js/hugo-learn.js?1553927521"></script>
+    <script src="../../../../js/modernizr.custom.71422.js?1553932715"></script>
+    <script src="../../../../js/learn.js?1553932715"></script>
+    <script src="../../../../js/hugo-learn.js?1553932715"></script>
 
-    <link href="../../../../mermaid/mermaid.css?1553927521" type="text/css" rel="stylesheet" />
-    <script src="../../../../mermaid/mermaid.js?1553927521"></script>
+    <link href="../../../../mermaid/mermaid.css?1553932715" type="text/css" rel="stylesheet" />
+    <script src="../../../../mermaid/mermaid.js?1553932715"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

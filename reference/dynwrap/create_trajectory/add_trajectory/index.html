@@ -12,19 +12,19 @@
     <title>Define a trajectory dataset given its milestone network and milestone percentages or progressions :: dynverse</title>
 
     
-    <link href="../../../../css/nucleus.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/fontawesome-all.min.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/hybrid.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/featherlight.min.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/perfect-scrollbar.min.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/auto-complete.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/theme.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/hugo-theme.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/nucleus.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/fontawesome-all.min.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/hybrid.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/featherlight.min.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/perfect-scrollbar.min.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/auto-complete.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/theme.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/hugo-theme.css?1553932715" rel="stylesheet">
     
-      <link href="../../../../css/theme-mine.css?1553927521" rel="stylesheet">
+      <link href="../../../../css/theme-mine.css?1553932715" rel="stylesheet">
     
 
-    <script src="../../../../js/jquery-2.x.min.js?1553927521"></script>
+    <script src="../../../../js/jquery-2.x.min.js?1553932715"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1553927521");
-    $.getScript("\/js\/auto-complete.js?1553927521");
-    $.getScript("\/js\/search.js?1553927521");
+    $.getScript("\/js\/lunr.min.js?1553932715");
+    $.getScript("\/js\/auto-complete.js?1553932715");
+    $.getScript("\/js\/search.js?1553932715");
     window.searchLoaded = true
   }
 
@@ -1960,28 +1960,50 @@ Type: Logical</p></td>
   <span class='st'>"B"</span>, <span class='st'>"C"</span>, <span class='fl'>2</span>, <span class='fl'>FALSE</span>,
   <span class='st'>"B"</span>, <span class='st'>"D"</span>, <span class='fl'>1</span>, <span class='fl'>FALSE</span>,
 )
-
-<span class='no'>progressions</span> <span class='kw'>&lt;-</span> <span class='no'>milestone_network</span> <span class='kw'>%&gt;%</span>
+<span class='no'>milestone_network</span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 3 x 4</span><span>
+#&gt;   from  to    length directed
+#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>   
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span> A     B          1 FALSE   
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span> B     C          2 FALSE   
+#&gt; </span><span style='color: #BCBCBC;'>3</span><span> B     D          1 FALSE   </div><div class='input'><span class='no'>progressions</span> <span class='kw'>&lt;-</span> <span class='no'>milestone_network</span> <span class='kw'>%&gt;%</span>
   <span class='fu'><a href='https://dplyr.tidyverse.org/reference/sample.html'>sample_n</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/length'>length</a></span>(<span class='no'>dataset</span>$<span class='no'>cell_ids</span>), <span class='kw'>replace</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>weight</span> <span class='kw'>=</span> <span class='no'>length</span>) <span class='kw'>%&gt;%</span>
   <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span>(
     <span class='kw'>cell_id</span> <span class='kw'>=</span> <span class='no'>dataset</span>$<span class='no'>cell_ids</span>,
     <span class='kw'>percentage</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/Uniform'>runif</a></span>(<span class='fu'><a href='https://dplyr.tidyverse.org/reference/n.html'>n</a></span>())
   ) <span class='kw'>%&gt;%</span>
   <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span>(<span class='no'>cell_id</span>, <span class='no'>from</span>, <span class='no'>to</span>, <span class='no'>percentage</span>)
-
-<span class='no'>divergence_regions</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/reexports.html'>tribble</a></span>(
+<span class='no'>progressions</span></div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 26 x 4</span><span>
+#&gt;    cell_id from  to    percentage
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> a       A     B          0.735
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> b       A     B          0.739
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> c       B     C          0.766
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> d       A     B          0.834
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> e       B     C          0.220
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> f       B     C          0.533
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> g       A     B          0.800
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> h       B     C          0.453
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> i       A     B          0.734
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> j       A     B          0.334
+#&gt; </span><span style='color: #949494;'># … with 16 more rows</span><span></div><div class='input'><span class='no'>divergence_regions</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/reexports.html'>tribble</a></span>(
   ~<span class='no'>divergence_id</span>, ~<span class='no'>milestone_id</span>, ~<span class='no'>is_start</span>,
   <span class='st'>"1"</span>, <span class='st'>"A"</span>, <span class='fl'>TRUE</span>,
   <span class='st'>"1"</span>, <span class='st'>"B"</span>, <span class='fl'>FALSE</span>,
   <span class='st'>"1"</span>, <span class='st'>"C"</span>, <span class='fl'>FALSE</span>
 )
-
-<span class='no'>trajectory</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='../../../../reference/dynwrap/create_trajectory/add_trajectory'>add_trajectory</a></span>(
+<span class='no'>divergence_regions</span></div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 3 x 3</span><span>
+#&gt;   divergence_id milestone_id is_start
+#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>   
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span> 1             A            TRUE    
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span> 1             B            FALSE   
+#&gt; </span><span style='color: #BCBCBC;'>3</span><span> 1             C            FALSE   </div><div class='input'><span class='no'>trajectory</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='../../../../reference/dynwrap/create_trajectory/add_trajectory'>add_trajectory</a></span>(
   <span class='no'>dataset</span>,
   <span class='kw'>milestone_network</span> <span class='kw'>=</span> <span class='no'>milestone_network</span>,
   <span class='kw'>divergence_regions</span> <span class='kw'>=</span> <span class='no'>divergence_regions</span>,
   <span class='kw'>progressions</span> <span class='kw'>=</span> <span class='no'>progressions</span>
-)</div></pre>
+)
+
+<span class='kw'>if</span> (<span class='st'>"dynplot"</span> <span class='kw'>%in%</span> <span class='fu'><a href='https://tibble.tidyverse.org/reference/rownames.html'>rownames</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/installed.packages'>installed.packages</a></span>())) {<span class='kw pkg'>dynplot</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/dynplot/topics/plot_graph'>plot_graph</a></span>(<span class='no'>trajectory</span>)}</div><div class='output co'>#&gt; <span class='message'>Coloring by milestone</span></div><div class='output co'>#&gt; <span class='message'>Using milestone_percentages from trajectory</span></div><div class='img'><img src='../../../../images/examples/add_trajectory-1.png' alt='static/images/examples/add_trajectory-1' width='700' height='433' /></div></span></pre>
 </div>
 <!--  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -3492,20 +3514,20 @@ Type: Logical</p></td>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../../js/clipboard.min.js?1553927521"></script>
-    <script src="../../../../js/perfect-scrollbar.min.js?1553927521"></script>
-    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1553927521"></script>
-    <script src="../../../../js/jquery.sticky.js?1553927521"></script>
-    <script src="../../../../js/featherlight.min.js?1553927521"></script>
-    <script src="../../../../js/html5shiv-printshiv.min.js?1553927521"></script>
-    <script src="../../../../js/highlight.pack.js?1553927521"></script>
+    <script src="../../../../js/clipboard.min.js?1553932715"></script>
+    <script src="../../../../js/perfect-scrollbar.min.js?1553932715"></script>
+    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1553932715"></script>
+    <script src="../../../../js/jquery.sticky.js?1553932715"></script>
+    <script src="../../../../js/featherlight.min.js?1553932715"></script>
+    <script src="../../../../js/html5shiv-printshiv.min.js?1553932715"></script>
+    <script src="../../../../js/highlight.pack.js?1553932715"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../../js/modernizr.custom.71422.js?1553927521"></script>
-    <script src="../../../../js/learn.js?1553927521"></script>
-    <script src="../../../../js/hugo-learn.js?1553927521"></script>
+    <script src="../../../../js/modernizr.custom.71422.js?1553932715"></script>
+    <script src="../../../../js/learn.js?1553932715"></script>
+    <script src="../../../../js/hugo-learn.js?1553932715"></script>
 
-    <link href="../../../../mermaid/mermaid.css?1553927521" type="text/css" rel="stylesheet" />
-    <script src="../../../../mermaid/mermaid.js?1553927521"></script>
+    <link href="../../../../mermaid/mermaid.css?1553932715" type="text/css" rel="stylesheet" />
+    <script src="../../../../mermaid/mermaid.js?1553932715"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,19 +12,19 @@
     <title>Simplify an igraph network such that consecutive linear edges are removed :: dynverse</title>
 
     
-    <link href="../../../../css/nucleus.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/fontawesome-all.min.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/hybrid.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/featherlight.min.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/perfect-scrollbar.min.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/auto-complete.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/theme.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/hugo-theme.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/nucleus.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/fontawesome-all.min.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/hybrid.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/featherlight.min.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/perfect-scrollbar.min.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/auto-complete.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/theme.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/hugo-theme.css?1553932715" rel="stylesheet">
     
-      <link href="../../../../css/theme-mine.css?1553927521" rel="stylesheet">
+      <link href="../../../../css/theme-mine.css?1553932715" rel="stylesheet">
     
 
-    <script src="../../../../js/jquery-2.x.min.js?1553927521"></script>
+    <script src="../../../../js/jquery-2.x.min.js?1553932715"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1553927521");
-    $.getScript("\/js\/auto-complete.js?1553927521");
-    $.getScript("\/js\/search.js?1553927521");
+    $.getScript("\/js\/lunr.min.js?1553932715");
+    $.getScript("\/js\/auto-complete.js?1553932715");
+    $.getScript("\/js\/search.js?1553932715");
     window.searchLoaded = true
   }
 
@@ -1927,11 +1927,10 @@ $(".searchbox").click(function(){
   <span class='kw'>stringsAsFactors</span> <span class='kw'>=</span> <span class='no'>F</span>
 )
 <span class='no'>gr</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>igraph</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/igraph/topics/graph_from_data_frame'>graph_from_data_frame</a></span>(<span class='no'>net</span>)
-<span class='fu'><a href='../../../../reference/dynwrap/other/simplify_igraph_network'>simplify_igraph_network</a></span>(<span class='no'>gr</span>)</div><div class='output co'>#&gt; IGRAPH 4a1f2a1 DNW- 2 1 -- 
+<span class='fu'><a href='../../../../reference/dynwrap/other/simplify_igraph_network'>simplify_igraph_network</a></span>(<span class='no'>gr</span>)</div><div class='output co'>#&gt; IGRAPH d6c2585 DNW- 2 1 -- 
 #&gt; + attr: name (v/c), length (e/n), directed (e/l), weight (e/n)
-#&gt; + edge from 4a1f2a1 (vertex names):
-#&gt; [1] 1-&gt;3</div><div class='input'>
-<span class='no'>net</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/data.frame'>data.frame</a></span>(
+#&gt; + edge from d6c2585 (vertex names):
+#&gt; [1] 1-&gt;3</div><div class='input'><span class='no'>net</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/data.frame'>data.frame</a></span>(
   <span class='kw'>from</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>1</span>, <span class='fl'>2</span>, <span class='fl'>3</span>, <span class='fl'>1</span>),
    <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>2</span>, <span class='fl'>3</span>, <span class='fl'>1</span>, <span class='fl'>4</span>),
     <span class='kw'>length</span> <span class='kw'>=</span> <span class='fl'>1</span>,
@@ -1939,11 +1938,10 @@ $(".searchbox").click(function(){
     <span class='kw'>stringsAsFactors</span> <span class='kw'>=</span> <span class='no'>F</span>
 )
 <span class='no'>gr</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>igraph</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/igraph/topics/graph_from_data_frame'>graph_from_data_frame</a></span>(<span class='no'>net</span>)
-<span class='fu'><a href='../../../../reference/dynwrap/other/simplify_igraph_network'>simplify_igraph_network</a></span>(<span class='no'>gr</span>)</div><div class='output co'>#&gt; IGRAPH a96107a DNW- 2 2 -- 
+<span class='fu'><a href='../../../../reference/dynwrap/other/simplify_igraph_network'>simplify_igraph_network</a></span>(<span class='no'>gr</span>)</div><div class='output co'>#&gt; IGRAPH 4d8360a DNW- 2 2 -- 
 #&gt; + attr: name (v/c), length (e/n), directed (e/l), weight (e/n)
-#&gt; + edges from a96107a (vertex names):
-#&gt; [1] 1-&gt;4 1-&gt;1</div><div class='input'>
-<span class='no'>net</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/data.frame'>data.frame</a></span>(
+#&gt; + edges from 4d8360a (vertex names):
+#&gt; [1] 1-&gt;4 1-&gt;1</div><div class='input'><span class='no'>net</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/data.frame'>data.frame</a></span>(
   <span class='kw'>from</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>1</span>, <span class='fl'>2</span>, <span class='fl'>3</span>, <span class='fl'>4</span>),
    <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>2</span>, <span class='fl'>3</span>, <span class='fl'>1</span>, <span class='fl'>5</span>),
     <span class='kw'>length</span> <span class='kw'>=</span> <span class='fl'>1</span>,
@@ -1951,9 +1949,9 @@ $(".searchbox").click(function(){
     <span class='kw'>stringsAsFactors</span> <span class='kw'>=</span> <span class='no'>F</span>
 )
 <span class='no'>gr</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>igraph</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/igraph/topics/graph_from_data_frame'>graph_from_data_frame</a></span>(<span class='no'>net</span>)
-<span class='fu'><a href='../../../../reference/dynwrap/other/simplify_igraph_network'>simplify_igraph_network</a></span>(<span class='no'>gr</span>)</div><div class='output co'>#&gt; IGRAPH f3c3c09 DNW- 3 2 -- 
+<span class='fu'><a href='../../../../reference/dynwrap/other/simplify_igraph_network'>simplify_igraph_network</a></span>(<span class='no'>gr</span>)</div><div class='output co'>#&gt; IGRAPH 60015c2 DNW- 3 2 -- 
 #&gt; + attr: name (v/c), length (e/n), directed (e/l), weight (e/n)
-#&gt; + edges from f3c3c09 (vertex names):
+#&gt; + edges from 60015c2 (vertex names):
 #&gt; [1] 1-&gt;1 4-&gt;5</div></pre>
 </div>
 <!--  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -3466,20 +3464,20 @@ $(".searchbox").click(function(){
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../../js/clipboard.min.js?1553927521"></script>
-    <script src="../../../../js/perfect-scrollbar.min.js?1553927521"></script>
-    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1553927521"></script>
-    <script src="../../../../js/jquery.sticky.js?1553927521"></script>
-    <script src="../../../../js/featherlight.min.js?1553927521"></script>
-    <script src="../../../../js/html5shiv-printshiv.min.js?1553927521"></script>
-    <script src="../../../../js/highlight.pack.js?1553927521"></script>
+    <script src="../../../../js/clipboard.min.js?1553932715"></script>
+    <script src="../../../../js/perfect-scrollbar.min.js?1553932715"></script>
+    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1553932715"></script>
+    <script src="../../../../js/jquery.sticky.js?1553932715"></script>
+    <script src="../../../../js/featherlight.min.js?1553932715"></script>
+    <script src="../../../../js/html5shiv-printshiv.min.js?1553932715"></script>
+    <script src="../../../../js/highlight.pack.js?1553932715"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../../js/modernizr.custom.71422.js?1553927521"></script>
-    <script src="../../../../js/learn.js?1553927521"></script>
-    <script src="../../../../js/hugo-learn.js?1553927521"></script>
+    <script src="../../../../js/modernizr.custom.71422.js?1553932715"></script>
+    <script src="../../../../js/learn.js?1553932715"></script>
+    <script src="../../../../js/hugo-learn.js?1553932715"></script>
 
-    <link href="../../../../mermaid/mermaid.css?1553927521" type="text/css" rel="stylesheet" />
-    <script src="../../../../mermaid/mermaid.js?1553927521"></script>
+    <link href="../../../../mermaid/mermaid.css?1553932715" type="text/css" rel="stylesheet" />
+    <script src="../../../../mermaid/mermaid.js?1553932715"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

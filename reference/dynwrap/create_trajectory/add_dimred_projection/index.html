@@ -12,19 +12,19 @@
     <title>Constructs a trajectory by projecting cells within a dimensionality reduction onto a backbone formed by a milestone network. Optionally, a cell grouping can be given which will restrict the edges on which a cell can be projected. :: dynverse</title>
 
     
-    <link href="../../../../css/nucleus.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/fontawesome-all.min.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/hybrid.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/featherlight.min.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/perfect-scrollbar.min.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/auto-complete.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/theme.css?1553927521" rel="stylesheet">
-    <link href="../../../../css/hugo-theme.css?1553927521" rel="stylesheet">
+    <link href="../../../../css/nucleus.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/fontawesome-all.min.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/hybrid.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/featherlight.min.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/perfect-scrollbar.min.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/auto-complete.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/theme.css?1553932715" rel="stylesheet">
+    <link href="../../../../css/hugo-theme.css?1553932715" rel="stylesheet">
     
-      <link href="../../../../css/theme-mine.css?1553927521" rel="stylesheet">
+      <link href="../../../../css/theme-mine.css?1553932715" rel="stylesheet">
     
 
-    <script src="../../../../js/jquery-2.x.min.js?1553927521"></script>
+    <script src="../../../../js/jquery-2.x.min.js?1553932715"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1553927521");
-    $.getScript("\/js\/auto-complete.js?1553927521");
-    $.getScript("\/js\/search.js?1553927521");
+    $.getScript("\/js\/lunr.min.js?1553932715");
+    $.getScript("\/js\/auto-complete.js?1553932715");
+    $.getScript("\/js\/search.js?1553932715");
     window.searchLoaded = true
   }
 
@@ -1936,23 +1936,59 @@ Type: Data frame(from = character, to = character, length = numeric, directed = 
 <span class='no'>dataset</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='../../../../reference/dynwrap/create_trajectory/wrap_data'>wrap_data</a></span>(<span class='kw'>cell_ids</span> <span class='kw'>=</span> <span class='no'>letters</span>)
 
 <span class='no'>milestone_network</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>tibble</span><span class='kw ns'>::</span><span class='fu'><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></span>(<span class='kw'>from</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"A"</span>, <span class='st'>"B"</span>, <span class='st'>"B"</span>), <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"B"</span>, <span class='st'>"C"</span>, <span class='st'>"D"</span>), <span class='kw'>directed</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>length</span> <span class='kw'>=</span> <span class='fl'>1</span>)
-<span class='no'>dimred</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/matrix'>matrix</a></span>(
+<span class='no'>milestone_network</span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 3 x 4</span><span>
+#&gt;   from  to    directed length
+#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span> A     B     TRUE          1
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span> B     C     TRUE          1
+#&gt; </span><span style='color: #BCBCBC;'>3</span><span> B     D     TRUE          1</div><div class='input'><span class='no'>dimred</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/matrix'>matrix</a></span>(
   <span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/Uniform'>runif</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/length'>length</a></span>(<span class='no'>dataset</span>$<span class='no'>cell_ids</span>) * <span class='fl'>2</span>),
   <span class='kw'>ncol</span> <span class='kw'>=</span> <span class='fl'>2</span>,
   <span class='kw'>dimnames</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(<span class='no'>dataset</span>$<span class='no'>cell_ids</span>, <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"comp_1"</span>, <span class='st'>"comp_2"</span>))
 )
-<span class='no'>dimred_milestones</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/matrix'>matrix</a></span>(
+<span class='no'>dimred</span></div><div class='output co'>#&gt;       comp_1       comp_2
+#&gt; a 0.32986888 0.3530078973
+#&gt; b 0.42884963 0.3440522808
+#&gt; c 0.03882058 0.8745339804
+#&gt; d 0.75896758 0.0173486059
+#&gt; e 0.98460681 0.4658214056
+#&gt; f 0.34483676 0.2436456131
+#&gt; g 0.72710732 0.3210454113
+#&gt; h 0.56599539 0.8114608999
+#&gt; i 0.69497863 0.3231402442
+#&gt; j 0.04193319 0.9698196012
+#&gt; k 0.63647791 0.3745381706
+#&gt; l 0.44345280 0.1599014306
+#&gt; m 0.56951175 0.7273843023
+#&gt; n 0.01979493 0.1083085020
+#&gt; o 0.15649933 0.6324415801
+#&gt; p 0.28980828 0.5328725392
+#&gt; q 0.21150844 0.7712558764
+#&gt; r 0.44349406 0.9062494885
+#&gt; s 0.45584101 0.1265374541
+#&gt; t 0.25802612 0.9122530338
+#&gt; u 0.21347036 0.8001164633
+#&gt; v 0.24195482 0.0001455615
+#&gt; w 0.68442718 0.9033330628
+#&gt; x 0.10104665 0.6178132677
+#&gt; y 0.80615590 0.7782506661
+#&gt; z 0.42133678 0.0198261838</div><div class='input'><span class='no'>dimred_milestones</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/matrix'>matrix</a></span>(
   <span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/Uniform'>runif</a></span>(<span class='fl'>2</span>*<span class='fl'>4</span>),
   <span class='kw'>ncol</span> <span class='kw'>=</span> <span class='fl'>2</span>,
   <span class='kw'>dimnames</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"A"</span>, <span class='st'>"B"</span>, <span class='st'>"C"</span>, <span class='st'>"D"</span>), <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"comp_1"</span>, <span class='st'>"comp_2"</span>))
 )
-
-<span class='no'>trajectory</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='../../../../reference/dynwrap/create_trajectory/add_dimred_projection'>add_dimred_projection</a></span>(
+<span class='no'>dimred_milestones</span></div><div class='output co'>#&gt;       comp_1     comp_2
+#&gt; A 0.13841996 0.48111005
+#&gt; B 0.24414964 0.46963296
+#&gt; C 0.93618148 0.03849168
+#&gt; D 0.07166581 0.26177035</div><div class='input'><span class='no'>trajectory</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='../../../../reference/dynwrap/create_trajectory/add_dimred_projection'>add_dimred_projection</a></span>(
   <span class='no'>dataset</span>,
   <span class='kw'>milestone_network</span> <span class='kw'>=</span> <span class='no'>milestone_network</span>,
   <span class='kw'>dimred</span> <span class='kw'>=</span> <span class='no'>dimred</span>,
   <span class='kw'>dimred_milestones</span> <span class='kw'>=</span> <span class='no'>dimred_milestones</span>
-)</div></pre>
+)
+
+<span class='kw'>if</span> (<span class='st'>"dynplot"</span> <span class='kw'>%in%</span> <span class='fu'><a href='https://tibble.tidyverse.org/reference/rownames.html'>rownames</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/installed.packages'>installed.packages</a></span>())) {<span class='kw pkg'>dynplot</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/dynplot/topics/plot_graph'>plot_graph</a></span>(<span class='no'>trajectory</span>)}</div><div class='output co'>#&gt; <span class='message'>Coloring by milestone</span></div><div class='output co'>#&gt; <span class='message'>Using milestone_percentages from trajectory</span></div><div class='img'><img src='../../../../images/examples/add_dimred_projection-1.png' alt='static/images/examples/add_dimred_projection-1' width='700' height='433' /></div></span></pre>
 </div>
 <!--  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -3463,20 +3499,20 @@ Type: Data frame(from = character, to = character, length = numeric, directed = 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../../js/clipboard.min.js?1553927521"></script>
-    <script src="../../../../js/perfect-scrollbar.min.js?1553927521"></script>
-    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1553927521"></script>
-    <script src="../../../../js/jquery.sticky.js?1553927521"></script>
-    <script src="../../../../js/featherlight.min.js?1553927521"></script>
-    <script src="../../../../js/html5shiv-printshiv.min.js?1553927521"></script>
-    <script src="../../../../js/highlight.pack.js?1553927521"></script>
+    <script src="../../../../js/clipboard.min.js?1553932715"></script>
+    <script src="../../../../js/perfect-scrollbar.min.js?1553932715"></script>
+    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1553932715"></script>
+    <script src="../../../../js/jquery.sticky.js?1553932715"></script>
+    <script src="../../../../js/featherlight.min.js?1553932715"></script>
+    <script src="../../../../js/html5shiv-printshiv.min.js?1553932715"></script>
+    <script src="../../../../js/highlight.pack.js?1553932715"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../../js/modernizr.custom.71422.js?1553927521"></script>
-    <script src="../../../../js/learn.js?1553927521"></script>
-    <script src="../../../../js/hugo-learn.js?1553927521"></script>
+    <script src="../../../../js/modernizr.custom.71422.js?1553932715"></script>
+    <script src="../../../../js/learn.js?1553932715"></script>
+    <script src="../../../../js/hugo-learn.js?1553932715"></script>
 
-    <link href="../../../../mermaid/mermaid.css?1553927521" type="text/css" rel="stylesheet" />
-    <script src="../../../../mermaid/mermaid.js?1553927521"></script>
+    <link href="../../../../mermaid/mermaid.css?1553932715" type="text/css" rel="stylesheet" />
+    <script src="../../../../mermaid/mermaid.js?1553932715"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
