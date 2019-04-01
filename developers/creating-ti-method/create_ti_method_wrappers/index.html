@@ -12,19 +12,19 @@
     <title>Creating a trajectory :: dynverse</title>
 
     
-    <link href="../../../css/nucleus.css?1553979462" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1553979462" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1553979462" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1553979462" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1553979462" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1553979462" rel="stylesheet">
-    <link href="../../../css/theme.css?1553979462" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1553979462" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1554129680" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1554129680" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1554129680" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1554129680" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1554129680" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1554129680" rel="stylesheet">
+    <link href="../../../css/theme.css?1554129680" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1554129680" rel="stylesheet">
     
-      <link href="../../../css/theme-mine.css?1553979462" rel="stylesheet">
+      <link href="../../../css/theme-mine.css?1554129680" rel="stylesheet">
     
 
-    <script src="../../../js/jquery-2.x.min.js?1553979462"></script>
+    <script src="../../../js/jquery-2.x.min.js?1554129680"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1553979462");
-    $.getScript("\/js\/auto-complete.js?1553979462");
-    $.getScript("\/js\/search.js?1553979462");
+    $.getScript("\/js\/lunr.min.js?1554129680");
+    $.getScript("\/js\/auto-complete.js?1554129680");
+    $.getScript("\/js\/search.js?1554129680");
     window.searchLoaded = true
   }
 
@@ -1873,8 +1873,8 @@ $(".searchbox").click(function(){
 
 
 
-<div id="direct-wrapping" class="section level1">
-<h1>Direct wrapping</h1>
+<div id="common-trajectory-model" class="section level2">
+<h2>Common trajectory model</h2>
 <p>dynwrap always represents trajectories in the same way, as illustrated here with a tree trajectory</p>
 <ul>
 <li>Milestone network, contains information of connections between milestones</li>
@@ -1893,32 +1893,32 @@ $(".searchbox").click(function(){
 <pre><code>## # A tibble: 10 x 3
 ##    cell_id milestone_id percentage
 ##    &lt;chr&gt;   &lt;chr&gt;             &lt;dbl&gt;
-##  1 Cell_a  Milestone_C    0.0777  
-##  2 Cell_a  Milestone_F    0.922   
-##  3 Cell_b  Milestone_C    0.287   
-##  4 Cell_b  Milestone_F    0.713   
-##  5 Cell_c  Milestone_B    0.0846  
-##  6 Cell_c  Milestone_C    0.915   
-##  7 Cell_d  Milestone_A    0.000193
-##  8 Cell_d  Milestone_B    1.000   
-##  9 Cell_e  Milestone_C    0.415   
-## 10 Cell_e  Milestone_F    0.585</code></pre>
+##  1 Cell_a  Milestone_B       0.503
+##  2 Cell_a  Milestone_C       0.497
+##  3 Cell_b  Milestone_A       0.149
+##  4 Cell_b  Milestone_B       0.851
+##  5 Cell_c  Milestone_C       0.601
+##  6 Cell_c  Milestone_E       0.399
+##  7 Cell_d  Milestone_C       0.445
+##  8 Cell_d  Milestone_F       0.555
+##  9 Cell_e  Milestone_C       0.880
+## 10 Cell_e  Milestone_E       0.120</code></pre>
 <ul>
 <li>Progressions, an alternative to milestone percentages, also contains the positions of each cell but now based on its progression through an edge</li>
 </ul>
 <pre><code>## # A tibble: 10 x 4
 ##    cell_id from        to          percentage
 ##    &lt;chr&gt;   &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;
-##  1 Cell_a  Milestone_C Milestone_F     0.922 
-##  2 Cell_b  Milestone_C Milestone_F     0.713 
-##  3 Cell_c  Milestone_B Milestone_C     0.915 
-##  4 Cell_d  Milestone_A Milestone_B     1.000 
-##  5 Cell_e  Milestone_C Milestone_F     0.585 
-##  6 Cell_f  Milestone_B Milestone_C     0.844 
-##  7 Cell_g  Milestone_C Milestone_F     0.0600
-##  8 Cell_h  Milestone_C Milestone_E     0.429 
-##  9 Cell_i  Milestone_C Milestone_E     0.557 
-## 10 Cell_j  Milestone_C Milestone_E     0.247</code></pre>
+##  1 Cell_a  Milestone_B Milestone_C      0.497
+##  2 Cell_b  Milestone_A Milestone_B      0.851
+##  3 Cell_c  Milestone_C Milestone_E      0.399
+##  4 Cell_d  Milestone_C Milestone_F      0.555
+##  5 Cell_e  Milestone_C Milestone_E      0.120
+##  6 Cell_f  Milestone_B Milestone_D      0.838
+##  7 Cell_g  Milestone_B Milestone_D      0.742
+##  8 Cell_h  Milestone_B Milestone_C      0.179
+##  9 Cell_i  Milestone_B Milestone_D      0.824
+## 10 Cell_j  Milestone_A Milestone_B      0.895</code></pre>
 <ul>
 <li>Divergence regions, contain the information on &gt;=3 milestones connected to eachother. This is optional.</li>
 </ul>
@@ -1928,6 +1928,9 @@ $(".searchbox").click(function(){
 ## 1 Divergence_1  Milestone_B  TRUE    
 ## 2 Divergence_1  Milestone_C  FALSE   
 ## 3 Divergence_1  Milestone_D  FALSE</code></pre>
+</div>
+<div id="direct-wrapping" class="section level2">
+<h2>Direct wrapping</h2>
 <p>These three objects (with either milestone percentages or progressions) are enough to form a trajectory using <code>add_trajectory</code>.</p>
 <pre class="r"><code>trajectory &lt;- wrap_data(cell_ids = cell_ids) %&gt;% 
   add_trajectory(
@@ -1936,8 +1939,8 @@ $(".searchbox").click(function(){
     divergence_regions = divergence_regions
   )</code></pre>
 </div>
-<div id="indirect-wrapping" class="section level1">
-<h1>Indirect wrapping</h1>
+<div id="indirect-wrapping" class="section level2">
+<h2>Indirect wrapping</h2>
 <p>Often, you don’t want to directly output the milestone network and percentages, but want to output an alternative representation that is converted by dynwrap to the common representation:</p>
 <p><img src="https://raw.githubusercontent.com/dynverse/dynwrap/devel/man/figures/overview_wrapping_v3.png" /></p>
 <p>Check out the reference documentation for an <a href="https://dynverse.org/reference/dynwrap/create_trajectory/">overview and examples of the different wrappers</a></p>
@@ -3440,20 +3443,20 @@ $(".searchbox").click(function(){
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1553979462"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1553979462"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1553979462"></script>
-    <script src="../../../js/jquery.sticky.js?1553979462"></script>
-    <script src="../../../js/featherlight.min.js?1553979462"></script>
-    <script src="../../../js/html5shiv-printshiv.min.js?1553979462"></script>
-    <script src="../../../js/highlight.pack.js?1553979462"></script>
+    <script src="../../../js/clipboard.min.js?1554129680"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1554129680"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1554129680"></script>
+    <script src="../../../js/jquery.sticky.js?1554129680"></script>
+    <script src="../../../js/featherlight.min.js?1554129680"></script>
+    <script src="../../../js/html5shiv-printshiv.min.js?1554129680"></script>
+    <script src="../../../js/highlight.pack.js?1554129680"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom.71422.js?1553979462"></script>
-    <script src="../../../js/learn.js?1553979462"></script>
-    <script src="../../../js/hugo-learn.js?1553979462"></script>
+    <script src="../../../js/modernizr.custom.71422.js?1554129680"></script>
+    <script src="../../../js/learn.js?1554129680"></script>
+    <script src="../../../js/hugo-learn.js?1554129680"></script>
 
-    <link href="../../../mermaid/mermaid.css?1553979462" type="text/css" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.js?1553979462"></script>
+    <link href="../../../mermaid/mermaid.css?1554129680" type="text/css" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1554129680"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

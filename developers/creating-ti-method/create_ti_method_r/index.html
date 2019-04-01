@@ -12,19 +12,19 @@
     <title>Wrapping in R :: dynverse</title>
 
     
-    <link href="../../../css/nucleus.css?1553979462" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1553979462" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1553979462" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1553979462" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1553979462" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1553979462" rel="stylesheet">
-    <link href="../../../css/theme.css?1553979462" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1553979462" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1554129680" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1554129680" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1554129680" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1554129680" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1554129680" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1554129680" rel="stylesheet">
+    <link href="../../../css/theme.css?1554129680" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1554129680" rel="stylesheet">
     
-      <link href="../../../css/theme-mine.css?1553979462" rel="stylesheet">
+      <link href="../../../css/theme-mine.css?1554129680" rel="stylesheet">
     
 
-    <script src="../../../js/jquery-2.x.min.js?1553979462"></script>
+    <script src="../../../js/jquery-2.x.min.js?1554129680"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1553979462");
-    $.getScript("\/js\/auto-complete.js?1553979462");
-    $.getScript("\/js\/search.js?1553979462");
+    $.getScript("\/js\/lunr.min.js?1554129680");
+    $.getScript("\/js\/auto-complete.js?1554129680");
+    $.getScript("\/js\/search.js?1554129680");
     window.searchLoaded = true
   }
 
@@ -1931,10 +1931,11 @@ $(".searchbox").click(function(){
   dynwrap::wrap_data(cell_ids = rownames(expression)) %&gt;%
     dynwrap::add_linear_trajectory(pseudotime = pseudotime)
 }</code></pre>
+<p>This function returns a trajectory object as described in <a href="../create_ti_method_wrappers">create a trajectory</a>. You may also add other relevant information to this output, often some timing checkpoints (<code>add_timings</code>), dimensionality reduction (<code>add_dimred</code>) or a cell clustering (<code>add_grouping</code>). Check out the <a href="https://dynverse.org/reference/dynwrap">reference</a> for an overview or <a href="https://github.com/dynverse/dynwrap">post an issue or pull request</a> if you want a type of output to be added.</p>
 </div>
 <div id="testing-it-out" class="section level2">
 <h2>Testing it out</h2>
-<p>To create the method, call <code>create_ti_method_r</code>. At this stage you can also define some R packages that have to be installed or loaded.</p>
+<p>To wrap the method, use <code>create_ti_method_r</code> with the definition and run function. At this stage you can also define some R packages that have to be installed or loaded.</p>
 <pre class="r"><code>ti_comp1 &lt;- create_ti_method_r(definition, run_fun, package_loaded = &quot;dplyr&quot;)</code></pre>
 <p>This function will return another function that can be used to change any parameters when running the method. This function is also useful to document any parameters when included in an R package.</p>
 <p>That’s it, let’s try it out:</p>
@@ -1957,7 +1958,7 @@ trajectory &lt;- infer_trajectory(dataset, ti_comp1())</code></pre>
 #&#39; 
 #&#39; @examples
 #&#39; dataset &lt;- dynwrap::example_dataset
-#&#39; model &lt;- dynwrap::infer_trajectory(dataset, ti_comp1()¸)
+#&#39; model &lt;- dynwrap::infer_trajectory(dataset, ti_comp1())
 ti_comp1 &lt;- create_ti_method_r(definition, run_fun)</code></pre>
 <p>The parameter documentation will look like follows:</p>
 <pre class="r"><code>generate_parameter_documentation(definition)</code></pre>
@@ -3465,20 +3466,20 @@ ti_comp1 &lt;- create_ti_method_r(definition, run_fun)</code></pre>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1553979462"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1553979462"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1553979462"></script>
-    <script src="../../../js/jquery.sticky.js?1553979462"></script>
-    <script src="../../../js/featherlight.min.js?1553979462"></script>
-    <script src="../../../js/html5shiv-printshiv.min.js?1553979462"></script>
-    <script src="../../../js/highlight.pack.js?1553979462"></script>
+    <script src="../../../js/clipboard.min.js?1554129680"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1554129680"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1554129680"></script>
+    <script src="../../../js/jquery.sticky.js?1554129680"></script>
+    <script src="../../../js/featherlight.min.js?1554129680"></script>
+    <script src="../../../js/html5shiv-printshiv.min.js?1554129680"></script>
+    <script src="../../../js/highlight.pack.js?1554129680"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom.71422.js?1553979462"></script>
-    <script src="../../../js/learn.js?1553979462"></script>
-    <script src="../../../js/hugo-learn.js?1553979462"></script>
+    <script src="../../../js/modernizr.custom.71422.js?1554129680"></script>
+    <script src="../../../js/learn.js?1554129680"></script>
+    <script src="../../../js/hugo-learn.js?1554129680"></script>
 
-    <link href="../../../mermaid/mermaid.css?1553979462" type="text/css" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.js?1553979462"></script>
+    <link href="../../../mermaid/mermaid.css?1554129680" type="text/css" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1554129680"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
