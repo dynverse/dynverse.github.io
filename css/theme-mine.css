@@ -156,7 +156,7 @@ div.notices.future p {
 }
 
 
-/* code blocks with filenames on top */
+/* filenames on top of codeblocks (specified manually) */
 
 div.filename {
   background-color: #CCCCCC;
@@ -172,6 +172,32 @@ div.filename:before {
   color:#555555;
   content: "\f15b";
   font-style: normal;
+}
+
+/* code blocks with non-R languages */
+
+pre.bash:hover:before {
+  content: "bash";
+  opacity: 0.5;
+  font-size: 10px;
+}
+
+pre.dockerfile:hover:before {
+  content: "Dockerfile";
+  opacity: 0.5;
+  font-size: 10px;
+}
+
+pre.python:hover:before {
+  content: "Python";
+  opacity: 0.5;
+  font-size: 10px;
+}
+
+pre.yaml:hover:before {
+  content: "YAML";
+  opacity: 0.5;
+  font-size: 10px;
 }
 
 
