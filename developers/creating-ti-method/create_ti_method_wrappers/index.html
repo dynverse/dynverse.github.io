@@ -12,19 +12,19 @@
     <title>Creating a trajectory :: dynverse</title>
 
     
-    <link href="../../../css/nucleus.css?1554129680" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1554129680" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1554129680" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1554129680" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1554129680" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1554129680" rel="stylesheet">
-    <link href="../../../css/theme.css?1554129680" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1554129680" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1554210311" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1554210311" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1554210311" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1554210311" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1554210311" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1554210311" rel="stylesheet">
+    <link href="../../../css/theme.css?1554210311" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1554210311" rel="stylesheet">
     
-      <link href="../../../css/theme-mine.css?1554129680" rel="stylesheet">
+      <link href="../../../css/theme-mine.css?1554210311" rel="stylesheet">
     
 
-    <script src="../../../js/jquery-2.x.min.js?1554129680"></script>
+    <script src="../../../js/jquery-2.x.min.js?1554210311"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1554129680");
-    $.getScript("\/js\/auto-complete.js?1554129680");
-    $.getScript("\/js\/search.js?1554129680");
+    $.getScript("\/js\/lunr.min.js?1554210311");
+    $.getScript("\/js\/auto-complete.js?1554210311");
+    $.getScript("\/js\/search.js?1554210311");
     window.searchLoaded = true
   }
 
@@ -1893,32 +1893,32 @@ $(".searchbox").click(function(){
 <pre><code>## # A tibble: 10 x 3
 ##    cell_id milestone_id percentage
 ##    &lt;chr&gt;   &lt;chr&gt;             &lt;dbl&gt;
-##  1 Cell_a  Milestone_B       0.503
-##  2 Cell_a  Milestone_C       0.497
-##  3 Cell_b  Milestone_A       0.149
-##  4 Cell_b  Milestone_B       0.851
-##  5 Cell_c  Milestone_C       0.601
-##  6 Cell_c  Milestone_E       0.399
-##  7 Cell_d  Milestone_C       0.445
-##  8 Cell_d  Milestone_F       0.555
-##  9 Cell_e  Milestone_C       0.880
-## 10 Cell_e  Milestone_E       0.120</code></pre>
+##  1 Cell_a  Milestone_C      0.510 
+##  2 Cell_a  Milestone_F      0.490 
+##  3 Cell_b  Milestone_B      0.243 
+##  4 Cell_b  Milestone_D      0.757 
+##  5 Cell_c  Milestone_B      0.352 
+##  6 Cell_c  Milestone_C      0.648 
+##  7 Cell_d  Milestone_B      0.726 
+##  8 Cell_d  Milestone_C      0.274 
+##  9 Cell_e  Milestone_B      0.976 
+## 10 Cell_e  Milestone_C      0.0235</code></pre>
 <ul>
 <li>Progressions, an alternative to milestone percentages, also contains the positions of each cell but now based on its progression through an edge</li>
 </ul>
 <pre><code>## # A tibble: 10 x 4
 ##    cell_id from        to          percentage
 ##    &lt;chr&gt;   &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;
-##  1 Cell_a  Milestone_B Milestone_C      0.497
-##  2 Cell_b  Milestone_A Milestone_B      0.851
-##  3 Cell_c  Milestone_C Milestone_E      0.399
-##  4 Cell_d  Milestone_C Milestone_F      0.555
-##  5 Cell_e  Milestone_C Milestone_E      0.120
-##  6 Cell_f  Milestone_B Milestone_D      0.838
-##  7 Cell_g  Milestone_B Milestone_D      0.742
-##  8 Cell_h  Milestone_B Milestone_C      0.179
-##  9 Cell_i  Milestone_B Milestone_D      0.824
-## 10 Cell_j  Milestone_A Milestone_B      0.895</code></pre>
+##  1 Cell_a  Milestone_C Milestone_F     0.490 
+##  2 Cell_b  Milestone_B Milestone_D     0.757 
+##  3 Cell_c  Milestone_B Milestone_C     0.648 
+##  4 Cell_d  Milestone_B Milestone_C     0.274 
+##  5 Cell_e  Milestone_B Milestone_C     0.0235
+##  6 Cell_f  Milestone_C Milestone_F     0.550 
+##  7 Cell_g  Milestone_B Milestone_D     0.199 
+##  8 Cell_h  Milestone_A Milestone_B     0.746 
+##  9 Cell_i  Milestone_C Milestone_F     0.283 
+## 10 Cell_j  Milestone_B Milestone_D     0.453</code></pre>
 <ul>
 <li>Divergence regions, contain the information on &gt;=3 milestones connected to eachother. This is optional.</li>
 </ul>
@@ -3443,20 +3443,20 @@ $(".searchbox").click(function(){
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1554129680"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1554129680"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1554129680"></script>
-    <script src="../../../js/jquery.sticky.js?1554129680"></script>
-    <script src="../../../js/featherlight.min.js?1554129680"></script>
-    <script src="../../../js/html5shiv-printshiv.min.js?1554129680"></script>
-    <script src="../../../js/highlight.pack.js?1554129680"></script>
+    <script src="../../../js/clipboard.min.js?1554210311"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1554210311"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1554210311"></script>
+    <script src="../../../js/jquery.sticky.js?1554210311"></script>
+    <script src="../../../js/featherlight.min.js?1554210311"></script>
+    <script src="../../../js/html5shiv-printshiv.min.js?1554210311"></script>
+    <script src="../../../js/highlight.pack.js?1554210311"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom.71422.js?1554129680"></script>
-    <script src="../../../js/learn.js?1554129680"></script>
-    <script src="../../../js/hugo-learn.js?1554129680"></script>
+    <script src="../../../js/modernizr.custom.71422.js?1554210311"></script>
+    <script src="../../../js/learn.js?1554210311"></script>
+    <script src="../../../js/hugo-learn.js?1554210311"></script>
 
-    <link href="../../../mermaid/mermaid.css?1554129680" type="text/css" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.js?1554129680"></script>
+    <link href="../../../mermaid/mermaid.css?1554210311" type="text/css" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1554210311"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

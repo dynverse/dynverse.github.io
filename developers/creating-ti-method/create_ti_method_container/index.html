@@ -12,19 +12,19 @@
     <title>Containerised wrapping :: dynverse</title>
 
     
-    <link href="../../../css/nucleus.css?1554129680" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1554129680" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1554129680" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1554129680" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1554129680" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1554129680" rel="stylesheet">
-    <link href="../../../css/theme.css?1554129680" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1554129680" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1554210311" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1554210311" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1554210311" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1554210311" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1554210311" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1554210311" rel="stylesheet">
+    <link href="../../../css/theme.css?1554210311" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1554210311" rel="stylesheet">
     
-      <link href="../../../css/theme-mine.css?1554129680" rel="stylesheet">
+      <link href="../../../css/theme-mine.css?1554210311" rel="stylesheet">
     
 
-    <script src="../../../js/jquery-2.x.min.js?1554129680"></script>
+    <script src="../../../js/jquery-2.x.min.js?1554210311"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1554129680");
-    $.getScript("\/js\/auto-complete.js?1554129680");
-    $.getScript("\/js\/search.js?1554129680");
+    $.getScript("\/js\/lunr.min.js?1554210311");
+    $.getScript("\/js\/auto-complete.js?1554210311");
+    $.getScript("\/js\/search.js?1554210311");
     window.searchLoaded = true
   }
 
@@ -1873,8 +1873,149 @@ $(".searchbox").click(function(){
 
 
 
-<pre class="r"><code>library(dynwrap)</code></pre>
-<p>To write</p>
+<pre class="r"><code>library(dynwrap)
+library(dplyr)</code></pre>
+<p>Once <a href="../create_ti_method_script">you have wrapped a method using a script and definition</a>, all you need to share your method is a <em>Dockerfile</em> which lists all the dependencies that need to be installed.</p>
+<p>We’ll work with the following <em>definition.yml</em>:</p>
+<div class="filename">
+definition.yml
+</div>
+<pre class="yaml"><code>method:
+  id: comp_1
+
+parameters:
+  - id: component
+    default: 1
+    type: integer
+    distribution:
+      type: uniform
+      lower: 1
+      upper: 10
+    description: The nth component to use
+
+wrapper:
+  input_required: expression
+  input_optional: start_id
+</code></pre>
+<p>and <em>run.py</em>:</p>
+<div class="filename">
+run.py
+</div>
+<pre class="python"><code>#!/usr/bin/env python
+
+import dynclipy
+dataset = dynclipy.main()
+
+import pandas as pd
+import sklearn.decomposition
+
+# infer trajectory
+pca = sklearn.decomposition.PCA()
+dimred = pca.fit_transform(dataset[&#39;expression&#39;])
+pseudotime = pd.Series(
+  dimred[:, dataset[&#39;parameters&#39;][&#39;component&#39;]-1], 
+  index = dataset[&#39;expression&#39;].index
+)
+
+# build trajectory
+trajectory = dynclipy.wrap_data(cell_ids = dataset[&#39;expression&#39;].index)
+trajectory.add_linear_trajectory(pseudotime = pseudotime)
+
+# save output
+trajectory.write_output(dataset[&#39;output&#39;])
+</code></pre>
+<p>Make sure it is executable</p>
+<pre class="bash"><code>chmod +x run.py</code></pre>
+<p>Assuming that the <em>definition.yml</em> and <em>run.R</em> are located in current directory, a minimal <em>Dockerfile</em> would look like:</p>
+<div class="filename">
+Dockerfile
+</div>
+<pre class="dockerfile"><code>FROM dynverse/dynwrappy:v0.1.0
+
+COPY definition.yml run.py /code/
+
+ENTRYPOINT [&quot;/code/run.py&quot;]</code></pre>
+<p><code>dynverse/dynwrappy</code> is here the base image, which contains the latest version of R, python, dynwrap, dyncli and most tidyverse dependencies. For R methods, you can use the <code>dynverse/dynwrapr</code> base. While not required, it’s recommended to start from these base images, because dyncli provides an interface to run each method using the docker container from the command line. <a href="../create_ti_method_script">As discussed before</a>, wrapping is also a lot easier using dynwrap.</p>
+<div class="notices tip">
+<p>For reproducibility, it’s best to specify the tag base image. You can find this these tags on dockerhub: <a href="https://hub.docker.com/r/dynverse/dynwrapr/tags" class="uri">https://hub.docker.com/r/dynverse/dynwrapr/tags</a>.</p>
+</div>
+<p>The <em>Dockerfile</em> then copies over the <em>definition.yml</em> and <em>run.py</em> file inside the “code” directory. Typically, you won’t change the locations of these files, simply to maintain consistency with the rest of the method wrappers included in dynmethods.</p>
+<p>Finally, we specify the entrypoint, which is the script that will be executed when the docker is run.</p>
+<div class="notices warning">
+<p>Do not specify this entrypoint using <code>ENTRYPOINT /code/run.R</code>, because this will create issues with specifying command-line arguments.</p>
+</div>
+<p>That’s it! Assuming that you have a functioning docker installation, you can build this container using</p>
+<pre class="bash"><code>docker build -t my_ti_method .</code></pre>
+<pre><code>## Sending build context to Docker daemon  4.608kB
+
+
+## Step 1/3 : FROM dynverse/dynwrappy:v0.1.0
+##  ---&gt; 5b58b73b3dc4
+## Step 2/3 : COPY definition.yml run.py /code/
+##  ---&gt; Using cache
+##  ---&gt; c9fe0eb25e8a
+## Step 3/3 : ENTRYPOINT [&quot;/code/run.py&quot;]
+##  ---&gt; Using cache
+##  ---&gt; 8815444104f4
+## Successfully built 8815444104f4
+## Successfully tagged my_ti_method:latest</code></pre>
+<div id="testing-it-out" class="section level2">
+<h2>Testing it out</h2>
+<p>This method can now be loaded inside R using dynwrap</p>
+<pre class="r"><code>method &lt;- create_ti_method_container(&quot;my_ti_method&quot;)
+dataset &lt;- dynwrap::example_dataset
+trajectory &lt;- infer_trajectory(dataset, method(), verbose = TRUE)</code></pre>
+<pre><code>## Executing &#39;comp_1&#39; on &#39;example&#39;
+## With parameters: list(component = 1L),
+## inputs: expression, and
+## priors :</code></pre>
+<pre><code>## Loading required namespace: hdf5r</code></pre>
+<pre><code>## Input saved to /tmp/RtmpAyJlHt/file21fa309f1600/ti
+## Running /usr/bin/docker run -e &#39;TMPDIR=/tmp2&#39; --workdir /ti/workspace -v \
+##   &#39;/tmp/RtmpAyJlHt/file21fa309f1600/ti:/ti&#39; -v \
+##   &#39;/tmp/RtmpAyJlHt/file21fac238d45/tmp:/tmp2&#39; my_ti_method --dataset \
+##   /ti/input.h5 --output /ti/output.h5</code></pre>
+<pre class="r"><code># install dynplot to plot the output
+if (&quot;dynplot&quot; %in% rownames(installed.packages())) {
+  dynplot::plot_dimred(trajectory, color_cells = &quot;pseudotime&quot; , expression_source = as.matrix(dataset$expression))
+}</code></pre>
+<p><img src="../../../developers/creating-ti-method/create_ti_method_container_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Congratulations! You now have a TI method that can be easily installed anywhere without dependency issues, and that can be included within the whole dynverse pipeline.</p>
+<p>So what’s left?</p>
+</div>
+<div id="testing-and-continuous-integration" class="section level2">
+<h2>Testing and continuous integration</h2>
+<p>To make a project like this maintainable in the long run, it is important that everytime something is changed, the method is tested to make sure it works fine.</p>
+<div id="creating-an-example-dataset" class="section level3">
+<h3>Creating an example dataset</h3>
+<p>To do this, we first add an <em>example.sh</em> file, which will generate an example dataset that will certainly run without any error with the method. In this case, this example is just the example dataset included in dynwrap.</p>
+<div class="filename">
+example.sh
+</div>
+<pre class="r"><code>#!/usr/bin/env Rscript
+
+dataset &lt;- dynwrap::example_dataset
+
+file &lt;- commandArgs(trailingOnly = TRUE)[[1]]
+dynutils::write_h5(dataset, file)
+</code></pre>
+<div class="notices tip">
+<p>You can of course provide your own example data here, but make sure it doesn’t take too long to generate, and not too long for the TI method run.</p>
+<p>You can also add extra parameters and a fixed seed to the example data, e.g.: <code>dataset$seed &lt;- 1</code> and <code>dataset$parameters &lt;- list(component = 42)</code></p>
+</div>
+<p>Now run the example script and test it:</p>
+<pre class="bash"><code>chmod +x example.sh
+./example.sh example.h5</code></pre>
+<pre><code>## Loading required namespace: hdf5r</code></pre>
+<pre class="r"><code>dataset &lt;- dynutils::read_h5(&quot;example.h5&quot;)
+trajectory &lt;- infer_trajectory(dataset, method())</code></pre>
+</div>
+<div id="continuous-integration" class="section level3">
+<h3>Continuous integration</h3>
+<p>To automate the testing (and building) of containers, you’ll have to use continuous integration. We use <a href="https://travis-ci.com">travis-ci</a> for this, a free service for open-source projects. Because the exact code to use this continuous integration requires some manual steps, we suggest you create an issue at <a href="https://github.com/dynverse/dynmethods/issues/new">dynmethods</a> so that we can help you further. If you’re really adventurous, you can have a look at some of our <em>.travis.yml</em> files, e.g.: <a href="https://github.com/dynverse/ti_paga/blob/master/.travis.yml" class="uri">https://github.com/dynverse/ti_paga/blob/master/.travis.yml</a></p>
+<p>Once the continuous integration works, you’re method is ready to be included in <a href="https://github.com/dynverse/dynmethods/issues/new">dynmethods</a>!</p>
+</div>
+</div>
 
 
 <footer class=" footline" >
@@ -3376,20 +3517,20 @@ $(".searchbox").click(function(){
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1554129680"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1554129680"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1554129680"></script>
-    <script src="../../../js/jquery.sticky.js?1554129680"></script>
-    <script src="../../../js/featherlight.min.js?1554129680"></script>
-    <script src="../../../js/html5shiv-printshiv.min.js?1554129680"></script>
-    <script src="../../../js/highlight.pack.js?1554129680"></script>
+    <script src="../../../js/clipboard.min.js?1554210311"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1554210311"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1554210311"></script>
+    <script src="../../../js/jquery.sticky.js?1554210311"></script>
+    <script src="../../../js/featherlight.min.js?1554210311"></script>
+    <script src="../../../js/html5shiv-printshiv.min.js?1554210311"></script>
+    <script src="../../../js/highlight.pack.js?1554210311"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom.71422.js?1554129680"></script>
-    <script src="../../../js/learn.js?1554129680"></script>
-    <script src="../../../js/hugo-learn.js?1554129680"></script>
+    <script src="../../../js/modernizr.custom.71422.js?1554210311"></script>
+    <script src="../../../js/learn.js?1554210311"></script>
+    <script src="../../../js/hugo-learn.js?1554210311"></script>
 
-    <link href="../../../mermaid/mermaid.css?1554129680" type="text/css" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.js?1554129680"></script>
+    <link href="../../../mermaid/mermaid.css?1554210311" type="text/css" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1554210311"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

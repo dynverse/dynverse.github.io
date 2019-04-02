@@ -12,19 +12,19 @@
     <title>Wrapper script :: dynverse</title>
 
     
-    <link href="../../../css/nucleus.css?1554129680" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1554129680" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1554129680" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1554129680" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1554129680" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1554129680" rel="stylesheet">
-    <link href="../../../css/theme.css?1554129680" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1554129680" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1554210311" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1554210311" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1554210311" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1554210311" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1554210311" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1554210311" rel="stylesheet">
+    <link href="../../../css/theme.css?1554210311" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1554210311" rel="stylesheet">
     
-      <link href="../../../css/theme-mine.css?1554129680" rel="stylesheet">
+      <link href="../../../css/theme-mine.css?1554210311" rel="stylesheet">
     
 
-    <script src="../../../js/jquery-2.x.min.js?1554129680"></script>
+    <script src="../../../js/jquery-2.x.min.js?1554210311"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1554129680");
-    $.getScript("\/js\/auto-complete.js?1554129680");
-    $.getScript("\/js\/search.js?1554129680");
+    $.getScript("\/js\/lunr.min.js?1554210311");
+    $.getScript("\/js\/auto-complete.js?1554210311");
+    $.getScript("\/js\/search.js?1554210311");
     window.searchLoaded = true
   }
 
@@ -1875,10 +1875,13 @@ $(".searchbox").click(function(){
 
 <pre class="r"><code>library(dynwrap)</code></pre>
 <p>An alternative to wrapping a script inside R, is to wrap it using an external script. Because this does not provide any dependency management, this is not really useful for method end-users, but rather as a way to easily develop a TI method and to ultimately step up towards <a href="../create_ti_method_container">containerised wrapping</a>.</p>
-<p>Similarly as a wrapper written in R, you’ll need to provide both a definition (= a <code>definition.yml</code>) and a way to run the methods (= a script).</p>
+<p>Similarly as a wrapper written in R, you’ll need to provide both a definition (= a <em>definition.yml</em>) and a way to run the methods (= a script).</p>
 <div id="definition.yml" class="section level2">
-<h2><code>definition.yml</code></h2>
+<h2><em>definition.yml</em></h2>
 <p>The definition has the same hierarchical structure as used by the <code>definition()</code> function. A minimal example</p>
+<div class="filename">
+definition.yml
+</div>
 <pre class="yaml"><code>method:
   id: comp_1
 
@@ -1896,7 +1899,7 @@ wrapper:
   input_required: expression
   input_optional: start_id
 </code></pre>
-<p>Check out the wrappers in dynmethods for an overview of what can be included in the definition file. For example: <a href="https://github.com/dynverse/ti_paga/blob/master/definition.yml" class="uri">https://github.com/dynverse/ti_paga/blob/master/definition.yml</a></p>
+<p>You can use our template <em>definition.yml</em> to see all the different possibilities of what can be included in the definition: <a href="https://github.com/dynverse/dynmethods/tree/master/template_container" class="uri">https://github.com/dynverse/dynmethods/tree/master/template_container</a> . It may also be useful to check out some of the wrappers in dynmethods, e.g.: <a href="https://github.com/dynverse/ti_paga/blob/master/definition.yml" class="uri">https://github.com/dynverse/ti_paga/blob/master/definition.yml</a></p>
 </div>
 <div id="running-script" class="section level2">
 <h2>Running script</h2>
@@ -1910,6 +1913,9 @@ wrapper:
 <li>A call to dyncli(py) to write the data, such as <code>dyncli::write_output(trajectory)</code> or <code>trajectory.write_output()</code></li>
 </ul>
 <p>A minimal example script for R:</p>
+<div class="filename">
+run.R
+</div>
 <pre class="r"><code>#!/usr/bin/env Rscript
 
 dataset &lt;- dyncli::main()
@@ -1939,20 +1945,27 @@ dyncli::write_output(trajectory, dataset$output)
 <p>Make sure this script is executable!</p>
 <pre class="bash"><code>chmod +x run.R</code></pre>
 <p>and for Python:</p>
+<div class="filename">
+run.py
+</div>
 <pre class="python"><code>#!/usr/bin/env python
 
 import dynclipy
-dataset &lt;- dynclipy.main()
+dataset = dynclipy.main()
 
+import pandas as pd
 import sklearn.decomposition
 
 # infer trajectory
 pca = sklearn.decomposition.PCA()
 dimred = pca.fit_transform(dataset[&#39;expression&#39;])
-pseudotime = dimred[:, dataset[&#39;parameters&#39;][&#39;component&#39;]]
+pseudotime = pd.Series(
+  dimred[:, dataset[&#39;parameters&#39;][&#39;component&#39;]-1], 
+  index = dataset[&#39;expression&#39;].index
+)
 
 # build trajectory
-trajectory &lt;- dynclipy.wrap_data(cell_ids = dataset[&#39;expression&#39;].index)
+trajectory = dynclipy.wrap_data(cell_ids = dataset[&#39;expression&#39;].index)
 trajectory.add_linear_trajectory(pseudotime = pseudotime)
 
 # save output
@@ -1972,8 +1985,8 @@ trajectory &lt;- infer_trajectory(dataset, method(), verbose = TRUE)</code></pre
 ## inputs: expression, and
 ## priors :</code></pre>
 <pre><code>## Loading required namespace: hdf5r</code></pre>
-<pre><code>## Input saved to /tmp/RtmpXt7C91/file6da85717eb0a/ti
-## Running /tmp/RtmpXt7C91/run.R --dataset input.h5 --output output.h5
+<pre><code>## Input saved to /tmp/Rtmp5sPKOx/file24ab647de88d/ti
+## Running /tmp/Rtmp5sPKOx/run.R --dataset input.h5 --output output.h5
 ## 
 ## Attaching package: ‘dplyr’
 ## 
@@ -1984,7 +1997,8 @@ trajectory &lt;- infer_trajectory(dataset, method(), verbose = TRUE)</code></pre
 ## The following objects are masked from ‘package:base’:
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>if (&quot;dynplot&quot; %in% rownames(installed.packages())) {
+<pre class="r"><code># install dynplot to plot the output
+if (&quot;dynplot&quot; %in% rownames(installed.packages())) {
   dynplot::plot_dimred(trajectory, color_cells = &quot;pseudotime&quot; , expression_source = as.matrix(dataset$expression))
 }</code></pre>
 <p><img src="../../../developers/creating-ti-method/create_ti_method_script_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
@@ -1997,6 +2011,10 @@ trajectory &lt;- infer_trajectory(dataset, method(), verbose = TRUE)</code></pre
 <div id="making-your-method-available-for-other-users" class="section level2">
 <h2>Making your method available for other users</h2>
 <p>Wrapping a method inside a script does not have any dependency management, and is therefore only meant for development purposes. To deploy your method to other users, check out the <a href="../create_ti_method_container">containerisation tutorial</a>!</p>
+</div>
+<div id="wrapping-a-method-without-dynclipy" class="section level2">
+<h2>Wrapping a method without dyncli(py)</h2>
+<p>While using dyncli to load and save the data is the most straightforward when using R and python, it’s also possible to</p>
 </div>
 
 
@@ -3499,20 +3517,20 @@ trajectory &lt;- infer_trajectory(dataset, method(), verbose = TRUE)</code></pre
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1554129680"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1554129680"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1554129680"></script>
-    <script src="../../../js/jquery.sticky.js?1554129680"></script>
-    <script src="../../../js/featherlight.min.js?1554129680"></script>
-    <script src="../../../js/html5shiv-printshiv.min.js?1554129680"></script>
-    <script src="../../../js/highlight.pack.js?1554129680"></script>
+    <script src="../../../js/clipboard.min.js?1554210311"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1554210311"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1554210311"></script>
+    <script src="../../../js/jquery.sticky.js?1554210311"></script>
+    <script src="../../../js/featherlight.min.js?1554210311"></script>
+    <script src="../../../js/html5shiv-printshiv.min.js?1554210311"></script>
+    <script src="../../../js/highlight.pack.js?1554210311"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom.71422.js?1554129680"></script>
-    <script src="../../../js/learn.js?1554129680"></script>
-    <script src="../../../js/hugo-learn.js?1554129680"></script>
+    <script src="../../../js/modernizr.custom.71422.js?1554210311"></script>
+    <script src="../../../js/learn.js?1554210311"></script>
+    <script src="../../../js/hugo-learn.js?1554210311"></script>
 
-    <link href="../../../mermaid/mermaid.css?1554129680" type="text/css" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.js?1554129680"></script>
+    <link href="../../../mermaid/mermaid.css?1554210311" type="text/css" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1554210311"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
