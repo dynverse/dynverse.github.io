@@ -26,7 +26,7 @@ Gene expression data As input, dynwrap requires raw counts and normalised (log2)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/users/3-user-guide/2-guidelines/</guid>
-      <description>library(dyno) library(tidyverse)  Within our evaluation study, we compared 45 methods on four aspects:
+      <description>library(dyno) library(tidyverse) Within our evaluation study, we compared 45 methods on four aspects:
  Accuracy: How similar is the inferred trajectory to the “true” (or “expected”) trajectory in the data. We used several metrics for this, comparing the cellular ordering and topology, and compared against both real datasets, for which a gold standard is not always so well defined, and synthetic data, which are not necessarily as biologically relevant as real data.</description>
     </item>
     
