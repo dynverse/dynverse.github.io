@@ -12,19 +12,19 @@
     <title>Contributing :: dynverse</title>
 
     
-    <link href="../../css/nucleus.css?1554286382" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1554286382" rel="stylesheet">
-    <link href="../../css/hybrid.css?1554286382" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1554286382" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1554286382" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1554286382" rel="stylesheet">
-    <link href="../../css/theme.css?1554286382" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1554286382" rel="stylesheet">
+    <link href="../../css/nucleus.css?1554301390" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1554301390" rel="stylesheet">
+    <link href="../../css/hybrid.css?1554301390" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1554301390" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1554301390" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1554301390" rel="stylesheet">
+    <link href="../../css/theme.css?1554301390" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1554301390" rel="stylesheet">
     
-      <link href="../../css/theme-mine.css?1554286382" rel="stylesheet">
+      <link href="../../css/theme-mine.css?1554301390" rel="stylesheet">
     
 
-    <script src="../../js/jquery-2.x.min.js?1554286382"></script>
+    <script src="../../js/jquery-2.x.min.js?1554301390"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1554286382");
-    $.getScript("\/js\/auto-complete.js?1554286382");
-    $.getScript("\/js\/search.js?1554286382");
+    $.getScript("\/js\/lunr.min.js?1554301390");
+    $.getScript("\/js\/auto-complete.js?1554301390");
+    $.getScript("\/js\/search.js?1554301390");
     window.searchLoaded = true
   }
 
@@ -1851,6 +1851,7 @@ $(".searchbox").click(function(){
 <li>
 <ul>
 <li><a href="#pull-requests">Pull Requests</a></li>
+<li><a href="#branches">Branches</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1875,15 +1876,37 @@ $(".searchbox").click(function(){
 
 <p>We welcome any contributions to this project, be it changes in documentation, bug fixes, new functionality, or even new packages if they fit the scope of our project. When making big changes, please first discuss the change you wish to make via issue, email, or any other method with the owners of the repository.</p>
 
-<p>We try to follow the</p>
-
 <h2 id="pull-requests">Pull Requests</h2>
 
 <ul>
 <li>Make sure your code is following <strong><a href="https://style.tidyverse.org/">tidyverse style guide</a></strong></li>
 <li>Ensure that you are working in the <strong>devel branch</strong> (or any derivates of the devel branch)</li>
-<li>Edit the NEWS.md and <strong>bump the version number</strong> to x.x.x.900 if there is not yet an unreleased version present</li>
+<li>Edit the NEWS.md and <strong>bump the version number</strong> to x.x.x.9000 if there is not yet an unreleased version present</li>
 <li>Adding a unit test will increase the likelihood of acceptance</li>
+</ul>
+
+<h2 id="branches">Branches</h2>
+
+<p>Each package always has 2 branches: devel and master. All development happens in the devel branch (or a derivative thereof), and this is only merged once the features are tested thoroughly.</p>
+
+<p>The devel branch always has version number x.x.x.9000. This version number is bumped right before merging to master.</p>
+
+<p>We have strict rules regarding dependencies between dynverse packages:</p>
+
+<ul>
+<li>devel branch always depends on the devel branch of other dynverse packages</li>
+<li>master branch always depends on the master branch of other dynverse packages</li>
+<li>cran versions (obivously) always depend on cran versions of other dynverse packages</li>
+</ul>
+
+<p>The Remotes of a package are only removed from master right before submitting to CRAN.</p>
+
+<p>To help development, we provide some helper functions in the <code>dynutils</code> package:</p>
+
+<ul>
+<li><code>switch_devel()</code> will bump version number to x.x.x.9000 and will add @devel to Remotes</li>
+<li><code>switch_master()</code> will bump version number to x.x.x and will add @master to Remotes</li>
+<li><code>switch_cran()</code> will remove remotes</li>
 </ul>
 
 
@@ -3380,20 +3403,20 @@ $(".searchbox").click(function(){
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1554286382"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1554286382"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1554286382"></script>
-    <script src="../../js/jquery.sticky.js?1554286382"></script>
-    <script src="../../js/featherlight.min.js?1554286382"></script>
-    <script src="../../js/html5shiv-printshiv.min.js?1554286382"></script>
-    <script src="../../js/highlight.pack.js?1554286382"></script>
+    <script src="../../js/clipboard.min.js?1554301390"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1554301390"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1554301390"></script>
+    <script src="../../js/jquery.sticky.js?1554301390"></script>
+    <script src="../../js/featherlight.min.js?1554301390"></script>
+    <script src="../../js/html5shiv-printshiv.min.js?1554301390"></script>
+    <script src="../../js/highlight.pack.js?1554301390"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom.71422.js?1554286382"></script>
-    <script src="../../js/learn.js?1554286382"></script>
-    <script src="../../js/hugo-learn.js?1554286382"></script>
+    <script src="../../js/modernizr.custom.71422.js?1554301390"></script>
+    <script src="../../js/learn.js?1554301390"></script>
+    <script src="../../js/hugo-learn.js?1554301390"></script>
 
-    <link href="../../mermaid/mermaid.css?1554286382" type="text/css" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1554286382"></script>
+    <link href="../../mermaid/mermaid.css?1554301390" type="text/css" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1554301390"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

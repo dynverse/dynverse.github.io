@@ -26,7 +26,6 @@
       
       <guid>/about/contributing/</guid>
       <description>We welcome any contributions to this project, be it changes in documentation, bug fixes, new functionality, or even new packages if they fit the scope of our project. When making big changes, please first discuss the change you wish to make via issue, email, or any other method with the owners of the repository.
-We try to follow the
 Pull Requests  Make sure your code is following tidyverse style guide Ensure that you are working in the devel branch (or any derivates of the devel branch) Edit the NEWS.</description>
     </item>
     
