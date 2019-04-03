@@ -35,7 +35,7 @@ Definition The definition contains information on the method, its parameters and
     <item>
       <title>Wrapper script</title>
       <link>/developers/creating-ti-method/create_ti_method_script/</link>
-      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/developers/creating-ti-method/create_ti_method_script/</guid>
       <description>library(dynwrap) An alternative to wrapping a script inside R, is to wrap it using an external script. Because this does not provide any dependency management, this is not really useful for method end-users, but rather as a way to easily develop a TI method and to ultimately step up towards containerised wrapping.
