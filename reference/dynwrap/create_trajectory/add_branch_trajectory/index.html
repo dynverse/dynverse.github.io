@@ -12,19 +12,19 @@
     <title>Create a trajectory given its branch network and the pseudotime of the cells on one of the branches :: dynverse</title>
 
     
-    <link href="../../../../css/nucleus.css?1554301798" rel="stylesheet">
-    <link href="../../../../css/fontawesome-all.min.css?1554301798" rel="stylesheet">
-    <link href="../../../../css/hybrid.css?1554301798" rel="stylesheet">
-    <link href="../../../../css/featherlight.min.css?1554301798" rel="stylesheet">
-    <link href="../../../../css/perfect-scrollbar.min.css?1554301798" rel="stylesheet">
-    <link href="../../../../css/auto-complete.css?1554301798" rel="stylesheet">
-    <link href="../../../../css/theme.css?1554301798" rel="stylesheet">
-    <link href="../../../../css/hugo-theme.css?1554301798" rel="stylesheet">
+    <link href="../../../../css/nucleus.css?1554304346" rel="stylesheet">
+    <link href="../../../../css/fontawesome-all.min.css?1554304346" rel="stylesheet">
+    <link href="../../../../css/hybrid.css?1554304346" rel="stylesheet">
+    <link href="../../../../css/featherlight.min.css?1554304346" rel="stylesheet">
+    <link href="../../../../css/perfect-scrollbar.min.css?1554304346" rel="stylesheet">
+    <link href="../../../../css/auto-complete.css?1554304346" rel="stylesheet">
+    <link href="../../../../css/theme.css?1554304346" rel="stylesheet">
+    <link href="../../../../css/hugo-theme.css?1554304346" rel="stylesheet">
     
-      <link href="../../../../css/theme-mine.css?1554301798" rel="stylesheet">
+      <link href="../../../../css/theme-mine.css?1554304346" rel="stylesheet">
     
 
-    <script src="../../../../js/jquery-2.x.min.js?1554301798"></script>
+    <script src="../../../../js/jquery-2.x.min.js?1554304346"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1554301798");
-    $.getScript("\/js\/auto-complete.js?1554301798");
-    $.getScript("\/js\/search.js?1554301798");
+    $.getScript("\/js\/lunr.min.js?1554304346");
+    $.getScript("\/js\/auto-complete.js?1554304346");
+    $.getScript("\/js\/search.js?1554304346");
     window.searchLoaded = true
   }
 
@@ -1948,16 +1948,16 @@ Type: Data frame(cell_id = character, branch_id = character, percentage = numeri
 <span class='no'>branch_progressions</span></div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 26 x 3</span><span>
 #&gt;    cell_id branch_id percentage
 #&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> a       B             0.786 
-#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> b       A             0.385 
-#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> c       C             0.612 
-#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> d       A             0.244 
-#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> e       A             0.548 
-#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> f       A             0.886 
-#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> g       A             0.685 
-#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> h       C             0.686 
-#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> i       B             0.036</span><span style='text-decoration: underline;'>5</span><span>
-#&gt; </span><span style='color: #BCBCBC;'>10</span><span> j       C             0.106 
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> a       B             0.966 
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> b       A             0.559 
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> c       A             0.946 
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> d       C             0.067</span><span style='text-decoration: underline;'>2</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> e       B             0.820 
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> f       B             0.845 
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> g       A             0.616 
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> h       B             0.553 
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> i       B             0.844 
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> j       C             0.976 
 #&gt; </span><span style='color: #949494;'># … with 16 more rows</span><span></div><div class='input'><span class='no'>trajectory</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='../../../../reference/dynwrap/create_trajectory/add_branch_trajectory'>add_branch_trajectory</a></span>(
   <span class='no'>dataset</span>,
   <span class='no'>branch_network</span>,
@@ -1965,7 +1965,8 @@ Type: Data frame(cell_id = character, branch_id = character, percentage = numeri
   <span class='no'>branch_progressions</span>
 )
 
-<span class='kw'>if</span> (<span class='st'>"dynplot"</span> <span class='kw'>%in%</span> <span class='fu'><a href='https://tibble.tidyverse.org/reference/rownames.html'>rownames</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/installed.packages'>installed.packages</a></span>())) {<span class='kw pkg'>dynplot</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/dynplot/topics/plot_graph'>plot_graph</a></span>(<span class='no'>trajectory</span>)}</div><div class='output co'>#&gt; <span class='message'>Coloring by milestone</span></div><div class='output co'>#&gt; <span class='message'>Using milestone_percentages from trajectory</span></div><div class='img'><img src='../../../../images/examples/add_branch_trajectory-1.png' alt='static/images/examples/add_branch_trajectory-1' width='700' height='433' /></div></span></pre>
+<span class='co'># for plotting the result, install dynplot</span>
+<span class='kw pkg'>dynplot</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/dynplot/topics/plot_graph'>plot_graph</a></span>(<span class='no'>trajectory</span>)</div><div class='output co'>#&gt; <span class='message'>Coloring by milestone</span></div><div class='output co'>#&gt; <span class='message'>Using milestone_percentages from trajectory</span></div><div class='img'><img src='../../../../images/examples/add_branch_trajectory-1.png' alt='static/images/examples/add_branch_trajectory-1' width='700' height='433' /></div></span></pre>
 </div>
 <!--  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -3476,20 +3477,20 @@ Type: Data frame(cell_id = character, branch_id = character, percentage = numeri
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../../js/clipboard.min.js?1554301798"></script>
-    <script src="../../../../js/perfect-scrollbar.min.js?1554301798"></script>
-    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1554301798"></script>
-    <script src="../../../../js/jquery.sticky.js?1554301798"></script>
-    <script src="../../../../js/featherlight.min.js?1554301798"></script>
-    <script src="../../../../js/html5shiv-printshiv.min.js?1554301798"></script>
-    <script src="../../../../js/highlight.pack.js?1554301798"></script>
+    <script src="../../../../js/clipboard.min.js?1554304346"></script>
+    <script src="../../../../js/perfect-scrollbar.min.js?1554304346"></script>
+    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1554304346"></script>
+    <script src="../../../../js/jquery.sticky.js?1554304346"></script>
+    <script src="../../../../js/featherlight.min.js?1554304346"></script>
+    <script src="../../../../js/html5shiv-printshiv.min.js?1554304346"></script>
+    <script src="../../../../js/highlight.pack.js?1554304346"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../../js/modernizr.custom.71422.js?1554301798"></script>
-    <script src="../../../../js/learn.js?1554301798"></script>
-    <script src="../../../../js/hugo-learn.js?1554301798"></script>
+    <script src="../../../../js/modernizr.custom.71422.js?1554304346"></script>
+    <script src="../../../../js/learn.js?1554304346"></script>
+    <script src="../../../../js/hugo-learn.js?1554304346"></script>
 
-    <link href="../../../../mermaid/mermaid.css?1554301798" type="text/css" rel="stylesheet" />
-    <script src="../../../../mermaid/mermaid.js?1554301798"></script>
+    <link href="../../../../mermaid/mermaid.css?1554304346" type="text/css" rel="stylesheet" />
+    <script src="../../../../mermaid/mermaid.js?1554304346"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

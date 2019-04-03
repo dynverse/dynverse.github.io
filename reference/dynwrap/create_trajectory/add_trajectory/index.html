@@ -12,19 +12,19 @@
     <title>Define a trajectory dataset given its milestone network and milestone percentages or progressions :: dynverse</title>
 
     
-    <link href="../../../../css/nucleus.css?1554301798" rel="stylesheet">
-    <link href="../../../../css/fontawesome-all.min.css?1554301798" rel="stylesheet">
-    <link href="../../../../css/hybrid.css?1554301798" rel="stylesheet">
-    <link href="../../../../css/featherlight.min.css?1554301798" rel="stylesheet">
-    <link href="../../../../css/perfect-scrollbar.min.css?1554301798" rel="stylesheet">
-    <link href="../../../../css/auto-complete.css?1554301798" rel="stylesheet">
-    <link href="../../../../css/theme.css?1554301798" rel="stylesheet">
-    <link href="../../../../css/hugo-theme.css?1554301798" rel="stylesheet">
+    <link href="../../../../css/nucleus.css?1554304346" rel="stylesheet">
+    <link href="../../../../css/fontawesome-all.min.css?1554304346" rel="stylesheet">
+    <link href="../../../../css/hybrid.css?1554304346" rel="stylesheet">
+    <link href="../../../../css/featherlight.min.css?1554304346" rel="stylesheet">
+    <link href="../../../../css/perfect-scrollbar.min.css?1554304346" rel="stylesheet">
+    <link href="../../../../css/auto-complete.css?1554304346" rel="stylesheet">
+    <link href="../../../../css/theme.css?1554304346" rel="stylesheet">
+    <link href="../../../../css/hugo-theme.css?1554304346" rel="stylesheet">
     
-      <link href="../../../../css/theme-mine.css?1554301798" rel="stylesheet">
+      <link href="../../../../css/theme-mine.css?1554304346" rel="stylesheet">
     
 
-    <script src="../../../../js/jquery-2.x.min.js?1554301798"></script>
+    <script src="../../../../js/jquery-2.x.min.js?1554304346"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1554301798");
-    $.getScript("\/js\/auto-complete.js?1554301798");
-    $.getScript("\/js\/search.js?1554301798");
+    $.getScript("\/js\/lunr.min.js?1554304346");
+    $.getScript("\/js\/auto-complete.js?1554304346");
+    $.getScript("\/js\/search.js?1554304346");
     window.searchLoaded = true
   }
 
@@ -1975,16 +1975,16 @@ Type: Logical</p></td>
 <span class='no'>progressions</span></div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 26 x 4</span><span>
 #&gt;    cell_id from  to    percentage
 #&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> a       A     B          0.735
-#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> b       A     B          0.739
-#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> c       B     C          0.766
-#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> d       A     B          0.834
-#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> e       B     C          0.220
-#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> f       B     C          0.533
-#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> g       A     B          0.800
-#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> h       B     C          0.453
-#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> i       A     B          0.734
-#&gt; </span><span style='color: #BCBCBC;'>10</span><span> j       A     B          0.334
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> a       B     C          0.694
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> b       A     B          0.173
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> c       B     D          0.468
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> d       A     B          0.803
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> e       A     B          0.692
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> f       B     C          0.836
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> g       B     C          0.341
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> h       B     D          0.665
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> i       B     C          0.184
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> j       B     C          0.971
 #&gt; </span><span style='color: #949494;'># … with 16 more rows</span><span></div><div class='input'><span class='no'>divergence_regions</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/reexports.html'>tribble</a></span>(
   ~<span class='no'>divergence_id</span>, ~<span class='no'>milestone_id</span>, ~<span class='no'>is_start</span>,
   <span class='st'>"1"</span>, <span class='st'>"A"</span>, <span class='fl'>TRUE</span>,
@@ -2003,7 +2003,8 @@ Type: Logical</p></td>
   <span class='kw'>progressions</span> <span class='kw'>=</span> <span class='no'>progressions</span>
 )
 
-<span class='kw'>if</span> (<span class='st'>"dynplot"</span> <span class='kw'>%in%</span> <span class='fu'><a href='https://tibble.tidyverse.org/reference/rownames.html'>rownames</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/installed.packages'>installed.packages</a></span>())) {<span class='kw pkg'>dynplot</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/dynplot/topics/plot_graph'>plot_graph</a></span>(<span class='no'>trajectory</span>)}</div><div class='output co'>#&gt; <span class='message'>Coloring by milestone</span></div><div class='output co'>#&gt; <span class='message'>Using milestone_percentages from trajectory</span></div><div class='img'><img src='../../../../images/examples/add_trajectory-1.png' alt='static/images/examples/add_trajectory-1' width='700' height='433' /></div></span></pre>
+<span class='co'># for plotting the result, install dynplot</span>
+<span class='kw pkg'>dynplot</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/dynplot/topics/plot_graph'>plot_graph</a></span>(<span class='no'>trajectory</span>)</div><div class='output co'>#&gt; <span class='message'>Coloring by milestone</span></div><div class='output co'>#&gt; <span class='message'>Using milestone_percentages from trajectory</span></div><div class='img'><img src='../../../../images/examples/add_trajectory-1.png' alt='static/images/examples/add_trajectory-1' width='700' height='433' /></div></span></pre>
 </div>
 <!--  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -3514,20 +3515,20 @@ Type: Logical</p></td>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../../js/clipboard.min.js?1554301798"></script>
-    <script src="../../../../js/perfect-scrollbar.min.js?1554301798"></script>
-    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1554301798"></script>
-    <script src="../../../../js/jquery.sticky.js?1554301798"></script>
-    <script src="../../../../js/featherlight.min.js?1554301798"></script>
-    <script src="../../../../js/html5shiv-printshiv.min.js?1554301798"></script>
-    <script src="../../../../js/highlight.pack.js?1554301798"></script>
+    <script src="../../../../js/clipboard.min.js?1554304346"></script>
+    <script src="../../../../js/perfect-scrollbar.min.js?1554304346"></script>
+    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1554304346"></script>
+    <script src="../../../../js/jquery.sticky.js?1554304346"></script>
+    <script src="../../../../js/featherlight.min.js?1554304346"></script>
+    <script src="../../../../js/html5shiv-printshiv.min.js?1554304346"></script>
+    <script src="../../../../js/highlight.pack.js?1554304346"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../../js/modernizr.custom.71422.js?1554301798"></script>
-    <script src="../../../../js/learn.js?1554301798"></script>
-    <script src="../../../../js/hugo-learn.js?1554301798"></script>
+    <script src="../../../../js/modernizr.custom.71422.js?1554304346"></script>
+    <script src="../../../../js/learn.js?1554304346"></script>
+    <script src="../../../../js/hugo-learn.js?1554304346"></script>
 
-    <link href="../../../../mermaid/mermaid.css?1554301798" type="text/css" rel="stylesheet" />
-    <script src="../../../../mermaid/mermaid.js?1554301798"></script>
+    <link href="../../../../mermaid/mermaid.css?1554304346" type="text/css" rel="stylesheet" />
+    <script src="../../../../mermaid/mermaid.js?1554304346"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
