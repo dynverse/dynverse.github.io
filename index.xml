@@ -27,7 +27,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/users/1-installation/</guid>
-      <description>Dyno Docker Singularity Frequent installation problems API rate limit exceeded I’m not allowed to install docker on my shared cluster    Dyno dyno contains and loads several of the dynverse R packages (dynwrap, dynplot, dynmethods, …). To install (and update) them all:
+      <description>Dyno Docker Singularity HDF5 Frequent installation problems API rate limit exceeded I’m not allowed to install docker on my shared cluster    Dyno dyno contains and loads several of the dynverse R packages (dynwrap, dynplot, dynmethods, …). To install (and update) them all:
 # install.packages(&amp;quot;devtools&amp;quot;) devtools::install_github(&amp;quot;dynverse/dyno&amp;quot;) On Linux, you will need to install udunits and ImageMagick:
  Debian / Ubuntu / Linux Mint: sudo apt-get install libudunits2-dev imagemagick Fedora / CentOS / RHEL: sudo dnf install udunits2-devel ImageMagick-c++-devel  Docker or Singularity (version ≥ 3.</description>
     </item>
@@ -109,7 +109,7 @@ definition.yml  method: id: comp_1 parameters: - id: component default: 1 type: 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/users/3-user-guide/4-visualisation/</guid>
-      <description>Visualising the trajectory on a dimensionality reduction Plotting the trajectory itself Plotting in a dendrogram Plotting as a graph Plotting in one dimension  Visualising many genes along a trajectory Current limitations   library(dyno) library(tidyverse) The main functions for plotting a trajectory are included in the dynplot package.
+      <description>Visualising the trajectory on a dimensionality reduction Plotting the trajectory itself Plotting in a dendrogram Plotting as a graph Plotting in one dimension  Visualising many genes along a trajectory   library(dyno) library(tidyverse) The main functions for plotting a trajectory are included in the dynplot package.
 We’ll use an example toy dataset
 set.seed(1) dataset &amp;lt;- dyntoy::generate_dataset(model = &amp;quot;bifurcating&amp;quot;, num_cells = 200) To visualise a trajectory, you have to take into acount two things:</description>
     </item>

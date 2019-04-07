@@ -12,19 +12,19 @@
     <title>Installation :: dynverse</title>
 
     
-    <link href="../../css/nucleus.css?1554304345" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1554304345" rel="stylesheet">
-    <link href="../../css/hybrid.css?1554304345" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1554304345" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1554304345" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1554304345" rel="stylesheet">
-    <link href="../../css/theme.css?1554304345" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1554304345" rel="stylesheet">
+    <link href="../../css/nucleus.css?1554615109" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1554615109" rel="stylesheet">
+    <link href="../../css/hybrid.css?1554615109" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1554615109" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1554615109" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1554615109" rel="stylesheet">
+    <link href="../../css/theme.css?1554615109" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1554615109" rel="stylesheet">
     
-      <link href="../../css/theme-mine.css?1554304345" rel="stylesheet">
+      <link href="../../css/theme-mine.css?1554615109" rel="stylesheet">
     
 
-    <script src="../../js/jquery-2.x.min.js?1554304345"></script>
+    <script src="../../js/jquery-2.x.min.js?1554615109"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1554304345");
-    $.getScript("\/js\/auto-complete.js?1554304345");
-    $.getScript("\/js\/search.js?1554304345");
+    $.getScript("\/js\/lunr.min.js?1554615109");
+    $.getScript("\/js\/auto-complete.js?1554615109");
+    $.getScript("\/js\/search.js?1554615109");
     window.searchLoaded = true
   }
 
@@ -1871,6 +1871,7 @@ $(".searchbox").click(function(){
 <li><a href="#dyno">Dyno</a></li>
 <li><a href="#docker">Docker</a></li>
 <li><a href="#singularity">Singularity</a></li>
+<li><a href="#hdf5">HDF5</a></li>
 <li><a href="#frequent-installation-problems">Frequent installation problems</a><ul>
 <li><a href="#api-rate-limit-exceeded"><code>API rate limit exceeded</code></a></li>
 <li><a href="#im-not-allowed-to-install-docker-on-my-shared-cluster">I’m not allowed to install docker on my shared cluster</a></li>
@@ -1921,6 +1922,15 @@ devtools::install_github(&quot;dynverse/dyno&quot;)</code></pre>
 ## ✔ Singularity test successful ------------------------------------------------------------
 ## [1] TRUE</code></pre>
 <p>This command will give helpful tips if some parts of the installation are missing.</p>
+</div>
+<div id="hdf5" class="section level2">
+<h2>HDF5</h2>
+<p>When not using Windows, HDF5 libraries should also be installed for the [hdf5r package]’, i.e.:</p>
+<ul>
+<li>OS X: <code>brew install hdf5</code></li>
+<li>Debian / Ubuntu / Linux Mint: <code>sudo apt-get install libhdf5-dev</code></li>
+<li>Fedora / CentOS / RHEL: <code>sudo yum install hdf5-devel</code></li>
+</ul>
 </div>
 <div id="frequent-installation-problems" class="section level2">
 <h2>Frequent installation problems</h2>
@@ -3433,20 +3443,20 @@ devtools::install_github(&quot;dynverse/dyno&quot;)</code></pre>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1554304345"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1554304345"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1554304345"></script>
-    <script src="../../js/jquery.sticky.js?1554304345"></script>
-    <script src="../../js/featherlight.min.js?1554304345"></script>
-    <script src="../../js/html5shiv-printshiv.min.js?1554304345"></script>
-    <script src="../../js/highlight.pack.js?1554304345"></script>
+    <script src="../../js/clipboard.min.js?1554615109"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1554615109"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1554615109"></script>
+    <script src="../../js/jquery.sticky.js?1554615109"></script>
+    <script src="../../js/featherlight.min.js?1554615109"></script>
+    <script src="../../js/html5shiv-printshiv.min.js?1554615109"></script>
+    <script src="../../js/highlight.pack.js?1554615109"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom.71422.js?1554304345"></script>
-    <script src="../../js/learn.js?1554304345"></script>
-    <script src="../../js/hugo-learn.js?1554304345"></script>
+    <script src="../../js/modernizr.custom.71422.js?1554615109"></script>
+    <script src="../../js/learn.js?1554615109"></script>
+    <script src="../../js/hugo-learn.js?1554615109"></script>
 
-    <link href="../../mermaid/mermaid.css?1554304345" type="text/css" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1554304345"></script>
+    <link href="../../mermaid/mermaid.css?1554615109" type="text/css" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1554615109"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

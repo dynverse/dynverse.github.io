@@ -16,7 +16,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/users/1-installation/</guid>
-      <description>Dyno Docker Singularity Frequent installation problems API rate limit exceeded I’m not allowed to install docker on my shared cluster    Dyno dyno contains and loads several of the dynverse R packages (dynwrap, dynplot, dynmethods, …). To install (and update) them all:
+      <description>Dyno Docker Singularity HDF5 Frequent installation problems API rate limit exceeded I’m not allowed to install docker on my shared cluster    Dyno dyno contains and loads several of the dynverse R packages (dynwrap, dynplot, dynmethods, …). To install (and update) them all:
 # install.packages(&amp;quot;devtools&amp;quot;) devtools::install_github(&amp;quot;dynverse/dyno&amp;quot;) On Linux, you will need to install udunits and ImageMagick:
  Debian / Ubuntu / Linux Mint: sudo apt-get install libudunits2-dev imagemagick Fedora / CentOS / RHEL: sudo dnf install udunits2-devel ImageMagick-c++-devel  Docker or Singularity (version ≥ 3.</description>
     </item>
