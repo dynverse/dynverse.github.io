@@ -17,7 +17,7 @@
       
       <guid>/reference/dynmethods/other/methods/</guid>
       <description> methods.Rd  Metadata on the different TI methods
- methods Format An object of class tbl_df (inherits from tbl, data.frame) with 59 rows and 22 columns.
+ methods Format An object of class tbl_df (inherits from tbl, data.frame) with 59 rows and 23 columns.
  Contents Format  -- </description>
     </item>
     

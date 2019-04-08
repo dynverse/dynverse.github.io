@@ -12,19 +12,19 @@
     <title>Wrapper script :: dynverse</title>
 
     
-    <link href="../../../css/nucleus.css?1554706873" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1554706873" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1554706873" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1554706873" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1554706873" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1554706873" rel="stylesheet">
-    <link href="../../../css/theme.css?1554706873" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1554706873" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1554730255" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1554730255" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1554730255" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1554730255" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1554730255" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1554730255" rel="stylesheet">
+    <link href="../../../css/theme.css?1554730255" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1554730255" rel="stylesheet">
     
-      <link href="../../../css/theme-mine.css?1554706873" rel="stylesheet">
+      <link href="../../../css/theme-mine.css?1554730255" rel="stylesheet">
     
 
-    <script src="../../../js/jquery-2.x.min.js?1554706873"></script>
+    <script src="../../../js/jquery-2.x.min.js?1554730255"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1554706873");
-    $.getScript("\/js\/auto-complete.js?1554706873");
-    $.getScript("\/js\/search.js?1554706873");
+    $.getScript("\/js\/lunr.min.js?1554730255");
+    $.getScript("\/js\/auto-complete.js?1554730255");
+    $.getScript("\/js\/search.js?1554730255");
     window.searchLoaded = true
   }
 
@@ -1873,7 +1873,8 @@ $(".searchbox").click(function(){
 
 
 
-<pre class="r"><code>library(dynwrap)</code></pre>
+<pre class="r"><code>library(dynwrap)
+library(dyncli)</code></pre>
 <p>An alternative to wrapping a script inside R, is to wrap it using an external script. Because this does not provide any dependency management, this is not really useful for method end-users, but rather as a way to easily develop a TI method and to ultimately step up towards <a href="../create_ti_method_container">containerised wrapping</a>.</p>
 <p>Similarly as a wrapper written in R, you’ll need to provide both a definition (= a <em>definition.yml</em>) and a way to run the methods (= a script).</p>
 <div id="definition.yml" class="section level2">
@@ -1983,9 +1984,8 @@ trajectory &lt;- infer_trajectory(dataset, method(), verbose = TRUE)</code></pre
 <pre><code>## Executing &#39;comp_1&#39; on &#39;example&#39;
 ## With parameters: list(component = 1L),
 ## inputs: expression, and
-## priors :</code></pre>
-<pre><code>## Loading required namespace: hdf5r</code></pre>
-<pre><code>## Input saved to /tmp/Rtmp6MbIZN/file7cab7f5eb963/ti
+## priors : 
+## Input saved to /tmp/RtmpwQdLKe/file68d26110ae05/ti
 ## Running ./run.R --dataset input.h5 --output output.h5
 ## 
 ## Attaching package: ‘dplyr’
@@ -2006,9 +2006,7 @@ if (&quot;dynplot&quot; %in% rownames(installed.packages())) {
 <div id="interactive-development" class="section level2">
 <h2>Interactive development</h2>
 <p>With the debug parameter, it is possible to enter the script interactively. This makes it easier to develop TI method as you can just load in the input data, and code!</p>
-<pre class="r"><code>trajectory &lt;- infer_trajectory(dataset, method(), debug = TRUE)</code></pre>
-<pre><code>## Error: Error during trajectory inference 
-## ./run.R --dataset input.h5 --output output.h5</code></pre>
+<pre class="r"><code>infer_trajectory(dataset, method(), debug = TRUE)</code></pre>
 </div>
 <div id="making-your-method-available-for-other-users" class="section level2">
 <h2>Making your method available for other users</h2>
@@ -3525,20 +3523,20 @@ if (&quot;dynplot&quot; %in% rownames(installed.packages())) {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1554706873"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1554706873"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1554706873"></script>
-    <script src="../../../js/jquery.sticky.js?1554706873"></script>
-    <script src="../../../js/featherlight.min.js?1554706873"></script>
-    <script src="../../../js/html5shiv-printshiv.min.js?1554706873"></script>
-    <script src="../../../js/highlight.pack.js?1554706873"></script>
+    <script src="../../../js/clipboard.min.js?1554730255"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1554730255"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1554730255"></script>
+    <script src="../../../js/jquery.sticky.js?1554730255"></script>
+    <script src="../../../js/featherlight.min.js?1554730255"></script>
+    <script src="../../../js/html5shiv-printshiv.min.js?1554730255"></script>
+    <script src="../../../js/highlight.pack.js?1554730255"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom.71422.js?1554706873"></script>
-    <script src="../../../js/learn.js?1554706873"></script>
-    <script src="../../../js/hugo-learn.js?1554706873"></script>
+    <script src="../../../js/modernizr.custom.71422.js?1554730255"></script>
+    <script src="../../../js/learn.js?1554730255"></script>
+    <script src="../../../js/hugo-learn.js?1554730255"></script>
 
-    <link href="../../../mermaid/mermaid.css?1554706873" type="text/css" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.js?1554706873"></script>
+    <link href="../../../mermaid/mermaid.css?1554730255" type="text/css" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1554730255"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

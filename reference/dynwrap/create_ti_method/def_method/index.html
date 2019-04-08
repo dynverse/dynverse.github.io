@@ -12,19 +12,19 @@
     <title>Define meta information on the TI method. :: dynverse</title>
 
     
-    <link href="../../../../css/nucleus.css?1554706873" rel="stylesheet">
-    <link href="../../../../css/fontawesome-all.min.css?1554706873" rel="stylesheet">
-    <link href="../../../../css/hybrid.css?1554706873" rel="stylesheet">
-    <link href="../../../../css/featherlight.min.css?1554706873" rel="stylesheet">
-    <link href="../../../../css/perfect-scrollbar.min.css?1554706873" rel="stylesheet">
-    <link href="../../../../css/auto-complete.css?1554706873" rel="stylesheet">
-    <link href="../../../../css/theme.css?1554706873" rel="stylesheet">
-    <link href="../../../../css/hugo-theme.css?1554706873" rel="stylesheet">
+    <link href="../../../../css/nucleus.css?1554730255" rel="stylesheet">
+    <link href="../../../../css/fontawesome-all.min.css?1554730255" rel="stylesheet">
+    <link href="../../../../css/hybrid.css?1554730255" rel="stylesheet">
+    <link href="../../../../css/featherlight.min.css?1554730255" rel="stylesheet">
+    <link href="../../../../css/perfect-scrollbar.min.css?1554730255" rel="stylesheet">
+    <link href="../../../../css/auto-complete.css?1554730255" rel="stylesheet">
+    <link href="../../../../css/theme.css?1554730255" rel="stylesheet">
+    <link href="../../../../css/hugo-theme.css?1554730255" rel="stylesheet">
     
-      <link href="../../../../css/theme-mine.css?1554706873" rel="stylesheet">
+      <link href="../../../../css/theme-mine.css?1554730255" rel="stylesheet">
     
 
-    <script src="../../../../js/jquery-2.x.min.js?1554706873"></script>
+    <script src="../../../../js/jquery-2.x.min.js?1554730255"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1554706873");
-    $.getScript("\/js\/auto-complete.js?1554706873");
-    $.getScript("\/js\/search.js?1554706873");
+    $.getScript("\/js\/lunr.min.js?1554730255");
+    $.getScript("\/js\/auto-complete.js?1554730255");
+    $.getScript("\/js\/search.js?1554730255");
     window.searchLoaded = true
   }
 
@@ -1890,7 +1890,8 @@ $(".searchbox").click(function(){
     </div>
 
     <pre class="usage"><span class='fu'><a href='../../../../reference/dynwrap/create_ti_method/def_method'>def_method</a></span>(<span class='no'>id</span>, <span class='kw'>name</span> <span class='kw'>=</span> <span class='no'>id</span>, <span class='kw'>source</span> <span class='kw'>=</span> <span class='st'>"tool"</span>, <span class='kw'>tool_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>platform</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>url</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>license</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>authors</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>())</pre>
+  <span class='kw'>platform</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>url</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>license</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>authors</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(),
+  <span class='kw'>description</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -1932,6 +1933,10 @@ $(".searchbox").click(function(){
       <th>authors</th>
       <td><p>A list of authors (see example).</p></td>
     </tr>
+    <tr>
+      <th>description</th>
+      <td><p>Additional information on the method</p></td>
+    </tr>
     </table>
     
 
@@ -1952,7 +1957,8 @@ $(".searchbox").click(function(){
       <span class='kw'>github</span> <span class='kw'>=</span> <span class='st'>"bobdylan"</span>,
       <span class='kw'>orcid</span> <span class='kw'>=</span> <span class='st'>"0000-0003-1234-5678"</span>
     )
-  )
+  ),
+  <span class='kw'>description</span> <span class='kw'>=</span> <span class='st'>"I love trajectories!!"</span>
 )</div><div class='output co'>#&gt; $id
 #&gt; [1] "some_method"
 #&gt; 
@@ -1992,6 +1998,9 @@ $(".searchbox").click(function(){
 #&gt; [1] "0000-0003-1234-5678"
 #&gt; 
 #&gt; 
+#&gt; 
+#&gt; $description
+#&gt; [1] "I love trajectories!!"
 #&gt; </div></pre>
 </div>
 <!--  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -3504,20 +3513,20 @@ $(".searchbox").click(function(){
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../../js/clipboard.min.js?1554706873"></script>
-    <script src="../../../../js/perfect-scrollbar.min.js?1554706873"></script>
-    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1554706873"></script>
-    <script src="../../../../js/jquery.sticky.js?1554706873"></script>
-    <script src="../../../../js/featherlight.min.js?1554706873"></script>
-    <script src="../../../../js/html5shiv-printshiv.min.js?1554706873"></script>
-    <script src="../../../../js/highlight.pack.js?1554706873"></script>
+    <script src="../../../../js/clipboard.min.js?1554730255"></script>
+    <script src="../../../../js/perfect-scrollbar.min.js?1554730255"></script>
+    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1554730255"></script>
+    <script src="../../../../js/jquery.sticky.js?1554730255"></script>
+    <script src="../../../../js/featherlight.min.js?1554730255"></script>
+    <script src="../../../../js/html5shiv-printshiv.min.js?1554730255"></script>
+    <script src="../../../../js/highlight.pack.js?1554730255"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../../js/modernizr.custom.71422.js?1554706873"></script>
-    <script src="../../../../js/learn.js?1554706873"></script>
-    <script src="../../../../js/hugo-learn.js?1554706873"></script>
+    <script src="../../../../js/modernizr.custom.71422.js?1554730255"></script>
+    <script src="../../../../js/learn.js?1554730255"></script>
+    <script src="../../../../js/hugo-learn.js?1554730255"></script>
 
-    <link href="../../../../mermaid/mermaid.css?1554706873" type="text/css" rel="stylesheet" />
-    <script src="../../../../mermaid/mermaid.js?1554706873"></script>
+    <link href="../../../../mermaid/mermaid.css?1554730255" type="text/css" rel="stylesheet" />
+    <script src="../../../../mermaid/mermaid.js?1554730255"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

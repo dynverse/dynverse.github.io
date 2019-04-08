@@ -98,7 +98,7 @@
       
       <guid>/reference/dynwrap/create_ti_method/def_method/</guid>
       <description>Source: R/method_process_definition.R def_method.Rd  Define meta information on the TI method.
- def_method(id, name = id, source = &#34;tool&#34;, tool_id = NULL, platform = NULL, url = NULL, license = NULL, authors = list()) Arguments   id An id by which to identify a method. Should only contain lowercase letters or underscores.
+ def_method(id, name = id, source = &#34;tool&#34;, tool_id = NULL, platform = NULL, url = NULL, license = NULL, authors = list(), description = NULL) Arguments   id An id by which to identify a method. Should only contain lowercase letters or underscores.
    name The name of the method.
    source The type of TI method.</description>
     </item>

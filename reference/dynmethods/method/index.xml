@@ -312,10 +312,9 @@ This method was wrapped inside a container. The original code of this method is 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/reference/dynmethods/method/ti_paga_tree/</guid>
-      <description>ti_paga_tree.Rd  Will generate a trajectory using PAGA Tree.
+      <description>ti_paga_tree.Rd  Will generate a trajectory using PAGA Tree. This method runs exactly the same as normal PAGA, but will construct a minimal-spanning tree between clusters
 This method was wrapped inside a container. The original code of this method is available here.
- ti_paga_tree(n_neighbors = 15L, n_comps = 50L, n_dcs = 15L, resolution = 1L, embedding_type = &#34;fa&#34;) Arguments   n_neighbors Number of neighbours for knn. Domain: U(1, 100). Default: 15. Format: integer.
-   n_comps Number of principal components. Domain: U(0, 100). Default: 50.</description>
+ ti_paga_tree(n_neighbors = 15L, n_comps = 50L, n_dcs = 15L, resolution = 1L, embedding_type = &#34;fa&#34;) Arguments   n_neighbors Number of neighbours for knn. Domain: U(1, 100).</description>
     </item>
     
     <item>

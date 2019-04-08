@@ -12,19 +12,19 @@
     <title>Constructs a trajectory using a cell grouping and a network between groups. Will use an existing grouping if it is present in the dataset. :: dynverse</title>
 
     
-    <link href="../../../../css/nucleus.css?1554706873" rel="stylesheet">
-    <link href="../../../../css/fontawesome-all.min.css?1554706873" rel="stylesheet">
-    <link href="../../../../css/hybrid.css?1554706873" rel="stylesheet">
-    <link href="../../../../css/featherlight.min.css?1554706873" rel="stylesheet">
-    <link href="../../../../css/perfect-scrollbar.min.css?1554706873" rel="stylesheet">
-    <link href="../../../../css/auto-complete.css?1554706873" rel="stylesheet">
-    <link href="../../../../css/theme.css?1554706873" rel="stylesheet">
-    <link href="../../../../css/hugo-theme.css?1554706873" rel="stylesheet">
+    <link href="../../../../css/nucleus.css?1554730255" rel="stylesheet">
+    <link href="../../../../css/fontawesome-all.min.css?1554730255" rel="stylesheet">
+    <link href="../../../../css/hybrid.css?1554730255" rel="stylesheet">
+    <link href="../../../../css/featherlight.min.css?1554730255" rel="stylesheet">
+    <link href="../../../../css/perfect-scrollbar.min.css?1554730255" rel="stylesheet">
+    <link href="../../../../css/auto-complete.css?1554730255" rel="stylesheet">
+    <link href="../../../../css/theme.css?1554730255" rel="stylesheet">
+    <link href="../../../../css/hugo-theme.css?1554730255" rel="stylesheet">
     
-      <link href="../../../../css/theme-mine.css?1554706873" rel="stylesheet">
+      <link href="../../../../css/theme-mine.css?1554730255" rel="stylesheet">
     
 
-    <script src="../../../../js/jquery-2.x.min.js?1554706873"></script>
+    <script src="../../../../js/jquery-2.x.min.js?1554730255"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1554706873");
-    $.getScript("\/js\/auto-complete.js?1554706873");
-    $.getScript("\/js\/search.js?1554706873");
+    $.getScript("\/js\/lunr.min.js?1554730255");
+    $.getScript("\/js\/auto-complete.js?1554730255");
+    $.getScript("\/js\/search.js?1554730255");
     window.searchLoaded = true
   }
 
@@ -1938,7 +1938,7 @@ $(".searchbox").click(function(){
 #&gt; </span><span style='color: #BCBCBC;'>1</span><span> A     B     TRUE          1
 #&gt; </span><span style='color: #BCBCBC;'>2</span><span> B     C     TRUE          1
 #&gt; </span><span style='color: #BCBCBC;'>3</span><span> B     D     TRUE          1</div><div class='input'><span class='no'>grouping</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/sample.html'>sample</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"A"</span>, <span class='st'>"B"</span>, <span class='st'>"C"</span>, <span class='st'>"D"</span>), <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/length'>length</a></span>(<span class='no'>dataset</span>$<span class='no'>cell_ids</span>), <span class='kw'>replace</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
-<span class='no'>grouping</span></div><div class='output co'>#&gt;  [1] "D" "A" "B" "D" "B" "A" "A" "D" "A" "D" "C" "A" "A" "D" "B" "B" "B" "D" "C" "D" "C" "A" "C" "B" "C" "D"</div><div class='input'><span class='no'>trajectory</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='../../../../reference/dynwrap/create_trajectory/add_cluster_graph'>add_cluster_graph</a></span>(<span class='no'>dataset</span>, <span class='no'>milestone_network</span>, <span class='no'>grouping</span>)
+<span class='no'>grouping</span></div><div class='output co'>#&gt;  [1] "B" "D" "B" "A" "A" "B" "A" "D" "C" "B" "A" "C" "D" "A" "A" "D" "A" "A" "D" "B" "B" "A" "B" "C" "C" "B"</div><div class='input'><span class='no'>trajectory</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='../../../../reference/dynwrap/create_trajectory/add_cluster_graph'>add_cluster_graph</a></span>(<span class='no'>dataset</span>, <span class='no'>milestone_network</span>, <span class='no'>grouping</span>)
 
 <span class='co'># for plotting the result, install dynplot</span>
 <span class='kw pkg'>dynplot</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/dynplot/topics/plot_graph'>plot_graph</a></span>(<span class='no'>trajectory</span>)</div><div class='output co'>#&gt; <span class='message'>Coloring by milestone</span></div><div class='output co'>#&gt; <span class='message'>Using milestone_percentages from trajectory</span></div><div class='img'><img src='../../../../images/examples/add_cluster_graph-1.png' alt='static/images/examples/add_cluster_graph-1' width='700' height='433' /></div></span></pre>
@@ -3452,20 +3452,20 @@ $(".searchbox").click(function(){
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../../js/clipboard.min.js?1554706873"></script>
-    <script src="../../../../js/perfect-scrollbar.min.js?1554706873"></script>
-    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1554706873"></script>
-    <script src="../../../../js/jquery.sticky.js?1554706873"></script>
-    <script src="../../../../js/featherlight.min.js?1554706873"></script>
-    <script src="../../../../js/html5shiv-printshiv.min.js?1554706873"></script>
-    <script src="../../../../js/highlight.pack.js?1554706873"></script>
+    <script src="../../../../js/clipboard.min.js?1554730255"></script>
+    <script src="../../../../js/perfect-scrollbar.min.js?1554730255"></script>
+    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1554730255"></script>
+    <script src="../../../../js/jquery.sticky.js?1554730255"></script>
+    <script src="../../../../js/featherlight.min.js?1554730255"></script>
+    <script src="../../../../js/html5shiv-printshiv.min.js?1554730255"></script>
+    <script src="../../../../js/highlight.pack.js?1554730255"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../../js/modernizr.custom.71422.js?1554706873"></script>
-    <script src="../../../../js/learn.js?1554706873"></script>
-    <script src="../../../../js/hugo-learn.js?1554706873"></script>
+    <script src="../../../../js/modernizr.custom.71422.js?1554730255"></script>
+    <script src="../../../../js/learn.js?1554730255"></script>
+    <script src="../../../../js/hugo-learn.js?1554730255"></script>
 
-    <link href="../../../../mermaid/mermaid.css?1554706873" type="text/css" rel="stylesheet" />
-    <script src="../../../../mermaid/mermaid.js?1554706873"></script>
+    <link href="../../../../mermaid/mermaid.css?1554730255" type="text/css" rel="stylesheet" />
+    <script src="../../../../mermaid/mermaid.js?1554730255"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

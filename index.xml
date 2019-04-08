@@ -6,7 +6,7 @@
     <description>Recent content on dynverse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Creating a trajectory</title>
       <link>/developers/creating-ti-method/create_ti_method_wrappers/</link>
-      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/developers/creating-ti-method/create_ti_method_wrappers/</guid>
       <description>Common trajectory model dynwrap always represents trajectories in the same way, as illustrated here with a tree trajectory
@@ -45,7 +45,7 @@ Gene expression data As input, dynwrap requires raw counts and normalised (log2)
     <item>
       <title>Wrapping in R</title>
       <link>/developers/creating-ti-method/create_ti_method_r/</link>
-      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/developers/creating-ti-method/create_ti_method_r/</guid>
       <description>library(dynwrap) This vignette describes how to include your own method into the dynverse workflow. We’ll illustrate this with a very basic method: using one of the components of a PCA as the pseudotime.
@@ -75,11 +75,11 @@ Definition The definition contains information on the method, its parameters and
     <item>
       <title>Wrapper script</title>
       <link>/developers/creating-ti-method/create_ti_method_script/</link>
-      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/developers/creating-ti-method/create_ti_method_script/</guid>
-      <description>library(dynwrap) An alternative to wrapping a script inside R, is to wrap it using an external script. Because this does not provide any dependency management, this is not really useful for method end-users, but rather as a way to easily develop a TI method and to ultimately step up towards containerised wrapping.
-Similarly as a wrapper written in R, you’ll need to provide both a definition (= a definition.yml) and a way to run the methods (= a script).</description>
+      <description>library(dynwrap) library(dyncli) An alternative to wrapping a script inside R, is to wrap it using an external script. Because this does not provide any dependency management, this is not really useful for method end-users, but rather as a way to easily develop a TI method and to ultimately step up towards containerised wrapping.
+Similarly as a wrapper written in R, you’ll need to provide both a definition (= a definition.</description>
     </item>
     
     <item>
@@ -89,13 +89,13 @@ Similarly as a wrapper written in R, you’ll need to provide both a definition 
       
       <guid>/users/3-user-guide/3-running/</guid>
       <description>Parameters Priors Reproducibility Running multiple methods or datasets Errors Running from the command line   library(dyno) library(tidyverse) dynwrap::infer_trajectory is the main function to infer a trajectory. It requires two things:
- A dataset, wrapped using dynwrap::wrap_expression A TI method. This can be one of the 59 TI method from dynmethods, or a name of a method in which case it will retrieve the relevant method from dynmethods.  dataset &amp;lt;- wrap_expression( counts = example_dataset$counts, expression = example_dataset$expression ) model &amp;lt;- infer_trajectory(dataset, ti_comp1()) ## Loading required namespace: hdf5r This model now contains the main information on the trajectory, i.</description>
+ A dataset, wrapped using dynwrap::wrap_expression A TI method. This can be one of the 59 TI method from dynmethods, or a name of a method in which case it will retrieve the relevant method from dynmethods.  dataset &amp;lt;- wrap_expression( counts = example_dataset$counts, expression = example_dataset$expression ) model &amp;lt;- infer_trajectory(dataset, ti_comp1()) ## Loading required namespace: hdf5r ## v0.</description>
     </item>
     
     <item>
       <title>Containerised wrapping</title>
       <link>/developers/creating-ti-method/create_ti_method_container/</link>
-      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/developers/creating-ti-method/create_ti_method_container/</guid>
       <description>library(dynwrap) library(dplyr) Once you have wrapped a method using a script and definition, all you need to share your method is a Dockerfile which lists all the dependencies that need to be installed.
@@ -835,7 +835,7 @@ This method was wrapped inside a container. The original code of this method is 
       
       <guid>/reference/dynwrap/create_ti_method/def_method/</guid>
       <description>Source: R/method_process_definition.R def_method.Rd  Define meta information on the TI method.
- def_method(id, name = id, source = &#34;tool&#34;, tool_id = NULL, platform = NULL, url = NULL, license = NULL, authors = list()) Arguments   id An id by which to identify a method. Should only contain lowercase letters or underscores.
+ def_method(id, name = id, source = &#34;tool&#34;, tool_id = NULL, platform = NULL, url = NULL, license = NULL, authors = list(), description = NULL) Arguments   id An id by which to identify a method. Should only contain lowercase letters or underscores.
    name The name of the method.
    source The type of TI method.</description>
     </item>
@@ -1276,7 +1276,7 @@ This method was wrapped inside a container.
       
       <guid>/reference/dynmethods/other/methods/</guid>
       <description> methods.Rd  Metadata on the different TI methods
- methods Format An object of class tbl_df (inherits from tbl, data.frame) with 59 rows and 22 columns.
+ methods Format An object of class tbl_df (inherits from tbl, data.frame) with 59 rows and 23 columns.
  Contents Format  -- </description>
     </item>
     
@@ -1366,10 +1366,9 @@ This method was wrapped inside a container. The original code of this method is 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/reference/dynmethods/method/ti_paga_tree/</guid>
-      <description>ti_paga_tree.Rd  Will generate a trajectory using PAGA Tree.
+      <description>ti_paga_tree.Rd  Will generate a trajectory using PAGA Tree. This method runs exactly the same as normal PAGA, but will construct a minimal-spanning tree between clusters
 This method was wrapped inside a container. The original code of this method is available here.
- ti_paga_tree(n_neighbors = 15L, n_comps = 50L, n_dcs = 15L, resolution = 1L, embedding_type = &#34;fa&#34;) Arguments   n_neighbors Number of neighbours for knn. Domain: U(1, 100). Default: 15. Format: integer.
-   n_comps Number of principal components. Domain: U(0, 100). Default: 50.</description>
+ ti_paga_tree(n_neighbors = 15L, n_comps = 50L, n_dcs = 15L, resolution = 1L, embedding_type = &#34;fa&#34;) Arguments   n_neighbors Number of neighbours for knn. Domain: U(1, 100).</description>
     </item>
     
     <item>
@@ -1499,7 +1498,7 @@ This method was wrapped inside a container. The original code of this method is 
    color_milestones How to color the cells
    milestones Tibble containing the `milestone_id` and a `color` for each milestone
    layout The type of layout to create.
-   Examples data(example_disconnected) plot_topology(example_disconnected)#&amp;gt; root cell or milestone not provided, trying first outgoing milestone_id#&amp;gt; Using &#39;T1_M4&#39; as root#&amp;gt; Error in if ((w[1] * sm + w[2] * cm + w[3] * dm + w[4]) &amp;lt; best$score) break: missing value where TRUE/FALSE neededdata(example_tree) plot_topology(example_tree)#&amp;gt; root cell or milestone not provided, trying first outgoing milestone_id#&amp;gt; Using &#39;M1&#39; as root  Contents Arguments Examples  -- </description>
+   Examples data(example_disconnected) plot_topology(example_disconnected)#&amp;gt; root cell or milestone not provided, trying first outgoing milestone_id#&amp;gt; Using &#39;T1_M4&#39; as rootdata(example_tree) plot_topology(example_tree)#&amp;gt; root cell or milestone not provided, trying first outgoing milestone_id#&amp;gt; Using &#39;M1&#39; as root  Contents Arguments Examples  -- </description>
     </item>
     
     <item>

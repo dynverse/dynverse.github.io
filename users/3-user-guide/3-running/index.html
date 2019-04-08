@@ -12,19 +12,19 @@
     <title>Inferring trajectories :: dynverse</title>
 
     
-    <link href="../../../css/nucleus.css?1554706873" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1554706873" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1554706873" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1554706873" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1554706873" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1554706873" rel="stylesheet">
-    <link href="../../../css/theme.css?1554706873" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1554706873" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1554730255" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1554730255" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1554730255" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1554730255" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1554730255" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1554730255" rel="stylesheet">
+    <link href="../../../css/theme.css?1554730255" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1554730255" rel="stylesheet">
     
-      <link href="../../../css/theme-mine.css?1554706873" rel="stylesheet">
+      <link href="../../../css/theme-mine.css?1554730255" rel="stylesheet">
     
 
-    <script src="../../../js/jquery-2.x.min.js?1554706873"></script>
+    <script src="../../../js/jquery-2.x.min.js?1554730255"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1554706873");
-    $.getScript("\/js\/auto-complete.js?1554706873");
-    $.getScript("\/js\/search.js?1554706873");
+    $.getScript("\/js\/lunr.min.js?1554730255");
+    $.getScript("\/js\/auto-complete.js?1554730255");
+    $.getScript("\/js\/search.js?1554730255");
     window.searchLoaded = true
   }
 
@@ -1895,7 +1895,24 @@ library(tidyverse)</code></pre>
   expression = example_dataset$expression
 )
 model &lt;- infer_trajectory(dataset, ti_comp1())
-## Loading required namespace: hdf5r</code></pre>
+## Loading required namespace: hdf5r
+## v0.9.9.01: Pulling from dynverse/ti_comp1
+## ab1fc7e4bf91: Already exists
+## 66575050199c: Already exists
+## 4d6ccd149fc3: Already exists
+## d588c72fe3f7: Already exists
+## c4efdd5f451e: Already exists
+## 834a41c4efa6: Already exists
+## 82fa28fdbeb3: Already exists
+## 56ea130ed2eb: Already exists
+## 2e86a9cb3474: Already exists
+## 9d4cd5ae4e44: Already exists
+## 9f9ce4eb1560: Already exists
+## a475221e8f73: Pulling fs layer
+## a475221e8f73: Download complete
+## a475221e8f73: Pull complete
+## Digest: sha256:9a110f64a74a601ee4c53fb662ef86b87ee6f461a54f4702ddbab3c289b9133b
+## Status: Downloaded newer image for dynverse/ti_comp1:v0.9.9.01</code></pre>
 <p>This model now contains the main information on the trajectory, i.e. the <code>milestone_network</code> and <code>progressions</code>:</p>
 <pre class="r"><code>model$milestone_network
 ##              from            to length directed
@@ -2049,18 +2066,36 @@ model &lt;- dynwrap::infer_trajectory(dataset, ti_comp1())</code></pre>
 </div>
 <div id="running-multiple-methods-or-datasets" class="section level2">
 <h2>Running multiple methods or datasets</h2>
-<p>Often it is useful to run multiple methods and/or use multiple datasets. While you easily parallelise this yourself, we provide a helper function for this: <code>dynwrap::infer_trajectories()</code>. This function integrates well with future interpretation and plotting functions.</p>
+<p>Often it is useful to run multiple methods and/or use multiple datasets. While you can easily parallelise this yourself, we provide a helper function for this: <code>dynwrap::infer_trajectories()</code>. This function integrates well with future interpretation and plotting functions.</p>
 <pre class="r"><code>models &lt;- dynwrap::infer_trajectories(
   dataset, 
   method = list(ti_comp1(), ti_angle())
-)</code></pre>
+)
+## v0.9.9.01: Pulling from dynverse/ti_angle
+## ab1fc7e4bf91: Already exists
+## 66575050199c: Already exists
+## 4d6ccd149fc3: Already exists
+## d588c72fe3f7: Already exists
+## c4efdd5f451e: Already exists
+## 834a41c4efa6: Already exists
+## 82fa28fdbeb3: Already exists
+## 56ea130ed2eb: Already exists
+## 2e86a9cb3474: Already exists
+## 9d4cd5ae4e44: Already exists
+## 9f9ce4eb1560: Already exists
+## 55663195879f: Pulling fs layer
+## 55663195879f: Verifying Checksum
+## 55663195879f: Download complete
+## 55663195879f: Pull complete
+## Digest: sha256:72dbdd45f7febf6f21e7b63cb3e5c9da43cf13788987242846530d0be3e9ae74
+## Status: Downloaded newer image for dynverse/ti_angle:v0.9.9.01</code></pre>
 <p>This function generates a data frame containing the different models and extra information.</p>
 <pre class="r"><code>models
 ## # A tibble: 2 x 7
 ##   dataset_ix method_ix dataset_id    method_id method_name model    summary
 ##        &lt;int&gt;     &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;     &lt;chr&gt;       &lt;list&gt;   &lt;list&gt; 
-## 1          1         1 20190408_090… comp1     Component 1 &lt;S3: dy… &lt;tibbl…
-## 2          1         2 20190408_090… angle     Angle       &lt;S3: dy… &lt;tibbl…</code></pre>
+## 1          1         1 20190408_153… comp1     Component 1 &lt;S3: dy… &lt;tibbl…
+## 2          1         2 20190408_153… angle     Angle       &lt;S3: dy… &lt;tibbl…</code></pre>
 </div>
 <div id="errors" class="section level2">
 <h2>Errors</h2>
@@ -2072,15 +2107,16 @@ model &lt;- dynwrap::infer_trajectory(dataset, ti_comp1(), give_priors = c(&quot
 ## Error in svd(x, nu = 0, nv = k) : infinite or missing values in &#39;x&#39;
 ## Calls: &lt;Anonymous&gt; ... &lt;Anonymous&gt; -&gt; &lt;Anonymous&gt; -&gt; prcomp.default -&gt; svd
 ## Execution halted
-## Executing &#39;comp1&#39; on &#39;20190408_090023__data_wrapper__39IOoehtLL&#39;
+## Executing &#39;comp1&#39; on &#39;20190408_153001__data_wrapper__8COZMe00e5&#39;
 ## With parameters: list(dimred = &quot;pca&quot;, ndim = 2L, component = 1L),
 ## inputs: expression, and
 ## priors : 
-## Input saved to /tmp/RtmpZRsk90/file72d15c93b76e/ti
-## Running method using babelwhaleRunning /usr/bin/docker run -e &#39;TMPDIR=/tmp2&#39; --workdir /ti/workspace -v \
-##   &#39;/tmp/RtmpZRsk90/file72d15c93b76e/ti:/ti&#39; -v \
-##   &#39;/tmp/RtmpZRsk90/file72d13f46ede3/tmp:/tmp2&#39; \
-##   &#39;dynverse/ti_comp1:v0.9.9&#39; --dataset /ti/input.h5 --output \
+## Input saved to /tmp/RtmpOGANWz/file69506af1bd66/ti
+## Running method using babelwhale
+## Running /usr/bin/docker run -e &#39;TMPDIR=/tmp2&#39; --workdir /ti/workspace -v \
+##   &#39;/tmp/RtmpOGANWz/file69506af1bd66/ti:/ti&#39; -v \
+##   &#39;/tmp/RtmpOGANWz/file69505837a774/tmp:/tmp2&#39; \
+##   &#39;dynverse/ti_comp1:v0.9.9.01&#39; --dataset /ti/input.h5 --output \
 ##   /ti/output.h5
 ## Loading required package: dynutils
 ## Error in svd(x, nu = 0, nv = k) : infinite or missing values in &#39;x&#39;
@@ -3636,20 +3672,20 @@ model &lt;- dynwrap::infer_trajectory(dataset, ti_comp1(), give_priors = c(&quot
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1554706873"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1554706873"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1554706873"></script>
-    <script src="../../../js/jquery.sticky.js?1554706873"></script>
-    <script src="../../../js/featherlight.min.js?1554706873"></script>
-    <script src="../../../js/html5shiv-printshiv.min.js?1554706873"></script>
-    <script src="../../../js/highlight.pack.js?1554706873"></script>
+    <script src="../../../js/clipboard.min.js?1554730255"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1554730255"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1554730255"></script>
+    <script src="../../../js/jquery.sticky.js?1554730255"></script>
+    <script src="../../../js/featherlight.min.js?1554730255"></script>
+    <script src="../../../js/html5shiv-printshiv.min.js?1554730255"></script>
+    <script src="../../../js/highlight.pack.js?1554730255"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom.71422.js?1554706873"></script>
-    <script src="../../../js/learn.js?1554706873"></script>
-    <script src="../../../js/hugo-learn.js?1554706873"></script>
+    <script src="../../../js/modernizr.custom.71422.js?1554730255"></script>
+    <script src="../../../js/learn.js?1554730255"></script>
+    <script src="../../../js/hugo-learn.js?1554730255"></script>
 
-    <link href="../../../mermaid/mermaid.css?1554706873" type="text/css" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.js?1554706873"></script>
+    <link href="../../../mermaid/mermaid.css?1554730255" type="text/css" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1554730255"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

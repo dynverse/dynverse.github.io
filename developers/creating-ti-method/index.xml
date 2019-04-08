@@ -6,7 +6,7 @@
     <description>Recent content in Creating a TI method on dynverse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/developers/creating-ti-method/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Creating a trajectory</title>
       <link>/developers/creating-ti-method/create_ti_method_wrappers/</link>
-      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/developers/creating-ti-method/create_ti_method_wrappers/</guid>
       <description>Common trajectory model dynwrap always represents trajectories in the same way, as illustrated here with a tree trajectory
@@ -24,7 +24,7 @@
     <item>
       <title>Wrapping in R</title>
       <link>/developers/creating-ti-method/create_ti_method_r/</link>
-      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/developers/creating-ti-method/create_ti_method_r/</guid>
       <description>library(dynwrap) This vignette describes how to include your own method into the dynverse workflow. We’ll illustrate this with a very basic method: using one of the components of a PCA as the pseudotime.
@@ -35,17 +35,17 @@ Definition The definition contains information on the method, its parameters and
     <item>
       <title>Wrapper script</title>
       <link>/developers/creating-ti-method/create_ti_method_script/</link>
-      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/developers/creating-ti-method/create_ti_method_script/</guid>
-      <description>library(dynwrap) An alternative to wrapping a script inside R, is to wrap it using an external script. Because this does not provide any dependency management, this is not really useful for method end-users, but rather as a way to easily develop a TI method and to ultimately step up towards containerised wrapping.
-Similarly as a wrapper written in R, you’ll need to provide both a definition (= a definition.yml) and a way to run the methods (= a script).</description>
+      <description>library(dynwrap) library(dyncli) An alternative to wrapping a script inside R, is to wrap it using an external script. Because this does not provide any dependency management, this is not really useful for method end-users, but rather as a way to easily develop a TI method and to ultimately step up towards containerised wrapping.
+Similarly as a wrapper written in R, you’ll need to provide both a definition (= a definition.</description>
     </item>
     
     <item>
       <title>Containerised wrapping</title>
       <link>/developers/creating-ti-method/create_ti_method_container/</link>
-      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/developers/creating-ti-method/create_ti_method_container/</guid>
       <description>library(dynwrap) library(dplyr) Once you have wrapped a method using a script and definition, all you need to share your method is a Dockerfile which lists all the dependencies that need to be installed.

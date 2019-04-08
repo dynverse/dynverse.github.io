@@ -12,19 +12,19 @@
     <title>Containerised wrapping :: dynverse</title>
 
     
-    <link href="../../../css/nucleus.css?1554706873" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1554706873" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1554706873" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1554706873" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1554706873" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1554706873" rel="stylesheet">
-    <link href="../../../css/theme.css?1554706873" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1554706873" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1554730255" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1554730255" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1554730255" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1554730255" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1554730255" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1554730255" rel="stylesheet">
+    <link href="../../../css/theme.css?1554730255" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1554730255" rel="stylesheet">
     
-      <link href="../../../css/theme-mine.css?1554706873" rel="stylesheet">
+      <link href="../../../css/theme-mine.css?1554730255" rel="stylesheet">
     
 
-    <script src="../../../js/jquery-2.x.min.js?1554706873"></script>
+    <script src="../../../js/jquery-2.x.min.js?1554730255"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -80,9 +80,9 @@
 <script text="text/javascript">
 $(".searchbox").click(function(){
   if (!searchLoaded) {
-    $.getScript("\/js\/lunr.min.js?1554706873");
-    $.getScript("\/js\/auto-complete.js?1554706873");
-    $.getScript("\/js\/search.js?1554706873");
+    $.getScript("\/js\/lunr.min.js?1554730255");
+    $.getScript("\/js\/auto-complete.js?1554730255");
+    $.getScript("\/js\/search.js?1554730255");
     window.searchLoaded = true
   }
 
@@ -1937,7 +1937,7 @@ COPY definition.yml run.py /code/
 ENTRYPOINT [&quot;/code/run.py&quot;]</code></pre>
 <p><code>dynverse/dynwrappy</code> is here the base image, which contains the latest version of R, python, dynwrap, dyncli and most tidyverse dependencies. For R methods, you can use the <code>dynverse/dynwrapr</code> base. While not required, it’s recommended to start from these base images, because dyncli provides an interface to run each method using the docker container from the command line. <a href="../create_ti_method_script">As discussed before</a>, wrapping is also a lot easier using dynwrap.</p>
 <div class="notices tip">
-<p>For reproducibility, it’s best to specify the tag base image. You can find this these tags on dockerhub: <a href="https://hub.docker.com/r/dynverse/dynwrapr/tags" class="uri">https://hub.docker.com/r/dynverse/dynwrapr/tags</a>.</p>
+<p>For reproducibility, it’s best to specify the tag of the base image. You can find this these tags on dockerhub: <a href="https://hub.docker.com/r/dynverse/dynwrapr/tags" class="uri">https://hub.docker.com/r/dynverse/dynwrapr/tags</a>.</p>
 </div>
 <p>The <em>Dockerfile</em> then copies over the <em>definition.yml</em> and <em>run.py</em> file inside the “code” directory. Typically, you won’t change the locations of these files, simply to maintain consistency with the rest of the method wrappers included in dynmethods.</p>
 <p>Finally, we specify the entrypoint, which is the script that will be executed when the docker is run.</p>
@@ -1950,14 +1950,14 @@ ENTRYPOINT [&quot;/code/run.py&quot;]</code></pre>
 
 
 ## Step 1/3 : FROM dynverse/dynwrappy:v0.1.0
-##  ---&gt; 5b58b73b3dc4
+##  ---&gt; c97bc2021452
 ## Step 2/3 : COPY definition.yml run.py /code/
-##  ---&gt; Using cache
-##  ---&gt; c9fe0eb25e8a
+##  ---&gt; f896e0f64d87
 ## Step 3/3 : ENTRYPOINT [&quot;/code/run.py&quot;]
-##  ---&gt; Using cache
-##  ---&gt; 8815444104f4
-## Successfully built 8815444104f4
+##  ---&gt; Running in 12f2e4570ee9
+## Removing intermediate container 12f2e4570ee9
+##  ---&gt; 1ddb71c55bbf
+## Successfully built 1ddb71c55bbf
 ## Successfully tagged my_ti_method:latest</code></pre>
 <div id="testing-it-out" class="section level2">
 <h2>Testing it out</h2>
@@ -1970,11 +1970,14 @@ trajectory &lt;- infer_trajectory(dataset, method(), verbose = TRUE)</code></pre
 ## inputs: expression, and
 ## priors :</code></pre>
 <pre><code>## Loading required namespace: hdf5r</code></pre>
-<pre><code>## Input saved to /tmp/RtmpAyJlHt/file21fa309f1600/ti
+<pre><code>## Input saved to /tmp/RtmpOZDumn/file57646669dc04/ti
+## Running method using babelwhale
 ## Running /usr/bin/docker run -e &#39;TMPDIR=/tmp2&#39; --workdir /ti/workspace -v \
-##   &#39;/tmp/RtmpAyJlHt/file21fa309f1600/ti:/ti&#39; -v \
-##   &#39;/tmp/RtmpAyJlHt/file21fac238d45/tmp:/tmp2&#39; my_ti_method --dataset \
-##   /ti/input.h5 --output /ti/output.h5</code></pre>
+##   &#39;/tmp/RtmpOZDumn/file57646669dc04/ti:/ti&#39; -v \
+##   &#39;/tmp/RtmpOZDumn/file57644fe30169/tmp:/tmp2&#39; my_ti_method --dataset \
+##   /ti/input.h5 --output /ti/output.h5
+## Output saved to /tmp/RtmpOZDumn/file57646669dc04/ti/output.h5
+## Attempting to read in output with hdf5</code></pre>
 <pre class="r"><code># install dynplot to plot the output
 if (&quot;dynplot&quot; %in% rownames(installed.packages())) {
   dynplot::plot_dimred(trajectory, color_cells = &quot;pseudotime&quot; , expression_source = as.matrix(dataset$expression))
@@ -3517,20 +3520,20 @@ trajectory &lt;- infer_trajectory(dataset, method())</code></pre>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1554706873"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1554706873"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1554706873"></script>
-    <script src="../../../js/jquery.sticky.js?1554706873"></script>
-    <script src="../../../js/featherlight.min.js?1554706873"></script>
-    <script src="../../../js/html5shiv-printshiv.min.js?1554706873"></script>
-    <script src="../../../js/highlight.pack.js?1554706873"></script>
+    <script src="../../../js/clipboard.min.js?1554730255"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1554730255"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1554730255"></script>
+    <script src="../../../js/jquery.sticky.js?1554730255"></script>
+    <script src="../../../js/featherlight.min.js?1554730255"></script>
+    <script src="../../../js/html5shiv-printshiv.min.js?1554730255"></script>
+    <script src="../../../js/highlight.pack.js?1554730255"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom.71422.js?1554706873"></script>
-    <script src="../../../js/learn.js?1554706873"></script>
-    <script src="../../../js/hugo-learn.js?1554706873"></script>
+    <script src="../../../js/modernizr.custom.71422.js?1554730255"></script>
+    <script src="../../../js/learn.js?1554730255"></script>
+    <script src="../../../js/hugo-learn.js?1554730255"></script>
 
-    <link href="../../../mermaid/mermaid.css?1554706873" type="text/css" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.js?1554706873"></script>
+    <link href="../../../mermaid/mermaid.css?1554730255" type="text/css" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1554730255"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
