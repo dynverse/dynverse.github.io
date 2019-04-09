@@ -37,7 +37,7 @@ Gene expression data As input, dynwrap requires raw counts and normalised (log2)
       
       <guid>/users/3-user-guide/3-running/</guid>
       <description>Parameters Priors Reproducibility Running multiple methods or datasets Errors Running from the command line   library(dyno) library(tidyverse) dynwrap::infer_trajectory is the main function to infer a trajectory. It requires two things:
- A dataset, wrapped using dynwrap::wrap_expression A TI method. This can be one of the 59 TI method from dynmethods, or a name of a method in which case it will retrieve the relevant method from dynmethods.  dataset &amp;lt;- wrap_expression( counts = example_dataset$counts, expression = example_dataset$expression ) model &amp;lt;- infer_trajectory(dataset, ti_comp1()) ## Loading required namespace: hdf5r ## v0.</description>
+ A dataset, wrapped using dynwrap::wrap_expression A TI method. This can be one of the 59 TI method from dynmethods, or a name of a method in which case it will retrieve the relevant method from dynmethods.  dataset &amp;lt;- wrap_expression( counts = example_dataset$counts, expression = example_dataset$expression ) model &amp;lt;- infer_trajectory(dataset, ti_comp1()) ## Loading required namespace: hdf5r This model now contains the main information on the trajectory, i.</description>
     </item>
     
     <item>

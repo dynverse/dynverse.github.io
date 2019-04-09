@@ -24,7 +24,7 @@
     <item>
       <title>Wrapping in R</title>
       <link>/developers/creating-ti-method/create_ti_method_r/</link>
-      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/developers/creating-ti-method/create_ti_method_r/</guid>
       <description>library(dynwrap) This vignette describes how to include your own method into the dynverse workflow. We’ll illustrate this with a very basic method: using one of the components of a PCA as the pseudotime.
