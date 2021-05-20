@@ -1874,41 +1874,40 @@ $(".searchbox").click(function(){
 
 
 
-<p>We welcome any contributions to this project, be it changes in documentation, bug fixes, new functionality, or even new packages if they fit the scope of our project. When making big changes, please first discuss the change you wish to make via issue, email, or any other method with the owners of the repository.</p>
-
-<h2 id="pull-requests">Pull Requests</h2>
-
+<p>We welcome any contributions to this project, be it changes in documentation, bug fixes, new functionality, or even new packages if they fit the scope of our project.  By participating in this project, you
+agree to abide by our <a href="https://github.com/dynverse/dynverse/blob/master/CONDUCT.md">code of conduct</a>.</p>
+<h2 id="getting-started">Getting Started</h2>
 <ul>
-<li>Make sure your code is following <strong><a href="https://style.tidyverse.org/">tidyverse style guide</a></strong></li>
-<li>Ensure that you are working in the <strong>devel branch</strong> (or any derivates of the devel branch)</li>
-<li>Edit the NEWS.md and <strong>bump the version number</strong> to x.x.x.9000 if there is not yet an unreleased version present</li>
-<li>Adding a unit test will increase the likelihood of acceptance</li>
+<li>Make sure you have a <a href="https://github.com/signup/free">GitHub account</a>. If you are not familar with git and GitHub, take a look at <a href="http://happygitwithr.com/">http://happygitwithr.com/</a> to get started.</li>
+<li><a href="https://github.com/dynverse/dynverse/issues">Submit a post for your issue</a> for your problem or suggestion, assuming one does not already exist.</li>
+<li>Clearly describe your issue, including steps to reproduce when it is a bug, or some justification for a proposed improvement.</li>
+<li><a href="https://github.com/dynverse/dynverse/#fork-destination-box">Fork</a> the repository on GitHub to make a copy of the repository on your account.</li>
 </ul>
-
-<h2 id="branches">Branches</h2>
-
-<p>Each package always has 2 branches: devel and master. All development happens in the devel branch (or a derivative thereof), and this is only merged once the features are tested thoroughly.</p>
-
-<p>The devel branch always has version number x.x.x.9000. This version number is bumped right before merging to master.</p>
-
-<p>We have strict rules regarding dependencies between dynverse packages:</p>
-
+<h2 id="making-changes">Making changes</h2>
 <ul>
-<li>devel branch always depends on the devel branch of other dynverse packages</li>
-<li>master branch always depends on the master branch of other dynverse packages</li>
-<li>cran versions (obivously) always depend on cran versions of other dynverse packages</li>
+<li>Edit the files, save often, and make commits of logical units, where each commit indicates one concept.</li>
+<li>Follow the <a href="https://style.tidyverse.org/">tidyverse style guide</a>.</li>
+<li>Make sure you write <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">good commit messages</a>.</li>
+<li>Add a unit test for added functionality or a bug you fixed.</li>
+<li>Run <em>all</em> the tests using <code>rcmdcheck::rcmdcheck()</code> to assure nothing else was accidentally broken.</li>
+<li>Edit the NEWS.md file to describe the changes you made.</li>
+<li>If you need help or unsure about anything, post an update to <a href="https://github.com/dynverse/dynverse/issues">your issue</a>.</li>
 </ul>
-
-<p>The Remotes of a package are only removed from master right before submitting to CRAN.</p>
-
-<p>To help development, we provide some helper functions in the <code>dynutils</code> package:</p>
-
+<h2 id="submitting-your-changes">Submitting your changes</h2>
+<p>Push to your fork and <a href="https://github.com/dynverse/dynverse/compare/">submit a pull request</a>.</p>
+<p>At this point you&rsquo;re waiting on us. We like to at least comment on pull requests
+within a few days (and, typically, one business day). We may suggest
+some changes or improvements or alternatives.</p>
+<h2 id="tips">Tips</h2>
+<p>Some things you can do that will increase the chance that your pull request is dealt with in a timely manner:</p>
 <ul>
-<li><code>switch_devel()</code> will bump version number to x.x.x.9000 and will add @devel to Remotes</li>
-<li><code>switch_master()</code> will bump version number to x.x.x and will add @master to Remotes</li>
-<li><code>switch_cran()</code> will remove remotes</li>
+<li>Engage in discussion on <a href="https://github.com/dynverse/dynverse/issues/">your issue</a>.</li>
+<li>Be familiar with the background literature cited in the <a href="README.md">README</a>.</li>
+<li>Follow our <a href="https://style.tidyverse.org/">code style guide</a>.</li>
+<li>Write a <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">good commit message</a>.</li>
+<li>Document your changes in the NEWS.md file.</li>
+<li>Write unit tests for the changes you made.</li>
 </ul>
-
 
 <footer class=" footline" >
 	
